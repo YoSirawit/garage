@@ -2,7 +2,7 @@
 public class DB_connector {
     
     public static String getUrl(){
-        return "jdbc:mysql://aws.connect.psdb.cloud:3306/garagesystem";
+        return "jdbc:mysql://aws.connect.psdb.cloud:3306/garagesystemdfdfd";
     }
     public static String getUsername(){
         return "6supp5otf9r8vj9gtxf8";
