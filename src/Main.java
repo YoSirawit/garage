@@ -1,10 +1,12 @@
 
 public class Main {
     public static void main(String[] args) {
-        Account acct = new Account();
-        System.out.println("Username : " + acct.getUsername());
-        System.out.println("FirstName : " + acct.getFirstName());
-        System.out.println("LastName : " + acct.getLastName());
-        System.out.println("Level : " + acct.getLevel());
+        LoginManager lm = new LoginManager();
+        if(lm.login("admin", "1234")){
+        System.out.println("Username : " + lm.getAccount().getUsername());
+        System.out.println("FirstName : " + lm.getAccount().getFirstName());
+        System.out.println("LastName : " + lm.getAccount().getLastName());
+        System.out.println("Level : " + lm.getAccount().getLevel());
+        }
     }
 }

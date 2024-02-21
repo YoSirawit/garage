@@ -5,24 +5,16 @@ public class Account {
     private String firstName;
     private String lastName;
     private int level;
+    private int id;
     public Statement statement;
-    public Account(){
-         try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection conn = DriverManager.getConnection(DB_connector.getUrl(), DB_connector.getUsername(), DB_connector.getPassword());
-            statement = conn.createStatement();
+    public Account(String username, String firstName, String lastName, int level, int id){
             
-            ResultSet result = statement.executeQuery("select * from userid");
-            result.next();
-            
-            this.level = result.getInt(2);
-            this.firstName = result.getString(3);
-            this.lastName = result.getString(4);
-            this.username = result.getString(5);
-            
-        } catch (Exception e){
-            System.out.println(e);
-        }
+            this.level = level;
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.username = username;
+            this.id = id;
+ 
     }
    
     public String getUsername(){
