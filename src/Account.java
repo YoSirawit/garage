@@ -18,7 +18,7 @@ public class Account {
     }
    
     public String getUsername(){
-        return this.username;
+        return this.username;   
     }
     public String getFirstName(){
         return this.firstName;
@@ -29,5 +29,7 @@ public class Account {
     public int getLevel(){
         return this.level;
     }
-   
+   public int getId(){
+       return this.id;
+   }
 }
