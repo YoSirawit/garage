@@ -1,11 +1,11 @@
 import java.sql.*;
 
 public class Warehouse extends Online{
-    private int ID;
+    private int id;
     private String name;
     private String type;
     private String Brand;
-    private Double price;
+    private double price;
     private int volume;
 
     public Warehouse(){
@@ -16,9 +16,9 @@ public class Warehouse extends Online{
     }
 }
     public void showItems(){
-        this.getStatement().
+        
     }
-    public void addItems(String type, String Brand, String name, Double price, int volume){
+    public void addItems(String type, String Brand, String name, double price, int volume){
         try{
 //            String add = "INSERT INTO inventory(item_type="+type+", brand="+Brand+", item_name="+name+", price="+price+", quantity="+volume+")";
             String add = String.format("INSERT INTO inventory (item_type, brand, item_name, price, quantity) VALUE ('%s', '%s', '%s', %f, %d)", type, Brand, name, price, volume);
@@ -37,16 +37,19 @@ public class Warehouse extends Online{
             System.out.println(e);
         }
     }
-    public void removeItems(int ID, int volume){
+    public void removeItems(int id, int volume){
         try{
-            
+            String count = "SELECT quantity FROM inventory WHERE ID="+id;
+            int count1 = Integer.parseInt(count) - volume;
+            String decrease = String.format("UPDATE inventory SET quantity= %d WHERE ID= %d", count1, id);
+            this.getStatement().executeUpdate(decrease);
         }catch(Exception e){
             System.out.println(e);
         }
     }
-    public void deleteItem(int ID, String name){
+    public void deleteItem(int id, String name){
         try{
-            String col = String.format("DELETE FROM inventory WHERE ID=%d OR item_name= '%s'", ID, name);
+            String col = String.format("DELETE FROM inventory WHERE ID=%d OR item_name= '%s'", id, name);
             this.getStatement().executeQuery(col);
         }catch(Exception e){
             System.out.println(e);
