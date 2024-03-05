@@ -11,7 +11,7 @@ public class Garage extends Online {
         try{
            ResultSet result = this.getStatement().executeQuery("select * from car_list");
            while (result.next()){
-               Car car = new Car(result.getString(2), result.getString(3), result.getString(4), result.getInt(5), result.getInt(6));
+               Car car = new Car(result.getString(2), result.getString(3), result.getString(4), result.getString(5), result.getInt(6));
                int channel = result.getInt(7);
                switch (channel){
                     case 1 : ch[1].addCar(car);
