@@ -4,6 +4,12 @@ public class Car {
     private String brand;
     private String carID;
     private int status;
+    public Car(String name, String brand, String carID, int status) {
+        this.name = name;
+        this.brand = brand;
+        this.carID = carID;
+        this.status = status;
+    }
     public String getName() {
         return this.name;
     }

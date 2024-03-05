@@ -1,6 +1,9 @@
 
 public class Channel {
     private Car car;
+    public Channel(Car car) {
+        this.car = car;
+    }
     public void addCar(Car car) {
         this.car = car;
     }
