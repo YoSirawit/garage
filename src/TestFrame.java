@@ -1,9 +1,5 @@
-import com.formdev.flatlaf.FlatIntelliJLaf;
 public class TestFrame extends javax.swing.JFrame {
 
-    /**
-     * Creates new form TestFrame
-     */
     public TestFrame() {
         initComponents();
     }
@@ -106,7 +102,6 @@ public class TestFrame extends javax.swing.JFrame {
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        FlatIntelliJLaf.setup();
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new TestFrame().setVisible(true);
