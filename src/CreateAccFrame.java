@@ -1,8 +1,8 @@
 import java.awt.*;
 import java.awt.event.*;
-public class SignInFrame extends javax.swing.JFrame {
+public class CreateAccFrame extends javax.swing.JFrame {
 
-    public SignInFrame() {
+    public CreateAccFrame() {
         initComponents();
     }
     public void close(){
@@ -188,9 +188,9 @@ public class SignInFrame extends javax.swing.JFrame {
                     .addComponent(PasswordField, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(UsernameField, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(27, 27, 27)
-                .addGroup(WhiteBGLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(EmailLabel)
-                    .addComponent(PhoneLabel))
+                .addGroup(WhiteBGLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(EmailLabel, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(PhoneLabel, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(WhiteBGLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(EmailField, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -249,10 +249,10 @@ public class SignInFrame extends javax.swing.JFrame {
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                SignInFrame Sign = new SignInFrame();
+                CreateAccFrame Sign = new CreateAccFrame();
                 Sign.setSize(1280,720);
                 Sign.setResizable(false);
-                new SignInFrame().setVisible(true);
+                new CreateAccFrame().setVisible(true);
             }
         });
     }
