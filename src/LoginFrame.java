@@ -171,7 +171,7 @@ public class LoginFrame extends javax.swing.JFrame {
 
     private void CreateAccActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CreateAccActionPerformed
         // TODO add your handling code here:
-        SignInFrame Sign = new SignInFrame();
+        CreateAccFrame Sign = new CreateAccFrame();
         Sign.setVisible(true);
         close();
     }//GEN-LAST:event_CreateAccActionPerformed
