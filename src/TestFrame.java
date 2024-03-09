@@ -65,7 +65,7 @@ public class TestFrame extends javax.swing.JFrame {
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 250, 800));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\weera\\OneDrive\\Documents\\NetBeansProjects\\Garage\\src\\TestIcon\\GanyuResize.jpg")); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/GanyuResizeButton.jpg"))); // NOI18N
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -79,7 +79,7 @@ public class TestFrame extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addComponent(jLabel2)
-                .addGap(0, 340, Short.MAX_VALUE))
+                .addGap(0, 745, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("tab1", jPanel2);
@@ -116,7 +116,7 @@ public class TestFrame extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("tab3", jPanel4);
 
-        getContentPane().add(jTabbedPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, -35, 1150, 800));
+        getContentPane().add(jTabbedPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 0, 1150, 800));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

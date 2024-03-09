@@ -84,7 +84,7 @@
     <Container class="javax.swing.JTabbedPane" name="jTabbedPane1">
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="250" y="-35" width="1150" height="800"/>
+          <AbsoluteConstraints x="250" y="0" width="1150" height="800"/>
         </Constraint>
       </Constraints>
 
@@ -112,7 +112,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="0" pref="340" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="745" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -121,7 +121,7 @@
             <Component class="javax.swing.JLabel" name="jLabel2">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\weera\OneDrive\Documents\NetBeansProjects\Garage\src\TestIcon\GanyuResize.jpg"/>
+                  <Image iconType="3" name="/TestIcon/GanyuResizeButton.jpg"/>
                 </Property>
               </Properties>
             </Component>
