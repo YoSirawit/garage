@@ -29,6 +29,7 @@ public class ManageCarFrame extends javax.swing.JFrame {
         jTextField1 = new javax.swing.JTextField();
         jPanel4 = new javax.swing.JPanel();
         jTextField2 = new javax.swing.JTextField();
+        jButton1 = new javax.swing.JButton();
         MenuBar = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
         jTextField4 = new javax.swing.JTextField();
@@ -41,6 +42,13 @@ public class ManageCarFrame extends javax.swing.JFrame {
         jPanel7 = new javax.swing.JPanel();
         jTextField7 = new javax.swing.JTextField();
         jPanel3 = new javax.swing.JPanel();
+        jPanel8 = new javax.swing.JPanel();
+        jDesktopPane1 = new javax.swing.JDesktopPane();
+        jProgressBar1 = new javax.swing.JProgressBar();
+        jRadioButton1 = new javax.swing.JRadioButton();
+        jToggleButton1 = new javax.swing.JToggleButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(1280, 720));
@@ -90,6 +98,14 @@ public class ManageCarFrame extends javax.swing.JFrame {
         );
 
         Header.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1070, 0, 220, 50));
+
+        jButton1.setText("jButton1");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        Header.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 60, 50));
 
         getContentPane().add(Header, java.awt.BorderLayout.PAGE_START);
 
@@ -227,17 +243,71 @@ public class ManageCarFrame extends javax.swing.JFrame {
         getContentPane().add(MenuBar, java.awt.BorderLayout.LINE_START);
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel3.setLayout(new java.awt.BorderLayout());
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        jPanel8.setBackground(new java.awt.Color(153, 102, 255));
+
+        javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
+        jPanel8.setLayout(jPanel8Layout);
+        jPanel8Layout.setHorizontalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 1090, Short.MAX_VALUE)
         );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 670, Short.MAX_VALUE)
+        jPanel8Layout.setVerticalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
         );
+
+        jPanel3.add(jPanel8, java.awt.BorderLayout.PAGE_START);
+
+        jDesktopPane1.setBackground(new java.awt.Color(153, 204, 0));
+
+        jDesktopPane1.setLayer(jProgressBar1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
+        javax.swing.GroupLayout jDesktopPane1Layout = new javax.swing.GroupLayout(jDesktopPane1);
+        jDesktopPane1.setLayout(jDesktopPane1Layout);
+        jDesktopPane1Layout.setHorizontalGroup(
+            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jDesktopPane1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jProgressBar1, javax.swing.GroupLayout.PREFERRED_SIZE, 276, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jDesktopPane1Layout.setVerticalGroup(
+            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jDesktopPane1Layout.createSequentialGroup()
+                .addGap(91, 91, 91)
+                .addComponent(jProgressBar1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(10, Short.MAX_VALUE))
+        );
+
+        jPanel3.add(jDesktopPane1, java.awt.BorderLayout.LINE_START);
+
+        jRadioButton1.setText("jRadioButton1");
+        jPanel3.add(jRadioButton1, java.awt.BorderLayout.CENTER);
+
+        jToggleButton1.setText("jToggleButton1");
+        jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jToggleButton1ActionPerformed(evt);
+            }
+        });
+        jPanel3.add(jToggleButton1, java.awt.BorderLayout.LINE_END);
+
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane1.setViewportView(jTable1);
+
+        jPanel3.add(jScrollPane1, java.awt.BorderLayout.PAGE_END);
 
         getContentPane().add(jPanel3, java.awt.BorderLayout.CENTER);
 
@@ -259,6 +329,19 @@ public class ManageCarFrame extends javax.swing.JFrame {
     private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField4ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        if(MenuBar.isVisible()){
+            MenuBar.setVisible(false);
+        }else{
+            MenuBar.setVisible(true);
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jToggleButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -302,6 +385,8 @@ public class ManageCarFrame extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Header;
     private javax.swing.JPanel MenuBar;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
@@ -309,6 +394,11 @@ public class ManageCarFrame extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
+    private javax.swing.JPanel jPanel8;
+    private javax.swing.JProgressBar jProgressBar1;
+    private javax.swing.JRadioButton jRadioButton1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable jTable1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
@@ -316,5 +406,6 @@ public class ManageCarFrame extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField6;
     private javax.swing.JTextField jTextField7;
+    private javax.swing.JToggleButton jToggleButton1;
     // End of variables declaration//GEN-END:variables
 }
