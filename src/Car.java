@@ -10,6 +10,11 @@ public class Car {
     private String carID;
     private int status;
     private Bill bill;
+    
+    public Car(){
+        this("", "", "", "", 0);
+    }
+    
     public Car(String carOwner, String brand, String carName, String carID, int status){
         this.carName = carName;
         this.carOwner = carOwner;
@@ -33,6 +38,9 @@ public class Car {
     }
     public void setStatus(int status){
         this.status = status;
+    }
+    public void setBill(Bill bill){
+        this.bill = bill;
     }
     
     public String getCarOwner() {
