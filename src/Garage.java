@@ -7,30 +7,33 @@ public class Garage extends Online {
     private Log log;
     
     public Garage(){
-        ch = new Channel[8];
+        ch = new Channel[10];
         try{
            ResultSet result = this.getStatement().executeQuery("select * from car_list");
            while (result.next()){
                Car car = new Car(result.getString(2), result.getString(3), result.getString(4), result.getString(5), result.getInt(6));
                int channel = result.getInt(7);
                switch (channel){
-                    case 1 : ch[1].addCar(car);
+                    case 1 : ch[0].addCar(car);
                             break;
-                    case 2 : ch[2].addCar(car);
+                    case 2 : ch[1].addCar(car);
                             break;
-                    case 3 : ch[3].addCar(car);
+                    case 3 : ch[2].addCar(car);
                             break;
-                    case 4 : ch[4].addCar(car);
+                    case 4 : ch[3].addCar(car);
                             break;
-                    case 5 : ch[5].addCar(car);
+                    case 5 : ch[4].addCar(car);
                             break;
-                    case 6 : ch[6].addCar(car);
+                    case 6 : ch[5].addCar(car);
                             break;
-                    case 7 : ch[7].addCar(car);
+                    case 7 : ch[6].addCar(car);
                             break;
-                    case 8 : ch[8].addCar(car);
+                    case 8 : ch[7].addCar(car);
                             break;
-                            
+                    case 9 : ch[8].addCar(car);
+                            break;
+                    case 10 : ch[9].addCar(car);
+                            break;
                }
                        
            }
@@ -41,22 +44,26 @@ public class Garage extends Online {
     
     public void addCar(Car car, int channel){
             switch (channel){
-                 case 1 : ch[1].addCar(car);
+                case 1 : ch[0].addCar(car);
+                        break;
+                case 2 : ch[1].addCar(car);
+                        break;
+                case 3 : ch[2].addCar(car);
+                        break;
+                case 4 : ch[3].addCar(car);
+                        break;
+                case 5 : ch[4].addCar(car);
+                        break;
+                case 6 : ch[5].addCar(car);
                          break;
-                 case 2 : ch[2].addCar(car);
-                         break;
-                 case 3 : ch[3].addCar(car);
-                         break;
-                 case 4 : ch[4].addCar(car);
-                         break;
-                 case 5 : ch[5].addCar(car);
-                         break;
-                 case 6 : ch[6].addCar(car);
-                         break;
-                 case 7 : ch[7].addCar(car);
-                         break;
-                 case 8 : ch[8].addCar(car);
-                         break;
+                case 7 : ch[6].addCar(car);
+                        break;
+                case 8 : ch[7].addCar(car);
+                        break;
+                case 9 : ch[8].addCar(car);
+                        break;
+                case 10 : ch[9].addCar(car);
+                        break;
             }
     }
     public String getName(){
