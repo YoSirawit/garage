@@ -3,8 +3,6 @@ import java.sql.*;
 public class Garage extends Online {
     private String name;
     private Channel[] ch;
-    private Warehouse wh;
-    private Log log;
     
     public Garage(){
         ch = new Channel[10];
@@ -72,14 +70,6 @@ public class Garage extends Online {
     
     public Channel getCh(int index){
         return this.ch[index];
-    }
-    
-    public Warehouse getWarehouse(){
-        return this.wh;
-    }
-    
-    public Log getLog(){
-        return this.log;
     }
     
 }
