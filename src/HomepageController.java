@@ -15,9 +15,6 @@ public class HomepageController implements ActionListener {
         open();
         return this.hpf;
     }
-    public HomepageFrame getHomePageFrame(){
-        return this.hpf;
-    }
 
     @Override
     public void actionPerformed(ActionEvent e) {
