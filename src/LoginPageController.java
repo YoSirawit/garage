@@ -1,16 +1,24 @@
-
+import javax.swing.*;
 import java.awt.event.*;
 
 public class LoginPageController implements ActionListener {
-    private LoginManager lm;
+
     private LoginFrame lf;
     
     public LoginPageController(){
-        this.lm = new LoginManager();
+        this.lf = new LoginFrame();
+        lf.setSize(1280, 720);
+        lf.setResizable(false);
+        lf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        
     }
     
-    public void open(){
-        lf = new LoginFrame();
+    public void close(){
+        lf.close();
+    }
+
+    public LoginFrame getLoginFrame(){
+        return this.lf;
     }
 
     @Override

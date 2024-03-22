@@ -11,6 +11,13 @@ public class HomepageController implements ActionListener {
     public void open(){
         hpf = new HomepageFrame();
     }
+    public HomepageFrame getHomepageframe(){
+        open();
+        return this.hpf;
+    }
+    public HomepageFrame getHomePageFrame(){
+        return this.hpf;
+    }
 
     @Override
     public void actionPerformed(ActionEvent e) {

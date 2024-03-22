@@ -1,5 +1,6 @@
 import java.awt.*;
 import java.awt.event.*;
+import javax.swing.JButton;
 public class LoginFrame extends javax.swing.JFrame {
 
     public LoginFrame() {
@@ -194,6 +195,21 @@ public class LoginFrame extends javax.swing.JFrame {
                 new LoginFrame().setVisible(true);
             }
         });
+    }
+    
+    public String getUsername(){
+        return this.UsernameField.getText();
+    }
+    public String getPassword(){
+        char[] tmp = jPasswordField1.getPassword();
+        String pass = "";
+        for(int i=0; i<tmp.length; i++){
+            pass += tmp[i]+"";
+        }
+        return pass;
+    }
+    public JButton getLoginButton(){
+        return this.LoginButton;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
