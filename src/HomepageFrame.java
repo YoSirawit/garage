@@ -1,11 +1,20 @@
-import java.awt.Color;
+import javax.swing.*;
 public class HomepageFrame extends javax.swing.JFrame {
-
     /**
      * Creates new form HomePageFrame
      */
     public HomepageFrame() {
         initComponents();
+        this.statusPn0.setVisible(false);
+        this.statusPn1.setVisible(false);
+        this.statusPn2.setVisible(false);
+        this.statusPn3.setVisible(false);
+        this.statusPn4.setVisible(false);
+        this.statusPn5.setVisible(false);
+        this.statusPn6.setVisible(false);
+        this.statusPn7.setVisible(false);
+        this.statusPn8.setVisible(false);
+        this.statusPn9.setVisible(false);
     }
 
     /**
@@ -28,13 +37,9 @@ public class HomepageFrame extends javax.swing.JFrame {
         equipmentBn = new javax.swing.JToggleButton();
         warehouseBn = new javax.swing.JToggleButton();
         invoiceBn = new javax.swing.JToggleButton();
-        manageBn = new javax.swing.JToggleButton();
         qTablePn = new javax.swing.JPanel();
         txtStatusRepair = new javax.swing.JLabel();
         carTable = new javax.swing.JPanel();
-        statusPn10 = new javax.swing.JPanel();
-        carpic10 = new javax.swing.JLabel();
-        statusBn10 = new javax.swing.JButton();
         statusPn9 = new javax.swing.JPanel();
         carpic9 = new javax.swing.JLabel();
         statusBn9 = new javax.swing.JButton();
@@ -62,6 +67,10 @@ public class HomepageFrame extends javax.swing.JFrame {
         statusPn1 = new javax.swing.JPanel();
         carpic1 = new javax.swing.JLabel();
         statusBn1 = new javax.swing.JButton();
+        statusPn0 = new javax.swing.JPanel();
+        carpic0 = new javax.swing.JLabel();
+        statusBn0 = new javax.swing.JButton();
+        txtNocar0 = new javax.swing.JLabel();
         txtNocar1 = new javax.swing.JLabel();
         txtNocar2 = new javax.swing.JLabel();
         txtNocar3 = new javax.swing.JLabel();
@@ -71,13 +80,11 @@ public class HomepageFrame extends javax.swing.JFrame {
         txtNocar7 = new javax.swing.JLabel();
         txtNocar8 = new javax.swing.JLabel();
         txtNocar9 = new javax.swing.JLabel();
-        txtNocar10 = new javax.swing.JLabel();
         tablepic = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Dumrongruuay");
         setBackground(new java.awt.Color(0, 0, 0));
-        setPreferredSize(new java.awt.Dimension(1280, 720));
         setResizable(false);
 
         headPanel.setBackground(new java.awt.Color(242, 157, 0));
@@ -137,7 +144,7 @@ public class HomepageFrame extends javax.swing.JFrame {
         customerQbn.setBackground(new java.awt.Color(255, 102, 0));
         customerQbn.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         customerQbn.setForeground(new java.awt.Color(0, 0, 0));
-        customerQbn.setText("บริการลูกค้า");
+        customerQbn.setText("จัดการคิวรถ");
         customerQbn.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
         customerQbn.setBorderPainted(false);
         customerQbn.setOpaque(true);
@@ -186,19 +193,6 @@ public class HomepageFrame extends javax.swing.JFrame {
             }
         });
 
-        manageBn.setBackground(new java.awt.Color(255, 102, 0));
-        manageBn.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        manageBn.setForeground(new java.awt.Color(0, 0, 0));
-        manageBn.setText("จัดการบัญชี");
-        manageBn.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
-        manageBn.setBorderPainted(false);
-        manageBn.setOpaque(true);
-        manageBn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                manageBnActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout buttonPanelLayout = new javax.swing.GroupLayout(buttonPanel);
         buttonPanel.setLayout(buttonPanelLayout);
         buttonPanelLayout.setHorizontalGroup(
@@ -214,7 +208,6 @@ public class HomepageFrame extends javax.swing.JFrame {
                             .addComponent(equipmentBn, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(invoiceBn, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(customerQbn, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(manageBn, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(homeBn, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
@@ -232,8 +225,6 @@ public class HomepageFrame extends javax.swing.JFrame {
                 .addComponent(warehouseBn, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(invoiceBn, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(manageBn, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -246,40 +237,9 @@ public class HomepageFrame extends javax.swing.JFrame {
         carTable.setBackground(new java.awt.Color(204, 204, 204));
         carTable.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        statusPn10.setBackground(new java.awt.Color(217, 217, 217));
-
-        carpic10.setIcon(new javax.swing.ImageIcon("C:\\Users\\iyara\\OneDrive\\Pictures\\garage proj\\car.png")); // NOI18N
-
-        statusBn10.setText("Status");
-
-        javax.swing.GroupLayout statusPn10Layout = new javax.swing.GroupLayout(statusPn10);
-        statusPn10.setLayout(statusPn10Layout);
-        statusPn10Layout.setHorizontalGroup(
-            statusPn10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(statusPn10Layout.createSequentialGroup()
-                .addGap(43, 43, 43)
-                .addComponent(carpic10)
-                .addContainerGap(46, Short.MAX_VALUE))
-            .addGroup(statusPn10Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(statusBn10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-        statusPn10Layout.setVerticalGroup(
-            statusPn10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(statusPn10Layout.createSequentialGroup()
-                .addGap(23, 23, 23)
-                .addComponent(carpic10)
-                .addGap(18, 18, 18)
-                .addComponent(statusBn10, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(10, Short.MAX_VALUE))
-        );
-
-        carTable.add(statusPn10, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 340, 150, 210));
-
         statusPn9.setBackground(new java.awt.Color(217, 217, 217));
 
-        carpic9.setIcon(new javax.swing.ImageIcon("C:\\Users\\iyara\\OneDrive\\Pictures\\garage proj\\car.png")); // NOI18N
+        carpic9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/car.png"))); // NOI18N
 
         statusBn9.setText("Status");
 
@@ -306,11 +266,11 @@ public class HomepageFrame extends javax.swing.JFrame {
                 .addContainerGap(10, Short.MAX_VALUE))
         );
 
-        carTable.add(statusPn9, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 340, 150, 210));
+        carTable.add(statusPn9, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 340, 150, 210));
 
         statusPn8.setBackground(new java.awt.Color(217, 217, 217));
 
-        carpic8.setIcon(new javax.swing.ImageIcon("C:\\Users\\iyara\\OneDrive\\Pictures\\garage proj\\car.png")); // NOI18N
+        carpic8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/car.png"))); // NOI18N
 
         statusBn8.setText("Status");
 
@@ -337,11 +297,11 @@ public class HomepageFrame extends javax.swing.JFrame {
                 .addContainerGap(10, Short.MAX_VALUE))
         );
 
-        carTable.add(statusPn8, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 340, 150, 210));
+        carTable.add(statusPn8, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 340, 150, 210));
 
         statusPn7.setBackground(new java.awt.Color(217, 217, 217));
 
-        carpic7.setIcon(new javax.swing.ImageIcon("C:\\Users\\iyara\\OneDrive\\Pictures\\garage proj\\car.png")); // NOI18N
+        carpic7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/car.png"))); // NOI18N
 
         statusBn7.setText("Status");
 
@@ -368,11 +328,11 @@ public class HomepageFrame extends javax.swing.JFrame {
                 .addContainerGap(10, Short.MAX_VALUE))
         );
 
-        carTable.add(statusPn7, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 340, 150, 210));
+        carTable.add(statusPn7, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 340, 150, 210));
 
         statusPn6.setBackground(new java.awt.Color(217, 217, 217));
 
-        carpic6.setIcon(new javax.swing.ImageIcon("C:\\Users\\iyara\\OneDrive\\Pictures\\garage proj\\car.png")); // NOI18N
+        carpic6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/car.png"))); // NOI18N
 
         statusBn6.setText("Status");
 
@@ -399,11 +359,11 @@ public class HomepageFrame extends javax.swing.JFrame {
                 .addContainerGap(10, Short.MAX_VALUE))
         );
 
-        carTable.add(statusPn6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 340, 150, 210));
+        carTable.add(statusPn6, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 340, 150, 210));
 
         statusPn5.setBackground(new java.awt.Color(217, 217, 217));
 
-        carpic5.setIcon(new javax.swing.ImageIcon("C:\\Users\\iyara\\OneDrive\\Pictures\\garage proj\\car.png")); // NOI18N
+        carpic5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/car.png"))); // NOI18N
 
         statusBn5.setText("Status");
 
@@ -430,11 +390,11 @@ public class HomepageFrame extends javax.swing.JFrame {
                 .addContainerGap(10, Short.MAX_VALUE))
         );
 
-        carTable.add(statusPn5, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 60, 150, 210));
+        carTable.add(statusPn5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 340, 150, 210));
 
         statusPn4.setBackground(new java.awt.Color(217, 217, 217));
 
-        carpic4.setIcon(new javax.swing.ImageIcon("C:\\Users\\iyara\\OneDrive\\Pictures\\garage proj\\car.png")); // NOI18N
+        carpic4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/car.png"))); // NOI18N
 
         statusBn4.setText("Status");
 
@@ -461,11 +421,11 @@ public class HomepageFrame extends javax.swing.JFrame {
                 .addContainerGap(10, Short.MAX_VALUE))
         );
 
-        carTable.add(statusPn4, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 60, 150, 210));
+        carTable.add(statusPn4, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 60, 150, 210));
 
         statusPn3.setBackground(new java.awt.Color(217, 217, 217));
 
-        carpic3.setIcon(new javax.swing.ImageIcon("C:\\Users\\iyara\\OneDrive\\Pictures\\garage proj\\car.png")); // NOI18N
+        carpic3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/car.png"))); // NOI18N
 
         statusBn3.setText("Status");
 
@@ -492,11 +452,11 @@ public class HomepageFrame extends javax.swing.JFrame {
                 .addContainerGap(10, Short.MAX_VALUE))
         );
 
-        carTable.add(statusPn3, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 60, 150, 210));
+        carTable.add(statusPn3, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 60, 150, 210));
 
         statusPn2.setBackground(new java.awt.Color(217, 217, 217));
 
-        carpic2.setIcon(new javax.swing.ImageIcon("C:\\Users\\iyara\\OneDrive\\Pictures\\garage proj\\car.png")); // NOI18N
+        carpic2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/car.png"))); // NOI18N
 
         statusBn2.setText("Status");
 
@@ -523,11 +483,11 @@ public class HomepageFrame extends javax.swing.JFrame {
                 .addContainerGap(10, Short.MAX_VALUE))
         );
 
-        carTable.add(statusPn2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 60, 150, 210));
+        carTable.add(statusPn2, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 60, 150, 210));
 
         statusPn1.setBackground(new java.awt.Color(217, 217, 217));
 
-        carpic1.setIcon(new javax.swing.ImageIcon("C:\\Users\\iyara\\OneDrive\\Pictures\\garage proj\\car.png")); // NOI18N
+        carpic1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/car.png"))); // NOI18N
 
         statusBn1.setText("Status");
 
@@ -554,57 +514,88 @@ public class HomepageFrame extends javax.swing.JFrame {
                 .addContainerGap(10, Short.MAX_VALUE))
         );
 
-        carTable.add(statusPn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 150, 210));
+        carTable.add(statusPn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 60, 150, 210));
+
+        statusPn0.setBackground(new java.awt.Color(217, 217, 217));
+
+        carpic0.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/car.png"))); // NOI18N
+
+        statusBn0.setText("Status");
+
+        javax.swing.GroupLayout statusPn0Layout = new javax.swing.GroupLayout(statusPn0);
+        statusPn0.setLayout(statusPn0Layout);
+        statusPn0Layout.setHorizontalGroup(
+            statusPn0Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(statusPn0Layout.createSequentialGroup()
+                .addGap(43, 43, 43)
+                .addComponent(carpic0)
+                .addContainerGap(46, Short.MAX_VALUE))
+            .addGroup(statusPn0Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(statusBn0, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        statusPn0Layout.setVerticalGroup(
+            statusPn0Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(statusPn0Layout.createSequentialGroup()
+                .addGap(23, 23, 23)
+                .addComponent(carpic0)
+                .addGap(18, 18, 18)
+                .addComponent(statusBn0, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(10, Short.MAX_VALUE))
+        );
+
+        carTable.add(statusPn0, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 150, 210));
+
+        txtNocar0.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
+        txtNocar0.setForeground(new java.awt.Color(0, 0, 0));
+        txtNocar0.setText("<No car repair>");
+        carTable.add(txtNocar0, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 130, -1, -1));
 
         txtNocar1.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
         txtNocar1.setForeground(new java.awt.Color(0, 0, 0));
         txtNocar1.setText("<No car repair>");
-        carTable.add(txtNocar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 130, -1, -1));
+        carTable.add(txtNocar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 130, -1, -1));
 
         txtNocar2.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
         txtNocar2.setForeground(new java.awt.Color(0, 0, 0));
         txtNocar2.setText("<No car repair>");
-        carTable.add(txtNocar2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 130, -1, -1));
+        carTable.add(txtNocar2, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 130, -1, -1));
 
         txtNocar3.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
         txtNocar3.setForeground(new java.awt.Color(0, 0, 0));
         txtNocar3.setText("<No car repair>");
-        carTable.add(txtNocar3, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 130, -1, -1));
+        carTable.add(txtNocar3, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 130, -1, -1));
 
         txtNocar4.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
         txtNocar4.setForeground(new java.awt.Color(0, 0, 0));
         txtNocar4.setText("<No car repair>");
-        carTable.add(txtNocar4, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 130, -1, -1));
+        carTable.add(txtNocar4, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 130, -1, -1));
 
         txtNocar5.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
         txtNocar5.setForeground(new java.awt.Color(0, 0, 0));
         txtNocar5.setText("<No car repair>");
-        carTable.add(txtNocar5, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 130, -1, -1));
+        carTable.add(txtNocar5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 420, -1, -1));
 
         txtNocar6.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
         txtNocar6.setForeground(new java.awt.Color(0, 0, 0));
         txtNocar6.setText("<No car repair>");
-        carTable.add(txtNocar6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 420, -1, -1));
+        carTable.add(txtNocar6, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 420, -1, -1));
 
         txtNocar7.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
         txtNocar7.setForeground(new java.awt.Color(0, 0, 0));
         txtNocar7.setText("<No car repair>");
-        carTable.add(txtNocar7, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 420, -1, -1));
+        carTable.add(txtNocar7, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 420, -1, -1));
 
         txtNocar8.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
         txtNocar8.setForeground(new java.awt.Color(0, 0, 0));
         txtNocar8.setText("<No car repair>");
-        carTable.add(txtNocar8, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 420, -1, -1));
+        carTable.add(txtNocar8, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 420, -1, -1));
 
         txtNocar9.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
         txtNocar9.setForeground(new java.awt.Color(0, 0, 0));
         txtNocar9.setText("<No car repair>");
-        carTable.add(txtNocar9, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 420, -1, -1));
-
-        txtNocar10.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
-        txtNocar10.setForeground(new java.awt.Color(0, 0, 0));
-        txtNocar10.setText("<No car repair>");
-        carTable.add(txtNocar10, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 420, -1, -1));
+        carTable.add(txtNocar9, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 420, -1, -1));
 
         tablepic.setIcon(new javax.swing.ImageIcon("C:\\Users\\iyara\\Downloads\\Group 1 (2).png")); // NOI18N
         carTable.add(tablepic, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -689,10 +680,6 @@ public class HomepageFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_warehouseBnActionPerformed
 
-    private void manageBnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_manageBnActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_manageBnActionPerformed
-
     /**
      * @param args the command line arguments
      */
@@ -727,6 +714,7 @@ public class HomepageFrame extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 HomepageFrame home = new HomepageFrame();
+                home.setSize(1280, 720);
                 home.setVisible(true);
             }
         });
@@ -735,8 +723,8 @@ public class HomepageFrame extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel buttonPanel;
     private javax.swing.JPanel carTable;
+    private javax.swing.JLabel carpic0;
     private javax.swing.JLabel carpic1;
-    private javax.swing.JLabel carpic10;
     private javax.swing.JLabel carpic2;
     private javax.swing.JLabel carpic3;
     private javax.swing.JLabel carpic4;
@@ -751,40 +739,33 @@ public class HomepageFrame extends javax.swing.JFrame {
     private javax.swing.JPanel headPanel;
     private javax.swing.JToggleButton homeBn;
     private javax.swing.JToggleButton invoiceBn;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel mainPanel;
-    private javax.swing.JToggleButton manageBn;
     private javax.swing.JPanel qTablePn;
-    private javax.swing.JButton statusBn1;
-    private javax.swing.JButton statusBn10;
-    private javax.swing.JButton statusBn2;
-    private javax.swing.JButton statusBn3;
-    private javax.swing.JButton statusBn4;
-    private javax.swing.JButton statusBn5;
-    private javax.swing.JButton statusBn6;
-    private javax.swing.JButton statusBn7;
-    private javax.swing.JButton statusBn8;
-    private javax.swing.JButton statusBn9;
-    private javax.swing.JPanel statusPn1;
-    private javax.swing.JPanel statusPn10;
-    private javax.swing.JPanel statusPn2;
-    private javax.swing.JPanel statusPn3;
-    private javax.swing.JPanel statusPn4;
-    private javax.swing.JPanel statusPn5;
-    private javax.swing.JPanel statusPn6;
-    private javax.swing.JPanel statusPn7;
-    private javax.swing.JPanel statusPn8;
-    private javax.swing.JPanel statusPn9;
+    protected javax.swing.JButton statusBn0;
+    protected javax.swing.JButton statusBn1;
+    protected javax.swing.JButton statusBn2;
+    protected javax.swing.JButton statusBn3;
+    protected javax.swing.JButton statusBn4;
+    protected javax.swing.JButton statusBn5;
+    protected javax.swing.JButton statusBn6;
+    protected javax.swing.JButton statusBn7;
+    protected javax.swing.JButton statusBn8;
+    protected javax.swing.JButton statusBn9;
+    protected javax.swing.JPanel statusPn0;
+    protected javax.swing.JPanel statusPn1;
+    protected javax.swing.JPanel statusPn2;
+    protected javax.swing.JPanel statusPn3;
+    protected javax.swing.JPanel statusPn4;
+    protected javax.swing.JPanel statusPn5;
+    protected javax.swing.JPanel statusPn6;
+    protected javax.swing.JPanel statusPn7;
+    protected javax.swing.JPanel statusPn8;
+    protected javax.swing.JPanel statusPn9;
     private javax.swing.JLabel tablepic;
+    private javax.swing.JLabel txtNocar0;
     private javax.swing.JLabel txtNocar1;
-    private javax.swing.JLabel txtNocar10;
     private javax.swing.JLabel txtNocar2;
     private javax.swing.JLabel txtNocar3;
     private javax.swing.JLabel txtNocar4;
