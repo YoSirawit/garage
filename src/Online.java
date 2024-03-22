@@ -2,7 +2,7 @@
 import java.sql.*;
 
 public abstract class Online implements NeedDB {  
-    private Statement statement;
+    public Statement statement;
     
     public Online(){
         db_connect();

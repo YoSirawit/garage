@@ -1,9 +1,11 @@
 import java.awt.*;
 import java.awt.event.*;
-public class CreateAccFrame extends javax.swing.JFrame {
-
+public class CreateAccFrame extends javax.swing.JFrame{
+    public TestConnection db;
+    
     public CreateAccFrame() {
         initComponents();
+        db = new TestConnection();
     }
     public void close(){
         WindowEvent closeWindow = new WindowEvent(this, WindowEvent.WINDOW_CLOSING);
@@ -69,21 +71,11 @@ public class CreateAccFrame extends javax.swing.JFrame {
         SurnameField.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 24)); // NOI18N
         SurnameField.setToolTipText("Enter New Surname");
         SurnameField.setBorder(null);
-        SurnameField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SurnameFieldActionPerformed(evt);
-            }
-        });
 
         NameField.setBackground(new java.awt.Color(221, 221, 221));
         NameField.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 24)); // NOI18N
         NameField.setToolTipText("Enter New Name");
         NameField.setBorder(null);
-        NameField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                NameFieldActionPerformed(evt);
-            }
-        });
 
         SurnameLabel.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         SurnameLabel.setText("Surname");
@@ -119,6 +111,11 @@ public class CreateAccFrame extends javax.swing.JFrame {
         CreateAccButton.setText("Create");
         CreateAccButton.setToolTipText("Create Account");
         CreateAccButton.setBorder(null);
+        CreateAccButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CreateAccButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout WhiteBGLayout = new javax.swing.GroupLayout(WhiteBG);
         WhiteBG.setLayout(WhiteBGLayout);
@@ -238,14 +235,22 @@ public class CreateAccFrame extends javax.swing.JFrame {
         Login.setVisible(true);
     }//GEN-LAST:event_BackButtonActionPerformed
 
-    private void NameFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NameFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_NameFieldActionPerformed
+    private void CreateAccButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CreateAccButtonActionPerformed
+        
+        if(evt.getSource() == CreateAccButton){
+            String name = NameField.getText();
+            String surname = SurnameField.getText();
+            String username = UsernameField.getText();
+            String password = PasswordField.getText();
+            String email = EmailField.getText();
+            String phone = PhoneNumber.getText();
+            int user_level = 1;
+            String sql = String.format("INSERT INTO userid (FirstName, LastName, username, user_pass, email, phone, user_level) VALUES('%s','%s','%s','%s','%s','%s',%d);",name,surname,username,password,email,phone,user_level);
+            db.getUpdate(sql);
 
-    private void SurnameFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SurnameFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_SurnameFieldActionPerformed
-
+       }
+    }//GEN-LAST:event_CreateAccButtonActionPerformed
+                                         
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
