@@ -729,6 +729,10 @@ public class HomepageFrame extends javax.swing.JFrame {
             }
         });
     }
+    
+    public JLabel getUsernameLabel(){
+        return this.jLabel1;
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel buttonPanel;

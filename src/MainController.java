@@ -36,6 +36,7 @@ public class MainController implements ActionListener{
             if(lm.login(lpc.getLoginFrame().getUsername(), lpc.getLoginFrame().getPassword())){
                 mainframe.dispose();
                 mainframe = new JFrame();
+                hc.getHomepageframe().getUsernameLabel().setText(lm.getAccount().getFirstName());
                 mainframe.setContentPane(hc.getHomepageframe().getContentPane());
                 mainframe.pack();
                 mainframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
