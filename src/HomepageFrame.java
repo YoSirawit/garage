@@ -12,19 +12,19 @@ public class HomepageFrame extends javax.swing.JFrame {
         pnArr = new JPanel[]{statusPn0, statusPn1, statusPn2, statusPn3, statusPn4, statusPn5, statusPn6, statusPn7, statusPn8, statusPn9};
         bnArr = new JButton[]{statusBn0, statusBn1, statusBn2, statusBn3, statusBn4, statusBn5, statusBn6, statusBn7, statusBn8, statusBn9};
         
-        ImageIcon icon = new ImageIcon(HomepageFrame.class.getResource("/TestIcon/car.png"));
-        ImageIcon slotpic = new ImageIcon(HomepageFrame.class.getResource("/TestIcon/slot_car.png"));
-        this.tablepic.setIcon(slotpic);
-        this.carpic0.setIcon(icon);
-        this.carpic1.setIcon(icon);
-        this.carpic2.setIcon(icon);
-        this.carpic3.setIcon(icon);
-        this.carpic4.setIcon(icon);
-        this.carpic5.setIcon(icon);
-        this.carpic6.setIcon(icon);
-        this.carpic7.setIcon(icon);
-        this.carpic8.setIcon(icon);
-        this.carpic9.setIcon(icon);
+//        ImageIcon icon = new ImageIcon(HomepageFrame.class.getResource("/TestIcon/car.png"));
+//        ImageIcon slotpic = new ImageIcon(HomepageFrame.class.getResource("/TestIcon/slot_car.png"));
+//        this.tablepic.setIcon(slotpic);
+//        this.carpic0.setIcon(icon);
+//        this.carpic1.setIcon(icon);
+//        this.carpic2.setIcon(icon);
+//        this.carpic3.setIcon(icon);
+//        this.carpic4.setIcon(icon);
+//        this.carpic5.setIcon(icon);
+//        this.carpic6.setIcon(icon);
+//        this.carpic7.setIcon(icon);
+//        this.carpic8.setIcon(icon);
+//        this.carpic9.setIcon(icon);
     }
 
     /**
@@ -249,6 +249,8 @@ public class HomepageFrame extends javax.swing.JFrame {
 
         statusPn9.setBackground(new java.awt.Color(217, 217, 217));
 
+        carpic9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/car.png"))); // NOI18N
+
         statusBn9.setText("Status");
 
         javax.swing.GroupLayout statusPn9Layout = new javax.swing.GroupLayout(statusPn9);
@@ -258,7 +260,7 @@ public class HomepageFrame extends javax.swing.JFrame {
             .addGroup(statusPn9Layout.createSequentialGroup()
                 .addGap(43, 43, 43)
                 .addComponent(carpic9)
-                .addContainerGap(107, Short.MAX_VALUE))
+                .addContainerGap(46, Short.MAX_VALUE))
             .addGroup(statusPn9Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(statusBn9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -271,12 +273,14 @@ public class HomepageFrame extends javax.swing.JFrame {
                 .addComponent(carpic9)
                 .addGap(18, 18, 18)
                 .addComponent(statusBn9, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(130, Short.MAX_VALUE))
+                .addContainerGap(10, Short.MAX_VALUE))
         );
 
         carTable.add(statusPn9, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 340, 150, 210));
 
         statusPn8.setBackground(new java.awt.Color(217, 217, 217));
+
+        carpic8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/car.png"))); // NOI18N
 
         statusBn8.setText("Status");
 
@@ -287,7 +291,7 @@ public class HomepageFrame extends javax.swing.JFrame {
             .addGroup(statusPn8Layout.createSequentialGroup()
                 .addGap(43, 43, 43)
                 .addComponent(carpic8)
-                .addContainerGap(107, Short.MAX_VALUE))
+                .addContainerGap(46, Short.MAX_VALUE))
             .addGroup(statusPn8Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(statusBn8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -300,12 +304,14 @@ public class HomepageFrame extends javax.swing.JFrame {
                 .addComponent(carpic8)
                 .addGap(18, 18, 18)
                 .addComponent(statusBn8, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(130, Short.MAX_VALUE))
+                .addContainerGap(10, Short.MAX_VALUE))
         );
 
         carTable.add(statusPn8, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 340, 150, 210));
 
         statusPn7.setBackground(new java.awt.Color(217, 217, 217));
+
+        carpic7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/car.png"))); // NOI18N
 
         statusBn7.setText("Status");
 
@@ -316,7 +322,7 @@ public class HomepageFrame extends javax.swing.JFrame {
             .addGroup(statusPn7Layout.createSequentialGroup()
                 .addGap(43, 43, 43)
                 .addComponent(carpic7)
-                .addContainerGap(107, Short.MAX_VALUE))
+                .addContainerGap(46, Short.MAX_VALUE))
             .addGroup(statusPn7Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(statusBn7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -329,12 +335,14 @@ public class HomepageFrame extends javax.swing.JFrame {
                 .addComponent(carpic7)
                 .addGap(18, 18, 18)
                 .addComponent(statusBn7, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(130, Short.MAX_VALUE))
+                .addContainerGap(10, Short.MAX_VALUE))
         );
 
         carTable.add(statusPn7, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 340, 150, 210));
 
         statusPn6.setBackground(new java.awt.Color(217, 217, 217));
+
+        carpic6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/car.png"))); // NOI18N
 
         statusBn6.setText("Status");
 
@@ -345,7 +353,7 @@ public class HomepageFrame extends javax.swing.JFrame {
             .addGroup(statusPn6Layout.createSequentialGroup()
                 .addGap(43, 43, 43)
                 .addComponent(carpic6)
-                .addContainerGap(107, Short.MAX_VALUE))
+                .addContainerGap(46, Short.MAX_VALUE))
             .addGroup(statusPn6Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(statusBn6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -358,12 +366,14 @@ public class HomepageFrame extends javax.swing.JFrame {
                 .addComponent(carpic6)
                 .addGap(18, 18, 18)
                 .addComponent(statusBn6, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(130, Short.MAX_VALUE))
+                .addContainerGap(10, Short.MAX_VALUE))
         );
 
         carTable.add(statusPn6, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 340, 150, 210));
 
         statusPn5.setBackground(new java.awt.Color(217, 217, 217));
+
+        carpic5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/car.png"))); // NOI18N
 
         statusBn5.setText("Status");
 
@@ -374,7 +384,7 @@ public class HomepageFrame extends javax.swing.JFrame {
             .addGroup(statusPn5Layout.createSequentialGroup()
                 .addGap(43, 43, 43)
                 .addComponent(carpic5)
-                .addContainerGap(107, Short.MAX_VALUE))
+                .addContainerGap(46, Short.MAX_VALUE))
             .addGroup(statusPn5Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(statusBn5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -387,12 +397,14 @@ public class HomepageFrame extends javax.swing.JFrame {
                 .addComponent(carpic5)
                 .addGap(18, 18, 18)
                 .addComponent(statusBn5, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(130, Short.MAX_VALUE))
+                .addContainerGap(10, Short.MAX_VALUE))
         );
 
         carTable.add(statusPn5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 340, 150, 210));
 
         statusPn4.setBackground(new java.awt.Color(217, 217, 217));
+
+        carpic4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/car.png"))); // NOI18N
 
         statusBn4.setText("Status");
 
@@ -403,7 +415,7 @@ public class HomepageFrame extends javax.swing.JFrame {
             .addGroup(statusPn4Layout.createSequentialGroup()
                 .addGap(43, 43, 43)
                 .addComponent(carpic4)
-                .addContainerGap(107, Short.MAX_VALUE))
+                .addContainerGap(46, Short.MAX_VALUE))
             .addGroup(statusPn4Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(statusBn4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -416,12 +428,14 @@ public class HomepageFrame extends javax.swing.JFrame {
                 .addComponent(carpic4)
                 .addGap(18, 18, 18)
                 .addComponent(statusBn4, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(130, Short.MAX_VALUE))
+                .addContainerGap(10, Short.MAX_VALUE))
         );
 
         carTable.add(statusPn4, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 60, 150, 210));
 
         statusPn3.setBackground(new java.awt.Color(217, 217, 217));
+
+        carpic3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/car.png"))); // NOI18N
 
         statusBn3.setText("Status");
 
@@ -432,7 +446,7 @@ public class HomepageFrame extends javax.swing.JFrame {
             .addGroup(statusPn3Layout.createSequentialGroup()
                 .addGap(43, 43, 43)
                 .addComponent(carpic3)
-                .addContainerGap(107, Short.MAX_VALUE))
+                .addContainerGap(46, Short.MAX_VALUE))
             .addGroup(statusPn3Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(statusBn3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -445,12 +459,14 @@ public class HomepageFrame extends javax.swing.JFrame {
                 .addComponent(carpic3)
                 .addGap(18, 18, 18)
                 .addComponent(statusBn3, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(130, Short.MAX_VALUE))
+                .addContainerGap(10, Short.MAX_VALUE))
         );
 
         carTable.add(statusPn3, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 60, 150, 210));
 
         statusPn2.setBackground(new java.awt.Color(217, 217, 217));
+
+        carpic2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/car.png"))); // NOI18N
 
         statusBn2.setText("Status");
 
@@ -461,7 +477,7 @@ public class HomepageFrame extends javax.swing.JFrame {
             .addGroup(statusPn2Layout.createSequentialGroup()
                 .addGap(43, 43, 43)
                 .addComponent(carpic2)
-                .addContainerGap(107, Short.MAX_VALUE))
+                .addContainerGap(46, Short.MAX_VALUE))
             .addGroup(statusPn2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(statusBn2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -474,12 +490,14 @@ public class HomepageFrame extends javax.swing.JFrame {
                 .addComponent(carpic2)
                 .addGap(18, 18, 18)
                 .addComponent(statusBn2, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(130, Short.MAX_VALUE))
+                .addContainerGap(10, Short.MAX_VALUE))
         );
 
         carTable.add(statusPn2, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 60, 150, 210));
 
         statusPn1.setBackground(new java.awt.Color(217, 217, 217));
+
+        carpic1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/car.png"))); // NOI18N
 
         statusBn1.setText("Status");
 
@@ -490,7 +508,7 @@ public class HomepageFrame extends javax.swing.JFrame {
             .addGroup(statusPn1Layout.createSequentialGroup()
                 .addGap(43, 43, 43)
                 .addComponent(carpic1)
-                .addContainerGap(107, Short.MAX_VALUE))
+                .addContainerGap(46, Short.MAX_VALUE))
             .addGroup(statusPn1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(statusBn1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -503,12 +521,14 @@ public class HomepageFrame extends javax.swing.JFrame {
                 .addComponent(carpic1)
                 .addGap(18, 18, 18)
                 .addComponent(statusBn1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(130, Short.MAX_VALUE))
+                .addContainerGap(10, Short.MAX_VALUE))
         );
 
         carTable.add(statusPn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 60, 150, 210));
 
         statusPn0.setBackground(new java.awt.Color(217, 217, 217));
+
+        carpic0.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/car.png"))); // NOI18N
 
         statusBn0.setText("Status");
 
@@ -519,7 +539,7 @@ public class HomepageFrame extends javax.swing.JFrame {
             .addGroup(statusPn0Layout.createSequentialGroup()
                 .addGap(43, 43, 43)
                 .addComponent(carpic0)
-                .addContainerGap(107, Short.MAX_VALUE))
+                .addContainerGap(46, Short.MAX_VALUE))
             .addGroup(statusPn0Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(statusBn0, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -532,7 +552,7 @@ public class HomepageFrame extends javax.swing.JFrame {
                 .addComponent(carpic0)
                 .addGap(18, 18, 18)
                 .addComponent(statusBn0, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(130, Short.MAX_VALUE))
+                .addContainerGap(10, Short.MAX_VALUE))
         );
 
         carTable.add(statusPn0, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 150, 210));
@@ -586,6 +606,8 @@ public class HomepageFrame extends javax.swing.JFrame {
         txtNocar9.setForeground(new java.awt.Color(0, 0, 0));
         txtNocar9.setText("<No car repair>");
         carTable.add(txtNocar9, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 420, -1, -1));
+
+        tablepic.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/slot_car.png"))); // NOI18N
         carTable.add(tablepic, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         javax.swing.GroupLayout qTablePnLayout = new javax.swing.GroupLayout(qTablePn);
@@ -623,7 +645,7 @@ public class HomepageFrame extends javax.swing.JFrame {
         );
         mainPanelLayout.setVerticalGroup(
             mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(buttonPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 670, Short.MAX_VALUE)
+            .addComponent(buttonPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 680, Short.MAX_VALUE)
             .addComponent(qTablePn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
