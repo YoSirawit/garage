@@ -1,3 +1,6 @@
+
+import javax.swing.table.DefaultTableModel;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -14,6 +17,7 @@ public class ManageCarFrame extends javax.swing.JFrame {
      */
     public ManageCarFrame() {
         initComponents();
+        populateTable();
     }
 
     /**
@@ -31,27 +35,18 @@ public class ManageCarFrame extends javax.swing.JFrame {
         jTextField2 = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         MenuBar = new javax.swing.JPanel();
-        jPanel5 = new javax.swing.JPanel();
-        jTextField4 = new javax.swing.JTextField();
-        jPanel6 = new javax.swing.JPanel();
-        jTextField3 = new javax.swing.JTextField();
-        jPanel1 = new javax.swing.JPanel();
-        jTextField5 = new javax.swing.JTextField();
-        jPanel2 = new javax.swing.JPanel();
-        jTextField6 = new javax.swing.JTextField();
-        jPanel7 = new javax.swing.JPanel();
-        jTextField7 = new javax.swing.JTextField();
+        logPanel = new javax.swing.JPanel();
+        jToggleButton3 = new javax.swing.JToggleButton();
+        jButton2 = new javax.swing.JButton();
+        HomeButton = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
+        jButton6 = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
-        jPanel8 = new javax.swing.JPanel();
-        jDesktopPane1 = new javax.swing.JDesktopPane();
-        jProgressBar1 = new javax.swing.JProgressBar();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jToggleButton1 = new javax.swing.JToggleButton();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTable2 = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(1280, 720));
         setResizable(false);
 
         Header.setBackground(new java.awt.Color(242, 157, 0));
@@ -99,7 +94,8 @@ public class ManageCarFrame extends javax.swing.JFrame {
 
         Header.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1070, 0, 220, 50));
 
-        jButton1.setText("jButton1");
+        jButton1.setBackground(new java.awt.Color(255, 204, 153));
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/menu_icon_jing.png"))); // NOI18N
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -109,205 +105,124 @@ public class ManageCarFrame extends javax.swing.JFrame {
 
         getContentPane().add(Header, java.awt.BorderLayout.PAGE_START);
 
-        MenuBar.setBackground(new java.awt.Color(242, 157, 0));
+        MenuBar.setBackground(new java.awt.Color(255, 204, 102));
         MenuBar.setPreferredSize(new java.awt.Dimension(200, 670));
         MenuBar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel5.setPreferredSize(new java.awt.Dimension(200, 70));
+        javax.swing.GroupLayout logPanelLayout = new javax.swing.GroupLayout(logPanel);
+        logPanel.setLayout(logPanelLayout);
+        logPanelLayout.setHorizontalGroup(
+            logPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        logPanelLayout.setVerticalGroup(
+            logPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
 
-        jTextField4.setEditable(false);
-        jTextField4.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        jTextField4.setForeground(new java.awt.Color(255, 102, 0));
-        jTextField4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jTextField4.setText("HOME");
-        jTextField4.setToolTipText("");
-        jTextField4.setBorder(null);
-        jTextField4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jTextField4.addActionListener(new java.awt.event.ActionListener() {
+        MenuBar.add(logPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 580, 200, 70));
+
+        jToggleButton3.setText("sth only admin see");
+        jToggleButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField4ActionPerformed(evt);
+                jToggleButton3ActionPerformed(evt);
             }
         });
+        MenuBar.add(jToggleButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 500, 200, 70));
 
-        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
-        jPanel5.setLayout(jPanel5Layout);
-        jPanel5Layout.setHorizontalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTextField4, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
-        );
-        jPanel5Layout.setVerticalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTextField4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
-        );
-
-        MenuBar.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
-
-        jPanel6.setPreferredSize(new java.awt.Dimension(200, 70));
-
-        jTextField3.setEditable(false);
-        jTextField3.setBackground(new java.awt.Color(255, 102, 0));
-        jTextField3.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        jTextField3.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jTextField3.setText("MANAGEMENT");
-        jTextField3.setToolTipText("");
-        jTextField3.setBorder(null);
-        jTextField3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jTextField3.addActionListener(new java.awt.event.ActionListener() {
+        jButton2.setBackground(new java.awt.Color(255, 102, 0));
+        jButton2.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 24)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(255, 255, 255));
+        jButton2.setText("RECEIPT");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField3ActionPerformed(evt);
+                jButton2ActionPerformed(evt);
             }
         });
+        MenuBar.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 360, 220, 70));
 
-        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
-        jPanel6.setLayout(jPanel6Layout);
-        jPanel6Layout.setHorizontalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTextField3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
-        );
-        jPanel6Layout.setVerticalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTextField3, javax.swing.GroupLayout.Alignment.TRAILING)
-        );
+        HomeButton.setBackground(new java.awt.Color(255, 102, 0));
+        HomeButton.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 24)); // NOI18N
+        HomeButton.setForeground(new java.awt.Color(255, 255, 255));
+        HomeButton.setText("HOME");
+        HomeButton.setBorder(null);
+        HomeButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        HomeButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                HomeButtonActionPerformed(evt);
+            }
+        });
+        MenuBar.add(HomeButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 220, 70));
 
-        MenuBar.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, -1, -1));
+        jButton3.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 24)); // NOI18N
+        jButton3.setForeground(new java.awt.Color(255, 102, 0));
+        jButton3.setText("MANAGEMENT");
+        jButton3.setBorder(null);
+        jButton3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+        MenuBar.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 90, 220, 70));
 
-        jPanel1.setPreferredSize(new java.awt.Dimension(200, 70));
+        jButton5.setBackground(new java.awt.Color(255, 102, 0));
+        jButton5.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 24)); // NOI18N
+        jButton5.setForeground(new java.awt.Color(255, 255, 255));
+        jButton5.setText("EQUIPMENT");
+        jButton5.setBorder(null);
+        jButton5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+        MenuBar.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 180, 220, 70));
 
-        jTextField5.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        jTextField5.setForeground(new java.awt.Color(255, 102, 0));
-        jTextField5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jTextField5.setText("WAREHOUSE");
-        jTextField5.setBorder(null);
-        jTextField5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTextField5, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTextField5, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
-        );
-
-        MenuBar.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 180, -1, -1));
-
-        jPanel2.setPreferredSize(new java.awt.Dimension(200, 70));
-
-        jTextField6.setEditable(false);
-        jTextField6.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        jTextField6.setForeground(new java.awt.Color(255, 102, 0));
-        jTextField6.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jTextField6.setText("EQUIPMENT");
-        jTextField6.setToolTipText("");
-        jTextField6.setBorder(null);
-        jTextField6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTextField6, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTextField6, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
-        );
-
-        MenuBar.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 270, -1, -1));
-
-        jPanel7.setPreferredSize(new java.awt.Dimension(200, 70));
-
-        jTextField7.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        jTextField7.setForeground(new java.awt.Color(255, 102, 0));
-        jTextField7.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jTextField7.setText("COST");
-        jTextField7.setBorder(null);
-        jTextField7.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-
-        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
-        jPanel7.setLayout(jPanel7Layout);
-        jPanel7Layout.setHorizontalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTextField7, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
-        );
-        jPanel7Layout.setVerticalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTextField7, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
-        );
-
-        MenuBar.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 360, 200, -1));
+        jButton6.setBackground(new java.awt.Color(255, 102, 0));
+        jButton6.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 24)); // NOI18N
+        jButton6.setForeground(new java.awt.Color(255, 255, 255));
+        jButton6.setText("WAREHOUSE");
+        jButton6.setBorder(null);
+        jButton6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
+        MenuBar.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 270, 220, 70));
 
         getContentPane().add(MenuBar, java.awt.BorderLayout.LINE_START);
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
         jPanel3.setLayout(new java.awt.BorderLayout());
 
-        jPanel8.setBackground(new java.awt.Color(153, 102, 255));
-
-        javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
-        jPanel8.setLayout(jPanel8Layout);
-        jPanel8Layout.setHorizontalGroup(
-            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1090, Short.MAX_VALUE)
-        );
-        jPanel8Layout.setVerticalGroup(
-            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
-
-        jPanel3.add(jPanel8, java.awt.BorderLayout.PAGE_START);
-
-        jDesktopPane1.setBackground(new java.awt.Color(153, 204, 0));
-
-        jDesktopPane1.setLayer(jProgressBar1, javax.swing.JLayeredPane.DEFAULT_LAYER);
-
-        javax.swing.GroupLayout jDesktopPane1Layout = new javax.swing.GroupLayout(jDesktopPane1);
-        jDesktopPane1.setLayout(jDesktopPane1Layout);
-        jDesktopPane1Layout.setHorizontalGroup(
-            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jDesktopPane1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jProgressBar1, javax.swing.GroupLayout.PREFERRED_SIZE, 276, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jDesktopPane1Layout.setVerticalGroup(
-            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jDesktopPane1Layout.createSequentialGroup()
-                .addGap(91, 91, 91)
-                .addComponent(jProgressBar1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(10, Short.MAX_VALUE))
-        );
-
-        jPanel3.add(jDesktopPane1, java.awt.BorderLayout.LINE_START);
-
-        jRadioButton1.setText("jRadioButton1");
-        jPanel3.add(jRadioButton1, java.awt.BorderLayout.CENTER);
-
-        jToggleButton1.setText("jToggleButton1");
-        jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jToggleButton1ActionPerformed(evt);
-            }
-        });
-        jPanel3.add(jToggleButton1, java.awt.BorderLayout.LINE_END);
-
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        jTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null}
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "Title 1", "Title 2", "Title 3", "Title 4", "Title 5", "Title 6"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane2.setViewportView(jTable2);
 
-        jPanel3.add(jScrollPane1, java.awt.BorderLayout.PAGE_END);
+        jPanel3.add(jScrollPane2, java.awt.BorderLayout.CENTER);
 
         getContentPane().add(jPanel3, java.awt.BorderLayout.CENTER);
 
@@ -322,30 +237,56 @@ public class ManageCarFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField2ActionPerformed
 
-    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField3ActionPerformed
-
-    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField4ActionPerformed
-
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        if(MenuBar.isVisible()){
+        if (MenuBar.isVisible()) {
             MenuBar.setVisible(false);
-        }else{
+        } else {
             MenuBar.setVisible(true);
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
+    private void jToggleButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton3ActionPerformed
+        if (logPanel.isVisible()) {
+            logPanel.setVisible(false);
+        } else {
+            logPanel.setVisible(true);
+        }
+    }//GEN-LAST:event_jToggleButton3ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jToggleButton1ActionPerformed
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void HomeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HomeButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_HomeButtonActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton6ActionPerformed
 
     /**
      * @param args the command line arguments
      */
+    
+    public void populateTable(){
+        String columns[] = {"1", "2", "3", "4", "5", "6"};
+        String data[][] = {{"test"}
+            
+        };
+        DefaultTableModel model = new DefaultTableModel(data, columns);
+        jTable2.setModel(model);
+    }
+    
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -377,35 +318,27 @@ public class ManageCarFrame extends javax.swing.JFrame {
                 mcf.setVisible(true);
                 mcf.setSize(1280, 720);
                 mcf.setTitle("ดำรงรวยการช่าง");
-                
+
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Header;
+    private javax.swing.JButton HomeButton;
     private javax.swing.JPanel MenuBar;
     private javax.swing.JButton jButton1;
-    private javax.swing.JDesktopPane jDesktopPane1;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
-    private javax.swing.JPanel jPanel6;
-    private javax.swing.JPanel jPanel7;
-    private javax.swing.JPanel jPanel8;
-    private javax.swing.JProgressBar jProgressBar1;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTable jTable2;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
-    private javax.swing.JToggleButton jToggleButton1;
+    private javax.swing.JToggleButton jToggleButton3;
+    private javax.swing.JPanel logPanel;
     // End of variables declaration//GEN-END:variables
 }
