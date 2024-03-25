@@ -7,13 +7,16 @@ public class GarageController implements ActionListener {
     
     public GarageController(){
         this.gr = new Garage();
+        open();
     }
     
     public void open(){
         this.mcf = new ManageCarFrame();
     }
     
-    
+    public ManageCarFrame getManageCarFrame(){
+        return this.mcf;
+    }
     
     @Override
     public void actionPerformed(ActionEvent e) {

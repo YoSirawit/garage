@@ -11,6 +11,7 @@ public class MainController implements ActionListener{
     private GarageController gc;
     private RequestItemController ric;
     private LoginManager lm;
+    private JPanel homepage;
     
     public MainController(){
         lm = new LoginManager();
@@ -37,11 +38,18 @@ public class MainController implements ActionListener{
                 mainframe.dispose();
                 mainframe = new JFrame();
                 hc.getHomepageframe().getUsernameLabel().setText(lm.getAccount().getFirstName());
-                mainframe.setContentPane(hc.getHomepageframe().getContentPane());
+                hc.getHomepageframe().getCustomerQBN().addActionListener(this);
+                homepage = (JPanel) hc.getHomepageframe().getContentPane();
+                mainframe.add(homepage);    
                 mainframe.pack();
                 mainframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 mainframe.setVisible(true);
             }
-        }
+        }else if(e.getSource().equals(hc.getHomepageframe().getCustomerQBN())){
+                System.out.println("Change pages");
+                mainframe.setContentPane(gc.getManageCarFrame().getContentPane());
+//                mainframe.repaint();
+                
+            }
     }
 }

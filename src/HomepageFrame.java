@@ -43,10 +43,10 @@ public class HomepageFrame extends javax.swing.JFrame {
         mainPanel = new javax.swing.JPanel();
         buttonPanel = new javax.swing.JPanel();
         homeBn = new javax.swing.JToggleButton();
-        customerQbn = new javax.swing.JToggleButton();
         equipmentBn = new javax.swing.JToggleButton();
         warehouseBn = new javax.swing.JToggleButton();
         invoiceBn = new javax.swing.JToggleButton();
+        customerqbn = new javax.swing.JButton();
         qTablePn = new javax.swing.JPanel();
         txtStatusRepair = new javax.swing.JLabel();
         carTable = new javax.swing.JPanel();
@@ -136,9 +136,7 @@ public class HomepageFrame extends javax.swing.JFrame {
         buttonPanel.setMinimumSize(new java.awt.Dimension(200, 360));
         buttonPanel.setPreferredSize(new java.awt.Dimension(200, 360));
 
-        homeBn.setBackground(new java.awt.Color(255, 255, 255));
         homeBn.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        homeBn.setForeground(new java.awt.Color(0, 0, 0));
         homeBn.setSelected(true);
         homeBn.setText("หน้าหลัก");
         homeBn.setToolTipText("");
@@ -151,22 +149,8 @@ public class HomepageFrame extends javax.swing.JFrame {
             }
         });
 
-        customerQbn.setBackground(new java.awt.Color(255, 102, 0));
-        customerQbn.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        customerQbn.setForeground(new java.awt.Color(0, 0, 0));
-        customerQbn.setText("จัดการคิวรถ");
-        customerQbn.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
-        customerQbn.setBorderPainted(false);
-        customerQbn.setOpaque(true);
-        customerQbn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                customerQbnActionPerformed(evt);
-            }
-        });
-
         equipmentBn.setBackground(new java.awt.Color(255, 102, 0));
         equipmentBn.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        equipmentBn.setForeground(new java.awt.Color(0, 0, 0));
         equipmentBn.setText("เบิกอุปกรณ์");
         equipmentBn.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
         equipmentBn.setBorderPainted(false);
@@ -179,7 +163,6 @@ public class HomepageFrame extends javax.swing.JFrame {
 
         warehouseBn.setBackground(new java.awt.Color(255, 102, 0));
         warehouseBn.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        warehouseBn.setForeground(new java.awt.Color(0, 0, 0));
         warehouseBn.setText("คลังอุปกรณ์");
         warehouseBn.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
         warehouseBn.setBorderPainted(false);
@@ -192,7 +175,6 @@ public class HomepageFrame extends javax.swing.JFrame {
 
         invoiceBn.setBackground(new java.awt.Color(255, 102, 0));
         invoiceBn.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        invoiceBn.setForeground(new java.awt.Color(0, 0, 0));
         invoiceBn.setText("ใบเสร็จ");
         invoiceBn.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
         invoiceBn.setBorderPainted(false);
@@ -202,6 +184,13 @@ public class HomepageFrame extends javax.swing.JFrame {
                 invoiceBnActionPerformed(evt);
             }
         });
+
+        customerqbn.setBackground(new java.awt.Color(255, 102, 0));
+        customerqbn.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        customerqbn.setText("จัดการคิวรถ");
+        customerqbn.setMaximumSize(new java.awt.Dimension(134, 31));
+        customerqbn.setMinimumSize(new java.awt.Dimension(134, 31));
+        customerqbn.setPreferredSize(new java.awt.Dimension(134, 31));
 
         javax.swing.GroupLayout buttonPanelLayout = new javax.swing.GroupLayout(buttonPanel);
         buttonPanel.setLayout(buttonPanelLayout);
@@ -214,11 +203,11 @@ public class HomepageFrame extends javax.swing.JFrame {
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(warehouseBn, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(buttonPanelLayout.createSequentialGroup()
-                        .addGroup(buttonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(equipmentBn, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(invoiceBn, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(customerQbn, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(homeBn, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(buttonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(equipmentBn, javax.swing.GroupLayout.DEFAULT_SIZE, 210, Short.MAX_VALUE)
+                            .addComponent(invoiceBn, javax.swing.GroupLayout.DEFAULT_SIZE, 210, Short.MAX_VALUE)
+                            .addComponent(homeBn, javax.swing.GroupLayout.DEFAULT_SIZE, 210, Short.MAX_VALUE)
+                            .addComponent(customerqbn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -228,14 +217,14 @@ public class HomepageFrame extends javax.swing.JFrame {
                 .addGap(44, 44, 44)
                 .addComponent(homeBn, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(customerQbn, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(customerqbn, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(equipmentBn, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(warehouseBn, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(invoiceBn, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(164, Short.MAX_VALUE))
         );
 
         qTablePn.setBackground(new java.awt.Color(255, 255, 255));
@@ -558,52 +547,42 @@ public class HomepageFrame extends javax.swing.JFrame {
         carTable.add(statusPn0, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 150, 210));
 
         txtNocar0.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
-        txtNocar0.setForeground(new java.awt.Color(0, 0, 0));
         txtNocar0.setText("<No car repair>");
         carTable.add(txtNocar0, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 130, -1, -1));
 
         txtNocar1.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
-        txtNocar1.setForeground(new java.awt.Color(0, 0, 0));
         txtNocar1.setText("<No car repair>");
         carTable.add(txtNocar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 130, -1, -1));
 
         txtNocar2.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
-        txtNocar2.setForeground(new java.awt.Color(0, 0, 0));
         txtNocar2.setText("<No car repair>");
         carTable.add(txtNocar2, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 130, -1, -1));
 
         txtNocar3.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
-        txtNocar3.setForeground(new java.awt.Color(0, 0, 0));
         txtNocar3.setText("<No car repair>");
         carTable.add(txtNocar3, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 130, -1, -1));
 
         txtNocar4.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
-        txtNocar4.setForeground(new java.awt.Color(0, 0, 0));
         txtNocar4.setText("<No car repair>");
         carTable.add(txtNocar4, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 130, -1, -1));
 
         txtNocar5.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
-        txtNocar5.setForeground(new java.awt.Color(0, 0, 0));
         txtNocar5.setText("<No car repair>");
         carTable.add(txtNocar5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 420, -1, -1));
 
         txtNocar6.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
-        txtNocar6.setForeground(new java.awt.Color(0, 0, 0));
         txtNocar6.setText("<No car repair>");
         carTable.add(txtNocar6, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 420, -1, -1));
 
         txtNocar7.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
-        txtNocar7.setForeground(new java.awt.Color(0, 0, 0));
         txtNocar7.setText("<No car repair>");
         carTable.add(txtNocar7, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 420, -1, -1));
 
         txtNocar8.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
-        txtNocar8.setForeground(new java.awt.Color(0, 0, 0));
         txtNocar8.setText("<No car repair>");
         carTable.add(txtNocar8, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 420, -1, -1));
 
         txtNocar9.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
-        txtNocar9.setForeground(new java.awt.Color(0, 0, 0));
         txtNocar9.setText("<No car repair>");
         carTable.add(txtNocar9, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 420, -1, -1));
 
@@ -670,10 +649,6 @@ public class HomepageFrame extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void customerQbnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_customerQbnActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_customerQbnActionPerformed
-
     private void homeBnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homeBnActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_homeBnActionPerformed
@@ -733,6 +708,10 @@ public class HomepageFrame extends javax.swing.JFrame {
     public JLabel getUsernameLabel(){
         return this.jLabel1;
     }
+    
+    public JButton getCustomerQBN(){
+        return this.customerqbn;
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel buttonPanel;
@@ -747,7 +726,7 @@ public class HomepageFrame extends javax.swing.JFrame {
     private javax.swing.JLabel carpic7;
     private javax.swing.JLabel carpic8;
     private javax.swing.JLabel carpic9;
-    private javax.swing.JToggleButton customerQbn;
+    private javax.swing.JButton customerqbn;
     private javax.swing.JToggleButton equipmentBn;
     private javax.swing.JLabel garageName;
     private javax.swing.JPanel headPanel;
