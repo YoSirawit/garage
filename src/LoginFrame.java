@@ -23,7 +23,6 @@ public class LoginFrame extends javax.swing.JFrame {
         UsernameField = new javax.swing.JTextField();
         PasswordLabel = new javax.swing.JLabel();
         UsernameLabel = new javax.swing.JLabel();
-        CreateAcc = new javax.swing.JButton();
         LoginButton = new javax.swing.JButton();
         jPasswordField1 = new javax.swing.JPasswordField();
 
@@ -50,18 +49,6 @@ public class LoginFrame extends javax.swing.JFrame {
         UsernameLabel.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 24)); // NOI18N
         UsernameLabel.setText("Username");
 
-        CreateAcc.setBackground(new java.awt.Color(252, 252, 252));
-        CreateAcc.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
-        CreateAcc.setForeground(new java.awt.Color(146, 146, 146));
-        CreateAcc.setText("Create New Account");
-        CreateAcc.setToolTipText("Create New Account");
-        CreateAcc.setBorder(null);
-        CreateAcc.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CreateAccActionPerformed(evt);
-            }
-        });
-
         LoginButton.setBackground(new java.awt.Color(186, 186, 186));
         LoginButton.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 36)); // NOI18N
         LoginButton.setText("Login");
@@ -77,7 +64,6 @@ public class LoginFrame extends javax.swing.JFrame {
         jPasswordField1.setToolTipText("Enter Password");
         jPasswordField1.setBorder(null);
         jPasswordField1.setMinimumSize(new java.awt.Dimension(64, 25));
-        jPasswordField1.setPreferredSize(new java.awt.Dimension(64, 29));
         jPasswordField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jPasswordField1ActionPerformed(evt);
@@ -89,21 +75,17 @@ public class LoginFrame extends javax.swing.JFrame {
         GrayBGLayout.setHorizontalGroup(
             GrayBGLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(GrayBGLayout.createSequentialGroup()
-                .addGroup(GrayBGLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(GrayBGLayout.createSequentialGroup()
-                        .addGap(32, 32, 32)
-                        .addGroup(GrayBGLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(UsernameLabel)
-                            .addComponent(UsernameField)
-                            .addComponent(PasswordLabel)
-                            .addComponent(jPasswordField1, javax.swing.GroupLayout.DEFAULT_SIZE, 342, Short.MAX_VALUE)))
-                    .addGroup(GrayBGLayout.createSequentialGroup()
-                        .addGap(93, 93, 93)
-                        .addComponent(LoginButton, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(32, 32, 32)
+                .addGroup(GrayBGLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(UsernameLabel)
+                    .addComponent(UsernameField)
+                    .addComponent(PasswordLabel)
+                    .addComponent(jPasswordField1, javax.swing.GroupLayout.DEFAULT_SIZE, 342, Short.MAX_VALUE))
                 .addContainerGap(32, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, GrayBGLayout.createSequentialGroup()
-                .addComponent(CreateAcc, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(116, 116, 116))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(LoginButton, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(93, 93, 93))
         );
         GrayBGLayout.setVerticalGroup(
             GrayBGLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -116,11 +98,9 @@ public class LoginFrame extends javax.swing.JFrame {
                 .addComponent(PasswordLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(32, 32, 32)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 61, Short.MAX_VALUE)
                 .addComponent(LoginButton, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(CreateAcc, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(37, Short.MAX_VALUE))
+                .addGap(56, 56, 56))
         );
 
         javax.swing.GroupLayout WhiteBGLayout = new javax.swing.GroupLayout(WhiteBG);
@@ -170,13 +150,6 @@ public class LoginFrame extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void CreateAccActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CreateAccActionPerformed
-        // TODO add your handling code here:
-        CreateAccFrame Sign = new CreateAccFrame();
-        Sign.setVisible(true);
-        close();
-    }//GEN-LAST:event_CreateAccActionPerformed
-
     private void LoginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginButtonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_LoginButtonActionPerformed
@@ -213,7 +186,6 @@ public class LoginFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton CreateAcc;
     private javax.swing.JPanel GrayBG;
     private javax.swing.JButton LoginButton;
     private javax.swing.JLabel LoginLabel;
