@@ -1,15 +1,13 @@
 public class HomepageSystem {
-    private HomepageFrame hpf;
     private Garage slot;
     private Car car;
     
     public HomepageSystem(){
-        hpf = new HomepageFrame();
         slot = new Garage();
         car = new Car();
     }
     
-    public void checkslot(){
+    public void checkslot(HomepageFrame hpf){
         for (int i=0; i<=9; i++){
             if (slot.getCh(i) != null){
                 car = slot.getCh(i).getCar();
@@ -38,5 +36,9 @@ public class HomepageSystem {
                 break;
         }
         return statustxt;
+    }
+    
+    public static void main(String[] args) {
+        new HomepageSystem();
     }
 }
