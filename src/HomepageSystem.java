@@ -9,7 +9,7 @@ public class HomepageSystem {
     
     public void checkslot(HomepageFrame hpf){
         for (int i=0; i<=9; i++){
-            if (slot.getCh(i) != null){
+            if (slot.getCh(i).getCar() != null){
                 car = slot.getCh(i).getCar();
                 hpf.pnArr[i].setVisible(true);
                 hpf.bnArr[i].setText(this.status(car.getStatus()));

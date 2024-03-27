@@ -10,18 +10,22 @@ public class Car {
     private String carID;
     private int status;
     private Bill bill;
+    private String date_in;
+    private String date_out;
     
     public Car(){
-        this("", "", "", "", 0);
+        this("", "", "", "", 0, "0000-00-0", "0000-00-00");
     }
     
-    public Car(String carOwner, String brand, String carName, String carID, int status){
+    public Car(String carOwner, String brand, String carName, String carID, int status, String date_in, String date_out){
         this.carName = carName;
         this.carOwner = carOwner;
         this.brand = brand;
         this.carID = carID;
         this.status = status;
         this.bill = null;
+        this.date_in = date_in;
+        this.date_out = date_out;
     }
     
     public void setCarOwner(String owner){
@@ -61,4 +65,11 @@ public class Car {
     public Bill getBill(){
         return this.bill;
     }
+    public String getDateIn(){
+        return this.date_in;
+    }
+    public String getDateOut(){
+        return this.date_out;
+    }
+    
 }

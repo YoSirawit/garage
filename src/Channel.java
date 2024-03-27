@@ -1,6 +1,10 @@
 
 public class Channel {
     private Car car;
+    
+    public Channel(){
+        this(null);
+    }
     public Channel(Car car) {
         this.car = car;
     }

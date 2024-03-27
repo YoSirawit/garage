@@ -1,4 +1,5 @@
 import java.sql.*;
+import java.util.ArrayList;
 
 public class Garage extends Online {
     private String name;
@@ -6,10 +7,20 @@ public class Garage extends Online {
     
     public Garage(){
         ch = new Channel[10];
+        ch[0] = new Channel();
+        ch[1] = new Channel();
+        ch[2] = new Channel();
+        ch[3] = new Channel();
+        ch[4] = new Channel();
+        ch[5] = new Channel();
+        ch[6] = new Channel();
+        ch[7] = new Channel();
+        ch[8] = new Channel();
+        ch[9] = new Channel();
         try{
            ResultSet result = this.getStatement().executeQuery("select * from car_list");
            while (result.next()){
-               Car car = new Car(result.getString(2), result.getString(3), result.getString(4), result.getString(5), result.getInt(6));
+               Car car = new Car(result.getString(2), result.getString(3), result.getString(4), result.getString(5), result.getInt(6), result.getString(8), result.getString(9));
                int channel = result.getInt(7);
                switch (channel){
                     case 1 : ch[0].addCar(car);
@@ -70,6 +81,10 @@ public class Garage extends Online {
     
     public Channel getCh(int index){
         return this.ch[index];
+    }
+    
+    public Channel[] getAllCh(){
+        return this.ch;
     }
     
 }

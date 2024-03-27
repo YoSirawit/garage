@@ -18,7 +18,7 @@ public class ManageCarFrame extends javax.swing.JFrame {
      */
     public ManageCarFrame() {
         initComponents();
-        populateTable();
+//        populateTable();
     }
 
     /**
@@ -201,27 +201,46 @@ public class ManageCarFrame extends javax.swing.JFrame {
 
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null}
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null}
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4", "Title 5", "Title 6"
+                "ch", "ID", "brand", "name", "status", "date_in", "date_out"
             }
-        ));
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Integer.class, java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false, false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         jScrollPane2.setViewportView(jTable2);
+        if (jTable2.getColumnModel().getColumnCount() > 0) {
+            jTable2.getColumnModel().getColumn(0).setPreferredWidth(3);
+            jTable2.getColumnModel().getColumn(1).setPreferredWidth(2);
+        }
 
         jPanel3.add(jScrollPane2, java.awt.BorderLayout.CENTER);
 
@@ -280,7 +299,7 @@ public class ManageCarFrame extends javax.swing.JFrame {
      */
     
     public void populateTable(){
-        String columns[] = {"1", "2", "3", "4", "5", "6"};
+        String columns[] = {"ID", "ch", "reg_number", "brand", "name", "status", "date_in", "date_out"};
         String data[][] = {{"test"}
             
         };
@@ -338,6 +357,10 @@ public class ManageCarFrame extends javax.swing.JFrame {
     
     public JButton getReceiptButton(){
         return this.receipt_bn;
+    }
+    
+    public JTable getTable(){
+        return this.jTable2;
     }
     
 
