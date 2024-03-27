@@ -12,8 +12,9 @@ public class GarageController extends Online implements ActionListener {
         this.mcf = new ManageCarFrame();
         
         for(int i=0; i<gr.getAllCh().length; i++){
-            if(gr.getCh(i) != null && gr.getCh(i).getCar() != null){
-                Channel cur_channel = gr.getCh(i);
+            Channel cur_channel = gr.getCh(i);
+            mcf.getTable().setValueAt(i+1, i, 0);
+            if(gr.getCh(i).getCar() != null){
                 Car tmp_car = cur_channel.getCar();
                 String id = tmp_car.getCarID();
                 String brand = tmp_car.getBrand();
@@ -22,7 +23,6 @@ public class GarageController extends Online implements ActionListener {
                 String date_in = tmp_car.getDateIn();
                 String date_out = tmp_car.getDateOut();
 
-                mcf.getTable().setValueAt(i+1, i, 0);
                 mcf.getTable().setValueAt(id, i, 1);
                 mcf.getTable().setValueAt(brand, i, 2);
                 mcf.getTable().setValueAt(name, i, 3);
