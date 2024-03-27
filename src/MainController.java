@@ -54,7 +54,7 @@ public class MainController implements ActionListener{
                 hc.getHomepageframe().getStuffmanageButton().addActionListener(this);
                 homepage = (JPanel) hc.getHomepageframe().getContentPane();
                 mainframe.add(homepage);    
-                mainframe.pack();
+                mainframe.setSize(1280, 720);
                 mainframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 mainframe.setVisible(true);
             }
