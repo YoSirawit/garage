@@ -248,8 +248,6 @@ public class CreateAccFrame extends javax.swing.JFrame{
 
     private void BackButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackButtonActionPerformed
         close();
-        LoginFrame Login = new LoginFrame();
-        Login.setVisible(true);
     }//GEN-LAST:event_BackButtonActionPerformed
 
     private void CreateAccButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CreateAccButtonActionPerformed

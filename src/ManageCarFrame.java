@@ -1,5 +1,6 @@
 
 import javax.swing.table.DefaultTableModel;
+import javax.swing.*;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -37,11 +38,11 @@ public class ManageCarFrame extends javax.swing.JFrame {
         MenuBar = new javax.swing.JPanel();
         logPanel = new javax.swing.JPanel();
         jToggleButton3 = new javax.swing.JToggleButton();
-        jButton2 = new javax.swing.JButton();
+        receipt_bn = new javax.swing.JButton();
         HomeButton = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
+        equipment_bn = new javax.swing.JButton();
+        warehouse_bn = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable2 = new javax.swing.JTable();
@@ -130,16 +131,16 @@ public class ManageCarFrame extends javax.swing.JFrame {
         });
         MenuBar.add(jToggleButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 500, 200, 70));
 
-        jButton2.setBackground(new java.awt.Color(255, 102, 0));
-        jButton2.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 24)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jButton2.setText("RECEIPT");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        receipt_bn.setBackground(new java.awt.Color(255, 102, 0));
+        receipt_bn.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 24)); // NOI18N
+        receipt_bn.setForeground(new java.awt.Color(255, 255, 255));
+        receipt_bn.setText("RECEIPT");
+        receipt_bn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                receipt_bnActionPerformed(evt);
             }
         });
-        MenuBar.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 360, 220, 70));
+        MenuBar.add(receipt_bn, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 360, 220, 70));
 
         HomeButton.setBackground(new java.awt.Color(255, 102, 0));
         HomeButton.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 24)); // NOI18N
@@ -167,31 +168,31 @@ public class ManageCarFrame extends javax.swing.JFrame {
         });
         MenuBar.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 90, 220, 70));
 
-        jButton5.setBackground(new java.awt.Color(255, 102, 0));
-        jButton5.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 24)); // NOI18N
-        jButton5.setForeground(new java.awt.Color(255, 255, 255));
-        jButton5.setText("EQUIPMENT");
-        jButton5.setBorder(null);
-        jButton5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
+        equipment_bn.setBackground(new java.awt.Color(255, 102, 0));
+        equipment_bn.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 24)); // NOI18N
+        equipment_bn.setForeground(new java.awt.Color(255, 255, 255));
+        equipment_bn.setText("EQUIPMENT");
+        equipment_bn.setBorder(null);
+        equipment_bn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        equipment_bn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+                equipment_bnActionPerformed(evt);
             }
         });
-        MenuBar.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 180, 220, 70));
+        MenuBar.add(equipment_bn, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 180, 220, 70));
 
-        jButton6.setBackground(new java.awt.Color(255, 102, 0));
-        jButton6.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 24)); // NOI18N
-        jButton6.setForeground(new java.awt.Color(255, 255, 255));
-        jButton6.setText("WAREHOUSE");
-        jButton6.setBorder(null);
-        jButton6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
+        warehouse_bn.setBackground(new java.awt.Color(255, 102, 0));
+        warehouse_bn.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 24)); // NOI18N
+        warehouse_bn.setForeground(new java.awt.Color(255, 255, 255));
+        warehouse_bn.setText("WAREHOUSE");
+        warehouse_bn.setBorder(null);
+        warehouse_bn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        warehouse_bn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
+                warehouse_bnActionPerformed(evt);
             }
         });
-        MenuBar.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 270, 220, 70));
+        MenuBar.add(warehouse_bn, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 270, 220, 70));
 
         getContentPane().add(MenuBar, java.awt.BorderLayout.LINE_START);
 
@@ -254,9 +255,9 @@ public class ManageCarFrame extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jToggleButton3ActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void receipt_bnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_receipt_bnActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_receipt_bnActionPerformed
 
     private void HomeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HomeButtonActionPerformed
         // TODO add your handling code here:
@@ -266,13 +267,13 @@ public class ManageCarFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+    private void equipment_bnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_equipment_bnActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton5ActionPerformed
+    }//GEN-LAST:event_equipment_bnActionPerformed
 
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+    private void warehouse_bnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_warehouse_bnActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton6ActionPerformed
+    }//GEN-LAST:event_warehouse_bnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -323,16 +324,30 @@ public class ManageCarFrame extends javax.swing.JFrame {
         });
     }
     
+    public JButton getHomeButton(){
+        return this.HomeButton;
+    }
+    
+    public JButton getEquipmentButton(){
+        return this.equipment_bn;
+    }
+    
+    public JButton getWarehouseButton(){
+        return this.warehouse_bn;
+    }
+    
+    public JButton getReceiptButton(){
+        return this.receipt_bn;
+    }
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Header;
     private javax.swing.JButton HomeButton;
     private javax.swing.JPanel MenuBar;
+    private javax.swing.JButton equipment_bn;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane2;
@@ -341,5 +356,7 @@ public class ManageCarFrame extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField2;
     private javax.swing.JToggleButton jToggleButton3;
     private javax.swing.JPanel logPanel;
+    private javax.swing.JButton receipt_bn;
+    private javax.swing.JButton warehouse_bn;
     // End of variables declaration//GEN-END:variables
 }

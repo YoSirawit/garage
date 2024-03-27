@@ -336,6 +336,26 @@ public class AccountManageFrame extends javax.swing.JFrame {
             }
         });
     }
+    
+    public JButton getHomeButton(){
+        return this.HomeButton;
+    }
+    
+    public JButton getManagementButton(){
+        return this.CustomButton;
+    }
+    
+    public JButton getEquipmentButton(){
+        return this.EquipmentButton;
+    }
+    
+    public JButton getWarehouseButton(){
+        return this.WarehouseButton;
+    }
+    
+    public JButton getReceiptButton(){
+        return this.InvoiceButton;
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton AccountButton;

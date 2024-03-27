@@ -21,6 +21,17 @@ public class MainController implements ActionListener{
         wpc = new WarehousePageController();
         gc = new GarageController();
         ric = new RequestItemController();
+        
+        gc.getManageCarFrame().getHomeButton().addActionListener(this);
+        gc.getManageCarFrame().getWarehouseButton().addActionListener(this);
+        gc.getManageCarFrame().getReceiptButton().addActionListener(this);
+        gc.getManageCarFrame().getEquipmentButton().addActionListener(this);
+        
+        spc.getAccountFrame().getHomeButton().addActionListener(this);
+        spc.getAccountFrame().getManagementButton().addActionListener(this);
+        spc.getAccountFrame().getEquipmentButton().addActionListener(this);
+        spc.getAccountFrame().getWarehouseButton().addActionListener(this);
+        spc.getAccountFrame().getReceiptButton().addActionListener(this);
 
         mainframe = new JFrame();
         mainframe.setContentPane(lpc.getLoginFrame().getContentPane());
@@ -33,23 +44,31 @@ public class MainController implements ActionListener{
 
     @Override
     public void actionPerformed(ActionEvent e) {
+        //if user press login button
         if(e.getSource().equals(lpc.getLoginFrame().getLoginButton())){
             if(lm.login(lpc.getLoginFrame().getUsername(), lpc.getLoginFrame().getPassword())){
                 mainframe.dispose();
                 mainframe = new JFrame();
                 hc.getHomepageframe().getUsernameLabel().setText(lm.getAccount().getFirstName());
-                hc.getHomepageframe().getCustomerQBN().addActionListener(this);
+                hc.getHomepageframe().getManagementButton().addActionListener(this);
+                hc.getHomepageframe().getStuffmanageButton().addActionListener(this);
                 homepage = (JPanel) hc.getHomepageframe().getContentPane();
                 mainframe.add(homepage);    
                 mainframe.pack();
                 mainframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 mainframe.setVisible(true);
             }
-        }else if(e.getSource().equals(hc.getHomepageframe().getCustomerQBN())){
-                System.out.println("Change pages");
-                mainframe.setContentPane(gc.getManageCarFrame().getContentPane());
-//                mainframe.repaint();
-                
-            }
+        //if user press management button
+        }else if(e.getSource().equals(hc.getHomepageframe().getManagementButton()) ||
+                e.getSource().equals(spc.getAccountFrame().getManagementButton())){
+            mainframe.setContentPane(gc.getManageCarFrame().getContentPane());
+        // if user press home button
+        }else if(e.getSource().equals(gc.getManageCarFrame().getHomeButton()) ||
+                e.getSource().equals(spc.getAccountFrame().getHomeButton())){
+            mainframe.setContentPane(hc.getHomepageframe().getContentPane());
+        // if user press stuff management button    
+        }else if(e.getSource().equals(hc.getHomepageframe().getStuffmanageButton())){
+            mainframe.setContentPane(spc.getAccountFrame().getContentPane());
+        }
     }
 }
