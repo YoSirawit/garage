@@ -37,8 +37,4 @@ public class HomepageSystem {
         }
         return statustxt;
     }
-    
-    public static void main(String[] args) {
-        new HomepageSystem();
-    }
 }
