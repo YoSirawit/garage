@@ -1,30 +1,19 @@
-import java.net.URL;
 import javax.swing.*;
 public class HomepageFrame extends javax.swing.JFrame {
     protected JPanel[] pnArr;
     protected JButton[] bnArr;
+    private HomepageSystem hps;
     /**
      * Creates new form HomePageFrame
      */
     public HomepageFrame(){
         initComponents();
+        hps = new HomepageSystem();
         
         pnArr = new JPanel[]{statusPn0, statusPn1, statusPn2, statusPn3, statusPn4, statusPn5, statusPn6, statusPn7, statusPn8, statusPn9};
         bnArr = new JButton[]{statusBn0, statusBn1, statusBn2, statusBn3, statusBn4, statusBn5, statusBn6, statusBn7, statusBn8, statusBn9};
         
-//        ImageIcon icon = new ImageIcon(HomepageFrame.class.getResource("/TestIcon/car.png"));
-//        ImageIcon slotpic = new ImageIcon(HomepageFrame.class.getResource("/TestIcon/slot_car.png"));
-//        this.tablepic.setIcon(slotpic);
-//        this.carpic0.setIcon(icon);
-//        this.carpic1.setIcon(icon);
-//        this.carpic2.setIcon(icon);
-//        this.carpic3.setIcon(icon);
-//        this.carpic4.setIcon(icon);
-//        this.carpic5.setIcon(icon);
-//        this.carpic6.setIcon(icon);
-//        this.carpic7.setIcon(icon);
-//        this.carpic8.setIcon(icon);
-//        this.carpic9.setIcon(icon);
+        hps.checkslot(this);
     }
 
     /**
@@ -36,19 +25,22 @@ public class HomepageFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        headPanel = new javax.swing.JPanel();
-        jPanel3 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        garageName = new javax.swing.JLabel();
-        mainPanel = new javax.swing.JPanel();
-        buttonPanel = new javax.swing.JPanel();
-        homeBn = new javax.swing.JToggleButton();
-        equipmentBn = new javax.swing.JToggleButton();
-        warehouseBn = new javax.swing.JToggleButton();
-        invoiceBn = new javax.swing.JToggleButton();
+        Header = new javax.swing.JPanel();
+        jTextField1 = new javax.swing.JTextField();
+        jPanel4 = new javax.swing.JPanel();
+        jTextField2 = new javax.swing.JTextField();
+        jButton1 = new javax.swing.JButton();
+        MenuBar = new javax.swing.JPanel();
+        jButton2 = new javax.swing.JButton();
+        HomeButton = new javax.swing.JButton();
         customerqbn = new javax.swing.JButton();
-        qTablePn = new javax.swing.JPanel();
-        txtStatusRepair = new javax.swing.JLabel();
+        jButton5 = new javax.swing.JButton();
+        jButton6 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
+        mainPanel = new javax.swing.JPanel();
+        jPanel5 = new javax.swing.JPanel();
+        jPanel3 = new javax.swing.JPanel();
+        txtStatusRepair2 = new javax.swing.JLabel();
         carTable = new javax.swing.JPanel();
         statusPn9 = new javax.swing.JPanel();
         carpic9 = new javax.swing.JLabel();
@@ -97,141 +89,153 @@ public class HomepageFrame extends javax.swing.JFrame {
         setBackground(new java.awt.Color(0, 0, 0));
         setResizable(false);
 
-        headPanel.setBackground(new java.awt.Color(242, 157, 0));
-        headPanel.setMinimumSize(new java.awt.Dimension(1290, 50));
-        headPanel.setPreferredSize(new java.awt.Dimension(1290, 50));
-        headPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        Header.setBackground(new java.awt.Color(242, 157, 0));
+        Header.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        Header.setPreferredSize(new java.awt.Dimension(1280, 50));
+        Header.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel3.setPreferredSize(new java.awt.Dimension(200, 50));
+        jTextField1.setEditable(false);
+        jTextField1.setBackground(new java.awt.Color(242, 157, 0));
+        jTextField1.setFont(new java.awt.Font("IrisUPC", 3, 48)); // NOI18N
+        jTextField1.setForeground(new java.awt.Color(255, 255, 255));
+        jTextField1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextField1.setText("ดำรงรวยการช่าง ");
+        jTextField1.setBorder(null);
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
+            }
+        });
+        Header.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 0, 250, 50));
 
-        jLabel1.setText("Username");
+        jTextField2.setEditable(false);
+        jTextField2.setForeground(new java.awt.Color(242, 157, 0));
+        jTextField2.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        jTextField2.setText("@USERNAME");
+        jTextField2.setBorder(null);
+        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField2ActionPerformed(evt);
+            }
+        });
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addContainerGap(29, Short.MAX_VALUE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(66, 66, 66))
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(15, 15, 15)
-                .addComponent(jLabel1)
-                .addContainerGap(19, Short.MAX_VALUE))
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jTextField2, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
         );
 
-        headPanel.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1090, 0, -1, -1));
+        Header.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1070, 0, 220, 50));
 
-        garageName.setFont(new java.awt.Font("IrisUPC", 3, 36)); // NOI18N
-        garageName.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        garageName.setText("ดำรงรวยการช่าง ");
-        headPanel.add(garageName, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 220, 50));
-
-        mainPanel.setBackground(new java.awt.Color(255, 255, 255));
-
-        buttonPanel.setBackground(new java.awt.Color(255, 194, 136));
-        buttonPanel.setMinimumSize(new java.awt.Dimension(200, 360));
-        buttonPanel.setPreferredSize(new java.awt.Dimension(200, 360));
-
-        homeBn.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        homeBn.setSelected(true);
-        homeBn.setText("หน้าหลัก");
-        homeBn.setToolTipText("");
-        homeBn.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
-        homeBn.setBorderPainted(false);
-        homeBn.setOpaque(true);
-        homeBn.addActionListener(new java.awt.event.ActionListener() {
+        jButton1.setBackground(new java.awt.Color(255, 204, 153));
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/menu_icon_jing.png"))); // NOI18N
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                homeBnActionPerformed(evt);
+                jButton1ActionPerformed(evt);
             }
         });
+        Header.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 60, 50));
 
-        equipmentBn.setBackground(new java.awt.Color(255, 102, 0));
-        equipmentBn.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        equipmentBn.setText("เบิกอุปกรณ์");
-        equipmentBn.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
-        equipmentBn.setBorderPainted(false);
-        equipmentBn.setOpaque(true);
-        equipmentBn.addActionListener(new java.awt.event.ActionListener() {
+        getContentPane().add(Header, java.awt.BorderLayout.PAGE_START);
+
+        MenuBar.setBackground(new java.awt.Color(255, 204, 102));
+        MenuBar.setPreferredSize(new java.awt.Dimension(200, 670));
+        MenuBar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jButton2.setBackground(new java.awt.Color(255, 102, 0));
+        jButton2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(255, 255, 255));
+        jButton2.setText("จัดการพนักงาน");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                equipmentBnActionPerformed(evt);
+                jButton2ActionPerformed(evt);
             }
         });
+        MenuBar.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 530, 220, 70));
 
-        warehouseBn.setBackground(new java.awt.Color(255, 102, 0));
-        warehouseBn.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        warehouseBn.setText("คลังอุปกรณ์");
-        warehouseBn.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
-        warehouseBn.setBorderPainted(false);
-        warehouseBn.setOpaque(true);
-        warehouseBn.addActionListener(new java.awt.event.ActionListener() {
+        HomeButton.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        HomeButton.setForeground(new java.awt.Color(255, 102, 0));
+        HomeButton.setText("หน้าโฮม");
+        HomeButton.setBorder(null);
+        HomeButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        HomeButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                warehouseBnActionPerformed(evt);
+                HomeButtonActionPerformed(evt);
             }
         });
-
-        invoiceBn.setBackground(new java.awt.Color(255, 102, 0));
-        invoiceBn.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        invoiceBn.setText("ใบเสร็จ");
-        invoiceBn.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
-        invoiceBn.setBorderPainted(false);
-        invoiceBn.setOpaque(true);
-        invoiceBn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                invoiceBnActionPerformed(evt);
-            }
-        });
+        MenuBar.add(HomeButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 30, 220, 70));
 
         customerqbn.setBackground(new java.awt.Color(255, 102, 0));
-        customerqbn.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        customerqbn.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        customerqbn.setForeground(new java.awt.Color(255, 255, 255));
         customerqbn.setText("จัดการคิวรถ");
-        customerqbn.setMaximumSize(new java.awt.Dimension(134, 31));
-        customerqbn.setMinimumSize(new java.awt.Dimension(134, 31));
-        customerqbn.setPreferredSize(new java.awt.Dimension(134, 31));
+        customerqbn.setBorder(null);
+        customerqbn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        customerqbn.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        customerqbn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                customerqbnActionPerformed(evt);
+            }
+        });
+        MenuBar.add(customerqbn, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 130, 220, 70));
 
-        javax.swing.GroupLayout buttonPanelLayout = new javax.swing.GroupLayout(buttonPanel);
-        buttonPanel.setLayout(buttonPanelLayout);
-        buttonPanelLayout.setHorizontalGroup(
-            buttonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(buttonPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(buttonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, buttonPanelLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(warehouseBn, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(buttonPanelLayout.createSequentialGroup()
-                        .addGroup(buttonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(equipmentBn, javax.swing.GroupLayout.DEFAULT_SIZE, 210, Short.MAX_VALUE)
-                            .addComponent(invoiceBn, javax.swing.GroupLayout.DEFAULT_SIZE, 210, Short.MAX_VALUE)
-                            .addComponent(homeBn, javax.swing.GroupLayout.DEFAULT_SIZE, 210, Short.MAX_VALUE)
-                            .addComponent(customerqbn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
-        );
-        buttonPanelLayout.setVerticalGroup(
-            buttonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(buttonPanelLayout.createSequentialGroup()
-                .addGap(44, 44, 44)
-                .addComponent(homeBn, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(customerqbn, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(equipmentBn, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(warehouseBn, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(invoiceBn, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(164, Short.MAX_VALUE))
-        );
+        jButton5.setBackground(new java.awt.Color(255, 102, 0));
+        jButton5.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jButton5.setForeground(new java.awt.Color(255, 255, 255));
+        jButton5.setText("เบิกอุปกรณ์");
+        jButton5.setBorder(null);
+        jButton5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+        MenuBar.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 230, 220, 70));
 
-        qTablePn.setBackground(new java.awt.Color(255, 255, 255));
+        jButton6.setBackground(new java.awt.Color(255, 102, 0));
+        jButton6.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jButton6.setForeground(new java.awt.Color(255, 255, 255));
+        jButton6.setText("คลังอุปกรณ์");
+        jButton6.setToolTipText("");
+        jButton6.setBorder(null);
+        jButton6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
+        MenuBar.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 330, 220, 70));
 
-        txtStatusRepair.setBackground(new java.awt.Color(0, 0, 0));
-        txtStatusRepair.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        txtStatusRepair.setText("สถานะการซ่อมรถ");
+        jButton4.setBackground(new java.awt.Color(255, 102, 0));
+        jButton4.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jButton4.setForeground(new java.awt.Color(255, 255, 255));
+        jButton4.setText("ใบเสร็จ");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+        MenuBar.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 430, 220, 70));
+
+        getContentPane().add(MenuBar, java.awt.BorderLayout.LINE_START);
+
+        mainPanel.setBackground(new java.awt.Color(255, 255, 255));
+        mainPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel5.setLayout(new javax.swing.BoxLayout(jPanel5, javax.swing.BoxLayout.Y_AXIS));
+
+        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
+
+        txtStatusRepair2.setBackground(new java.awt.Color(0, 0, 0));
+        txtStatusRepair2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        txtStatusRepair2.setText("สถานะการซ่อมรถ");
 
         carTable.setBackground(new java.awt.Color(204, 204, 204));
         carTable.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -589,81 +593,83 @@ public class HomepageFrame extends javax.swing.JFrame {
         tablepic.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/slot_car.png"))); // NOI18N
         carTable.add(tablepic, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
-        javax.swing.GroupLayout qTablePnLayout = new javax.swing.GroupLayout(qTablePn);
-        qTablePn.setLayout(qTablePnLayout);
-        qTablePnLayout.setHorizontalGroup(
-            qTablePnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(qTablePnLayout.createSequentialGroup()
-                .addGap(430, 430, 430)
-                .addComponent(txtStatusRepair)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, qTablePnLayout.createSequentialGroup()
-                .addContainerGap(38, Short.MAX_VALUE)
-                .addComponent(carTable, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(17, 17, 17))
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(457, 457, 457)
+                .addComponent(txtStatusRepair2)
+                .addContainerGap(900, Short.MAX_VALUE))
+            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                    .addContainerGap(61, Short.MAX_VALUE)
+                    .addComponent(carTable, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(479, Short.MAX_VALUE)))
         );
-        qTablePnLayout.setVerticalGroup(
-            qTablePnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, qTablePnLayout.createSequentialGroup()
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(14, 14, 14)
-                .addComponent(txtStatusRepair)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(carTable, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(65, Short.MAX_VALUE))
+                .addComponent(txtStatusRepair2)
+                .addContainerGap(627, Short.MAX_VALUE))
+            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                    .addContainerGap(55, Short.MAX_VALUE)
+                    .addComponent(carTable, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(55, Short.MAX_VALUE)))
         );
 
-        javax.swing.GroupLayout mainPanelLayout = new javax.swing.GroupLayout(mainPanel);
-        mainPanel.setLayout(mainPanelLayout);
-        mainPanelLayout.setHorizontalGroup(
-            mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(mainPanelLayout.createSequentialGroup()
-                .addComponent(buttonPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(qTablePn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
-        mainPanelLayout.setVerticalGroup(
-            mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(buttonPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 680, Short.MAX_VALUE)
-            .addComponent(qTablePn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
+        jPanel5.add(jPanel3);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(mainPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(headPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 1280, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(headPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(mainPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+        mainPanel.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 670));
+
+        getContentPane().add(mainPanel, java.awt.BorderLayout.CENTER);
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void homeBnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homeBnActionPerformed
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_homeBnActionPerformed
+    }//GEN-LAST:event_jTextField1ActionPerformed
 
-    private void invoiceBnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_invoiceBnActionPerformed
+    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_invoiceBnActionPerformed
+    }//GEN-LAST:event_jTextField2ActionPerformed
 
-    private void equipmentBnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_equipmentBnActionPerformed
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_equipmentBnActionPerformed
+        if (MenuBar.isVisible()) {
+            MenuBar.setVisible(false);
+        } else {
+            MenuBar.setVisible(true);
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void warehouseBnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_warehouseBnActionPerformed
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_warehouseBnActionPerformed
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void HomeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HomeButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_HomeButtonActionPerformed
+
+    private void customerqbnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_customerqbnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_customerqbnActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -705,16 +711,18 @@ public class HomepageFrame extends javax.swing.JFrame {
         });
     }
     
-    public JLabel getUsernameLabel(){
-        return this.jLabel1;
-    }
+    public JTextField getUsernameLabel(){
+            return this.jTextField2;
+        }
     
     public JButton getCustomerQBN(){
         return this.customerqbn;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel buttonPanel;
+    private javax.swing.JPanel Header;
+    private javax.swing.JButton HomeButton;
+    private javax.swing.JPanel MenuBar;
     private javax.swing.JPanel carTable;
     private javax.swing.JLabel carpic0;
     private javax.swing.JLabel carpic1;
@@ -727,15 +735,17 @@ public class HomepageFrame extends javax.swing.JFrame {
     private javax.swing.JLabel carpic8;
     private javax.swing.JLabel carpic9;
     private javax.swing.JButton customerqbn;
-    private javax.swing.JToggleButton equipmentBn;
-    private javax.swing.JLabel garageName;
-    private javax.swing.JPanel headPanel;
-    private javax.swing.JToggleButton homeBn;
-    private javax.swing.JToggleButton invoiceBn;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField2;
     private javax.swing.JPanel mainPanel;
-    private javax.swing.JPanel qTablePn;
     protected javax.swing.JButton statusBn0;
     protected javax.swing.JButton statusBn1;
     protected javax.swing.JButton statusBn2;
@@ -767,7 +777,6 @@ public class HomepageFrame extends javax.swing.JFrame {
     private javax.swing.JLabel txtNocar7;
     private javax.swing.JLabel txtNocar8;
     private javax.swing.JLabel txtNocar9;
-    private javax.swing.JLabel txtStatusRepair;
-    private javax.swing.JToggleButton warehouseBn;
+    private javax.swing.JLabel txtStatusRepair2;
     // End of variables declaration//GEN-END:variables
 }
