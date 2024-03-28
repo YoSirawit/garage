@@ -23,16 +23,13 @@ public class HomepageSystem {
         String statustxt = "None";
         switch(status){
             case 0 :
-                statustxt = "Waiting...";
+                statustxt = "รอคิวซ่อม";
                 break;
             case 1 :
-                statustxt = "Reparing...";
+                statustxt = "กำลังซ่อม";
                 break;
             case 2 :
-                statustxt = "Finished!";
-                break;
-            case 3 :
-                statustxt = "Completed!";
+                statustxt = "รอรับรถ!";
                 break;
         }
         return statustxt;
