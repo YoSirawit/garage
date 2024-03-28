@@ -87,18 +87,17 @@ public class ReceiptFrame extends javax.swing.JFrame {
     private void initComponents() {
 
         Header = new javax.swing.JPanel();
-        jTextField1 = new javax.swing.JTextField();
-        jPanel4 = new javax.swing.JPanel();
-        jTextField2 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        MenuBar = new javax.swing.JPanel();
-        logPanel = new javax.swing.JPanel();
-        jToggleButton3 = new javax.swing.JToggleButton();
-        jButton2 = new javax.swing.JButton();
-        HomeButton = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
+        usernamePn = new javax.swing.JPanel();
+        usernameTxt = new javax.swing.JLabel();
+        jButton4 = new javax.swing.JButton();
+        garageName = new javax.swing.JLabel();
+        MenuBar1 = new javax.swing.JPanel();
+        stuffmange_bn = new javax.swing.JButton();
+        HomeButton1 = new javax.swing.JButton();
+        customerqbn = new javax.swing.JButton();
+        equipment_bn = new javax.swing.JButton();
+        warehouse_bn = new javax.swing.JButton();
+        receipt_bn = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         grid = new javax.swing.JPanel();
@@ -158,157 +157,126 @@ public class ReceiptFrame extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
 
-        Header.setBackground(new java.awt.Color(255, 102, 0));
+        Header.setBackground(new java.awt.Color(242, 157, 0));
         Header.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         Header.setPreferredSize(new java.awt.Dimension(1280, 50));
         Header.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jTextField1.setEditable(false);
-        jTextField1.setBackground(new java.awt.Color(255, 102, 0));
-        jTextField1.setFont(new java.awt.Font("IrisUPC", 3, 48)); // NOI18N
-        jTextField1.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jTextField1.setText("ดำรงรวยการช่าง ");
-        jTextField1.setBorder(null);
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        usernamePn.setBackground(new java.awt.Color(255, 255, 255));
+        usernamePn.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        usernameTxt.setBackground(new java.awt.Color(0, 0, 0));
+        usernameTxt.setForeground(new java.awt.Color(0, 0, 0));
+        usernameTxt.setText("@USERNAME");
+        usernameTxt.setToolTipText("Username Account");
+        usernameTxt.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED, new java.awt.Color(0, 0, 0), java.awt.Color.white, null, null));
+        usernameTxt.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        usernamePn.add(usernameTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 160, 30));
+
+        Header.add(usernamePn, new org.netbeans.lib.awtextra.AbsoluteConstraints(1090, 10, 160, 30));
+
+        jButton4.setBackground(new java.awt.Color(255, 204, 153));
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/menu_icon_jing.png"))); // NOI18N
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                jButton4ActionPerformed(evt);
             }
         });
-        Header.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 0, 250, 50));
+        Header.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 60, 50));
 
-        jTextField2.setEditable(false);
-        jTextField2.setForeground(new java.awt.Color(242, 157, 0));
-        jTextField2.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        jTextField2.setText("@USERNAME");
-        jTextField2.setBorder(null);
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        garageName.setBackground(new java.awt.Color(242, 157, 0));
+        garageName.setFont(new java.awt.Font("IrisUPC", 3, 48)); // NOI18N
+        garageName.setForeground(new java.awt.Color(255, 255, 255));
+        garageName.setText("ดำรงรวยการช่าง ");
+        Header.add(garageName, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 0, 230, 60));
+
+        getContentPane().add(Header, java.awt.BorderLayout.NORTH);
+
+        MenuBar1.setBackground(new java.awt.Color(255, 204, 102));
+        MenuBar1.setPreferredSize(new java.awt.Dimension(200, 670));
+        MenuBar1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        stuffmange_bn.setBackground(new java.awt.Color(255, 102, 0));
+        stuffmange_bn.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        stuffmange_bn.setForeground(new java.awt.Color(255, 255, 255));
+        stuffmange_bn.setText("จัดการพนักงาน");
+        stuffmange_bn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                stuffmange_bnActionPerformed(evt);
             }
         });
+        MenuBar1.add(stuffmange_bn, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 530, 220, 70));
 
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTextField2, javax.swing.GroupLayout.DEFAULT_SIZE, 220, Short.MAX_VALUE)
-        );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTextField2, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
-        );
-
-        Header.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1070, 0, 220, 50));
-
-        jButton1.setBackground(new java.awt.Color(255, 102, 0));
-        jButton1.setForeground(new java.awt.Color(255, 102, 0));
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/menu_icon_jing.png"))); // NOI18N
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        HomeButton1.setBackground(new java.awt.Color(255, 255, 255));
+        HomeButton1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        HomeButton1.setForeground(new java.awt.Color(255, 102, 0));
+        HomeButton1.setText("หน้าโฮม");
+        HomeButton1.setBorder(null);
+        HomeButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        HomeButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                HomeButton1ActionPerformed(evt);
             }
         });
-        Header.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 60, 50));
+        MenuBar1.add(HomeButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 30, 220, 70));
 
-        getContentPane().add(Header, java.awt.BorderLayout.PAGE_START);
-
-        MenuBar.setBackground(new java.awt.Color(69, 69, 69));
-        MenuBar.setPreferredSize(new java.awt.Dimension(200, 670));
-        MenuBar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        logPanel.setForeground(new java.awt.Color(69, 69, 69));
-
-        javax.swing.GroupLayout logPanelLayout = new javax.swing.GroupLayout(logPanel);
-        logPanel.setLayout(logPanelLayout);
-        logPanelLayout.setHorizontalGroup(
-            logPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 200, Short.MAX_VALUE)
-        );
-        logPanelLayout.setVerticalGroup(
-            logPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-
-        MenuBar.add(logPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 580, 200, 70));
-
-        jToggleButton3.setText("sth only admin see");
-        jToggleButton3.addActionListener(new java.awt.event.ActionListener() {
+        customerqbn.setBackground(new java.awt.Color(255, 102, 0));
+        customerqbn.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        customerqbn.setForeground(new java.awt.Color(255, 255, 255));
+        customerqbn.setText("จัดการคิวรถ");
+        customerqbn.setBorder(null);
+        customerqbn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        customerqbn.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        customerqbn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jToggleButton3ActionPerformed(evt);
+                customerqbnActionPerformed(evt);
             }
         });
-        MenuBar.add(jToggleButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 500, 200, 70));
+        MenuBar1.add(customerqbn, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 130, 220, 70));
 
-        jButton2.setBackground(new java.awt.Color(255, 255, 255));
-        jButton2.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 24)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(69, 69, 69));
-        jButton2.setText("RECEIPT");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        equipment_bn.setBackground(new java.awt.Color(255, 102, 0));
+        equipment_bn.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        equipment_bn.setForeground(new java.awt.Color(255, 255, 255));
+        equipment_bn.setText("เบิกอุปกรณ์");
+        equipment_bn.setBorder(null);
+        equipment_bn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        equipment_bn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                equipment_bnActionPerformed(evt);
             }
         });
-        MenuBar.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 410, 220, 70));
+        MenuBar1.add(equipment_bn, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 230, 220, 70));
 
-        HomeButton.setBackground(new java.awt.Color(255, 102, 0));
-        HomeButton.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 24)); // NOI18N
-        HomeButton.setForeground(new java.awt.Color(255, 255, 255));
-        HomeButton.setText("HOME");
-        HomeButton.setBorder(null);
-        HomeButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        HomeButton.addActionListener(new java.awt.event.ActionListener() {
+        warehouse_bn.setBackground(new java.awt.Color(255, 102, 0));
+        warehouse_bn.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        warehouse_bn.setForeground(new java.awt.Color(255, 255, 255));
+        warehouse_bn.setText("คลังอุปกรณ์");
+        warehouse_bn.setToolTipText("");
+        warehouse_bn.setBorder(null);
+        warehouse_bn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        warehouse_bn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                HomeButtonActionPerformed(evt);
+                warehouse_bnActionPerformed(evt);
             }
         });
-        MenuBar.add(HomeButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 40, 220, 70));
+        MenuBar1.add(warehouse_bn, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 330, 220, 70));
 
-        jButton3.setBackground(new java.awt.Color(255, 102, 0));
-        jButton3.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 24)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(255, 255, 255));
-        jButton3.setText("MANAGEMENT");
-        jButton3.setBorder(null);
-        jButton3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        receipt_bn.setBackground(new java.awt.Color(255, 102, 0));
+        receipt_bn.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        receipt_bn.setForeground(new java.awt.Color(255, 255, 255));
+        receipt_bn.setText("ใบเสร็จ");
+        receipt_bn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                receipt_bnActionPerformed(evt);
             }
         });
-        MenuBar.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 130, 220, 70));
+        MenuBar1.add(receipt_bn, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 430, 220, 70));
 
-        jButton5.setBackground(new java.awt.Color(255, 102, 0));
-        jButton5.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 24)); // NOI18N
-        jButton5.setForeground(new java.awt.Color(255, 255, 255));
-        jButton5.setText("EQUIPMENT");
-        jButton5.setBorder(null);
-        jButton5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
-            }
-        });
-        MenuBar.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 220, 220, 70));
-
-        jButton6.setBackground(new java.awt.Color(255, 102, 0));
-        jButton6.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 24)); // NOI18N
-        jButton6.setForeground(new java.awt.Color(255, 255, 255));
-        jButton6.setText("WAREHOUSE");
-        jButton6.setBorder(null);
-        jButton6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
-            }
-        });
-        MenuBar.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 320, 220, 70));
-
-        getContentPane().add(MenuBar, java.awt.BorderLayout.LINE_START);
+        getContentPane().add(MenuBar1, java.awt.BorderLayout.WEST);
 
         jPanel3.setBackground(new java.awt.Color(69, 69, 69));
         jPanel3.setForeground(new java.awt.Color(69, 69, 69));
-        jPanel3.setLayout(new java.awt.BorderLayout());
+        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setBackground(new java.awt.Color(69, 69, 69));
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
@@ -316,7 +284,7 @@ public class ReceiptFrame extends javax.swing.JFrame {
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("เลือกรถเพื่อทำรายการ");
         jLabel1.setBorder(javax.swing.BorderFactory.createEmptyBorder(15, 20, 1, 1));
-        jPanel3.add(jLabel1, java.awt.BorderLayout.PAGE_START);
+        jPanel3.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1060, -1));
 
         grid.setForeground(new java.awt.Color(51, 51, 51));
         grid.setLayout(new java.awt.GridLayout(2, 5));
@@ -427,7 +395,7 @@ public class ReceiptFrame extends javax.swing.JFrame {
         slot2Layout.setVerticalGroup(
             slot2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, slot2Layout.createSequentialGroup()
-                .addContainerGap(46, Short.MAX_VALUE)
+                .addContainerGap(178, Short.MAX_VALUE)
                 .addComponent(ch2)
                 .addGap(18, 18, 18)
                 .addComponent(car_owner2)
@@ -482,7 +450,7 @@ public class ReceiptFrame extends javax.swing.JFrame {
         slot3Layout.setVerticalGroup(
             slot3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, slot3Layout.createSequentialGroup()
-                .addContainerGap(46, Short.MAX_VALUE)
+                .addContainerGap(178, Short.MAX_VALUE)
                 .addComponent(ch3)
                 .addGap(18, 18, 18)
                 .addComponent(car_owner3)
@@ -616,7 +584,7 @@ public class ReceiptFrame extends javax.swing.JFrame {
                 .addComponent(slot4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(slot5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(55, Short.MAX_VALUE))
+                .addGap(0, 3, Short.MAX_VALUE))
         );
         gridtopLayout.setVerticalGroup(
             gridtopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -684,7 +652,7 @@ public class ReceiptFrame extends javax.swing.JFrame {
                 .addComponent(car_id6)
                 .addGap(18, 18, 18)
                 .addComponent(select6)
-                .addContainerGap(33, Short.MAX_VALUE))
+                .addContainerGap(165, Short.MAX_VALUE))
         );
 
         ch7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -916,7 +884,7 @@ public class ReceiptFrame extends javax.swing.JFrame {
                 .addComponent(slot9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(slot10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addGap(0, 0, 0))
         );
         gridbottLayout.setVerticalGroup(
             gridbottLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -933,57 +901,12 @@ public class ReceiptFrame extends javax.swing.JFrame {
 
         grid.add(gridbott);
 
-        jPanel3.add(grid, java.awt.BorderLayout.CENTER);
+        jPanel3.add(grid, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 45, -1, -1));
 
         getContentPane().add(jPanel3, java.awt.BorderLayout.CENTER);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
-
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
-
-    private void jToggleButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton3ActionPerformed
-        if (logPanel.isVisible()) {
-            logPanel.setVisible(false);
-        } else {
-            logPanel.setVisible(true);
-        }
-    }//GEN-LAST:event_jToggleButton3ActionPerformed
-
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
-
-    private void HomeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HomeButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_HomeButtonActionPerformed
-
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
-
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton5ActionPerformed
-
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton6ActionPerformed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-        if (MenuBar.isVisible()) {
-            MenuBar.setVisible(false);
-        } else {
-            MenuBar.setVisible(true);
-        }
-    }//GEN-LAST:event_jButton1ActionPerformed
         
     private void select1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_select1ActionPerformed
         ReceiptMDIApplication mdi = new ReceiptMDIApplication();
@@ -1035,6 +958,39 @@ public class ReceiptFrame extends javax.swing.JFrame {
         mdi.setVisible(true);
     }//GEN-LAST:event_select10ActionPerformed
 
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+        if (MenuBar.isVisible()) {
+            MenuBar.setVisible(false);
+        } else {
+            MenuBar.setVisible(true);
+        }
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void stuffmange_bnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_stuffmange_bnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_stuffmange_bnActionPerformed
+
+    private void HomeButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HomeButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_HomeButton1ActionPerformed
+
+    private void customerqbnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_customerqbnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_customerqbnActionPerformed
+
+    private void equipment_bnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_equipment_bnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_equipment_bnActionPerformed
+
+    private void warehouse_bnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_warehouse_bnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_warehouse_bnActionPerformed
+
+    private void receipt_bnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_receipt_bnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_receipt_bnActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1068,8 +1024,8 @@ public class ReceiptFrame extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Header;
-    private javax.swing.JButton HomeButton;
-    private javax.swing.JPanel MenuBar;
+    private javax.swing.JButton HomeButton1;
+    private javax.swing.JPanel MenuBar1;
     private javax.swing.JLabel car_id1;
     private javax.swing.JLabel car_id10;
     private javax.swing.JLabel car_id2;
@@ -1100,21 +1056,16 @@ public class ReceiptFrame extends javax.swing.JFrame {
     private javax.swing.JLabel ch7;
     private javax.swing.JLabel ch8;
     private javax.swing.JLabel ch9;
+    private javax.swing.JButton customerqbn;
+    private javax.swing.JButton equipment_bn;
+    private javax.swing.JLabel garageName;
     private javax.swing.JPanel grid;
     private javax.swing.JPanel gridbott;
     private javax.swing.JPanel gridtop;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JToggleButton jToggleButton3;
-    private javax.swing.JPanel logPanel;
+    private javax.swing.JButton receipt_bn;
     private javax.swing.JButton select1;
     private javax.swing.JButton select10;
     private javax.swing.JButton select2;
@@ -1135,5 +1086,9 @@ public class ReceiptFrame extends javax.swing.JFrame {
     private javax.swing.JPanel slot7;
     private javax.swing.JPanel slot8;
     private javax.swing.JPanel slot9;
+    private javax.swing.JButton stuffmange_bn;
+    private javax.swing.JPanel usernamePn;
+    private javax.swing.JLabel usernameTxt;
+    private javax.swing.JButton warehouse_bn;
     // End of variables declaration//GEN-END:variables
 }
