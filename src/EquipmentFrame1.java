@@ -64,9 +64,10 @@ public class EquipmentFrame1 extends javax.swing.JFrame {
 
         jPanel3.setPreferredSize(new java.awt.Dimension(200, 50));
 
+        jLabel1.setForeground(new java.awt.Color(242, 157, 0));
         jLabel1.setText("Username");
 
-        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\petgo\\Downloads\\user-regular-24.png")); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/user-regular-24.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -140,7 +141,7 @@ public class EquipmentFrame1 extends javax.swing.JFrame {
 
         jLabel21.setText("Engine");
 
-        BodyButton.setIcon(new javax.swing.ImageIcon("C:\\Users\\petgo\\Pictures\\Screenshots\\Screenshot 2024-03-23 182427.png")); // NOI18N
+        BodyButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/BodyComponents.png"))); // NOI18N
         BodyButton.setText("jButton2");
         BodyButton.setAutoscrolls(true);
         BodyButton.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -152,7 +153,7 @@ public class EquipmentFrame1 extends javax.swing.JFrame {
             }
         });
 
-        BreakeButton.setIcon(new javax.swing.ImageIcon("C:\\Users\\petgo\\Pictures\\Screenshots\\Screenshot 2024-03-23 183116.png")); // NOI18N
+        BreakeButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/Braking.png"))); // NOI18N
         BreakeButton.setText("--");
         BreakeButton.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         BreakeButton.addActionListener(new java.awt.event.ActionListener() {
@@ -161,7 +162,7 @@ public class EquipmentFrame1 extends javax.swing.JFrame {
             }
         });
 
-        CoolingButton.setIcon(new javax.swing.ImageIcon("C:\\Users\\petgo\\Pictures\\Screenshots\\Screenshot 2024-03-23 183159.png")); // NOI18N
+        CoolingButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/Cooling.png"))); // NOI18N
         CoolingButton.setText("--");
         CoolingButton.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         CoolingButton.addActionListener(new java.awt.event.ActionListener() {
@@ -170,7 +171,7 @@ public class EquipmentFrame1 extends javax.swing.JFrame {
             }
         });
 
-        ElectricalButton.setIcon(new javax.swing.ImageIcon("C:\\Users\\petgo\\Pictures\\Screenshots\\Screenshot 2024-03-23 183225.png")); // NOI18N
+        ElectricalButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/Electrical.png"))); // NOI18N
         ElectricalButton.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         ElectricalButton.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         ElectricalButton.addActionListener(new java.awt.event.ActionListener() {
@@ -179,7 +180,7 @@ public class EquipmentFrame1 extends javax.swing.JFrame {
             }
         });
 
-        EngineButton.setIcon(new javax.swing.ImageIcon("C:\\Users\\petgo\\Pictures\\Screenshots\\Screenshot 2024-03-23 183403.png")); // NOI18N
+        EngineButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/Engine.png"))); // NOI18N
         EngineButton.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         EngineButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -187,7 +188,7 @@ public class EquipmentFrame1 extends javax.swing.JFrame {
             }
         });
 
-        ExhaustButton.setIcon(new javax.swing.ImageIcon("C:\\Users\\petgo\\Pictures\\Screenshots\\Screenshot 2024-03-23 183452.png")); // NOI18N
+        ExhaustButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/Exhaust.png"))); // NOI18N
         ExhaustButton.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         ExhaustButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -195,7 +196,7 @@ public class EquipmentFrame1 extends javax.swing.JFrame {
             }
         });
 
-        FuelButton.setIcon(new javax.swing.ImageIcon("C:\\Users\\petgo\\Pictures\\Screenshots\\Screenshot 2024-03-23 183520.png")); // NOI18N
+        FuelButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/Fuel.png"))); // NOI18N
         FuelButton.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         FuelButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -203,7 +204,7 @@ public class EquipmentFrame1 extends javax.swing.JFrame {
             }
         });
 
-        DrivetrainButton.setIcon(new javax.swing.ImageIcon("C:\\Users\\petgo\\Pictures\\Screenshots\\Screenshot 2024-03-23 183550.png")); // NOI18N
+        DrivetrainButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/Drivetrain.png"))); // NOI18N
         DrivetrainButton.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         DrivetrainButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -211,7 +212,7 @@ public class EquipmentFrame1 extends javax.swing.JFrame {
             }
         });
 
-        SuspensionButton.setIcon(new javax.swing.ImageIcon("C:\\Users\\petgo\\Pictures\\Screenshots\\Screenshot 2024-03-23 183636.png")); // NOI18N
+        SuspensionButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/Suspension.png"))); // NOI18N
         SuspensionButton.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         SuspensionButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -219,7 +220,7 @@ public class EquipmentFrame1 extends javax.swing.JFrame {
             }
         });
 
-        jLabel4.setIcon(new javax.swing.ImageIcon("C:\\Users\\petgo\\Pictures\\Screenshots\\Screenshot 2024-03-23 190057.png")); // NOI18N
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/Mechanic.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -233,9 +234,9 @@ public class EquipmentFrame1 extends javax.swing.JFrame {
                 .addComponent(jLabel14)
                 .addGap(150, 150, 150)
                 .addComponent(jLabel15)
-                .addGap(156, 156, 156)
-                .addComponent(jLabel16)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel16)
+                .addGap(143, 143, 143)
                 .addComponent(jLabel21)
                 .addGap(82, 82, 82))
             .addGroup(jPanel2Layout.createSequentialGroup()
@@ -258,17 +259,18 @@ public class EquipmentFrame1 extends javax.swing.JFrame {
                         .addGap(65, 65, 65)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(ElectricalButton, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(SuspensionButton, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(SuspensionButton, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(100, 100, 100)
                         .addComponent(jLabel17)
-                        .addGap(144, 144, 144)
+                        .addGap(165, 165, 165)
                         .addComponent(jLabel18)
-                        .addGap(194, 194, 194)
+                        .addGap(173, 173, 173)
                         .addComponent(jLabel19)
-                        .addGap(141, 141, 141)
-                        .addComponent(jLabel20)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel20)
+                        .addGap(92, 92, 92)))
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(EngineButton, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel2Layout.createSequentialGroup()
@@ -292,13 +294,14 @@ public class EquipmentFrame1 extends javax.swing.JFrame {
                             .addComponent(ElectricalButton, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(EngineButton, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
-                        .addComponent(jLabel14))
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel14)
+                            .addComponent(jLabel16)))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(157, 157, 157)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel13)
                             .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel16)
                             .addComponent(jLabel15))))
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
@@ -319,10 +322,11 @@ public class EquipmentFrame1 extends javax.swing.JFrame {
                                             .addComponent(DrivetrainButton, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addComponent(SuspensionButton, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addGap(18, 18, 18)
-                                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(jLabel18)
-                                            .addComponent(jLabel19)
-                                            .addComponent(jLabel20))))))
+                                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                                .addComponent(jLabel19)
+                                                .addComponent(jLabel20)))))))
                         .addGap(43, 43, 43))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -341,8 +345,8 @@ public class EquipmentFrame1 extends javax.swing.JFrame {
         });
 
         ShopButton.setBackground(new java.awt.Color(242, 242, 242));
-        ShopButton.setIcon(new javax.swing.ImageIcon("C:\\Users\\petgo\\Pictures\\Screenshots\\Screenshot 2024-03-24 142021.png")); // NOI18N
-        ShopButton.setBorder(null);
+        ShopButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/sale.png"))); // NOI18N
+        ShopButton.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         ShopButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ShopButtonActionPerformed(evt);
@@ -370,7 +374,7 @@ public class EquipmentFrame1 extends javax.swing.JFrame {
                 .addContainerGap(588, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(37, 37, 37)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 535, Short.MAX_VALUE)
                 .addGap(80, 80, 80))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -440,6 +444,9 @@ public class EquipmentFrame1 extends javax.swing.JFrame {
 
     private void BackButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackButtonActionPerformed
         // TODO add your handling code here:
+        this.dispose();
+        EquipmentMainFrame eqm = new EquipmentMainFrame();
+        eqm.setVisible(true);
     }//GEN-LAST:event_BackButtonActionPerformed
 
     private void ShopButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ShopButtonActionPerformed

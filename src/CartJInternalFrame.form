@@ -155,7 +155,12 @@
         <Component class="javax.swing.JButton" name="CostButton">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\petgo\Pictures\Screenshots\Screenshot 2024-03-24 142021.png"/>
+              <Image iconType="3" name="/TestIcon/sale.png"/>
+            </Property>
+            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+              <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
+                <BevelBorder/>
+              </Border>
             </Property>
           </Properties>
           <Events>

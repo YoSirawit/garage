@@ -2,7 +2,6 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 public class EquipmentFrame2 extends javax.swing.JFrame {
-    
     public EquipmentFrame2() {
         initComponents();
     }
@@ -37,6 +36,7 @@ public class EquipmentFrame2 extends javax.swing.JFrame {
         SortButton3 = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
+        AddButton = new javax.swing.JButton();
 
         BackButton2.setBackground(new java.awt.Color(255, 127, 54));
         BackButton2.setFont(new java.awt.Font("JasmineUPC", 1, 24)); // NOI18N
@@ -49,7 +49,6 @@ public class EquipmentFrame2 extends javax.swing.JFrame {
         });
 
         jButton3.setBackground(new java.awt.Color(242, 242, 242));
-        jButton3.setIcon(new javax.swing.ImageIcon("C:\\Users\\petgo\\Pictures\\Screenshots\\Screenshot 2024-03-24 142507.png")); // NOI18N
         jButton3.setBorder(null);
 
         jPanel7.setBackground(new java.awt.Color(241, 127, 22));
@@ -196,9 +195,10 @@ public class EquipmentFrame2 extends javax.swing.JFrame {
 
         jPanel3.setPreferredSize(new java.awt.Dimension(200, 50));
 
+        jLabel1.setForeground(new java.awt.Color(242, 157, 0));
         jLabel1.setText("Username");
 
-        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\petgo\\Downloads\\user-regular-24.png")); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/user-regular-24.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -240,8 +240,8 @@ public class EquipmentFrame2 extends javax.swing.JFrame {
         });
 
         CartButton.setBackground(new java.awt.Color(242, 242, 242));
-        CartButton.setIcon(new javax.swing.ImageIcon("C:\\Users\\petgo\\Pictures\\Screenshots\\Screenshot 2024-03-24 142507.png")); // NOI18N
-        CartButton.setBorder(null);
+        CartButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/cart.png"))); // NOI18N
+        CartButton.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         CartButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CartButtonActionPerformed(evt);
@@ -349,6 +349,7 @@ public class EquipmentFrame2 extends javax.swing.JFrame {
             jTable1.getColumnModel().getColumn(5).setResizable(false);
             jTable1.getColumnModel().getColumn(6).setResizable(false);
             jTable1.getColumnModel().getColumn(6).setPreferredWidth(50);
+            jTable1.getColumnModel().getColumn(6).setHeaderValue("Add");
         }
 
         javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
@@ -356,12 +357,14 @@ public class EquipmentFrame2 extends javax.swing.JFrame {
         jPanel9Layout.setHorizontalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
-                .addContainerGap(445, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(TableName, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(319, 319, 319)
                 .addComponent(SortButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(14, 14, 14))
-            .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.TRAILING)
+            .addGroup(jPanel9Layout.createSequentialGroup()
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 1045, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel9Layout.setVerticalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -371,9 +374,20 @@ public class EquipmentFrame2 extends javax.swing.JFrame {
                     .addComponent(TableName, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(SortButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 482, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 465, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
+
+        AddButton.setBackground(new java.awt.Color(255, 127, 54));
+        AddButton.setFont(new java.awt.Font("JasmineUPC", 1, 24)); // NOI18N
+        AddButton.setForeground(new java.awt.Color(255, 255, 255));
+        AddButton.setText("Add");
+        AddButton.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        AddButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AddButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
@@ -385,22 +399,25 @@ public class EquipmentFrame2 extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel8Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(AddButton, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(CartButton, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(66, 66, 66))
+                .addGap(98, 98, 98))
         );
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel8Layout.createSequentialGroup()
                 .addGap(15, 15, 15)
-                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(CartButton, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel8Layout.createSequentialGroup()
-                        .addComponent(BackButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(7, 7, 7)
-                        .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(128, Short.MAX_VALUE))
+                .addComponent(BackButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 7, Short.MAX_VALUE)
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel9, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(CartButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(AddButton, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(109, 109, 109))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -434,6 +451,9 @@ public class EquipmentFrame2 extends javax.swing.JFrame {
 
     private void BackButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackButton3ActionPerformed
         // TODO add your handling code here:
+        this.dispose();
+        EquipmentFrame1 eq = new EquipmentFrame1();
+        eq.setVisible(true);
     }//GEN-LAST:event_BackButton3ActionPerformed
 
     private void SortButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SortButton3ActionPerformed
@@ -446,6 +466,13 @@ public class EquipmentFrame2 extends javax.swing.JFrame {
         jTable1.add(cart);
         cart.setVisible(true);
     }//GEN-LAST:event_CartButtonActionPerformed
+
+    private void AddButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddButtonActionPerformed
+        // TODO add your handling code here:
+        AddInternalFrame addframe = new AddInternalFrame();
+        jTable1.add(addframe);
+        addframe.setVisible(true);
+    }//GEN-LAST:event_AddButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -485,6 +512,7 @@ public class EquipmentFrame2 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton AddButton;
     private javax.swing.JButton BackButton2;
     private javax.swing.JButton BackButton3;
     private javax.swing.JButton CartButton;
