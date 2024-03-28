@@ -10,6 +10,7 @@ public class HomepageFrame extends javax.swing.JFrame {
         initComponents();
         hps = new HomepageSystem();
         
+        
         pnArr = new JPanel[]{statusPn0, statusPn1, statusPn2, statusPn3, statusPn4, statusPn5, statusPn6, statusPn7, statusPn8, statusPn9};
         bnArr = new JButton[]{statusBn0, statusBn1, statusBn2, statusBn3, statusBn4, statusBn5, statusBn6, statusBn7, statusBn8, statusBn9};
         
@@ -26,10 +27,11 @@ public class HomepageFrame extends javax.swing.JFrame {
     private void initComponents() {
 
         Header = new javax.swing.JPanel();
-        jTextField1 = new javax.swing.JTextField();
-        jPanel4 = new javax.swing.JPanel();
-        jTextField2 = new javax.swing.JTextField();
+        usernamePn = new javax.swing.JPanel();
+        usernameTxt = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        mainPn = new javax.swing.JPanel();
         MenuBar = new javax.swing.JPanel();
         stuffmange_bn = new javax.swing.JButton();
         HomeButton = new javax.swing.JButton();
@@ -37,52 +39,70 @@ public class HomepageFrame extends javax.swing.JFrame {
         equipment_bn = new javax.swing.JButton();
         warehouse_bn = new javax.swing.JButton();
         receipt_bn = new javax.swing.JButton();
-        mainPanel = new javax.swing.JPanel();
-        jPanel5 = new javax.swing.JPanel();
-        jPanel3 = new javax.swing.JPanel();
-        txtStatusRepair2 = new javax.swing.JLabel();
-        carTable = new javax.swing.JPanel();
-        statusPn9 = new javax.swing.JPanel();
-        carpic9 = new javax.swing.JLabel();
-        statusBn9 = new javax.swing.JButton();
-        statusPn8 = new javax.swing.JPanel();
-        carpic8 = new javax.swing.JLabel();
-        statusBn8 = new javax.swing.JButton();
-        statusPn7 = new javax.swing.JPanel();
-        carpic7 = new javax.swing.JLabel();
-        statusBn7 = new javax.swing.JButton();
-        statusPn6 = new javax.swing.JPanel();
-        carpic6 = new javax.swing.JLabel();
-        statusBn6 = new javax.swing.JButton();
-        statusPn5 = new javax.swing.JPanel();
-        carpic5 = new javax.swing.JLabel();
-        statusBn5 = new javax.swing.JButton();
-        statusPn4 = new javax.swing.JPanel();
-        carpic4 = new javax.swing.JLabel();
-        statusBn4 = new javax.swing.JButton();
-        statusPn3 = new javax.swing.JPanel();
-        carpic3 = new javax.swing.JLabel();
-        statusBn3 = new javax.swing.JButton();
-        statusPn2 = new javax.swing.JPanel();
-        carpic2 = new javax.swing.JLabel();
-        statusBn2 = new javax.swing.JButton();
-        statusPn1 = new javax.swing.JPanel();
-        carpic1 = new javax.swing.JLabel();
-        statusBn1 = new javax.swing.JButton();
+        submainPn = new javax.swing.JPanel();
+        tablePn = new javax.swing.JPanel();
+        slot0 = new javax.swing.JPanel();
         statusPn0 = new javax.swing.JPanel();
         carpic0 = new javax.swing.JLabel();
         statusBn0 = new javax.swing.JButton();
         txtNocar0 = new javax.swing.JLabel();
+        num1 = new javax.swing.JLabel();
+        slot1 = new javax.swing.JPanel();
+        statusPn1 = new javax.swing.JPanel();
+        carpic1 = new javax.swing.JLabel();
+        statusBn1 = new javax.swing.JButton();
         txtNocar1 = new javax.swing.JLabel();
+        num2 = new javax.swing.JLabel();
+        slot2 = new javax.swing.JPanel();
+        statusPn2 = new javax.swing.JPanel();
+        carpic2 = new javax.swing.JLabel();
+        statusBn2 = new javax.swing.JButton();
         txtNocar2 = new javax.swing.JLabel();
+        num3 = new javax.swing.JLabel();
+        slot3 = new javax.swing.JPanel();
+        statusPn3 = new javax.swing.JPanel();
+        carpic3 = new javax.swing.JLabel();
+        statusBn3 = new javax.swing.JButton();
         txtNocar3 = new javax.swing.JLabel();
+        num4 = new javax.swing.JLabel();
+        slot4 = new javax.swing.JPanel();
+        statusPn4 = new javax.swing.JPanel();
+        carpic4 = new javax.swing.JLabel();
+        statusBn4 = new javax.swing.JButton();
         txtNocar4 = new javax.swing.JLabel();
+        num5 = new javax.swing.JLabel();
+        slot5 = new javax.swing.JPanel();
+        statusPn5 = new javax.swing.JPanel();
+        carpic5 = new javax.swing.JLabel();
+        statusBn5 = new javax.swing.JButton();
         txtNocar5 = new javax.swing.JLabel();
+        num6 = new javax.swing.JLabel();
+        slot6 = new javax.swing.JPanel();
+        statusPn6 = new javax.swing.JPanel();
+        carpic6 = new javax.swing.JLabel();
+        statusBn6 = new javax.swing.JButton();
         txtNocar6 = new javax.swing.JLabel();
+        num7 = new javax.swing.JLabel();
+        slot7 = new javax.swing.JPanel();
+        statusPn7 = new javax.swing.JPanel();
+        carpic7 = new javax.swing.JLabel();
+        statusBn7 = new javax.swing.JButton();
         txtNocar7 = new javax.swing.JLabel();
+        num8 = new javax.swing.JLabel();
+        slot8 = new javax.swing.JPanel();
+        statusPn8 = new javax.swing.JPanel();
+        carpic8 = new javax.swing.JLabel();
+        statusBn8 = new javax.swing.JButton();
         txtNocar8 = new javax.swing.JLabel();
+        num9 = new javax.swing.JLabel();
+        slot9 = new javax.swing.JPanel();
+        statusPn9 = new javax.swing.JPanel();
+        carpic9 = new javax.swing.JLabel();
+        statusBn9 = new javax.swing.JButton();
         txtNocar9 = new javax.swing.JLabel();
-        tablepic = new javax.swing.JLabel();
+        num10 = new javax.swing.JLabel();
+        headtextPn = new javax.swing.JPanel();
+        headTxt = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Dumrongruuay");
@@ -94,45 +114,18 @@ public class HomepageFrame extends javax.swing.JFrame {
         Header.setPreferredSize(new java.awt.Dimension(1280, 50));
         Header.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jTextField1.setEditable(false);
-        jTextField1.setBackground(new java.awt.Color(242, 157, 0));
-        jTextField1.setFont(new java.awt.Font("IrisUPC", 3, 48)); // NOI18N
-        jTextField1.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jTextField1.setText("ดำรงรวยการช่าง ");
-        jTextField1.setBorder(null);
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
-            }
-        });
-        Header.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 0, 250, 50));
+        usernamePn.setBackground(new java.awt.Color(255, 255, 255));
+        usernamePn.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jTextField2.setEditable(false);
-        jTextField2.setForeground(new java.awt.Color(242, 157, 0));
-        jTextField2.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        jTextField2.setText("@USERNAME");
-        jTextField2.setBorder(null);
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
-            }
-        });
+        usernameTxt.setBackground(new java.awt.Color(0, 0, 0));
+        usernameTxt.setForeground(new java.awt.Color(0, 0, 0));
+        usernameTxt.setText("@USERNAME");
+        usernameTxt.setToolTipText("Username Account");
+        usernameTxt.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED, new java.awt.Color(0, 0, 0), java.awt.Color.white, null, null));
+        usernameTxt.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        usernamePn.add(usernameTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 160, 30));
 
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTextField2, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
-        );
-
-        Header.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1070, 0, 220, 50));
+        Header.add(usernamePn, new org.netbeans.lib.awtextra.AbsoluteConstraints(1090, 10, 160, 30));
 
         jButton1.setBackground(new java.awt.Color(255, 204, 153));
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/menu_icon_jing.png"))); // NOI18N
@@ -142,6 +135,12 @@ public class HomepageFrame extends javax.swing.JFrame {
             }
         });
         Header.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 60, 50));
+
+        jLabel1.setBackground(new java.awt.Color(242, 157, 0));
+        jLabel1.setFont(new java.awt.Font("IrisUPC", 3, 48)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("ดำรงรวยการช่าง ");
+        Header.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 0, 230, 60));
 
         getContentPane().add(Header, java.awt.BorderLayout.PAGE_START);
 
@@ -160,6 +159,7 @@ public class HomepageFrame extends javax.swing.JFrame {
         });
         MenuBar.add(stuffmange_bn, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 530, 220, 70));
 
+        HomeButton.setBackground(new java.awt.Color(255, 255, 255));
         HomeButton.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         HomeButton.setForeground(new java.awt.Color(255, 102, 0));
         HomeButton.setText("หน้าโฮม");
@@ -224,419 +224,601 @@ public class HomepageFrame extends javax.swing.JFrame {
         });
         MenuBar.add(receipt_bn, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 430, 220, 70));
 
-        getContentPane().add(MenuBar, java.awt.BorderLayout.LINE_START);
+        submainPn.setBackground(new java.awt.Color(255, 255, 255));
+        submainPn.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 10, 30));
 
-        mainPanel.setBackground(new java.awt.Color(255, 255, 255));
-        mainPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        tablePn.setBackground(new java.awt.Color(255, 187, 92));
 
-        jPanel5.setLayout(new javax.swing.BoxLayout(jPanel5, javax.swing.BoxLayout.Y_AXIS));
+        slot0.setBackground(new java.awt.Color(169, 169, 169));
+        slot0.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        slot0.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
-
-        txtStatusRepair2.setBackground(new java.awt.Color(0, 0, 0));
-        txtStatusRepair2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        txtStatusRepair2.setText("สถานะการซ่อมรถ");
-
-        carTable.setBackground(new java.awt.Color(204, 204, 204));
-        carTable.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        statusPn9.setBackground(new java.awt.Color(217, 217, 217));
-
-        carpic9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/car.png"))); // NOI18N
-
-        statusBn9.setText("Status");
-
-        javax.swing.GroupLayout statusPn9Layout = new javax.swing.GroupLayout(statusPn9);
-        statusPn9.setLayout(statusPn9Layout);
-        statusPn9Layout.setHorizontalGroup(
-            statusPn9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(statusPn9Layout.createSequentialGroup()
-                .addGap(43, 43, 43)
-                .addComponent(carpic9)
-                .addContainerGap(46, Short.MAX_VALUE))
-            .addGroup(statusPn9Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(statusBn9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-        statusPn9Layout.setVerticalGroup(
-            statusPn9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(statusPn9Layout.createSequentialGroup()
-                .addGap(23, 23, 23)
-                .addComponent(carpic9)
-                .addGap(18, 18, 18)
-                .addComponent(statusBn9, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(10, Short.MAX_VALUE))
-        );
-
-        carTable.add(statusPn9, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 340, 150, 210));
-
-        statusPn8.setBackground(new java.awt.Color(217, 217, 217));
-
-        carpic8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/car.png"))); // NOI18N
-
-        statusBn8.setText("Status");
-
-        javax.swing.GroupLayout statusPn8Layout = new javax.swing.GroupLayout(statusPn8);
-        statusPn8.setLayout(statusPn8Layout);
-        statusPn8Layout.setHorizontalGroup(
-            statusPn8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(statusPn8Layout.createSequentialGroup()
-                .addGap(43, 43, 43)
-                .addComponent(carpic8)
-                .addContainerGap(46, Short.MAX_VALUE))
-            .addGroup(statusPn8Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(statusBn8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-        statusPn8Layout.setVerticalGroup(
-            statusPn8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(statusPn8Layout.createSequentialGroup()
-                .addGap(23, 23, 23)
-                .addComponent(carpic8)
-                .addGap(18, 18, 18)
-                .addComponent(statusBn8, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(10, Short.MAX_VALUE))
-        );
-
-        carTable.add(statusPn8, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 340, 150, 210));
-
-        statusPn7.setBackground(new java.awt.Color(217, 217, 217));
-
-        carpic7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/car.png"))); // NOI18N
-
-        statusBn7.setText("Status");
-
-        javax.swing.GroupLayout statusPn7Layout = new javax.swing.GroupLayout(statusPn7);
-        statusPn7.setLayout(statusPn7Layout);
-        statusPn7Layout.setHorizontalGroup(
-            statusPn7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(statusPn7Layout.createSequentialGroup()
-                .addGap(43, 43, 43)
-                .addComponent(carpic7)
-                .addContainerGap(46, Short.MAX_VALUE))
-            .addGroup(statusPn7Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(statusBn7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-        statusPn7Layout.setVerticalGroup(
-            statusPn7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(statusPn7Layout.createSequentialGroup()
-                .addGap(23, 23, 23)
-                .addComponent(carpic7)
-                .addGap(18, 18, 18)
-                .addComponent(statusBn7, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(10, Short.MAX_VALUE))
-        );
-
-        carTable.add(statusPn7, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 340, 150, 210));
-
-        statusPn6.setBackground(new java.awt.Color(217, 217, 217));
-
-        carpic6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/car.png"))); // NOI18N
-
-        statusBn6.setText("Status");
-
-        javax.swing.GroupLayout statusPn6Layout = new javax.swing.GroupLayout(statusPn6);
-        statusPn6.setLayout(statusPn6Layout);
-        statusPn6Layout.setHorizontalGroup(
-            statusPn6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(statusPn6Layout.createSequentialGroup()
-                .addGap(43, 43, 43)
-                .addComponent(carpic6)
-                .addContainerGap(46, Short.MAX_VALUE))
-            .addGroup(statusPn6Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(statusBn6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-        statusPn6Layout.setVerticalGroup(
-            statusPn6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(statusPn6Layout.createSequentialGroup()
-                .addGap(23, 23, 23)
-                .addComponent(carpic6)
-                .addGap(18, 18, 18)
-                .addComponent(statusBn6, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(10, Short.MAX_VALUE))
-        );
-
-        carTable.add(statusPn6, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 340, 150, 210));
-
-        statusPn5.setBackground(new java.awt.Color(217, 217, 217));
-
-        carpic5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/car.png"))); // NOI18N
-
-        statusBn5.setText("Status");
-
-        javax.swing.GroupLayout statusPn5Layout = new javax.swing.GroupLayout(statusPn5);
-        statusPn5.setLayout(statusPn5Layout);
-        statusPn5Layout.setHorizontalGroup(
-            statusPn5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(statusPn5Layout.createSequentialGroup()
-                .addGap(43, 43, 43)
-                .addComponent(carpic5)
-                .addContainerGap(46, Short.MAX_VALUE))
-            .addGroup(statusPn5Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(statusBn5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-        statusPn5Layout.setVerticalGroup(
-            statusPn5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(statusPn5Layout.createSequentialGroup()
-                .addGap(23, 23, 23)
-                .addComponent(carpic5)
-                .addGap(18, 18, 18)
-                .addComponent(statusBn5, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(10, Short.MAX_VALUE))
-        );
-
-        carTable.add(statusPn5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 340, 150, 210));
-
-        statusPn4.setBackground(new java.awt.Color(217, 217, 217));
-
-        carpic4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/car.png"))); // NOI18N
-
-        statusBn4.setText("Status");
-
-        javax.swing.GroupLayout statusPn4Layout = new javax.swing.GroupLayout(statusPn4);
-        statusPn4.setLayout(statusPn4Layout);
-        statusPn4Layout.setHorizontalGroup(
-            statusPn4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(statusPn4Layout.createSequentialGroup()
-                .addGap(43, 43, 43)
-                .addComponent(carpic4)
-                .addContainerGap(46, Short.MAX_VALUE))
-            .addGroup(statusPn4Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(statusBn4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-        statusPn4Layout.setVerticalGroup(
-            statusPn4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(statusPn4Layout.createSequentialGroup()
-                .addGap(23, 23, 23)
-                .addComponent(carpic4)
-                .addGap(18, 18, 18)
-                .addComponent(statusBn4, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(10, Short.MAX_VALUE))
-        );
-
-        carTable.add(statusPn4, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 60, 150, 210));
-
-        statusPn3.setBackground(new java.awt.Color(217, 217, 217));
-
-        carpic3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/car.png"))); // NOI18N
-
-        statusBn3.setText("Status");
-
-        javax.swing.GroupLayout statusPn3Layout = new javax.swing.GroupLayout(statusPn3);
-        statusPn3.setLayout(statusPn3Layout);
-        statusPn3Layout.setHorizontalGroup(
-            statusPn3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(statusPn3Layout.createSequentialGroup()
-                .addGap(43, 43, 43)
-                .addComponent(carpic3)
-                .addContainerGap(46, Short.MAX_VALUE))
-            .addGroup(statusPn3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(statusBn3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-        statusPn3Layout.setVerticalGroup(
-            statusPn3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(statusPn3Layout.createSequentialGroup()
-                .addGap(23, 23, 23)
-                .addComponent(carpic3)
-                .addGap(18, 18, 18)
-                .addComponent(statusBn3, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(10, Short.MAX_VALUE))
-        );
-
-        carTable.add(statusPn3, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 60, 150, 210));
-
-        statusPn2.setBackground(new java.awt.Color(217, 217, 217));
-
-        carpic2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/car.png"))); // NOI18N
-
-        statusBn2.setText("Status");
-
-        javax.swing.GroupLayout statusPn2Layout = new javax.swing.GroupLayout(statusPn2);
-        statusPn2.setLayout(statusPn2Layout);
-        statusPn2Layout.setHorizontalGroup(
-            statusPn2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(statusPn2Layout.createSequentialGroup()
-                .addGap(43, 43, 43)
-                .addComponent(carpic2)
-                .addContainerGap(46, Short.MAX_VALUE))
-            .addGroup(statusPn2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(statusBn2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-        statusPn2Layout.setVerticalGroup(
-            statusPn2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(statusPn2Layout.createSequentialGroup()
-                .addGap(23, 23, 23)
-                .addComponent(carpic2)
-                .addGap(18, 18, 18)
-                .addComponent(statusBn2, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(10, Short.MAX_VALUE))
-        );
-
-        carTable.add(statusPn2, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 60, 150, 210));
-
-        statusPn1.setBackground(new java.awt.Color(217, 217, 217));
-
-        carpic1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/car.png"))); // NOI18N
-
-        statusBn1.setText("Status");
-
-        javax.swing.GroupLayout statusPn1Layout = new javax.swing.GroupLayout(statusPn1);
-        statusPn1.setLayout(statusPn1Layout);
-        statusPn1Layout.setHorizontalGroup(
-            statusPn1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(statusPn1Layout.createSequentialGroup()
-                .addGap(43, 43, 43)
-                .addComponent(carpic1)
-                .addContainerGap(46, Short.MAX_VALUE))
-            .addGroup(statusPn1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(statusBn1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-        statusPn1Layout.setVerticalGroup(
-            statusPn1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(statusPn1Layout.createSequentialGroup()
-                .addGap(23, 23, 23)
-                .addComponent(carpic1)
-                .addGap(18, 18, 18)
-                .addComponent(statusBn1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(10, Short.MAX_VALUE))
-        );
-
-        carTable.add(statusPn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 60, 150, 210));
-
-        statusPn0.setBackground(new java.awt.Color(217, 217, 217));
+        statusPn0.setBackground(new java.awt.Color(255, 255, 255));
 
         carpic0.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/car.png"))); // NOI18N
 
-        statusBn0.setText("Status");
+        statusBn0.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        statusBn0.setText("สถานะ");
 
         javax.swing.GroupLayout statusPn0Layout = new javax.swing.GroupLayout(statusPn0);
         statusPn0.setLayout(statusPn0Layout);
         statusPn0Layout.setHorizontalGroup(
             statusPn0Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(statusPn0Layout.createSequentialGroup()
-                .addGap(43, 43, 43)
-                .addComponent(carpic0)
-                .addContainerGap(46, Short.MAX_VALUE))
-            .addGroup(statusPn0Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(statusBn0, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+                .addGroup(statusPn0Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(statusPn0Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(statusBn0, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(statusPn0Layout.createSequentialGroup()
+                        .addGap(36, 36, 36)
+                        .addComponent(carpic0)))
+                .addContainerGap(9, Short.MAX_VALUE))
         );
         statusPn0Layout.setVerticalGroup(
             statusPn0Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(statusPn0Layout.createSequentialGroup()
-                .addGap(23, 23, 23)
+                .addGap(12, 12, 12)
                 .addComponent(carpic0)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(statusBn0, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(10, Short.MAX_VALUE))
+                .addContainerGap(17, Short.MAX_VALUE))
         );
 
-        carTable.add(statusPn0, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 150, 210));
+        slot0.add(statusPn0, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 140, 200));
 
-        txtNocar0.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
-        txtNocar0.setText("<No car repair>");
-        carTable.add(txtNocar0, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 130, -1, -1));
+        txtNocar0.setBackground(new java.awt.Color(255, 255, 255));
+        txtNocar0.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
+        txtNocar0.setForeground(java.awt.Color.white);
+        txtNocar0.setText("< ว่าง >");
+        slot0.add(txtNocar0, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 110, -1, -1));
 
-        txtNocar1.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
-        txtNocar1.setText("<No car repair>");
-        carTable.add(txtNocar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 130, -1, -1));
+        num1.setBackground(new java.awt.Color(255, 255, 255));
+        num1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        num1.setForeground(java.awt.Color.white);
+        num1.setText("1");
+        slot0.add(num1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 0, 20, -1));
 
-        txtNocar2.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
-        txtNocar2.setText("<No car repair>");
-        carTable.add(txtNocar2, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 130, -1, -1));
+        slot1.setBackground(new java.awt.Color(169, 169, 169));
+        slot1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        slot1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        txtNocar3.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
-        txtNocar3.setText("<No car repair>");
-        carTable.add(txtNocar3, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 130, -1, -1));
+        statusPn1.setBackground(new java.awt.Color(255, 255, 255));
 
-        txtNocar4.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
-        txtNocar4.setText("<No car repair>");
-        carTable.add(txtNocar4, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 130, -1, -1));
+        carpic1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/car.png"))); // NOI18N
 
-        txtNocar5.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
-        txtNocar5.setText("<No car repair>");
-        carTable.add(txtNocar5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 420, -1, -1));
+        statusBn1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        statusBn1.setText("สถานะ");
+        statusBn1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                statusBn1ActionPerformed(evt);
+            }
+        });
 
-        txtNocar6.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
-        txtNocar6.setText("<No car repair>");
-        carTable.add(txtNocar6, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 420, -1, -1));
-
-        txtNocar7.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
-        txtNocar7.setText("<No car repair>");
-        carTable.add(txtNocar7, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 420, -1, -1));
-
-        txtNocar8.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
-        txtNocar8.setText("<No car repair>");
-        carTable.add(txtNocar8, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 420, -1, -1));
-
-        txtNocar9.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
-        txtNocar9.setText("<No car repair>");
-        carTable.add(txtNocar9, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 420, -1, -1));
-
-        tablepic.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/slot_car.png"))); // NOI18N
-        carTable.add(tablepic, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
-
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(457, 457, 457)
-                .addComponent(txtStatusRepair2)
-                .addContainerGap(900, Short.MAX_VALUE))
-            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                    .addContainerGap(61, Short.MAX_VALUE)
-                    .addComponent(carTable, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(479, Short.MAX_VALUE)))
+        javax.swing.GroupLayout statusPn1Layout = new javax.swing.GroupLayout(statusPn1);
+        statusPn1.setLayout(statusPn1Layout);
+        statusPn1Layout.setHorizontalGroup(
+            statusPn1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(statusPn1Layout.createSequentialGroup()
+                .addGroup(statusPn1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(statusPn1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(statusBn1, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(statusPn1Layout.createSequentialGroup()
+                        .addGap(36, 36, 36)
+                        .addComponent(carpic1)))
+                .addContainerGap(9, Short.MAX_VALUE))
         );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(14, 14, 14)
-                .addComponent(txtStatusRepair2)
-                .addContainerGap(627, Short.MAX_VALUE))
-            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                    .addContainerGap(55, Short.MAX_VALUE)
-                    .addComponent(carTable, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(55, Short.MAX_VALUE)))
+        statusPn1Layout.setVerticalGroup(
+            statusPn1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(statusPn1Layout.createSequentialGroup()
+                .addGap(12, 12, 12)
+                .addComponent(carpic1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(statusBn1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(17, Short.MAX_VALUE))
         );
 
-        jPanel5.add(jPanel3);
+        slot1.add(statusPn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 140, 200));
 
-        mainPanel.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 670));
+        txtNocar1.setBackground(new java.awt.Color(255, 255, 255));
+        txtNocar1.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
+        txtNocar1.setForeground(java.awt.Color.white);
+        txtNocar1.setText("< ว่าง >");
+        slot1.add(txtNocar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 110, -1, -1));
 
-        getContentPane().add(mainPanel, java.awt.BorderLayout.CENTER);
+        num2.setBackground(new java.awt.Color(255, 255, 255));
+        num2.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        num2.setForeground(java.awt.Color.white);
+        num2.setText("2");
+        slot1.add(num2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 0, 20, -1));
+
+        slot2.setBackground(new java.awt.Color(169, 169, 169));
+        slot2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        slot2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        statusPn2.setBackground(new java.awt.Color(255, 255, 255));
+
+        carpic2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/car.png"))); // NOI18N
+
+        statusBn2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        statusBn2.setText("สถานะ");
+        statusBn2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                statusBn2ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout statusPn2Layout = new javax.swing.GroupLayout(statusPn2);
+        statusPn2.setLayout(statusPn2Layout);
+        statusPn2Layout.setHorizontalGroup(
+            statusPn2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(statusPn2Layout.createSequentialGroup()
+                .addGroup(statusPn2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(statusPn2Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(statusBn2, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(statusPn2Layout.createSequentialGroup()
+                        .addGap(38, 38, 38)
+                        .addComponent(carpic2)))
+                .addContainerGap(9, Short.MAX_VALUE))
+        );
+        statusPn2Layout.setVerticalGroup(
+            statusPn2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(statusPn2Layout.createSequentialGroup()
+                .addGap(12, 12, 12)
+                .addComponent(carpic2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(statusBn2, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(17, Short.MAX_VALUE))
+        );
+
+        slot2.add(statusPn2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 140, 200));
+
+        txtNocar2.setBackground(new java.awt.Color(255, 255, 255));
+        txtNocar2.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
+        txtNocar2.setForeground(java.awt.Color.white);
+        txtNocar2.setText("< ว่าง >");
+        slot2.add(txtNocar2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 110, -1, -1));
+
+        num3.setBackground(new java.awt.Color(255, 255, 255));
+        num3.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        num3.setForeground(java.awt.Color.white);
+        num3.setText("3");
+        slot2.add(num3, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 0, 20, -1));
+
+        slot3.setBackground(new java.awt.Color(169, 169, 169));
+        slot3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        slot3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        statusPn3.setBackground(new java.awt.Color(255, 255, 255));
+
+        carpic3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/car.png"))); // NOI18N
+
+        statusBn3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        statusBn3.setText("สถานะ");
+
+        javax.swing.GroupLayout statusPn3Layout = new javax.swing.GroupLayout(statusPn3);
+        statusPn3.setLayout(statusPn3Layout);
+        statusPn3Layout.setHorizontalGroup(
+            statusPn3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(statusPn3Layout.createSequentialGroup()
+                .addGroup(statusPn3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(statusPn3Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(statusBn3, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(statusPn3Layout.createSequentialGroup()
+                        .addGap(39, 39, 39)
+                        .addComponent(carpic3)))
+                .addContainerGap(9, Short.MAX_VALUE))
+        );
+        statusPn3Layout.setVerticalGroup(
+            statusPn3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(statusPn3Layout.createSequentialGroup()
+                .addGap(12, 12, 12)
+                .addComponent(carpic3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(statusBn3, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(17, Short.MAX_VALUE))
+        );
+
+        slot3.add(statusPn3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 140, 200));
+
+        txtNocar3.setBackground(new java.awt.Color(255, 255, 255));
+        txtNocar3.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
+        txtNocar3.setForeground(java.awt.Color.white);
+        txtNocar3.setText("< ว่าง >");
+        slot3.add(txtNocar3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 110, -1, -1));
+
+        num4.setBackground(new java.awt.Color(255, 255, 255));
+        num4.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        num4.setForeground(java.awt.Color.white);
+        num4.setText("4");
+        slot3.add(num4, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 0, 20, -1));
+
+        slot4.setBackground(new java.awt.Color(169, 169, 169));
+        slot4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        slot4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        statusPn4.setBackground(new java.awt.Color(255, 255, 255));
+
+        carpic4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/car.png"))); // NOI18N
+
+        statusBn4.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        statusBn4.setText("สถานะ");
+
+        javax.swing.GroupLayout statusPn4Layout = new javax.swing.GroupLayout(statusPn4);
+        statusPn4.setLayout(statusPn4Layout);
+        statusPn4Layout.setHorizontalGroup(
+            statusPn4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(statusPn4Layout.createSequentialGroup()
+                .addGroup(statusPn4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(statusPn4Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(statusBn4, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(statusPn4Layout.createSequentialGroup()
+                        .addGap(36, 36, 36)
+                        .addComponent(carpic4)))
+                .addContainerGap(9, Short.MAX_VALUE))
+        );
+        statusPn4Layout.setVerticalGroup(
+            statusPn4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(statusPn4Layout.createSequentialGroup()
+                .addGap(12, 12, 12)
+                .addComponent(carpic4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(statusBn4, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(17, Short.MAX_VALUE))
+        );
+
+        slot4.add(statusPn4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 140, 200));
+
+        txtNocar4.setBackground(new java.awt.Color(255, 255, 255));
+        txtNocar4.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
+        txtNocar4.setForeground(java.awt.Color.white);
+        txtNocar4.setText("< ว่าง >");
+        slot4.add(txtNocar4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 110, -1, -1));
+
+        num5.setBackground(new java.awt.Color(255, 255, 255));
+        num5.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        num5.setForeground(java.awt.Color.white);
+        num5.setText("5");
+        slot4.add(num5, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 0, 20, -1));
+
+        slot5.setBackground(new java.awt.Color(169, 169, 169));
+        slot5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        slot5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        statusPn5.setBackground(new java.awt.Color(255, 255, 255));
+
+        carpic5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/car.png"))); // NOI18N
+
+        statusBn5.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        statusBn5.setText("สถานะ");
+
+        javax.swing.GroupLayout statusPn5Layout = new javax.swing.GroupLayout(statusPn5);
+        statusPn5.setLayout(statusPn5Layout);
+        statusPn5Layout.setHorizontalGroup(
+            statusPn5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(statusPn5Layout.createSequentialGroup()
+                .addGroup(statusPn5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(statusPn5Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(statusBn5, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(statusPn5Layout.createSequentialGroup()
+                        .addGap(35, 35, 35)
+                        .addComponent(carpic5)))
+                .addContainerGap(9, Short.MAX_VALUE))
+        );
+        statusPn5Layout.setVerticalGroup(
+            statusPn5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(statusPn5Layout.createSequentialGroup()
+                .addGap(12, 12, 12)
+                .addComponent(carpic5)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(statusBn5, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(17, Short.MAX_VALUE))
+        );
+
+        slot5.add(statusPn5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 140, 200));
+
+        txtNocar5.setBackground(new java.awt.Color(255, 255, 255));
+        txtNocar5.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
+        txtNocar5.setForeground(java.awt.Color.white);
+        txtNocar5.setText("< ว่าง >");
+        slot5.add(txtNocar5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 110, -1, -1));
+
+        num6.setBackground(new java.awt.Color(255, 255, 255));
+        num6.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        num6.setForeground(java.awt.Color.white);
+        num6.setText("6");
+        slot5.add(num6, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 0, 20, -1));
+
+        slot6.setBackground(new java.awt.Color(169, 169, 169));
+        slot6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        slot6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        statusPn6.setBackground(new java.awt.Color(255, 255, 255));
+
+        carpic6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/car.png"))); // NOI18N
+
+        statusBn6.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        statusBn6.setText("สถานะ");
+
+        javax.swing.GroupLayout statusPn6Layout = new javax.swing.GroupLayout(statusPn6);
+        statusPn6.setLayout(statusPn6Layout);
+        statusPn6Layout.setHorizontalGroup(
+            statusPn6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(statusPn6Layout.createSequentialGroup()
+                .addGroup(statusPn6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(statusPn6Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(statusBn6, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(statusPn6Layout.createSequentialGroup()
+                        .addGap(39, 39, 39)
+                        .addComponent(carpic6)))
+                .addContainerGap(9, Short.MAX_VALUE))
+        );
+        statusPn6Layout.setVerticalGroup(
+            statusPn6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(statusPn6Layout.createSequentialGroup()
+                .addGap(12, 12, 12)
+                .addComponent(carpic6)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(statusBn6, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(17, Short.MAX_VALUE))
+        );
+
+        slot6.add(statusPn6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 140, 200));
+
+        txtNocar6.setBackground(new java.awt.Color(255, 255, 255));
+        txtNocar6.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
+        txtNocar6.setForeground(java.awt.Color.white);
+        txtNocar6.setText("< ว่าง >");
+        slot6.add(txtNocar6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 110, -1, -1));
+
+        num7.setBackground(new java.awt.Color(255, 255, 255));
+        num7.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        num7.setForeground(java.awt.Color.white);
+        num7.setText("7");
+        slot6.add(num7, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 0, 20, -1));
+
+        slot7.setBackground(new java.awt.Color(169, 169, 169));
+        slot7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        slot7.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        statusPn7.setBackground(new java.awt.Color(255, 255, 255));
+
+        carpic7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/car.png"))); // NOI18N
+
+        statusBn7.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        statusBn7.setText("สถานะ");
+        statusBn7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                statusBn7ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout statusPn7Layout = new javax.swing.GroupLayout(statusPn7);
+        statusPn7.setLayout(statusPn7Layout);
+        statusPn7Layout.setHorizontalGroup(
+            statusPn7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(statusPn7Layout.createSequentialGroup()
+                .addGroup(statusPn7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(statusPn7Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(statusBn7, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(statusPn7Layout.createSequentialGroup()
+                        .addGap(39, 39, 39)
+                        .addComponent(carpic7)))
+                .addContainerGap(9, Short.MAX_VALUE))
+        );
+        statusPn7Layout.setVerticalGroup(
+            statusPn7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(statusPn7Layout.createSequentialGroup()
+                .addGap(12, 12, 12)
+                .addComponent(carpic7)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(statusBn7, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(17, Short.MAX_VALUE))
+        );
+
+        slot7.add(statusPn7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 140, 200));
+
+        txtNocar7.setBackground(new java.awt.Color(255, 255, 255));
+        txtNocar7.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
+        txtNocar7.setForeground(java.awt.Color.white);
+        txtNocar7.setText("< ว่าง >");
+        slot7.add(txtNocar7, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 110, -1, -1));
+
+        num8.setBackground(new java.awt.Color(255, 255, 255));
+        num8.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        num8.setForeground(java.awt.Color.white);
+        num8.setText("8");
+        slot7.add(num8, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 0, 20, -1));
+
+        slot8.setBackground(new java.awt.Color(169, 169, 169));
+        slot8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        slot8.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        statusPn8.setBackground(new java.awt.Color(255, 255, 255));
+
+        carpic8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/car.png"))); // NOI18N
+
+        statusBn8.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        statusBn8.setText("สถานะ");
+
+        javax.swing.GroupLayout statusPn8Layout = new javax.swing.GroupLayout(statusPn8);
+        statusPn8.setLayout(statusPn8Layout);
+        statusPn8Layout.setHorizontalGroup(
+            statusPn8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(statusPn8Layout.createSequentialGroup()
+                .addGroup(statusPn8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(statusPn8Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(statusBn8, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(statusPn8Layout.createSequentialGroup()
+                        .addGap(38, 38, 38)
+                        .addComponent(carpic8)))
+                .addContainerGap(9, Short.MAX_VALUE))
+        );
+        statusPn8Layout.setVerticalGroup(
+            statusPn8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(statusPn8Layout.createSequentialGroup()
+                .addGap(12, 12, 12)
+                .addComponent(carpic8)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(statusBn8, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(17, Short.MAX_VALUE))
+        );
+
+        slot8.add(statusPn8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 140, 200));
+
+        txtNocar8.setBackground(new java.awt.Color(255, 255, 255));
+        txtNocar8.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
+        txtNocar8.setForeground(java.awt.Color.white);
+        txtNocar8.setText("< ว่าง >");
+        slot8.add(txtNocar8, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 110, -1, -1));
+
+        num9.setBackground(new java.awt.Color(255, 255, 255));
+        num9.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        num9.setForeground(java.awt.Color.white);
+        num9.setText("9");
+        slot8.add(num9, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 0, 20, -1));
+
+        slot9.setBackground(new java.awt.Color(169, 169, 169));
+        slot9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        slot9.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        statusPn9.setBackground(new java.awt.Color(255, 255, 255));
+
+        carpic9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/car.png"))); // NOI18N
+
+        statusBn9.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        statusBn9.setText("สถานะ");
+
+        javax.swing.GroupLayout statusPn9Layout = new javax.swing.GroupLayout(statusPn9);
+        statusPn9.setLayout(statusPn9Layout);
+        statusPn9Layout.setHorizontalGroup(
+            statusPn9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(statusPn9Layout.createSequentialGroup()
+                .addGroup(statusPn9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(statusPn9Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(statusBn9, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(statusPn9Layout.createSequentialGroup()
+                        .addGap(38, 38, 38)
+                        .addComponent(carpic9)))
+                .addContainerGap(9, Short.MAX_VALUE))
+        );
+        statusPn9Layout.setVerticalGroup(
+            statusPn9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(statusPn9Layout.createSequentialGroup()
+                .addGap(12, 12, 12)
+                .addComponent(carpic9)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(statusBn9, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(17, Short.MAX_VALUE))
+        );
+
+        slot9.add(statusPn9, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 140, 200));
+
+        txtNocar9.setBackground(new java.awt.Color(255, 255, 255));
+        txtNocar9.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
+        txtNocar9.setForeground(java.awt.Color.white);
+        txtNocar9.setText("< ว่าง >");
+        slot9.add(txtNocar9, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 110, -1, -1));
+
+        num10.setBackground(new java.awt.Color(255, 255, 255));
+        num10.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        num10.setForeground(java.awt.Color.white);
+        num10.setText("10");
+        slot9.add(num10, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 0, 30, -1));
+
+        headtextPn.setBackground(new java.awt.Color(255, 255, 255));
+
+        headTxt.setBackground(new java.awt.Color(255, 204, 102));
+        headTxt.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        headTxt.setForeground(new java.awt.Color(255, 102, 0));
+        headTxt.setText("สถานะการซ่อมรถ");
+        headtextPn.add(headTxt);
+
+        javax.swing.GroupLayout tablePnLayout = new javax.swing.GroupLayout(tablePn);
+        tablePn.setLayout(tablePnLayout);
+        tablePnLayout.setHorizontalGroup(
+            tablePnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(tablePnLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(tablePnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(headtextPn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(tablePnLayout.createSequentialGroup()
+                        .addComponent(slot5, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(slot6, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(slot7, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(slot8, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(slot9, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(tablePnLayout.createSequentialGroup()
+                        .addComponent(slot0, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(slot1, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(slot2, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(slot3, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(slot4, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        tablePnLayout.setVerticalGroup(
+            tablePnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, tablePnLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(headtextPn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(tablePnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(slot1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(slot0, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(slot4, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(slot3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(slot2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(tablePnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(slot6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(slot5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(slot9, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(slot8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(slot7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(10, 10, 10))
+        );
+
+        submainPn.add(tablePn);
+
+        javax.swing.GroupLayout mainPnLayout = new javax.swing.GroupLayout(mainPn);
+        mainPn.setLayout(mainPnLayout);
+        mainPnLayout.setHorizontalGroup(
+            mainPnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(mainPnLayout.createSequentialGroup()
+                .addComponent(MenuBar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(submainPn, javax.swing.GroupLayout.PREFERRED_SIZE, 1064, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        mainPnLayout.setVerticalGroup(
+            mainPnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(mainPnLayout.createSequentialGroup()
+                .addComponent(MenuBar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(submainPn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        getContentPane().add(mainPn, java.awt.BorderLayout.CENTER);
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
-
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
@@ -651,25 +833,37 @@ public class HomepageFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_stuffmange_bnActionPerformed
 
-    private void HomeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HomeButtonActionPerformed
+    private void receipt_bnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_receipt_bnActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_HomeButtonActionPerformed
-
-    private void customerqbnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_customerqbnActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_customerqbnActionPerformed
-
-    private void equipment_bnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_equipment_bnActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_equipment_bnActionPerformed
+    }//GEN-LAST:event_receipt_bnActionPerformed
 
     private void warehouse_bnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_warehouse_bnActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_warehouse_bnActionPerformed
 
-    private void receipt_bnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_receipt_bnActionPerformed
+    private void equipment_bnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_equipment_bnActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_receipt_bnActionPerformed
+    }//GEN-LAST:event_equipment_bnActionPerformed
+
+    private void customerqbnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_customerqbnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_customerqbnActionPerformed
+
+    private void HomeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HomeButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_HomeButtonActionPerformed
+
+    private void statusBn7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_statusBn7ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_statusBn7ActionPerformed
+
+    private void statusBn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_statusBn2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_statusBn2ActionPerformed
+
+    private void statusBn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_statusBn1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_statusBn1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -711,9 +905,9 @@ public class HomepageFrame extends javax.swing.JFrame {
         });
     }
     
-    public JTextField getUsernameLabel(){
-            return this.jTextField2;
-        }
+    public JLabel getUsernameLabel(){
+        return this.usernameTxt;
+    }
     
     public JButton getManagementButton(){
         return this.customerqbn;
@@ -734,12 +928,12 @@ public class HomepageFrame extends javax.swing.JFrame {
     public JButton getStuffmanageButton(){
         return this.stuffmange_bn;
     }
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Header;
     private javax.swing.JButton HomeButton;
     private javax.swing.JPanel MenuBar;
-    private javax.swing.JPanel carTable;
     private javax.swing.JLabel carpic0;
     private javax.swing.JLabel carpic1;
     private javax.swing.JLabel carpic2;
@@ -752,36 +946,55 @@ public class HomepageFrame extends javax.swing.JFrame {
     private javax.swing.JLabel carpic9;
     private javax.swing.JButton customerqbn;
     private javax.swing.JButton equipment_bn;
+    private javax.swing.JLabel headTxt;
+    private javax.swing.JPanel headtextPn;
     private javax.swing.JButton jButton1;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JPanel mainPanel;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JPanel mainPn;
+    private javax.swing.JLabel num1;
+    private javax.swing.JLabel num10;
+    private javax.swing.JLabel num2;
+    private javax.swing.JLabel num3;
+    private javax.swing.JLabel num4;
+    private javax.swing.JLabel num5;
+    private javax.swing.JLabel num6;
+    private javax.swing.JLabel num7;
+    private javax.swing.JLabel num8;
+    private javax.swing.JLabel num9;
     private javax.swing.JButton receipt_bn;
+    private javax.swing.JPanel slot0;
+    private javax.swing.JPanel slot1;
+    private javax.swing.JPanel slot2;
+    private javax.swing.JPanel slot3;
+    private javax.swing.JPanel slot4;
+    private javax.swing.JPanel slot5;
+    private javax.swing.JPanel slot6;
+    private javax.swing.JPanel slot7;
+    private javax.swing.JPanel slot8;
+    private javax.swing.JPanel slot9;
     protected javax.swing.JButton statusBn0;
-    protected javax.swing.JButton statusBn1;
-    protected javax.swing.JButton statusBn2;
-    protected javax.swing.JButton statusBn3;
-    protected javax.swing.JButton statusBn4;
-    protected javax.swing.JButton statusBn5;
-    protected javax.swing.JButton statusBn6;
-    protected javax.swing.JButton statusBn7;
-    protected javax.swing.JButton statusBn8;
-    protected javax.swing.JButton statusBn9;
+    private javax.swing.JButton statusBn1;
+    private javax.swing.JButton statusBn2;
+    private javax.swing.JButton statusBn3;
+    private javax.swing.JButton statusBn4;
+    private javax.swing.JButton statusBn5;
+    private javax.swing.JButton statusBn6;
+    private javax.swing.JButton statusBn7;
+    private javax.swing.JButton statusBn8;
+    private javax.swing.JButton statusBn9;
     protected javax.swing.JPanel statusPn0;
-    protected javax.swing.JPanel statusPn1;
-    protected javax.swing.JPanel statusPn2;
-    protected javax.swing.JPanel statusPn3;
-    protected javax.swing.JPanel statusPn4;
-    protected javax.swing.JPanel statusPn5;
-    protected javax.swing.JPanel statusPn6;
-    protected javax.swing.JPanel statusPn7;
-    protected javax.swing.JPanel statusPn8;
-    protected javax.swing.JPanel statusPn9;
+    private javax.swing.JPanel statusPn1;
+    private javax.swing.JPanel statusPn2;
+    private javax.swing.JPanel statusPn3;
+    private javax.swing.JPanel statusPn4;
+    private javax.swing.JPanel statusPn5;
+    private javax.swing.JPanel statusPn6;
+    private javax.swing.JPanel statusPn7;
+    private javax.swing.JPanel statusPn8;
+    private javax.swing.JPanel statusPn9;
     private javax.swing.JButton stuffmange_bn;
-    private javax.swing.JLabel tablepic;
+    private javax.swing.JPanel submainPn;
+    private javax.swing.JPanel tablePn;
     private javax.swing.JLabel txtNocar0;
     private javax.swing.JLabel txtNocar1;
     private javax.swing.JLabel txtNocar2;
@@ -792,7 +1005,8 @@ public class HomepageFrame extends javax.swing.JFrame {
     private javax.swing.JLabel txtNocar7;
     private javax.swing.JLabel txtNocar8;
     private javax.swing.JLabel txtNocar9;
-    private javax.swing.JLabel txtStatusRepair2;
+    private javax.swing.JPanel usernamePn;
+    private javax.swing.JLabel usernameTxt;
     private javax.swing.JButton warehouse_bn;
     // End of variables declaration//GEN-END:variables
 }
