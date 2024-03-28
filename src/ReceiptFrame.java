@@ -207,9 +207,9 @@ public class ReceiptFrame extends javax.swing.JFrame {
         });
         MenuBar1.add(stuffmange_bn, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 530, 220, 70));
 
-        HomeButton1.setBackground(new java.awt.Color(255, 255, 255));
+        HomeButton1.setBackground(new java.awt.Color(255, 102, 0));
         HomeButton1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        HomeButton1.setForeground(new java.awt.Color(255, 102, 0));
+        HomeButton1.setForeground(new java.awt.Color(255, 255, 255));
         HomeButton1.setText("หน้าโฮม");
         HomeButton1.setBorder(null);
         HomeButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -261,9 +261,9 @@ public class ReceiptFrame extends javax.swing.JFrame {
         });
         MenuBar1.add(warehouse_bn, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 330, 220, 70));
 
-        receipt_bn.setBackground(new java.awt.Color(255, 102, 0));
+        receipt_bn.setBackground(new java.awt.Color(255, 255, 255));
         receipt_bn.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        receipt_bn.setForeground(new java.awt.Color(255, 255, 255));
+        receipt_bn.setForeground(new java.awt.Color(255, 102, 0));
         receipt_bn.setText("ใบเสร็จ");
         receipt_bn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
