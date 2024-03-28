@@ -107,9 +107,16 @@ public class AccountManageFrame extends javax.swing.JFrame {
                 "Username", "Name", "Surname", "Level"
             }
         ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class
+            };
             boolean[] canEdit = new boolean [] {
                 false, false, false, false
             };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
                 return canEdit [columnIndex];
@@ -352,6 +359,10 @@ public class AccountManageFrame extends javax.swing.JFrame {
                 new AccountManageFrame().setVisible(true);
             }
         });
+    }
+    
+    public JTable getTable(){
+        return this.AccountTable;
     }
     
     public JButton getHomeButton(){

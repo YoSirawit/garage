@@ -261,7 +261,7 @@ public class CreateAccFrame extends javax.swing.JFrame{
             int user_level = 1;
             String sql = String.format("INSERT INTO userid (FirstName, LastName, username, user_pass, email, phone, user_level) VALUES('%s','%s','%s','%s','%s','%s',%d);",name,surname,username,password,email,phone,user_level);
             db.getUpdate(sql);
-
+            this.close();
        }
     }//GEN-LAST:event_CreateAccButtonActionPerformed
 

@@ -68,6 +68,7 @@ public class MainController implements ActionListener{
             mainframe.setContentPane(hc.getHomepageframe().getContentPane());
         // if user press stuff management button    
         }else if(e.getSource().equals(hc.getHomepageframe().getStuffmanageButton())){
+            spc.update();
             mainframe.setContentPane(spc.getAccountFrame().getContentPane());
         }
     }
