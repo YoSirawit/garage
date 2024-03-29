@@ -89,7 +89,6 @@ public class ReceiptFrame extends javax.swing.JFrame {
         Header = new javax.swing.JPanel();
         usernamePn = new javax.swing.JPanel();
         usernameTxt = new javax.swing.JLabel();
-        jButton4 = new javax.swing.JButton();
         garageName = new javax.swing.JLabel();
         MenuBar1 = new javax.swing.JPanel();
         stuffmange_bn = new javax.swing.JButton();
@@ -103,58 +102,60 @@ public class ReceiptFrame extends javax.swing.JFrame {
         grid = new javax.swing.JPanel();
         gridtop = new javax.swing.JPanel();
         slot1 = new javax.swing.JPanel();
-        ch1 = new javax.swing.JLabel();
         car_owner1 = new javax.swing.JLabel();
         car_id1 = new javax.swing.JLabel();
+        ch1 = new javax.swing.JLabel();
         select1 = new javax.swing.JButton();
         slot2 = new javax.swing.JPanel();
-        ch2 = new javax.swing.JLabel();
         car_owner2 = new javax.swing.JLabel();
         car_id2 = new javax.swing.JLabel();
+        ch2 = new javax.swing.JLabel();
         select2 = new javax.swing.JButton();
         slot3 = new javax.swing.JPanel();
-        ch3 = new javax.swing.JLabel();
         car_owner3 = new javax.swing.JLabel();
         car_id3 = new javax.swing.JLabel();
+        ch3 = new javax.swing.JLabel();
         select3 = new javax.swing.JButton();
         slot4 = new javax.swing.JPanel();
-        ch4 = new javax.swing.JLabel();
         car_owner4 = new javax.swing.JLabel();
         car_id4 = new javax.swing.JLabel();
         select4 = new javax.swing.JButton();
+        ch4 = new javax.swing.JLabel();
         slot5 = new javax.swing.JPanel();
-        ch5 = new javax.swing.JLabel();
         car_owner5 = new javax.swing.JLabel();
         car_id5 = new javax.swing.JLabel();
+        ch5 = new javax.swing.JLabel();
         select5 = new javax.swing.JButton();
         gridbott = new javax.swing.JPanel();
         slot6 = new javax.swing.JPanel();
-        ch6 = new javax.swing.JLabel();
         car_owner6 = new javax.swing.JLabel();
         car_id6 = new javax.swing.JLabel();
         select6 = new javax.swing.JButton();
+        ch6 = new javax.swing.JLabel();
         slot7 = new javax.swing.JPanel();
-        ch7 = new javax.swing.JLabel();
         car_owner7 = new javax.swing.JLabel();
         car_id7 = new javax.swing.JLabel();
         select7 = new javax.swing.JButton();
+        ch7 = new javax.swing.JLabel();
         slot8 = new javax.swing.JPanel();
-        ch8 = new javax.swing.JLabel();
         car_owner8 = new javax.swing.JLabel();
         car_id8 = new javax.swing.JLabel();
         select8 = new javax.swing.JButton();
+        ch8 = new javax.swing.JLabel();
         slot9 = new javax.swing.JPanel();
-        ch9 = new javax.swing.JLabel();
         car_owner9 = new javax.swing.JLabel();
         car_id9 = new javax.swing.JLabel();
         select9 = new javax.swing.JButton();
+        ch9 = new javax.swing.JLabel();
         slot10 = new javax.swing.JPanel();
-        ch10 = new javax.swing.JLabel();
         car_owner10 = new javax.swing.JLabel();
         car_id10 = new javax.swing.JLabel();
         select10 = new javax.swing.JButton();
+        ch10 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMinimumSize(new java.awt.Dimension(1270, 950));
+        setPreferredSize(new java.awt.Dimension(1280, 950));
         setResizable(false);
 
         Header.setBackground(new java.awt.Color(242, 157, 0));
@@ -174,10 +175,6 @@ public class ReceiptFrame extends javax.swing.JFrame {
         usernamePn.add(usernameTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 160, 30));
 
         Header.add(usernamePn, new org.netbeans.lib.awtextra.AbsoluteConstraints(1090, 10, 160, 30));
-
-        jButton4.setBackground(new java.awt.Color(255, 204, 153));
-        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/menu_icon_jing.png"))); // NOI18N
-        Header.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 60, 50));
 
         garageName.setBackground(new java.awt.Color(242, 157, 0));
         garageName.setFont(new java.awt.Font("IrisUPC", 3, 48)); // NOI18N
@@ -282,24 +279,23 @@ public class ReceiptFrame extends javax.swing.JFrame {
         jPanel3.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1060, -1));
 
         grid.setForeground(new java.awt.Color(51, 51, 51));
-        grid.setLayout(new java.awt.GridLayout(2, 5));
+        grid.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         gridtop.setForeground(new java.awt.Color(51, 51, 51));
 
         slot1.setForeground(new java.awt.Color(51, 51, 51));
 
-        ch1.setForeground(new java.awt.Color(51, 51, 51));
-        ch1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        ch1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/user.png"))); // NOI18N
-        ch1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        ch1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        ch1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-
         car_owner1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        car_owner1.setText("ชื่อ  : -");
+        car_owner1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        car_owner1.setText("<ว่าง>");
 
         car_id1.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
+        car_id1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         car_id1.setText("ทะเบียนรถ  : -");
+
+        ch1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ch1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/user.png"))); // NOI18N
+        ch1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         select1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         select1.setText("เลือก");
@@ -318,17 +314,16 @@ public class ReceiptFrame extends javax.swing.JFrame {
                 .addContainerGap(19, Short.MAX_VALUE)
                 .addGroup(slot1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, slot1Layout.createSequentialGroup()
-                        .addGroup(slot1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(car_id1, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(car_owner1, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(27, 27, 27))
+                        .addGroup(slot1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(car_id1, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(car_owner1, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(13, 13, 13))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, slot1Layout.createSequentialGroup()
-                        .addComponent(ch1, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(38, 38, 38))))
-            .addGroup(slot1Layout.createSequentialGroup()
-                .addGap(79, 79, 79)
-                .addComponent(select1, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                        .addComponent(select1, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(74, 74, 74))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, slot1Layout.createSequentialGroup()
+                        .addComponent(ch1, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(36, 36, 36))))
         );
         slot1Layout.setVerticalGroup(
             slot1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -346,17 +341,17 @@ public class ReceiptFrame extends javax.swing.JFrame {
 
         slot2.setForeground(new java.awt.Color(51, 51, 51));
 
-        ch2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        ch2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/user.png"))); // NOI18N
-        ch2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        ch2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        ch2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-
         car_owner2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        car_owner2.setText("ชื่อ  : -");
+        car_owner2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        car_owner2.setText("<ว่าง>");
 
         car_id2.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
+        car_id2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         car_id2.setText("ทะเบียนรถ  : -");
+
+        ch2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ch2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/user.png"))); // NOI18N
+        ch2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         select2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         select2.setText("เลือก");
@@ -371,26 +366,25 @@ public class ReceiptFrame extends javax.swing.JFrame {
         slot2.setLayout(slot2Layout);
         slot2Layout.setHorizontalGroup(
             slot2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, slot2Layout.createSequentialGroup()
+            .addGroup(slot2Layout.createSequentialGroup()
                 .addContainerGap(19, Short.MAX_VALUE)
                 .addGroup(slot2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(car_id2, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(slot2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, slot2Layout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, slot2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(car_id2, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(slot2Layout.createSequentialGroup()
                             .addComponent(car_owner2, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(16, 16, 16))
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, slot2Layout.createSequentialGroup()
-                            .addComponent(ch2, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(38, 38, 38)))))
-            .addGroup(slot2Layout.createSequentialGroup()
-                .addGap(73, 73, 73)
-                .addComponent(select2, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                            .addGap(16, 16, 16)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, slot2Layout.createSequentialGroup()
+                        .addComponent(select2, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(72, 72, 72))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, slot2Layout.createSequentialGroup()
+                        .addComponent(ch2, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(35, 35, 35))))
         );
         slot2Layout.setVerticalGroup(
             slot2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, slot2Layout.createSequentialGroup()
-                .addContainerGap(178, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(ch2)
                 .addGap(18, 18, 18)
                 .addComponent(car_owner2)
@@ -401,17 +395,17 @@ public class ReceiptFrame extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        ch3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        ch3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/user.png"))); // NOI18N
-        ch3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        ch3.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        ch3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-
         car_owner3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        car_owner3.setText("ชื่อ  : -");
+        car_owner3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        car_owner3.setText("<ว่าง>");
 
         car_id3.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
+        car_id3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         car_id3.setText("ทะเบียนรถ   : -");
+
+        ch3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ch3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/user.png"))); // NOI18N
+        ch3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         select3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         select3.setText("เลือก");
@@ -430,22 +424,21 @@ public class ReceiptFrame extends javax.swing.JFrame {
                 .addContainerGap(19, Short.MAX_VALUE)
                 .addGroup(slot3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, slot3Layout.createSequentialGroup()
-                        .addGroup(slot3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(car_id3, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(car_owner3, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(22, 22, 22))
+                        .addGroup(slot3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(car_id3, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(car_owner3, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(16, 16, 16))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, slot3Layout.createSequentialGroup()
-                        .addComponent(ch3, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(42, 42, 42))))
-            .addGroup(slot3Layout.createSequentialGroup()
-                .addGap(76, 76, 76)
-                .addComponent(select3, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                        .addComponent(select3, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(74, 74, 74))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, slot3Layout.createSequentialGroup()
+                        .addComponent(ch3, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(35, 35, 35))))
         );
         slot3Layout.setVerticalGroup(
             slot3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, slot3Layout.createSequentialGroup()
-                .addContainerGap(178, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(ch3)
                 .addGap(18, 18, 18)
                 .addComponent(car_owner3)
@@ -456,16 +449,12 @@ public class ReceiptFrame extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        ch4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        ch4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/user.png"))); // NOI18N
-        ch4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        ch4.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        ch4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-
         car_owner4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        car_owner4.setText("ชื่อ  : -");
+        car_owner4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        car_owner4.setText("<ว่าง>");
 
         car_id4.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
+        car_id4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         car_id4.setText("ทะเบียนรถ  : -");
 
         select4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
@@ -477,6 +466,10 @@ public class ReceiptFrame extends javax.swing.JFrame {
             }
         });
 
+        ch4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ch4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/user.png"))); // NOI18N
+        ch4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
         javax.swing.GroupLayout slot4Layout = new javax.swing.GroupLayout(slot4);
         slot4.setLayout(slot4Layout);
         slot4Layout.setHorizontalGroup(
@@ -485,17 +478,16 @@ public class ReceiptFrame extends javax.swing.JFrame {
                 .addContainerGap(13, Short.MAX_VALUE)
                 .addGroup(slot4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, slot4Layout.createSequentialGroup()
-                        .addGroup(slot4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(car_id4, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(car_owner4, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(24, 24, 24))
+                        .addGroup(slot4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(car_id4, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(car_owner4, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(13, 13, 13))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, slot4Layout.createSequentialGroup()
-                        .addComponent(ch4, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(45, 45, 45))))
-            .addGroup(slot4Layout.createSequentialGroup()
-                .addGap(72, 72, 72)
-                .addComponent(select4, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                        .addComponent(select4, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(69, 69, 69))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, slot4Layout.createSequentialGroup()
+                        .addComponent(ch4, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(33, 33, 33))))
         );
         slot4Layout.setVerticalGroup(
             slot4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -506,22 +498,22 @@ public class ReceiptFrame extends javax.swing.JFrame {
                 .addComponent(car_owner4, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(car_id4)
-                .addGap(22, 22, 22)
+                .addGap(21, 21, 21)
                 .addComponent(select4)
-                .addGap(5, 5, 5))
+                .addContainerGap())
         );
+
+        car_owner5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        car_owner5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        car_owner5.setText("<ว่าง>");
+
+        car_id5.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
+        car_id5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        car_id5.setText("ทะเบียนรถ  : -");
 
         ch5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         ch5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/user.png"))); // NOI18N
-        ch5.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        ch5.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         ch5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-
-        car_owner5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        car_owner5.setText("ชื่อ  : -");
-
-        car_id5.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
-        car_id5.setText("ทะเบียนรถ  : -");
 
         select5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         select5.setText("เลือก");
@@ -536,32 +528,33 @@ public class ReceiptFrame extends javax.swing.JFrame {
         slot5.setLayout(slot5Layout);
         slot5Layout.setHorizontalGroup(
             slot5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, slot5Layout.createSequentialGroup()
+            .addGroup(slot5Layout.createSequentialGroup()
                 .addContainerGap(21, Short.MAX_VALUE)
                 .addGroup(slot5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(slot5Layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(ch5, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(car_id5, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(car_owner5, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(21, 21, 21))
-            .addGroup(slot5Layout.createSequentialGroup()
-                .addGap(76, 76, 76)
-                .addComponent(select5, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, slot5Layout.createSequentialGroup()
+                        .addGroup(slot5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(car_id5, javax.swing.GroupLayout.DEFAULT_SIZE, 167, Short.MAX_VALUE)
+                            .addComponent(car_owner5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(21, 21, 21))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, slot5Layout.createSequentialGroup()
+                        .addComponent(ch5, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(39, 39, 39))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, slot5Layout.createSequentialGroup()
+                        .addComponent(select5, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(73, 73, 73))))
         );
         slot5Layout.setVerticalGroup(
             slot5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, slot5Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(49, Short.MAX_VALUE)
                 .addComponent(ch5)
                 .addGap(18, 18, 18)
                 .addComponent(car_owner5)
                 .addGap(18, 18, 18)
                 .addComponent(car_id5)
-                .addGap(18, 18, 18)
+                .addGap(23, 23, 23)
                 .addComponent(select5)
-                .addGap(11, 11, 11))
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout gridtopLayout = new javax.swing.GroupLayout(gridtop);
@@ -594,18 +587,14 @@ public class ReceiptFrame extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        grid.add(gridtop);
-
-        ch6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        ch6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/user.png"))); // NOI18N
-        ch6.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        ch6.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        ch6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        grid.add(gridtop, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 320));
 
         car_owner6.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        car_owner6.setText("ชื่อ  : -");
+        car_owner6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        car_owner6.setText("<ว่าง>");
 
         car_id6.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
+        car_id6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         car_id6.setText("ทะเบียนรถ  : -");
 
         select6.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
@@ -617,49 +606,50 @@ public class ReceiptFrame extends javax.swing.JFrame {
             }
         });
 
+        ch6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ch6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/user.png"))); // NOI18N
+        ch6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
         javax.swing.GroupLayout slot6Layout = new javax.swing.GroupLayout(slot6);
         slot6.setLayout(slot6Layout);
         slot6Layout.setHorizontalGroup(
             slot6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, slot6Layout.createSequentialGroup()
-                .addContainerGap(19, Short.MAX_VALUE)
-                .addGroup(slot6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, slot6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(car_id6, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(car_owner6, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, slot6Layout.createSequentialGroup()
-                        .addComponent(ch6, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(11, 11, 11)))
-                .addGap(22, 22, 22))
             .addGroup(slot6Layout.createSequentialGroup()
                 .addGap(76, 76, 76)
                 .addComponent(select6, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(76, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, slot6Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(slot6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, slot6Layout.createSequentialGroup()
+                        .addGroup(slot6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(car_owner6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(car_id6, javax.swing.GroupLayout.DEFAULT_SIZE, 178, Short.MAX_VALUE))
+                        .addGap(14, 14, 14))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, slot6Layout.createSequentialGroup()
+                        .addComponent(ch6, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(37, 37, 37))))
         );
         slot6Layout.setVerticalGroup(
             slot6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(slot6Layout.createSequentialGroup()
-                .addGap(23, 23, 23)
+                .addGap(27, 27, 27)
                 .addComponent(ch6)
                 .addGap(18, 18, 18)
                 .addComponent(car_owner6)
                 .addGap(18, 18, 18)
                 .addComponent(car_id6)
-                .addGap(18, 18, 18)
+                .addGap(31, 31, 31)
                 .addComponent(select6)
-                .addContainerGap(165, Short.MAX_VALUE))
+                .addContainerGap(40, Short.MAX_VALUE))
         );
 
-        ch7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        ch7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/user.png"))); // NOI18N
-        ch7.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        ch7.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        ch7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-
         car_owner7.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        car_owner7.setText("ชื่อ  : -");
+        car_owner7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        car_owner7.setText("<ว่าง>");
 
         car_id7.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
+        car_id7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         car_id7.setText("ทะเบียนรถ  : -");
 
         select7.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
@@ -671,6 +661,10 @@ public class ReceiptFrame extends javax.swing.JFrame {
             }
         });
 
+        ch7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ch7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/user.png"))); // NOI18N
+        ch7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
         javax.swing.GroupLayout slot7Layout = new javax.swing.GroupLayout(slot7);
         slot7.setLayout(slot7Layout);
         slot7Layout.setHorizontalGroup(
@@ -679,42 +673,37 @@ public class ReceiptFrame extends javax.swing.JFrame {
                 .addContainerGap(13, Short.MAX_VALUE)
                 .addGroup(slot7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, slot7Layout.createSequentialGroup()
-                        .addGroup(slot7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(car_id7, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(car_owner7, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(27, 27, 27))
+                        .addGroup(slot7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(car_owner7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(car_id7, javax.swing.GroupLayout.DEFAULT_SIZE, 174, Short.MAX_VALUE))
+                        .addGap(20, 20, 20))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, slot7Layout.createSequentialGroup()
-                        .addComponent(ch7, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(39, 39, 39))))
-            .addGroup(slot7Layout.createSequentialGroup()
-                .addGap(75, 75, 75)
-                .addComponent(select7, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                        .addComponent(select7, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(75, 75, 75))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, slot7Layout.createSequentialGroup()
+                        .addComponent(ch7, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(36, 36, 36))))
         );
         slot7Layout.setVerticalGroup(
             slot7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(slot7Layout.createSequentialGroup()
-                .addGap(28, 28, 28)
+                .addGap(26, 26, 26)
                 .addComponent(ch7)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
                 .addComponent(car_owner7)
                 .addGap(18, 18, 18)
                 .addComponent(car_id7)
-                .addGap(18, 18, 18)
+                .addGap(29, 29, 29)
                 .addComponent(select7)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        ch8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        ch8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/user.png"))); // NOI18N
-        ch8.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        ch8.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        ch8.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-
         car_owner8.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        car_owner8.setText("ชื่อ  : -");
+        car_owner8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        car_owner8.setText("<ว่าง>");
 
         car_id8.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
+        car_id8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         car_id8.setText("ทะเบียนรถ  : -");
 
         select8.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
@@ -726,47 +715,49 @@ public class ReceiptFrame extends javax.swing.JFrame {
             }
         });
 
+        ch8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ch8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/user.png"))); // NOI18N
+        ch8.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
         javax.swing.GroupLayout slot8Layout = new javax.swing.GroupLayout(slot8);
         slot8.setLayout(slot8Layout);
         slot8Layout.setHorizontalGroup(
             slot8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(slot8Layout.createSequentialGroup()
+                .addContainerGap(19, Short.MAX_VALUE)
+                .addGroup(slot8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(car_id8, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(car_owner8, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(19, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, slot8Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(slot8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(ch8, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(slot8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(car_id8, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(car_owner8, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(33, 33, 33))
-            .addGroup(slot8Layout.createSequentialGroup()
-                .addGap(75, 75, 75)
                 .addComponent(select8, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(70, 70, 70))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, slot8Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(ch8, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(35, 35, 35))
         );
         slot8Layout.setVerticalGroup(
             slot8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(slot8Layout.createSequentialGroup()
-                .addGap(28, 28, 28)
+                .addGap(26, 26, 26)
                 .addComponent(ch8)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
                 .addComponent(car_owner8)
                 .addGap(18, 18, 18)
                 .addComponent(car_id8)
-                .addGap(18, 18, 18)
+                .addGap(30, 30, 30)
                 .addComponent(select8)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        ch9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        ch9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/user.png"))); // NOI18N
-        ch9.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        ch9.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        ch9.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-
         car_owner9.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        car_owner9.setText("ชื่อ  : -");
+        car_owner9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        car_owner9.setText("<ว่าง>");
 
         car_id9.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
+        car_id9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         car_id9.setText("ทะเบียนรถ  : -");
 
         select9.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
@@ -778,47 +769,50 @@ public class ReceiptFrame extends javax.swing.JFrame {
             }
         });
 
+        ch9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ch9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/user.png"))); // NOI18N
+        ch9.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
         javax.swing.GroupLayout slot9Layout = new javax.swing.GroupLayout(slot9);
         slot9.setLayout(slot9Layout);
         slot9Layout.setHorizontalGroup(
             slot9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, slot9Layout.createSequentialGroup()
-                .addContainerGap(14, Short.MAX_VALUE)
-                .addGroup(slot9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(ch9, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(slot9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(car_id9, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(car_owner9, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(31, 31, 31))
             .addGroup(slot9Layout.createSequentialGroup()
                 .addGap(78, 78, 78)
                 .addComponent(select9, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, slot9Layout.createSequentialGroup()
+                .addContainerGap(14, Short.MAX_VALUE)
+                .addGroup(slot9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, slot9Layout.createSequentialGroup()
+                        .addGroup(slot9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(car_owner9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(car_id9, javax.swing.GroupLayout.DEFAULT_SIZE, 178, Short.MAX_VALUE))
+                        .addGap(20, 20, 20))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, slot9Layout.createSequentialGroup()
+                        .addComponent(ch9, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(40, 40, 40))))
         );
         slot9Layout.setVerticalGroup(
             slot9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(slot9Layout.createSequentialGroup()
-                .addGap(28, 28, 28)
+                .addGap(26, 26, 26)
                 .addComponent(ch9)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
                 .addComponent(car_owner9)
                 .addGap(18, 18, 18)
                 .addComponent(car_id9)
-                .addGap(18, 18, 18)
+                .addGap(29, 29, 29)
                 .addComponent(select9)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        ch10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        ch10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/user.png"))); // NOI18N
-        ch10.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        ch10.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        ch10.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-
         car_owner10.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        car_owner10.setText("ชื่อ  : -");
+        car_owner10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        car_owner10.setText("<ว่าง>");
 
         car_id10.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
+        car_id10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         car_id10.setText("ทะเบียนรถ  : -");
 
         select10.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
@@ -830,6 +824,10 @@ public class ReceiptFrame extends javax.swing.JFrame {
             }
         });
 
+        ch10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ch10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/user.png"))); // NOI18N
+        ch10.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
         javax.swing.GroupLayout slot10Layout = new javax.swing.GroupLayout(slot10);
         slot10.setLayout(slot10Layout);
         slot10Layout.setHorizontalGroup(
@@ -837,29 +835,28 @@ public class ReceiptFrame extends javax.swing.JFrame {
             .addGroup(slot10Layout.createSequentialGroup()
                 .addContainerGap(18, Short.MAX_VALUE)
                 .addGroup(slot10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(car_id10, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(car_owner10, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(31, 31, 31))
-            .addGroup(slot10Layout.createSequentialGroup()
-                .addGroup(slot10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(slot10Layout.createSequentialGroup()
-                        .addGap(30, 30, 30)
-                        .addComponent(ch10, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(slot10Layout.createSequentialGroup()
-                        .addGap(76, 76, 76)
-                        .addComponent(select10, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, slot10Layout.createSequentialGroup()
+                        .addGroup(slot10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(car_owner10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(car_id10, javax.swing.GroupLayout.DEFAULT_SIZE, 182, Short.MAX_VALUE))
+                        .addGap(16, 16, 16))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, slot10Layout.createSequentialGroup()
+                        .addComponent(select10, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(75, 75, 75))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, slot10Layout.createSequentialGroup()
+                        .addComponent(ch10, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(43, 43, 43))))
         );
         slot10Layout.setVerticalGroup(
             slot10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(slot10Layout.createSequentialGroup()
-                .addGap(28, 28, 28)
+                .addGap(26, 26, 26)
                 .addComponent(ch10)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
                 .addComponent(car_owner10)
                 .addGap(18, 18, 18)
                 .addComponent(car_id10)
-                .addGap(18, 18, 18)
+                .addGap(29, 29, 29)
                 .addComponent(select10)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -874,7 +871,7 @@ public class ReceiptFrame extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(slot7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(slot8, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(slot8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(slot9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -894,7 +891,7 @@ public class ReceiptFrame extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        grid.add(gridbott);
+        grid.add(gridbott, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 324, -1, 340));
 
         jPanel3.add(grid, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 45, -1, -1));
 
@@ -1048,7 +1045,6 @@ public class ReceiptFrame extends javax.swing.JFrame {
     private javax.swing.JPanel grid;
     private javax.swing.JPanel gridbott;
     private javax.swing.JPanel gridtop;
-    private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JButton receipt_bn;
