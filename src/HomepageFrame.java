@@ -109,7 +109,7 @@ public class HomepageFrame extends javax.swing.JFrame {
         setBackground(new java.awt.Color(0, 0, 0));
         setResizable(false);
 
-        Header.setBackground(new java.awt.Color(242, 157, 0));
+        Header.setBackground(new java.awt.Color(247, 127, 0));
         Header.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         Header.setPreferredSize(new java.awt.Dimension(1280, 50));
         Header.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -126,7 +126,7 @@ public class HomepageFrame extends javax.swing.JFrame {
 
         Header.add(usernamePn, new org.netbeans.lib.awtextra.AbsoluteConstraints(1090, 10, 160, 30));
 
-        jButton1.setBackground(new java.awt.Color(255, 204, 153));
+        jButton1.setBackground(new java.awt.Color(247, 127, 0));
         jButton1.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir") + "\\src\\TestIcon\\menu_icon_jing.png"));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -143,11 +143,11 @@ public class HomepageFrame extends javax.swing.JFrame {
 
         getContentPane().add(Header, java.awt.BorderLayout.PAGE_START);
 
-        MenuBar.setBackground(new java.awt.Color(255, 204, 102));
+        MenuBar.setBackground(new java.awt.Color(248, 245, 228));
         MenuBar.setPreferredSize(new java.awt.Dimension(200, 670));
         MenuBar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        stuffmange_bn.setBackground(new java.awt.Color(255, 102, 0));
+        stuffmange_bn.setBackground(new java.awt.Color(247, 127, 0));
         stuffmange_bn.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         stuffmange_bn.setForeground(new java.awt.Color(255, 255, 255));
         stuffmange_bn.setText("จัดการพนักงาน");
@@ -159,7 +159,7 @@ public class HomepageFrame extends javax.swing.JFrame {
         MenuBar.add(stuffmange_bn, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 530, 220, 70));
 
         HomeButton.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        HomeButton.setForeground(new java.awt.Color(255, 102, 0));
+        HomeButton.setForeground(new java.awt.Color(247, 127, 0));
         HomeButton.setText("หน้าโฮม");
         HomeButton.setBorder(null);
         HomeButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -170,7 +170,7 @@ public class HomepageFrame extends javax.swing.JFrame {
         });
         MenuBar.add(HomeButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 30, 220, 70));
 
-        customerqbn.setBackground(new java.awt.Color(255, 102, 0));
+        customerqbn.setBackground(new java.awt.Color(247, 127, 0));
         customerqbn.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         customerqbn.setForeground(new java.awt.Color(255, 255, 255));
         customerqbn.setText("จัดการคิวรถ");
@@ -184,7 +184,7 @@ public class HomepageFrame extends javax.swing.JFrame {
         });
         MenuBar.add(customerqbn, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 130, 220, 70));
 
-        equipment_bn.setBackground(new java.awt.Color(255, 102, 0));
+        equipment_bn.setBackground(new java.awt.Color(247, 127, 0));
         equipment_bn.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         equipment_bn.setForeground(new java.awt.Color(255, 255, 255));
         equipment_bn.setText("เบิกอุปกรณ์");
@@ -197,7 +197,7 @@ public class HomepageFrame extends javax.swing.JFrame {
         });
         MenuBar.add(equipment_bn, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 230, 220, 70));
 
-        warehouse_bn.setBackground(new java.awt.Color(255, 102, 0));
+        warehouse_bn.setBackground(new java.awt.Color(247, 127, 0));
         warehouse_bn.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         warehouse_bn.setForeground(new java.awt.Color(255, 255, 255));
         warehouse_bn.setText("คลังอุปกรณ์");
@@ -211,7 +211,7 @@ public class HomepageFrame extends javax.swing.JFrame {
         });
         MenuBar.add(warehouse_bn, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 330, 220, 70));
 
-        receipt_bn.setBackground(new java.awt.Color(255, 102, 0));
+        receipt_bn.setBackground(new java.awt.Color(247, 127, 0));
         receipt_bn.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         receipt_bn.setForeground(new java.awt.Color(255, 255, 255));
         receipt_bn.setText("ใบเสร็จ");
@@ -225,9 +225,9 @@ public class HomepageFrame extends javax.swing.JFrame {
         submainPn.setBackground(new java.awt.Color(255, 255, 255));
         submainPn.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 10, 30));
 
-        tablePn.setBackground(new java.awt.Color(255, 187, 92));
+        tablePn.setBackground(new java.awt.Color(255, 255, 255));
 
-        slot0.setBackground(new java.awt.Color(169, 169, 169));
+        slot0.setBackground(new java.awt.Color(78, 80, 82));
         slot0.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         slot0.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -276,7 +276,7 @@ public class HomepageFrame extends javax.swing.JFrame {
         num1.setText("1");
         slot0.add(num1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 0, 20, -1));
 
-        slot1.setBackground(new java.awt.Color(169, 169, 169));
+        slot1.setBackground(new java.awt.Color(78, 80, 82));
         slot1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         slot1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -330,7 +330,7 @@ public class HomepageFrame extends javax.swing.JFrame {
         num2.setText("2");
         slot1.add(num2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 0, 20, -1));
 
-        slot2.setBackground(new java.awt.Color(169, 169, 169));
+        slot2.setBackground(new java.awt.Color(78, 80, 82));
         slot2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         slot2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -384,7 +384,7 @@ public class HomepageFrame extends javax.swing.JFrame {
         num3.setText("3");
         slot2.add(num3, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 0, 20, -1));
 
-        slot3.setBackground(new java.awt.Color(169, 169, 169));
+        slot3.setBackground(new java.awt.Color(78, 80, 82));
         slot3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         slot3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -433,7 +433,7 @@ public class HomepageFrame extends javax.swing.JFrame {
         num4.setText("4");
         slot3.add(num4, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 0, 20, -1));
 
-        slot4.setBackground(new java.awt.Color(169, 169, 169));
+        slot4.setBackground(new java.awt.Color(78, 80, 82));
         slot4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         slot4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -482,7 +482,7 @@ public class HomepageFrame extends javax.swing.JFrame {
         num5.setText("5");
         slot4.add(num5, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 0, 20, -1));
 
-        slot5.setBackground(new java.awt.Color(169, 169, 169));
+        slot5.setBackground(new java.awt.Color(78, 80, 82));
         slot5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         slot5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -531,7 +531,7 @@ public class HomepageFrame extends javax.swing.JFrame {
         num6.setText("6");
         slot5.add(num6, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 0, 20, -1));
 
-        slot6.setBackground(new java.awt.Color(169, 169, 169));
+        slot6.setBackground(new java.awt.Color(78, 80, 82));
         slot6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         slot6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -580,7 +580,7 @@ public class HomepageFrame extends javax.swing.JFrame {
         num7.setText("7");
         slot6.add(num7, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 0, 20, -1));
 
-        slot7.setBackground(new java.awt.Color(169, 169, 169));
+        slot7.setBackground(new java.awt.Color(78, 80, 82));
         slot7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         slot7.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -634,7 +634,7 @@ public class HomepageFrame extends javax.swing.JFrame {
         num8.setText("8");
         slot7.add(num8, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 0, 20, -1));
 
-        slot8.setBackground(new java.awt.Color(169, 169, 169));
+        slot8.setBackground(new java.awt.Color(78, 80, 82));
         slot8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         slot8.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -683,7 +683,7 @@ public class HomepageFrame extends javax.swing.JFrame {
         num9.setText("9");
         slot8.add(num9, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 0, 20, -1));
 
-        slot9.setBackground(new java.awt.Color(169, 169, 169));
+        slot9.setBackground(new java.awt.Color(78, 80, 82));
         slot9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         slot9.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -732,11 +732,11 @@ public class HomepageFrame extends javax.swing.JFrame {
         num10.setText("10");
         slot9.add(num10, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 0, 30, -1));
 
-        headtextPn.setBackground(new java.awt.Color(255, 255, 255));
+        headtextPn.setBackground(new java.awt.Color(78, 80, 82));
 
         headTxt.setBackground(new java.awt.Color(255, 204, 102));
         headTxt.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        headTxt.setForeground(new java.awt.Color(255, 102, 0));
+        headTxt.setForeground(new java.awt.Color(255, 255, 255));
         headTxt.setText("สถานะการซ่อมรถ");
         headtextPn.add(headTxt);
 
