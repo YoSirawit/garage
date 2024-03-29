@@ -198,14 +198,14 @@ public class EquipmentFrame2 extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(242, 157, 0));
         jLabel1.setText("Username");
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/user-regular-24.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir") + "\\src\\TestIcon\\user-regular-24.png"));
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addContainerGap(16, Short.MAX_VALUE)
+                .addContainerGap(40, Short.MAX_VALUE)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -218,7 +218,7 @@ public class EquipmentFrame2 extends javax.swing.JFrame {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel1)
                     .addComponent(jLabel2))
-                .addContainerGap(10, Short.MAX_VALUE))
+                .addContainerGap(18, Short.MAX_VALUE))
         );
 
         headPanel.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1110, 0, 180, -1));
@@ -240,7 +240,7 @@ public class EquipmentFrame2 extends javax.swing.JFrame {
         });
 
         CartButton.setBackground(new java.awt.Color(242, 242, 242));
-        CartButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/cart.png"))); // NOI18N
+        CartButton.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir") + "\\src\\TestIcon\\cart.png"));
         CartButton.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         CartButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

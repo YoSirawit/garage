@@ -118,7 +118,6 @@ public class HomepageFrame extends javax.swing.JFrame {
         usernamePn.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         usernameTxt.setBackground(new java.awt.Color(0, 0, 0));
-        usernameTxt.setForeground(new java.awt.Color(0, 0, 0));
         usernameTxt.setText("@USERNAME");
         usernameTxt.setToolTipText("Username Account");
         usernameTxt.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED, new java.awt.Color(0, 0, 0), java.awt.Color.white, null, null));
@@ -128,7 +127,7 @@ public class HomepageFrame extends javax.swing.JFrame {
         Header.add(usernamePn, new org.netbeans.lib.awtextra.AbsoluteConstraints(1090, 10, 160, 30));
 
         jButton1.setBackground(new java.awt.Color(255, 204, 153));
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/menu_icon_jing.png"))); // NOI18N
+        jButton1.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir") + "\\src\\TestIcon\\menu_icon_jing.png"));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -159,7 +158,6 @@ public class HomepageFrame extends javax.swing.JFrame {
         });
         MenuBar.add(stuffmange_bn, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 530, 220, 70));
 
-        HomeButton.setBackground(new java.awt.Color(255, 255, 255));
         HomeButton.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         HomeButton.setForeground(new java.awt.Color(255, 102, 0));
         HomeButton.setText("หน้าโฮม");
@@ -235,7 +233,7 @@ public class HomepageFrame extends javax.swing.JFrame {
 
         statusPn0.setBackground(new java.awt.Color(255, 255, 255));
 
-        carpic0.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/car.png"))); // NOI18N
+        carpic0.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir") + "\\src\\TestIcon\\car.png"));
 
         statusBn0.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         statusBn0.setText("สถานะ");
@@ -261,7 +259,7 @@ public class HomepageFrame extends javax.swing.JFrame {
                 .addComponent(carpic0)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(statusBn0, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(17, Short.MAX_VALUE))
+                .addContainerGap(137, Short.MAX_VALUE))
         );
 
         slot0.add(statusPn0, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 140, 200));
@@ -284,7 +282,7 @@ public class HomepageFrame extends javax.swing.JFrame {
 
         statusPn1.setBackground(new java.awt.Color(255, 255, 255));
 
-        carpic1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/car.png"))); // NOI18N
+        carpic1.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir") + "\\src\\TestIcon\\car.png"));
 
         statusBn1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         statusBn1.setText("สถานะ");
@@ -315,7 +313,7 @@ public class HomepageFrame extends javax.swing.JFrame {
                 .addComponent(carpic1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(statusBn1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(17, Short.MAX_VALUE))
+                .addContainerGap(137, Short.MAX_VALUE))
         );
 
         slot1.add(statusPn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 140, 200));
@@ -338,7 +336,7 @@ public class HomepageFrame extends javax.swing.JFrame {
 
         statusPn2.setBackground(new java.awt.Color(255, 255, 255));
 
-        carpic2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/car.png"))); // NOI18N
+        carpic2.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir") + "\\src\\TestIcon\\car.png"));
 
         statusBn2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         statusBn2.setText("สถานะ");
@@ -369,7 +367,7 @@ public class HomepageFrame extends javax.swing.JFrame {
                 .addComponent(carpic2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(statusBn2, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(17, Short.MAX_VALUE))
+                .addContainerGap(137, Short.MAX_VALUE))
         );
 
         slot2.add(statusPn2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 140, 200));
@@ -392,7 +390,7 @@ public class HomepageFrame extends javax.swing.JFrame {
 
         statusPn3.setBackground(new java.awt.Color(255, 255, 255));
 
-        carpic3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/car.png"))); // NOI18N
+        carpic3.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir") + "\\src\\TestIcon\\car.png"));
 
         statusBn3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         statusBn3.setText("สถานะ");
@@ -418,7 +416,7 @@ public class HomepageFrame extends javax.swing.JFrame {
                 .addComponent(carpic3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(statusBn3, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(17, Short.MAX_VALUE))
+                .addContainerGap(137, Short.MAX_VALUE))
         );
 
         slot3.add(statusPn3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 140, 200));
@@ -441,7 +439,7 @@ public class HomepageFrame extends javax.swing.JFrame {
 
         statusPn4.setBackground(new java.awt.Color(255, 255, 255));
 
-        carpic4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/car.png"))); // NOI18N
+        carpic4.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir") + "\\src\\TestIcon\\car.png"));
 
         statusBn4.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         statusBn4.setText("สถานะ");
@@ -467,7 +465,7 @@ public class HomepageFrame extends javax.swing.JFrame {
                 .addComponent(carpic4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(statusBn4, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(17, Short.MAX_VALUE))
+                .addContainerGap(137, Short.MAX_VALUE))
         );
 
         slot4.add(statusPn4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 140, 200));
@@ -490,7 +488,7 @@ public class HomepageFrame extends javax.swing.JFrame {
 
         statusPn5.setBackground(new java.awt.Color(255, 255, 255));
 
-        carpic5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/car.png"))); // NOI18N
+        carpic5.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir") + "\\src\\TestIcon\\car.png"));
 
         statusBn5.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         statusBn5.setText("สถานะ");
@@ -516,7 +514,7 @@ public class HomepageFrame extends javax.swing.JFrame {
                 .addComponent(carpic5)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(statusBn5, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(17, Short.MAX_VALUE))
+                .addContainerGap(137, Short.MAX_VALUE))
         );
 
         slot5.add(statusPn5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 140, 200));
@@ -539,7 +537,7 @@ public class HomepageFrame extends javax.swing.JFrame {
 
         statusPn6.setBackground(new java.awt.Color(255, 255, 255));
 
-        carpic6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/car.png"))); // NOI18N
+        carpic6.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir") + "\\src\\TestIcon\\car.png"));
 
         statusBn6.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         statusBn6.setText("สถานะ");
@@ -565,7 +563,7 @@ public class HomepageFrame extends javax.swing.JFrame {
                 .addComponent(carpic6)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(statusBn6, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(17, Short.MAX_VALUE))
+                .addContainerGap(137, Short.MAX_VALUE))
         );
 
         slot6.add(statusPn6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 140, 200));
@@ -588,7 +586,7 @@ public class HomepageFrame extends javax.swing.JFrame {
 
         statusPn7.setBackground(new java.awt.Color(255, 255, 255));
 
-        carpic7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/car.png"))); // NOI18N
+        carpic7.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir") + "\\src\\TestIcon\\car.png"));
 
         statusBn7.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         statusBn7.setText("สถานะ");
@@ -619,7 +617,7 @@ public class HomepageFrame extends javax.swing.JFrame {
                 .addComponent(carpic7)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(statusBn7, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(17, Short.MAX_VALUE))
+                .addContainerGap(137, Short.MAX_VALUE))
         );
 
         slot7.add(statusPn7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 140, 200));
@@ -642,7 +640,7 @@ public class HomepageFrame extends javax.swing.JFrame {
 
         statusPn8.setBackground(new java.awt.Color(255, 255, 255));
 
-        carpic8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/car.png"))); // NOI18N
+        carpic8.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir") + "\\src\\TestIcon\\car.png"));
 
         statusBn8.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         statusBn8.setText("สถานะ");
@@ -668,7 +666,7 @@ public class HomepageFrame extends javax.swing.JFrame {
                 .addComponent(carpic8)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(statusBn8, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(17, Short.MAX_VALUE))
+                .addContainerGap(137, Short.MAX_VALUE))
         );
 
         slot8.add(statusPn8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 140, 200));
@@ -691,7 +689,7 @@ public class HomepageFrame extends javax.swing.JFrame {
 
         statusPn9.setBackground(new java.awt.Color(255, 255, 255));
 
-        carpic9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/car.png"))); // NOI18N
+        carpic9.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir") + "\\src\\TestIcon\\car.png"));
 
         statusBn9.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         statusBn9.setText("สถานะ");
@@ -717,7 +715,7 @@ public class HomepageFrame extends javax.swing.JFrame {
                 .addComponent(carpic9)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(statusBn9, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(17, Short.MAX_VALUE))
+                .addContainerGap(137, Short.MAX_VALUE))
         );
 
         slot9.add(statusPn9, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 140, 200));
@@ -973,25 +971,25 @@ public class HomepageFrame extends javax.swing.JFrame {
     private javax.swing.JPanel slot8;
     private javax.swing.JPanel slot9;
     protected javax.swing.JButton statusBn0;
-    private javax.swing.JButton statusBn1;
-    private javax.swing.JButton statusBn2;
-    private javax.swing.JButton statusBn3;
-    private javax.swing.JButton statusBn4;
-    private javax.swing.JButton statusBn5;
-    private javax.swing.JButton statusBn6;
-    private javax.swing.JButton statusBn7;
-    private javax.swing.JButton statusBn8;
-    private javax.swing.JButton statusBn9;
+    protected javax.swing.JButton statusBn1;
+    protected javax.swing.JButton statusBn2;
+    protected javax.swing.JButton statusBn3;
+    protected javax.swing.JButton statusBn4;
+    protected javax.swing.JButton statusBn5;
+    protected javax.swing.JButton statusBn6;
+    protected javax.swing.JButton statusBn7;
+    protected javax.swing.JButton statusBn8;
+    protected javax.swing.JButton statusBn9;
     protected javax.swing.JPanel statusPn0;
-    private javax.swing.JPanel statusPn1;
-    private javax.swing.JPanel statusPn2;
-    private javax.swing.JPanel statusPn3;
-    private javax.swing.JPanel statusPn4;
-    private javax.swing.JPanel statusPn5;
-    private javax.swing.JPanel statusPn6;
-    private javax.swing.JPanel statusPn7;
-    private javax.swing.JPanel statusPn8;
-    private javax.swing.JPanel statusPn9;
+    protected javax.swing.JPanel statusPn1;
+    protected javax.swing.JPanel statusPn2;
+    protected javax.swing.JPanel statusPn3;
+    protected javax.swing.JPanel statusPn4;
+    protected javax.swing.JPanel statusPn5;
+    protected javax.swing.JPanel statusPn6;
+    protected javax.swing.JPanel statusPn7;
+    protected javax.swing.JPanel statusPn8;
+    protected javax.swing.JPanel statusPn9;
     private javax.swing.JButton stuffmange_bn;
     private javax.swing.JPanel submainPn;
     private javax.swing.JPanel tablePn;
