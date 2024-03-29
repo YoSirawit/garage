@@ -10,7 +10,6 @@ public class HomepageFrame extends javax.swing.JFrame {
         initComponents();
         hps = new HomepageSystem();
         
-        
         pnArr = new JPanel[]{statusPn0, statusPn1, statusPn2, statusPn3, statusPn4, statusPn5, statusPn6, statusPn7, statusPn8, statusPn9};
         bnArr = new JButton[]{statusBn0, statusBn1, statusBn2, statusBn3, statusBn4, statusBn5, statusBn6, statusBn7, statusBn8, statusBn9};
         
@@ -28,8 +27,8 @@ public class HomepageFrame extends javax.swing.JFrame {
 
         Header = new javax.swing.JPanel();
         usernamePn = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
         usernameTxt = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         mainPn = new javax.swing.JPanel();
         MenuBar = new javax.swing.JPanel();
@@ -114,32 +113,25 @@ public class HomepageFrame extends javax.swing.JFrame {
         Header.setPreferredSize(new java.awt.Dimension(1280, 50));
         Header.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        usernamePn.setBackground(new java.awt.Color(255, 255, 255));
+        usernamePn.setBackground(new java.awt.Color(247, 127, 0));
         usernamePn.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        usernameTxt.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/userWithcircle.png"))); // NOI18N
+        usernamePn.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, -1, -1));
+
+        usernameTxt.setBackground(new java.awt.Color(255, 255, 255));
         usernameTxt.setText("@USERNAME");
         usernameTxt.setToolTipText("Username Account");
-        usernameTxt.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED, new java.awt.Color(0, 0, 0), java.awt.Color.white, null, null));
         usernameTxt.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        usernamePn.add(usernameTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 160, 30));
+        usernamePn.add(usernameTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 0, 80, 30));
 
-        Header.add(usernamePn, new org.netbeans.lib.awtextra.AbsoluteConstraints(1090, 10, 160, 30));
-
-        jButton1.setBackground(new java.awt.Color(247, 127, 0));
-        jButton1.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir") + "\\src\\TestIcon\\menu_icon_jing.png"));
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-        Header.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 60, 50));
+        Header.add(usernamePn, new org.netbeans.lib.awtextra.AbsoluteConstraints(1120, 10, 130, 30));
 
         jLabel1.setBackground(new java.awt.Color(242, 157, 0));
-        jLabel1.setFont(new java.awt.Font("IrisUPC", 3, 48)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("IrisUPC", 3, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("ดำรงรวยการช่าง ");
-        Header.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 0, 230, 60));
+        Header.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 170, 40));
 
         getContentPane().add(Header, java.awt.BorderLayout.PAGE_START);
 
@@ -158,6 +150,7 @@ public class HomepageFrame extends javax.swing.JFrame {
         });
         MenuBar.add(stuffmange_bn, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 530, 220, 70));
 
+        HomeButton.setBackground(new java.awt.Color(255, 255, 255));
         HomeButton.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         HomeButton.setForeground(new java.awt.Color(247, 127, 0));
         HomeButton.setText("หน้าโฮม");
@@ -223,6 +216,7 @@ public class HomepageFrame extends javax.swing.JFrame {
         MenuBar.add(receipt_bn, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 430, 220, 70));
 
         submainPn.setBackground(new java.awt.Color(255, 255, 255));
+        submainPn.setForeground(new java.awt.Color(255, 255, 255));
         submainPn.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 10, 30));
 
         tablePn.setBackground(new java.awt.Color(255, 255, 255));
@@ -232,10 +226,13 @@ public class HomepageFrame extends javax.swing.JFrame {
         slot0.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         statusPn0.setBackground(new java.awt.Color(255, 255, 255));
+        statusPn0.setForeground(new java.awt.Color(255, 255, 255));
 
         carpic0.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir") + "\\src\\TestIcon\\car.png"));
 
+        statusBn0.setBackground(new java.awt.Color(78, 80, 82));
         statusBn0.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        statusBn0.setForeground(new java.awt.Color(255, 255, 255));
         statusBn0.setText("สถานะ");
 
         javax.swing.GroupLayout statusPn0Layout = new javax.swing.GroupLayout(statusPn0);
@@ -281,10 +278,13 @@ public class HomepageFrame extends javax.swing.JFrame {
         slot1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         statusPn1.setBackground(new java.awt.Color(255, 255, 255));
+        statusPn1.setForeground(new java.awt.Color(255, 255, 255));
 
         carpic1.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir") + "\\src\\TestIcon\\car.png"));
 
+        statusBn1.setBackground(new java.awt.Color(78, 80, 82));
         statusBn1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        statusBn1.setForeground(new java.awt.Color(255, 255, 255));
         statusBn1.setText("สถานะ");
         statusBn1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -335,10 +335,13 @@ public class HomepageFrame extends javax.swing.JFrame {
         slot2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         statusPn2.setBackground(new java.awt.Color(255, 255, 255));
+        statusPn2.setForeground(new java.awt.Color(255, 255, 255));
 
         carpic2.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir") + "\\src\\TestIcon\\car.png"));
 
+        statusBn2.setBackground(new java.awt.Color(78, 80, 82));
         statusBn2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        statusBn2.setForeground(new java.awt.Color(255, 255, 255));
         statusBn2.setText("สถานะ");
         statusBn2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -389,10 +392,13 @@ public class HomepageFrame extends javax.swing.JFrame {
         slot3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         statusPn3.setBackground(new java.awt.Color(255, 255, 255));
+        statusPn3.setForeground(new java.awt.Color(255, 255, 255));
 
         carpic3.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir") + "\\src\\TestIcon\\car.png"));
 
+        statusBn3.setBackground(new java.awt.Color(78, 80, 82));
         statusBn3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        statusBn3.setForeground(new java.awt.Color(255, 255, 255));
         statusBn3.setText("สถานะ");
 
         javax.swing.GroupLayout statusPn3Layout = new javax.swing.GroupLayout(statusPn3);
@@ -438,11 +444,19 @@ public class HomepageFrame extends javax.swing.JFrame {
         slot4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         statusPn4.setBackground(new java.awt.Color(255, 255, 255));
+        statusPn4.setForeground(new java.awt.Color(255, 255, 255));
 
         carpic4.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir") + "\\src\\TestIcon\\car.png"));
 
+        statusBn4.setBackground(new java.awt.Color(78, 80, 82));
         statusBn4.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        statusBn4.setForeground(new java.awt.Color(255, 255, 255));
         statusBn4.setText("สถานะ");
+        statusBn4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                statusBn4ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout statusPn4Layout = new javax.swing.GroupLayout(statusPn4);
         statusPn4.setLayout(statusPn4Layout);
@@ -487,10 +501,13 @@ public class HomepageFrame extends javax.swing.JFrame {
         slot5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         statusPn5.setBackground(new java.awt.Color(255, 255, 255));
+        statusPn5.setForeground(new java.awt.Color(255, 255, 255));
 
         carpic5.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir") + "\\src\\TestIcon\\car.png"));
 
+        statusBn5.setBackground(new java.awt.Color(78, 80, 82));
         statusBn5.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        statusBn5.setForeground(new java.awt.Color(255, 255, 255));
         statusBn5.setText("สถานะ");
 
         javax.swing.GroupLayout statusPn5Layout = new javax.swing.GroupLayout(statusPn5);
@@ -536,10 +553,13 @@ public class HomepageFrame extends javax.swing.JFrame {
         slot6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         statusPn6.setBackground(new java.awt.Color(255, 255, 255));
+        statusPn6.setForeground(new java.awt.Color(255, 255, 255));
 
         carpic6.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir") + "\\src\\TestIcon\\car.png"));
 
+        statusBn6.setBackground(new java.awt.Color(78, 80, 82));
         statusBn6.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        statusBn6.setForeground(new java.awt.Color(255, 255, 255));
         statusBn6.setText("สถานะ");
 
         javax.swing.GroupLayout statusPn6Layout = new javax.swing.GroupLayout(statusPn6);
@@ -585,10 +605,13 @@ public class HomepageFrame extends javax.swing.JFrame {
         slot7.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         statusPn7.setBackground(new java.awt.Color(255, 255, 255));
+        statusPn7.setForeground(new java.awt.Color(255, 255, 255));
 
         carpic7.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir") + "\\src\\TestIcon\\car.png"));
 
+        statusBn7.setBackground(new java.awt.Color(78, 80, 82));
         statusBn7.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        statusBn7.setForeground(new java.awt.Color(255, 255, 255));
         statusBn7.setText("สถานะ");
         statusBn7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -639,10 +662,13 @@ public class HomepageFrame extends javax.swing.JFrame {
         slot8.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         statusPn8.setBackground(new java.awt.Color(255, 255, 255));
+        statusPn8.setForeground(new java.awt.Color(255, 255, 255));
 
         carpic8.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir") + "\\src\\TestIcon\\car.png"));
 
+        statusBn8.setBackground(new java.awt.Color(78, 80, 82));
         statusBn8.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        statusBn8.setForeground(new java.awt.Color(255, 255, 255));
         statusBn8.setText("สถานะ");
 
         javax.swing.GroupLayout statusPn8Layout = new javax.swing.GroupLayout(statusPn8);
@@ -688,10 +714,13 @@ public class HomepageFrame extends javax.swing.JFrame {
         slot9.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         statusPn9.setBackground(new java.awt.Color(255, 255, 255));
+        statusPn9.setForeground(new java.awt.Color(255, 255, 255));
 
         carpic9.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir") + "\\src\\TestIcon\\car.png"));
 
+        statusBn9.setBackground(new java.awt.Color(78, 80, 82));
         statusBn9.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        statusBn9.setForeground(new java.awt.Color(255, 255, 255));
         statusBn9.setText("สถานะ");
 
         javax.swing.GroupLayout statusPn9Layout = new javax.swing.GroupLayout(statusPn9);
@@ -818,15 +847,6 @@ public class HomepageFrame extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-        if (MenuBar.isVisible()) {
-            MenuBar.setVisible(false);
-        } else {
-            MenuBar.setVisible(true);
-        }
-    }//GEN-LAST:event_jButton1ActionPerformed
-
     private void stuffmange_bnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_stuffmange_bnActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_stuffmange_bnActionPerformed
@@ -862,6 +882,10 @@ public class HomepageFrame extends javax.swing.JFrame {
     private void statusBn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_statusBn1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_statusBn1ActionPerformed
+
+    private void statusBn4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_statusBn4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_statusBn4ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -946,8 +970,8 @@ public class HomepageFrame extends javax.swing.JFrame {
     private javax.swing.JButton equipment_bn;
     private javax.swing.JLabel headTxt;
     private javax.swing.JPanel headtextPn;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel mainPn;
     private javax.swing.JLabel num1;
     private javax.swing.JLabel num10;
