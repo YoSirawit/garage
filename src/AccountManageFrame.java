@@ -1,3 +1,4 @@
+import com.formdev.flatlaf.FlatLightLaf;
 import javax.swing.table.*;
 import javax.swing.*;
 public class AccountManageFrame extends javax.swing.JFrame {
@@ -20,12 +21,11 @@ public class AccountManageFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        headPanel = new javax.swing.JPanel();
-        jTextField1 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        usernamePn = new javax.swing.JPanel();
-        usernameTxt = new javax.swing.JLabel();
+        Header = new javax.swing.JPanel();
+        usernamePn1 = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
+        usernameTxt1 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
         WhiteBG = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         AccountTable = new javax.swing.JTable();
@@ -35,8 +35,8 @@ public class AccountManageFrame extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         MenuBar = new javax.swing.JPanel();
         HomeButton = new javax.swing.JButton();
-        EquipmentButton = new javax.swing.JButton();
         CustomButton = new javax.swing.JButton();
+        EquipmentButton = new javax.swing.JButton();
         WarehouseButton = new javax.swing.JButton();
         InvoiceButton = new javax.swing.JButton();
         AccountButton = new javax.swing.JButton();
@@ -44,47 +44,30 @@ public class AccountManageFrame extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
-        headPanel.setBackground(new java.awt.Color(242, 157, 0));
-        headPanel.setMinimumSize(new java.awt.Dimension(1290, 50));
-        headPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        Header.setBackground(new java.awt.Color(247, 127, 0));
+        Header.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        Header.setPreferredSize(new java.awt.Dimension(1280, 50));
+        Header.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jTextField1.setEditable(false);
-        jTextField1.setBackground(new java.awt.Color(242, 157, 0));
-        jTextField1.setFont(new java.awt.Font("IrisUPC", 3, 48)); // NOI18N
-        jTextField1.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jTextField1.setText("ดำรงรวยการช่าง ");
-        jTextField1.setBorder(null);
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
-            }
-        });
-        headPanel.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 0, 250, 50));
+        usernamePn1.setBackground(new java.awt.Color(247, 127, 0));
+        usernamePn1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton1.setBackground(new java.awt.Color(255, 204, 153));
-        jButton1.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\TestIcon\\menu_icon_jing.png"));
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-        headPanel.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 60, 50));
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/userWithcircle.png"))); // NOI18N
+        usernamePn1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, -1, -1));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\TestIcon\\Account.png"));
-        headPanel.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1060, 10, -1, -1));
+        usernameTxt1.setBackground(new java.awt.Color(255, 255, 255));
+        usernameTxt1.setText("@USERNAME");
+        usernameTxt1.setToolTipText("Username Account");
+        usernameTxt1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        usernamePn1.add(usernameTxt1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 0, 80, 30));
 
-        usernamePn.setBackground(new java.awt.Color(255, 255, 255));
-        usernamePn.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        Header.add(usernamePn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1120, 10, 130, 30));
 
-        usernameTxt.setBackground(new java.awt.Color(0, 0, 0));
-        usernameTxt.setText("@USERNAME");
-        usernameTxt.setToolTipText("Username Account");
-        usernameTxt.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED, new java.awt.Color(0, 0, 0), java.awt.Color.white, null, null));
-        usernameTxt.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        usernamePn.add(usernameTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 160, 30));
-
-        headPanel.add(usernamePn, new org.netbeans.lib.awtextra.AbsoluteConstraints(1090, 10, 160, 30));
+        jLabel4.setBackground(new java.awt.Color(242, 157, 0));
+        jLabel4.setFont(new java.awt.Font("IrisUPC", 3, 36)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setText("ดำรงรวยการช่าง ");
+        Header.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 170, 40));
 
         WhiteBG.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -145,7 +128,7 @@ public class AccountManageFrame extends javax.swing.JFrame {
         WhiteBGLayout.setHorizontalGroup(
             WhiteBGLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, WhiteBGLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(50, Short.MAX_VALUE)
                 .addGroup(WhiteBGLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(WhiteBGLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
@@ -176,7 +159,7 @@ public class AccountManageFrame extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        MenuBar.setBackground(new java.awt.Color(255, 204, 102));
+        MenuBar.setBackground(new java.awt.Color(248, 245, 228));
         MenuBar.setPreferredSize(new java.awt.Dimension(200, 670));
         MenuBar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -184,27 +167,14 @@ public class AccountManageFrame extends javax.swing.JFrame {
         HomeButton.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         HomeButton.setForeground(new java.awt.Color(255, 255, 255));
         HomeButton.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\TestIcon\\HomeOrange.png"));
-        HomeButton.setText("หน้าโฮม");
+        HomeButton.setText("หน้าหลัก");
         HomeButton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         HomeButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 HomeButtonActionPerformed(evt);
             }
         });
-        MenuBar.add(HomeButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 30, 200, 70));
-
-        EquipmentButton.setBackground(new java.awt.Color(255, 102, 0));
-        EquipmentButton.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        EquipmentButton.setForeground(new java.awt.Color(255, 255, 255));
-        EquipmentButton.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\TestIcon\\ShopOrange.png"));
-        EquipmentButton.setText("เบิกอุปกรณ์");
-        EquipmentButton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        EquipmentButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                EquipmentButtonActionPerformed(evt);
-            }
-        });
-        MenuBar.add(EquipmentButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 230, 220, 70));
+        MenuBar.add(HomeButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 30, 220, 70));
 
         CustomButton.setBackground(new java.awt.Color(255, 102, 0));
         CustomButton.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
@@ -218,6 +188,19 @@ public class AccountManageFrame extends javax.swing.JFrame {
             }
         });
         MenuBar.add(CustomButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 130, 220, 70));
+
+        EquipmentButton.setBackground(new java.awt.Color(255, 102, 0));
+        EquipmentButton.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        EquipmentButton.setForeground(new java.awt.Color(255, 255, 255));
+        EquipmentButton.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\TestIcon\\ShopOrange.png"));
+        EquipmentButton.setText("เบิกอุปกรณ์");
+        EquipmentButton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        EquipmentButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EquipmentButtonActionPerformed(evt);
+            }
+        });
+        MenuBar.add(EquipmentButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 230, 220, 70));
 
         WarehouseButton.setBackground(new java.awt.Color(255, 102, 0));
         WarehouseButton.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
@@ -245,6 +228,7 @@ public class AccountManageFrame extends javax.swing.JFrame {
         });
         MenuBar.add(InvoiceButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 430, 220, 70));
 
+        AccountButton.setBackground(new java.awt.Color(255, 255, 255));
         AccountButton.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         AccountButton.setForeground(new java.awt.Color(255, 102, 0));
         AccountButton.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\TestIcon\\AccountWhite.png"));
@@ -262,23 +246,23 @@ public class AccountManageFrame extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(headPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 1280, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(Header, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(MenuBar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, 0)
-                        .addComponent(WhiteBG, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(WhiteBG, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(headPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(WhiteBG, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(MenuBar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addComponent(Header, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(MenuBar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(WhiteBG, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(0, 0, 0))
         );
 
         pack();
@@ -292,6 +276,12 @@ public class AccountManageFrame extends javax.swing.JFrame {
         AccountTable.setRowSorter(obj);
         obj.setRowFilter(RowFilter.regexFilter(SearchField.getText()));
     }//GEN-LAST:event_SearchButtonActionPerformed
+
+    private void AddAccountButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddAccountButtonActionPerformed
+        // TODO add your handling code here:
+        CreateAccFrame Sign = new CreateAccFrame();
+        Sign.setVisible(true);
+    }//GEN-LAST:event_AddAccountButtonActionPerformed
 
     private void HomeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HomeButtonActionPerformed
         // TODO add your handling code here:
@@ -317,57 +307,21 @@ public class AccountManageFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_AccountButtonActionPerformed
 
-    private void AddAccountButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddAccountButtonActionPerformed
-        // TODO add your handling code here:
-        CreateAccFrame Sign = new CreateAccFrame();
-        Sign.setVisible(true);
-    }//GEN-LAST:event_AddAccountButtonActionPerformed
-
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-        if (MenuBar.isVisible()) {
-            MenuBar.setVisible(false);
-        } else {
-            MenuBar.setVisible(true);
-        }
-    }//GEN-LAST:event_jButton1ActionPerformed
-
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(AccountManageFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(AccountManageFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(AccountManageFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(AccountManageFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() 
-            {
+            public void run(){
                 new AccountManageFrame().setVisible(true);
+//                try {
+//                    UIManager.setLookAndFeel(new FlatLightLaf());
+//                }catch(UnsupportedLookAndFeelException ex){
+//                    ex.printStackTrace();
+//                }
             }
         });
     }
@@ -402,6 +356,7 @@ public class AccountManageFrame extends javax.swing.JFrame {
     private javax.swing.JButton AddAccountButton;
     private javax.swing.JButton CustomButton;
     private javax.swing.JButton EquipmentButton;
+    private javax.swing.JPanel Header;
     private javax.swing.JButton HomeButton;
     private javax.swing.JButton InvoiceButton;
     private javax.swing.JPanel MenuBar;
@@ -409,13 +364,11 @@ public class AccountManageFrame extends javax.swing.JFrame {
     private javax.swing.JTextField SearchField;
     private javax.swing.JButton WarehouseButton;
     private javax.swing.JPanel WhiteBG;
-    private javax.swing.JPanel headPanel;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JPanel usernamePn;
-    private javax.swing.JLabel usernameTxt;
+    private javax.swing.JPanel usernamePn1;
+    private javax.swing.JLabel usernameTxt1;
     // End of variables declaration//GEN-END:variables
 }
