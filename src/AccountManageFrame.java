@@ -1,6 +1,6 @@
 import javax.swing.table.*;
 import javax.swing.*;
-public class AccountManageFrame extends javax.swing.JFrame {
+public class AccountManageFrame extends javax.swing.JFrame implements ChangePageButton {
 
     /**TableRowSorter myTableRowSorter = new TableRowSorter(AccountTable.getModel());
      * Creates new form AccountManageFrame
@@ -376,22 +376,27 @@ public class AccountManageFrame extends javax.swing.JFrame {
         return this.AccountTable;
     }
     
+    @Override
     public JButton getHomeButton(){
         return this.HomeButton;
     }
     
+    @Override
     public JButton getManagementButton(){
         return this.CustomButton;
     }
     
+    @Override
     public JButton getEquipmentButton(){
         return this.EquipmentButton;
     }
     
+    @Override
     public JButton getWarehouseButton(){
         return this.WarehouseButton;
     }
     
+    @Override
     public JButton getReceiptButton(){
         return this.InvoiceButton;
     }
@@ -416,4 +421,9 @@ public class AccountManageFrame extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     // End of variables declaration//GEN-END:variables
+
+    @Override
+    public JButton getStuffManageButton() {
+        return null;
+    }
 }

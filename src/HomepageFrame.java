@@ -1,5 +1,5 @@
 import javax.swing.*;
-public class HomepageFrame extends javax.swing.JFrame {
+public class HomepageFrame extends javax.swing.JFrame implements ChangePageButton {
     protected JPanel[] pnArr;
     protected JButton[] bnArr;
     private HomepageSystem hps;
@@ -907,18 +907,22 @@ public class HomepageFrame extends javax.swing.JFrame {
         return this.usernameTxt;
     }
     
+    @Override
     public JButton getManagementButton(){
         return this.customerqbn;
     }
     
+    @Override
     public JButton getEquipmentButton(){
         return this.equipment_bn;
     }
     
+    @Override
     public JButton getWarehouseButton(){
         return this.warehouse_bn;
     }
     
+    @Override
     public JButton getReceiptButton(){
         return this.receipt_bn;
     }
@@ -1007,4 +1011,14 @@ public class HomepageFrame extends javax.swing.JFrame {
     private javax.swing.JLabel usernameTxt;
     private javax.swing.JButton warehouse_bn;
     // End of variables declaration//GEN-END:variables
+
+    @Override
+    public JButton getHomeButton() {
+        return null;
+    }
+
+    @Override
+    public JButton getStuffManageButton() {
+        return this.stuffmange_bn;
+    }
 }

@@ -1,3 +1,6 @@
+
+import javax.swing.JButton;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -7,10 +10,17 @@
  *
  * @author petgo
  */
-public class EquipmentMainFrame extends javax.swing.JFrame {
+public class EquipmentMainFrame extends javax.swing.JFrame implements ChangePageButton {
 
-    public EquipmentMainFrame() {
+    private Channel[] garage_ch;
+    
+    public EquipmentMainFrame(Channel[] garage_ch) {
         initComponents();
+        this.garage_ch = garage_ch;
+    }
+    
+    public EquipmentMainFrame(){
+        this(null);
     }
 
     /**
@@ -324,4 +334,50 @@ public class EquipmentMainFrame extends javax.swing.JFrame {
     private javax.swing.JButton stuffmange_bn;
     private javax.swing.JButton warehouse_bn;
     // End of variables declaration//GEN-END:variables
+
+    public void update(){
+        this.JPanelCenter.removeAll();
+        this.JPanelCenter.revalidate();
+        for(int i=0; i<garage_ch.length; i++){
+            Car tmp = garage_ch[i].getCar();
+            if(tmp != null){
+                this.JPanelCenter.add(new Slotcar(tmp.getCarID(), tmp.getCarOwner(), tmp.getCarName(), tmp.getBrand()));
+            }
+            
+        }
+        this.JPanelCenter.revalidate();
+        this.JPanelCenter.repaint();
+        this.repaint();
+    }
+    
+    
+    @Override
+    public JButton getHomeButton() {
+        return this.HomeButton;
+    }
+
+    @Override
+    public JButton getManagementButton() {
+        return this.customerqbn;
+    }
+
+    @Override
+    public JButton getEquipmentButton() {
+        return this.equipment_bn;
+    }
+
+    @Override
+    public JButton getReceiptButton() {
+        return this.receipt_bn;
+    }
+
+    @Override
+    public JButton getWarehouseButton() {
+        return this.warehouse_bn;
+    }
+
+    @Override
+    public JButton getStuffManageButton() {
+        return this.stuffmange_bn;
+    }
 }

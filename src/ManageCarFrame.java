@@ -11,7 +11,7 @@ import javax.swing.*;
  *
  * @author Acer
  */
-public class ManageCarFrame extends javax.swing.JFrame {
+public class ManageCarFrame extends javax.swing.JFrame implements ChangePageButton {
 
     /**
      * Creates new form ManageCarFrame
@@ -201,21 +201,7 @@ public class ManageCarFrame extends javax.swing.JFrame {
 
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null}
+
             },
             new String [] {
                 "ch", "ID", "brand", "name", "status", "date_in", "date_out"
@@ -343,18 +329,22 @@ public class ManageCarFrame extends javax.swing.JFrame {
         });
     }
     
+    @Override
     public JButton getHomeButton(){
         return this.HomeButton;
     }
     
+    @Override
     public JButton getEquipmentButton(){
         return this.equipment_bn;
     }
     
+    @Override
     public JButton getWarehouseButton(){
         return this.warehouse_bn;
     }
     
+    @Override
     public JButton getReceiptButton(){
         return this.receipt_bn;
     }
@@ -382,4 +372,14 @@ public class ManageCarFrame extends javax.swing.JFrame {
     private javax.swing.JButton receipt_bn;
     private javax.swing.JButton warehouse_bn;
     // End of variables declaration//GEN-END:variables
+
+    @Override
+    public JButton getManagementButton() {
+        return null;
+    }
+
+    @Override
+    public JButton getStuffManageButton() {
+        return null;
+    }
 }

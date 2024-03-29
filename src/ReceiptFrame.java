@@ -4,7 +4,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import javax.swing.*;
 
-public class ReceiptFrame extends javax.swing.JFrame {
+public class ReceiptFrame extends javax.swing.JFrame implements ChangePageButton {
     public TestConnection db;
     
     public ReceiptFrame() {
@@ -155,7 +155,6 @@ public class ReceiptFrame extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(1270, 950));
-        setPreferredSize(new java.awt.Dimension(1280, 950));
         setResizable(false);
 
         Header.setBackground(new java.awt.Color(242, 157, 0));
@@ -167,7 +166,6 @@ public class ReceiptFrame extends javax.swing.JFrame {
         usernamePn.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         usernameTxt.setBackground(new java.awt.Color(0, 0, 0));
-        usernameTxt.setForeground(new java.awt.Color(0, 0, 0));
         usernameTxt.setText("@USERNAME");
         usernameTxt.setToolTipText("Username Account");
         usernameTxt.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED, new java.awt.Color(0, 0, 0), java.awt.Color.white, null, null));
@@ -253,7 +251,6 @@ public class ReceiptFrame extends javax.swing.JFrame {
         });
         MenuBar1.add(warehouse_bn, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 330, 220, 70));
 
-        receipt_bn.setBackground(new java.awt.Color(255, 255, 255));
         receipt_bn.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         receipt_bn.setForeground(new java.awt.Color(255, 102, 0));
         receipt_bn.setText("ใบเสร็จ");
@@ -369,11 +366,11 @@ public class ReceiptFrame extends javax.swing.JFrame {
             .addGroup(slot2Layout.createSequentialGroup()
                 .addContainerGap(19, Short.MAX_VALUE)
                 .addGroup(slot2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, slot2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(car_id2, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(slot2Layout.createSequentialGroup()
-                            .addComponent(car_owner2, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(16, 16, 16)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, slot2Layout.createSequentialGroup()
+                        .addGroup(slot2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(car_id2, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(car_owner2, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(16, 16, 16))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, slot2Layout.createSequentialGroup()
                         .addComponent(select2, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(72, 72, 72))
@@ -1003,7 +1000,6 @@ public class ReceiptFrame extends javax.swing.JFrame {
             }
         });
     }
-    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Header;
@@ -1073,4 +1069,32 @@ public class ReceiptFrame extends javax.swing.JFrame {
     private javax.swing.JLabel usernameTxt;
     private javax.swing.JButton warehouse_bn;
     // End of variables declaration//GEN-END:variables
+
+        
+    @Override
+    public JButton getHomeButton(){
+        return this.HomeButton1;
+    }
+    @Override
+    public JButton getManagementButton(){
+        return this.customerqbn;
+    }
+    @Override
+    public JButton getEquipmentButton(){
+        return this.equipment_bn;
+    }
+    @Override
+    public JButton getWarehouseButton(){
+        return this.warehouse_bn;
+    }
+    
+    @Override
+    public JButton getReceiptButton() {
+        return null;
+    }
+
+    @Override
+    public JButton getStuffManageButton() {
+        return this.stuffmange_bn;
+    }
 }

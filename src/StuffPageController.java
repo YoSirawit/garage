@@ -18,11 +18,9 @@ public class StuffPageController extends Online {
     public void update(){
         try{
             if(accFrame.getTable().getRowCount() != 0){
-                System.out.println(accFrame.getTable().getRowCount());
                 for(int i=accFrame.getTable().getRowCount()-1; i>=0; i--){
                     ((DefaultTableModel)accFrame.getTable().getModel()).removeRow(i);
                 }
-                System.out.println("after delete: " + accFrame.getTable().getRowCount());
             }
             ResultSet result = this.getStatement().executeQuery("select * from userid");
             int i = 0;

@@ -14,16 +14,20 @@ public class Car {
     private String date_out;
     
     public Car(){
-        this("", "", "", "", 0, "0000-00-0", "0000-00-00");
+        this("", "", "", "", 0, "0000-00-0", "0000-00-00", null);
     }
     
     public Car(String carOwner, String brand, String carName, String carID, int status, String date_in, String date_out){
+        this(carOwner, brand, carName, carID, status, date_in, date_out, null);
+    }
+    
+    public Car(String carOwner, String brand, String carName, String carID, int status, String date_in, String date_out, Bill bill){
         this.carName = carName;
         this.carOwner = carOwner;
         this.brand = brand;
         this.carID = carID;
         this.status = status;
-        this.bill = null;
+        this.bill = bill;
         this.date_in = date_in;
         this.date_out = date_out;
     }
