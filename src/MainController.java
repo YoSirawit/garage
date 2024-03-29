@@ -1,4 +1,5 @@
 
+import com.formdev.flatlaf.FlatLightLaf;
 import java.awt.event.*;
 import javax.swing.*;
 
@@ -38,8 +39,9 @@ public class MainController implements ActionListener{
         mainframe.pack();
         mainframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         mainframe.setVisible(true);
+        mainframe.setLocationRelativeTo(null);
         lpc.getLoginFrame().getLoginButton().addActionListener(this);
-        
+
     }
 
     @Override
@@ -57,6 +59,7 @@ public class MainController implements ActionListener{
                 mainframe.setSize(1280, 720);
                 mainframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 mainframe.setVisible(true);
+                mainframe.setLocationRelativeTo(null);
             }
         //if user press management button
         }else if(e.getSource().equals(hc.getHomepageframe().getManagementButton()) ||
