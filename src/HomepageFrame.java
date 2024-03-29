@@ -1,3 +1,4 @@
+import com.formdev.flatlaf.*;
 import javax.swing.*;
 public class HomepageFrame extends javax.swing.JFrame {
     protected JPanel[] pnArr;
@@ -32,12 +33,12 @@ public class HomepageFrame extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         mainPn = new javax.swing.JPanel();
         MenuBar = new javax.swing.JPanel();
-        stuffmange_bn = new javax.swing.JButton();
         HomeButton = new javax.swing.JButton();
-        customerqbn = new javax.swing.JButton();
-        equipment_bn = new javax.swing.JButton();
-        warehouse_bn = new javax.swing.JButton();
-        receipt_bn = new javax.swing.JButton();
+        CustomButton = new javax.swing.JButton();
+        EquipmentButton = new javax.swing.JButton();
+        WarehouseButton = new javax.swing.JButton();
+        InvoiceButton = new javax.swing.JButton();
+        AccountButton = new javax.swing.JButton();
         submainPn = new javax.swing.JPanel();
         tablePn = new javax.swing.JPanel();
         slot0 = new javax.swing.JPanel();
@@ -139,23 +140,12 @@ public class HomepageFrame extends javax.swing.JFrame {
         MenuBar.setPreferredSize(new java.awt.Dimension(200, 670));
         MenuBar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        stuffmange_bn.setBackground(new java.awt.Color(247, 127, 0));
-        stuffmange_bn.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        stuffmange_bn.setForeground(new java.awt.Color(255, 255, 255));
-        stuffmange_bn.setText("จัดการพนักงาน");
-        stuffmange_bn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                stuffmange_bnActionPerformed(evt);
-            }
-        });
-        MenuBar.add(stuffmange_bn, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 530, 220, 70));
-
         HomeButton.setBackground(new java.awt.Color(255, 255, 255));
         HomeButton.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        HomeButton.setForeground(new java.awt.Color(247, 127, 0));
-        HomeButton.setText("หน้าโฮม");
-        HomeButton.setBorder(null);
-        HomeButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        HomeButton.setForeground(new java.awt.Color(255, 102, 0));
+        HomeButton.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\TestIcon\\HomeWhite.png"));
+        HomeButton.setText("หน้าหลัก");
+        HomeButton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         HomeButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 HomeButtonActionPerformed(evt);
@@ -163,57 +153,70 @@ public class HomepageFrame extends javax.swing.JFrame {
         });
         MenuBar.add(HomeButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 30, 220, 70));
 
-        customerqbn.setBackground(new java.awt.Color(247, 127, 0));
-        customerqbn.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        customerqbn.setForeground(new java.awt.Color(255, 255, 255));
-        customerqbn.setText("จัดการคิวรถ");
-        customerqbn.setBorder(null);
-        customerqbn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        customerqbn.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        customerqbn.addActionListener(new java.awt.event.ActionListener() {
+        CustomButton.setBackground(new java.awt.Color(255, 102, 0));
+        CustomButton.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        CustomButton.setForeground(new java.awt.Color(255, 255, 255));
+        CustomButton.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\TestIcon\\CarManageOrange.png"));
+        CustomButton.setText("จัดการคิวรถ");
+        CustomButton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        CustomButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                customerqbnActionPerformed(evt);
+                CustomButtonActionPerformed(evt);
             }
         });
-        MenuBar.add(customerqbn, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 130, 220, 70));
+        MenuBar.add(CustomButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 130, 220, 70));
 
-        equipment_bn.setBackground(new java.awt.Color(247, 127, 0));
-        equipment_bn.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        equipment_bn.setForeground(new java.awt.Color(255, 255, 255));
-        equipment_bn.setText("เบิกอุปกรณ์");
-        equipment_bn.setBorder(null);
-        equipment_bn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        equipment_bn.addActionListener(new java.awt.event.ActionListener() {
+        EquipmentButton.setBackground(new java.awt.Color(255, 102, 0));
+        EquipmentButton.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        EquipmentButton.setForeground(new java.awt.Color(255, 255, 255));
+        EquipmentButton.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\TestIcon\\ShopOrange.png"));
+        EquipmentButton.setText("เบิกอุปกรณ์");
+        EquipmentButton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        EquipmentButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                equipment_bnActionPerformed(evt);
+                EquipmentButtonActionPerformed(evt);
             }
         });
-        MenuBar.add(equipment_bn, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 230, 220, 70));
+        MenuBar.add(EquipmentButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 230, 220, 70));
 
-        warehouse_bn.setBackground(new java.awt.Color(247, 127, 0));
-        warehouse_bn.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        warehouse_bn.setForeground(new java.awt.Color(255, 255, 255));
-        warehouse_bn.setText("คลังอุปกรณ์");
-        warehouse_bn.setToolTipText("");
-        warehouse_bn.setBorder(null);
-        warehouse_bn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        warehouse_bn.addActionListener(new java.awt.event.ActionListener() {
+        WarehouseButton.setBackground(new java.awt.Color(255, 102, 0));
+        WarehouseButton.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        WarehouseButton.setForeground(new java.awt.Color(255, 255, 255));
+        WarehouseButton.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\TestIcon\\StorageOrange.png"));
+        WarehouseButton.setText("คลังอุปกรณ์");
+        WarehouseButton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        WarehouseButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                warehouse_bnActionPerformed(evt);
+                WarehouseButtonActionPerformed(evt);
             }
         });
-        MenuBar.add(warehouse_bn, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 330, 220, 70));
+        MenuBar.add(WarehouseButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 330, 220, 70));
 
-        receipt_bn.setBackground(new java.awt.Color(247, 127, 0));
-        receipt_bn.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        receipt_bn.setForeground(new java.awt.Color(255, 255, 255));
-        receipt_bn.setText("ใบเสร็จ");
-        receipt_bn.addActionListener(new java.awt.event.ActionListener() {
+        InvoiceButton.setBackground(new java.awt.Color(255, 102, 0));
+        InvoiceButton.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        InvoiceButton.setForeground(new java.awt.Color(255, 255, 255));
+        InvoiceButton.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\TestIcon\\InvoiceOrange.png"));
+        InvoiceButton.setText("ใบเสร็จ");
+        InvoiceButton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        InvoiceButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                receipt_bnActionPerformed(evt);
+                InvoiceButtonActionPerformed(evt);
             }
         });
-        MenuBar.add(receipt_bn, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 430, 220, 70));
+        MenuBar.add(InvoiceButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 430, 220, 70));
+
+        AccountButton.setBackground(new java.awt.Color(255, 102, 0));
+        AccountButton.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        AccountButton.setForeground(new java.awt.Color(255, 255, 255));
+        AccountButton.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\TestIcon\\AccountOrange.png"));
+        AccountButton.setText("จัดการพนักงาน");
+        AccountButton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        AccountButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AccountButtonActionPerformed(evt);
+            }
+        });
+        MenuBar.add(AccountButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 530, 220, 70));
 
         submainPn.setBackground(new java.awt.Color(255, 255, 255));
         submainPn.setForeground(new java.awt.Color(255, 255, 255));
@@ -240,14 +243,13 @@ public class HomepageFrame extends javax.swing.JFrame {
         statusPn0Layout.setHorizontalGroup(
             statusPn0Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(statusPn0Layout.createSequentialGroup()
-                .addGroup(statusPn0Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(statusPn0Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(statusBn0, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(statusPn0Layout.createSequentialGroup()
-                        .addGap(36, 36, 36)
-                        .addComponent(carpic0)))
-                .addContainerGap(9, Short.MAX_VALUE))
+                .addGap(36, 36, 36)
+                .addComponent(carpic0)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(statusPn0Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(statusBn0, javax.swing.GroupLayout.DEFAULT_SIZE, 128, Short.MAX_VALUE)
+                .addContainerGap())
         );
         statusPn0Layout.setVerticalGroup(
             statusPn0Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -297,14 +299,13 @@ public class HomepageFrame extends javax.swing.JFrame {
         statusPn1Layout.setHorizontalGroup(
             statusPn1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(statusPn1Layout.createSequentialGroup()
-                .addGroup(statusPn1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(statusPn1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(statusBn1, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(statusPn1Layout.createSequentialGroup()
-                        .addGap(36, 36, 36)
-                        .addComponent(carpic1)))
-                .addContainerGap(9, Short.MAX_VALUE))
+                .addGap(36, 36, 36)
+                .addComponent(carpic1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(statusPn1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(statusBn1, javax.swing.GroupLayout.DEFAULT_SIZE, 128, Short.MAX_VALUE)
+                .addContainerGap())
         );
         statusPn1Layout.setVerticalGroup(
             statusPn1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -354,14 +355,13 @@ public class HomepageFrame extends javax.swing.JFrame {
         statusPn2Layout.setHorizontalGroup(
             statusPn2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(statusPn2Layout.createSequentialGroup()
-                .addGroup(statusPn2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(statusPn2Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(statusBn2, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(statusPn2Layout.createSequentialGroup()
-                        .addGap(38, 38, 38)
-                        .addComponent(carpic2)))
-                .addContainerGap(9, Short.MAX_VALUE))
+                .addGap(38, 38, 38)
+                .addComponent(carpic2)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(statusPn2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(statusBn2, javax.swing.GroupLayout.DEFAULT_SIZE, 128, Short.MAX_VALUE)
+                .addContainerGap())
         );
         statusPn2Layout.setVerticalGroup(
             statusPn2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -847,30 +847,6 @@ public class HomepageFrame extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void stuffmange_bnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_stuffmange_bnActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_stuffmange_bnActionPerformed
-
-    private void receipt_bnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_receipt_bnActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_receipt_bnActionPerformed
-
-    private void warehouse_bnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_warehouse_bnActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_warehouse_bnActionPerformed
-
-    private void equipment_bnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_equipment_bnActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_equipment_bnActionPerformed
-
-    private void customerqbnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_customerqbnActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_customerqbnActionPerformed
-
-    private void HomeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HomeButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_HomeButtonActionPerformed
-
     private void statusBn7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_statusBn7ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_statusBn7ActionPerformed
@@ -887,36 +863,35 @@ public class HomepageFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_statusBn4ActionPerformed
 
+    private void HomeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HomeButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_HomeButtonActionPerformed
+
+    private void CustomButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CustomButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CustomButtonActionPerformed
+
+    private void EquipmentButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EquipmentButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_EquipmentButtonActionPerformed
+
+    private void WarehouseButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_WarehouseButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_WarehouseButtonActionPerformed
+
+    private void InvoiceButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InvoiceButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_InvoiceButtonActionPerformed
+
+    private void AccountButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AccountButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_AccountButtonActionPerformed
+
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(HomepageFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(HomepageFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(HomepageFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(HomepageFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -932,30 +907,35 @@ public class HomepageFrame extends javax.swing.JFrame {
     }
     
     public JButton getManagementButton(){
-        return this.customerqbn;
+        return this.CustomButton;
     }
     
     public JButton getEquipmentButton(){
-        return this.equipment_bn;
+        return this.EquipmentButton;
     }
     
     public JButton getWarehouseButton(){
-        return this.warehouse_bn;
+        return this.WarehouseButton;
     }
     
     public JButton getReceiptButton(){
-        return this.receipt_bn;
+        return this.InvoiceButton;
     }
     
     public JButton getStuffmanageButton(){
-        return this.stuffmange_bn;
+        return this.AccountButton;
     }
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton AccountButton;
+    private javax.swing.JButton CustomButton;
+    private javax.swing.JButton EquipmentButton;
     private javax.swing.JPanel Header;
     private javax.swing.JButton HomeButton;
+    private javax.swing.JButton InvoiceButton;
     private javax.swing.JPanel MenuBar;
+    private javax.swing.JButton WarehouseButton;
     private javax.swing.JLabel carpic0;
     private javax.swing.JLabel carpic1;
     private javax.swing.JLabel carpic2;
@@ -966,8 +946,6 @@ public class HomepageFrame extends javax.swing.JFrame {
     private javax.swing.JLabel carpic7;
     private javax.swing.JLabel carpic8;
     private javax.swing.JLabel carpic9;
-    private javax.swing.JButton customerqbn;
-    private javax.swing.JButton equipment_bn;
     private javax.swing.JLabel headTxt;
     private javax.swing.JPanel headtextPn;
     private javax.swing.JLabel jLabel1;
@@ -983,7 +961,6 @@ public class HomepageFrame extends javax.swing.JFrame {
     private javax.swing.JLabel num7;
     private javax.swing.JLabel num8;
     private javax.swing.JLabel num9;
-    private javax.swing.JButton receipt_bn;
     private javax.swing.JPanel slot0;
     private javax.swing.JPanel slot1;
     private javax.swing.JPanel slot2;
@@ -1014,7 +991,6 @@ public class HomepageFrame extends javax.swing.JFrame {
     protected javax.swing.JPanel statusPn7;
     protected javax.swing.JPanel statusPn8;
     protected javax.swing.JPanel statusPn9;
-    private javax.swing.JButton stuffmange_bn;
     private javax.swing.JPanel submainPn;
     private javax.swing.JPanel tablePn;
     private javax.swing.JLabel txtNocar0;
@@ -1029,6 +1005,5 @@ public class HomepageFrame extends javax.swing.JFrame {
     private javax.swing.JLabel txtNocar9;
     private javax.swing.JPanel usernamePn;
     private javax.swing.JLabel usernameTxt;
-    private javax.swing.JButton warehouse_bn;
     // End of variables declaration//GEN-END:variables
 }
