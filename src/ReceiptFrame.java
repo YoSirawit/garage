@@ -87,16 +87,17 @@ public class ReceiptFrame extends javax.swing.JFrame {
     private void initComponents() {
 
         Header = new javax.swing.JPanel();
-        usernamePn = new javax.swing.JPanel();
-        usernameTxt = new javax.swing.JLabel();
-        garageName = new javax.swing.JLabel();
-        MenuBar1 = new javax.swing.JPanel();
-        stuffmange_bn = new javax.swing.JButton();
-        HomeButton1 = new javax.swing.JButton();
-        customerqbn = new javax.swing.JButton();
-        equipment_bn = new javax.swing.JButton();
-        warehouse_bn = new javax.swing.JButton();
-        receipt_bn = new javax.swing.JButton();
+        usernamePn1 = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
+        usernameTxt1 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        MenuBar = new javax.swing.JPanel();
+        HomeButton = new javax.swing.JButton();
+        CustomButton = new javax.swing.JButton();
+        EquipmentButton = new javax.swing.JButton();
+        WarehouseButton = new javax.swing.JButton();
+        InvoiceButton = new javax.swing.JButton();
+        AccountButton = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         grid = new javax.swing.JPanel();
@@ -154,117 +155,121 @@ public class ReceiptFrame extends javax.swing.JFrame {
         ch10 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMinimumSize(new java.awt.Dimension(1270, 950));
+        setMinimumSize(new java.awt.Dimension(1280, 720));
         setPreferredSize(new java.awt.Dimension(1280, 950));
         setResizable(false);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        Header.setBackground(new java.awt.Color(242, 157, 0));
+        Header.setBackground(new java.awt.Color(247, 127, 0));
         Header.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         Header.setPreferredSize(new java.awt.Dimension(1280, 50));
         Header.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        usernamePn.setBackground(new java.awt.Color(255, 255, 255));
-        usernamePn.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        usernamePn1.setBackground(new java.awt.Color(247, 127, 0));
+        usernamePn1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        usernameTxt.setBackground(new java.awt.Color(0, 0, 0));
-        usernameTxt.setForeground(new java.awt.Color(0, 0, 0));
-        usernameTxt.setText("@USERNAME");
-        usernameTxt.setToolTipText("Username Account");
-        usernameTxt.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED, new java.awt.Color(0, 0, 0), java.awt.Color.white, null, null));
-        usernameTxt.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        usernamePn.add(usernameTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 160, 30));
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/userWithcircle.png"))); // NOI18N
+        usernamePn1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, -1, -1));
 
-        Header.add(usernamePn, new org.netbeans.lib.awtextra.AbsoluteConstraints(1090, 10, 160, 30));
+        usernameTxt1.setBackground(new java.awt.Color(255, 255, 255));
+        usernameTxt1.setText("@USERNAME");
+        usernameTxt1.setToolTipText("Username Account");
+        usernameTxt1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        usernamePn1.add(usernameTxt1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 0, 80, 30));
 
-        garageName.setBackground(new java.awt.Color(242, 157, 0));
-        garageName.setFont(new java.awt.Font("IrisUPC", 3, 48)); // NOI18N
-        garageName.setForeground(new java.awt.Color(255, 255, 255));
-        garageName.setText("ดำรงรวยการช่าง ");
-        Header.add(garageName, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 0, 230, 60));
+        Header.add(usernamePn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1120, 10, 130, 30));
 
-        getContentPane().add(Header, java.awt.BorderLayout.NORTH);
+        jLabel4.setBackground(new java.awt.Color(242, 157, 0));
+        jLabel4.setFont(new java.awt.Font("IrisUPC", 3, 36)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setText("ดำรงรวยการช่าง ");
+        Header.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 170, 40));
 
-        MenuBar1.setBackground(new java.awt.Color(255, 204, 102));
-        MenuBar1.setPreferredSize(new java.awt.Dimension(200, 670));
-        MenuBar1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        getContentPane().add(Header, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1280, -1));
 
-        stuffmange_bn.setBackground(new java.awt.Color(255, 102, 0));
-        stuffmange_bn.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        stuffmange_bn.setForeground(new java.awt.Color(255, 255, 255));
-        stuffmange_bn.setText("จัดการพนักงาน");
-        stuffmange_bn.addActionListener(new java.awt.event.ActionListener() {
+        MenuBar.setBackground(new java.awt.Color(248, 245, 228));
+        MenuBar.setPreferredSize(new java.awt.Dimension(200, 670));
+        MenuBar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        HomeButton.setBackground(new java.awt.Color(255, 102, 0));
+        HomeButton.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        HomeButton.setForeground(new java.awt.Color(255, 255, 255));
+        HomeButton.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\TestIcon\\HomeOrange.png"));
+        HomeButton.setText("หน้าหลัก");
+        HomeButton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        HomeButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                stuffmange_bnActionPerformed(evt);
+                HomeButtonActionPerformed(evt);
             }
         });
-        MenuBar1.add(stuffmange_bn, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 530, 220, 70));
+        MenuBar.add(HomeButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 30, 220, 70));
 
-        HomeButton1.setBackground(new java.awt.Color(255, 102, 0));
-        HomeButton1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        HomeButton1.setForeground(new java.awt.Color(255, 255, 255));
-        HomeButton1.setText("หน้าโฮม");
-        HomeButton1.setBorder(null);
-        HomeButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        HomeButton1.addActionListener(new java.awt.event.ActionListener() {
+        CustomButton.setBackground(new java.awt.Color(255, 102, 0));
+        CustomButton.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        CustomButton.setForeground(new java.awt.Color(255, 255, 255));
+        CustomButton.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\TestIcon\\CarManageOrange.png"));
+        CustomButton.setText("จัดการคิวรถ");
+        CustomButton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        CustomButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                HomeButton1ActionPerformed(evt);
+                CustomButtonActionPerformed(evt);
             }
         });
-        MenuBar1.add(HomeButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 30, 220, 70));
+        MenuBar.add(CustomButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 130, 220, 70));
 
-        customerqbn.setBackground(new java.awt.Color(255, 102, 0));
-        customerqbn.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        customerqbn.setForeground(new java.awt.Color(255, 255, 255));
-        customerqbn.setText("จัดการคิวรถ");
-        customerqbn.setBorder(null);
-        customerqbn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        customerqbn.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        customerqbn.addActionListener(new java.awt.event.ActionListener() {
+        EquipmentButton.setBackground(new java.awt.Color(255, 102, 0));
+        EquipmentButton.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        EquipmentButton.setForeground(new java.awt.Color(255, 255, 255));
+        EquipmentButton.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\TestIcon\\ShopOrange.png"));
+        EquipmentButton.setText("เบิกอุปกรณ์");
+        EquipmentButton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        EquipmentButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                customerqbnActionPerformed(evt);
+                EquipmentButtonActionPerformed(evt);
             }
         });
-        MenuBar1.add(customerqbn, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 130, 220, 70));
+        MenuBar.add(EquipmentButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 230, 220, 70));
 
-        equipment_bn.setBackground(new java.awt.Color(255, 102, 0));
-        equipment_bn.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        equipment_bn.setForeground(new java.awt.Color(255, 255, 255));
-        equipment_bn.setText("เบิกอุปกรณ์");
-        equipment_bn.setBorder(null);
-        equipment_bn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        equipment_bn.addActionListener(new java.awt.event.ActionListener() {
+        WarehouseButton.setBackground(new java.awt.Color(255, 102, 0));
+        WarehouseButton.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        WarehouseButton.setForeground(new java.awt.Color(255, 255, 255));
+        WarehouseButton.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\TestIcon\\StorageOrange.png"));
+        WarehouseButton.setText("คลังอุปกรณ์");
+        WarehouseButton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        WarehouseButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                equipment_bnActionPerformed(evt);
+                WarehouseButtonActionPerformed(evt);
             }
         });
-        MenuBar1.add(equipment_bn, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 230, 220, 70));
+        MenuBar.add(WarehouseButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 330, 220, 70));
 
-        warehouse_bn.setBackground(new java.awt.Color(255, 102, 0));
-        warehouse_bn.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        warehouse_bn.setForeground(new java.awt.Color(255, 255, 255));
-        warehouse_bn.setText("คลังอุปกรณ์");
-        warehouse_bn.setToolTipText("");
-        warehouse_bn.setBorder(null);
-        warehouse_bn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        warehouse_bn.addActionListener(new java.awt.event.ActionListener() {
+        InvoiceButton.setBackground(new java.awt.Color(255, 255, 255));
+        InvoiceButton.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        InvoiceButton.setForeground(new java.awt.Color(255, 102, 0));
+        InvoiceButton.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\TestIcon\\InvoiceWhite.png"));
+        InvoiceButton.setText("ใบเสร็จ");
+        InvoiceButton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        InvoiceButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                warehouse_bnActionPerformed(evt);
+                InvoiceButtonActionPerformed(evt);
             }
         });
-        MenuBar1.add(warehouse_bn, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 330, 220, 70));
+        MenuBar.add(InvoiceButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 430, 220, 70));
 
-        receipt_bn.setBackground(new java.awt.Color(255, 255, 255));
-        receipt_bn.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        receipt_bn.setForeground(new java.awt.Color(255, 102, 0));
-        receipt_bn.setText("ใบเสร็จ");
-        receipt_bn.addActionListener(new java.awt.event.ActionListener() {
+        AccountButton.setBackground(new java.awt.Color(255, 102, 0));
+        AccountButton.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        AccountButton.setForeground(new java.awt.Color(255, 255, 255));
+        AccountButton.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\TestIcon\\AccountOrange.png"));
+        AccountButton.setText("จัดการพนักงาน");
+        AccountButton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        AccountButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                receipt_bnActionPerformed(evt);
+                AccountButtonActionPerformed(evt);
             }
         });
-        MenuBar1.add(receipt_bn, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 430, 220, 70));
+        MenuBar.add(AccountButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 530, 220, 70));
 
-        getContentPane().add(MenuBar1, java.awt.BorderLayout.WEST);
+        getContentPane().add(MenuBar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, -1, -1));
 
         jPanel3.setBackground(new java.awt.Color(69, 69, 69));
         jPanel3.setForeground(new java.awt.Color(69, 69, 69));
@@ -276,7 +281,7 @@ public class ReceiptFrame extends javax.swing.JFrame {
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("เลือกรถเพื่อทำรายการ");
         jLabel1.setBorder(javax.swing.BorderFactory.createEmptyBorder(15, 20, 1, 1));
-        jPanel3.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1060, -1));
+        jPanel3.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1080, -1));
 
         grid.setForeground(new java.awt.Color(51, 51, 51));
         grid.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -311,32 +316,28 @@ public class ReceiptFrame extends javax.swing.JFrame {
         slot1Layout.setHorizontalGroup(
             slot1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(slot1Layout.createSequentialGroup()
-                .addContainerGap(19, Short.MAX_VALUE)
-                .addGroup(slot1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, slot1Layout.createSequentialGroup()
-                        .addGroup(slot1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(car_id1, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(car_owner1, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(13, 13, 13))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, slot1Layout.createSequentialGroup()
-                        .addComponent(select1, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(74, 74, 74))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, slot1Layout.createSequentialGroup()
-                        .addComponent(ch1, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(36, 36, 36))))
+                .addContainerGap(20, Short.MAX_VALUE)
+                .addComponent(ch1, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(36, 36, 36))
+            .addComponent(car_id1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(car_owner1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(slot1Layout.createSequentialGroup()
+                .addGap(64, 64, 64)
+                .addComponent(select1, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         slot1Layout.setVerticalGroup(
             slot1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, slot1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(20, Short.MAX_VALUE)
                 .addComponent(ch1)
                 .addGap(18, 18, 18)
                 .addComponent(car_owner1)
                 .addGap(18, 18, 18)
                 .addComponent(car_id1)
-                .addGap(22, 22, 22)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(select1)
-                .addContainerGap())
+                .addGap(16, 16, 16))
         );
 
         slot2.setForeground(new java.awt.Color(51, 51, 51));
@@ -366,33 +367,32 @@ public class ReceiptFrame extends javax.swing.JFrame {
         slot2.setLayout(slot2Layout);
         slot2Layout.setHorizontalGroup(
             slot2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(car_id2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(slot2Layout.createSequentialGroup()
-                .addContainerGap(19, Short.MAX_VALUE)
+                .addContainerGap()
                 .addGroup(slot2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, slot2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(car_id2, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(slot2Layout.createSequentialGroup()
-                            .addComponent(car_owner2, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(16, 16, 16)))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, slot2Layout.createSequentialGroup()
-                        .addComponent(select2, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(72, 72, 72))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, slot2Layout.createSequentialGroup()
+                        .addGap(0, 33, Short.MAX_VALUE)
                         .addComponent(ch2, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(35, 35, 35))))
+                        .addGap(35, 35, 35))
+                    .addComponent(car_owner2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, slot2Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(select2, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(69, 69, 69))
         );
         slot2Layout.setVerticalGroup(
             slot2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, slot2Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(20, Short.MAX_VALUE)
                 .addComponent(ch2)
                 .addGap(18, 18, 18)
                 .addComponent(car_owner2)
                 .addGap(18, 18, 18)
                 .addComponent(car_id2)
-                .addGap(22, 22, 22)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(select2)
-                .addContainerGap())
+                .addGap(16, 16, 16))
         );
 
         car_owner3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -420,33 +420,32 @@ public class ReceiptFrame extends javax.swing.JFrame {
         slot3.setLayout(slot3Layout);
         slot3Layout.setHorizontalGroup(
             slot3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, slot3Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(select3, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(71, 71, 71))
             .addGroup(slot3Layout.createSequentialGroup()
-                .addContainerGap(19, Short.MAX_VALUE)
+                .addContainerGap()
                 .addGroup(slot3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, slot3Layout.createSequentialGroup()
-                        .addGroup(slot3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(car_id3, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(car_owner3, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(16, 16, 16))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, slot3Layout.createSequentialGroup()
-                        .addComponent(select3, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(74, 74, 74))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, slot3Layout.createSequentialGroup()
+                    .addGroup(slot3Layout.createSequentialGroup()
+                        .addGap(0, 39, Short.MAX_VALUE)
                         .addComponent(ch3, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(35, 35, 35))))
+                        .addGap(35, 35, 35))
+                    .addComponent(car_id3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(car_owner3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
         slot3Layout.setVerticalGroup(
             slot3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, slot3Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(20, Short.MAX_VALUE)
                 .addComponent(ch3)
                 .addGap(18, 18, 18)
                 .addComponent(car_owner3)
                 .addGap(18, 18, 18)
                 .addComponent(car_id3)
-                .addGap(22, 22, 22)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(select3)
-                .addContainerGap())
+                .addGap(16, 16, 16))
         );
 
         car_owner4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -474,33 +473,32 @@ public class ReceiptFrame extends javax.swing.JFrame {
         slot4.setLayout(slot4Layout);
         slot4Layout.setHorizontalGroup(
             slot4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, slot4Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(select4, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(66, 66, 66))
             .addGroup(slot4Layout.createSequentialGroup()
-                .addContainerGap(13, Short.MAX_VALUE)
+                .addContainerGap()
                 .addGroup(slot4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(car_id4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, slot4Layout.createSequentialGroup()
-                        .addGroup(slot4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(car_id4, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(car_owner4, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(13, 13, 13))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, slot4Layout.createSequentialGroup()
-                        .addComponent(select4, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(69, 69, 69))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, slot4Layout.createSequentialGroup()
+                        .addGap(0, 31, Short.MAX_VALUE)
                         .addComponent(ch4, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(33, 33, 33))))
+            .addComponent(car_owner4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         slot4Layout.setVerticalGroup(
             slot4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, slot4Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(21, Short.MAX_VALUE)
                 .addComponent(ch4)
                 .addGap(18, 18, 18)
                 .addComponent(car_owner4, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(car_id4)
-                .addGap(21, 21, 21)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(select4)
-                .addContainerGap())
+                .addGap(15, 15, 15))
         );
 
         car_owner5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -529,32 +527,33 @@ public class ReceiptFrame extends javax.swing.JFrame {
         slot5Layout.setHorizontalGroup(
             slot5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(slot5Layout.createSequentialGroup()
-                .addContainerGap(21, Short.MAX_VALUE)
+                .addContainerGap()
                 .addGroup(slot5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, slot5Layout.createSequentialGroup()
-                        .addGroup(slot5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(car_id5, javax.swing.GroupLayout.DEFAULT_SIZE, 167, Short.MAX_VALUE)
-                            .addComponent(car_owner5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(21, 21, 21))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, slot5Layout.createSequentialGroup()
+                    .addGroup(slot5Layout.createSequentialGroup()
+                        .addGap(0, 36, Short.MAX_VALUE)
                         .addComponent(ch5, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(39, 39, 39))
+                    .addComponent(car_id5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, slot5Layout.createSequentialGroup()
-                        .addComponent(select5, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(73, 73, 73))))
+                        .addComponent(car_owner5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addContainerGap())))
+            .addGroup(slot5Layout.createSequentialGroup()
+                .addGap(75, 75, 75)
+                .addComponent(select5, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         slot5Layout.setVerticalGroup(
             slot5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, slot5Layout.createSequentialGroup()
-                .addContainerGap(49, Short.MAX_VALUE)
+                .addContainerGap(19, Short.MAX_VALUE)
                 .addComponent(ch5)
                 .addGap(18, 18, 18)
                 .addComponent(car_owner5)
                 .addGap(18, 18, 18)
                 .addComponent(car_id5)
-                .addGap(23, 23, 23)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(select5)
-                .addContainerGap())
+                .addGap(17, 17, 17))
         );
 
         javax.swing.GroupLayout gridtopLayout = new javax.swing.GroupLayout(gridtop);
@@ -562,7 +561,7 @@ public class ReceiptFrame extends javax.swing.JFrame {
         gridtopLayout.setHorizontalGroup(
             gridtopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(gridtopLayout.createSequentialGroup()
-                .addGap(12, 12, 12)
+                .addContainerGap()
                 .addComponent(slot1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(slot2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -572,7 +571,7 @@ public class ReceiptFrame extends javax.swing.JFrame {
                 .addComponent(slot4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(slot5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 3, Short.MAX_VALUE))
+                .addGap(0, 15, Short.MAX_VALUE))
         );
         gridtopLayout.setVerticalGroup(
             gridtopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -587,7 +586,7 @@ public class ReceiptFrame extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        grid.add(gridtop, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 320));
+        grid.add(gridtop, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 290));
 
         car_owner6.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         car_owner6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -614,21 +613,18 @@ public class ReceiptFrame extends javax.swing.JFrame {
         slot6.setLayout(slot6Layout);
         slot6Layout.setHorizontalGroup(
             slot6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(slot6Layout.createSequentialGroup()
-                .addGap(76, 76, 76)
-                .addComponent(select6, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(76, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, slot6Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(slot6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, slot6Layout.createSequentialGroup()
-                        .addGroup(slot6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(car_owner6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(car_id6, javax.swing.GroupLayout.DEFAULT_SIZE, 178, Short.MAX_VALUE))
-                        .addGap(14, 14, 14))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, slot6Layout.createSequentialGroup()
-                        .addComponent(ch6, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(37, 37, 37))))
+                .addContainerGap(20, Short.MAX_VALUE)
+                .addComponent(ch6, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(37, 37, 37))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, slot6Layout.createSequentialGroup()
+                .addComponent(car_owner6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+            .addComponent(car_id6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(slot6Layout.createSequentialGroup()
+                .addGap(60, 60, 60)
+                .addComponent(select6, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         slot6Layout.setVerticalGroup(
             slot6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -639,9 +635,9 @@ public class ReceiptFrame extends javax.swing.JFrame {
                 .addComponent(car_owner6)
                 .addGap(18, 18, 18)
                 .addComponent(car_id6)
-                .addGap(31, 31, 31)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(select6)
-                .addContainerGap(40, Short.MAX_VALUE))
+                .addContainerGap(19, Short.MAX_VALUE))
         );
 
         car_owner7.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -669,20 +665,19 @@ public class ReceiptFrame extends javax.swing.JFrame {
         slot7.setLayout(slot7Layout);
         slot7Layout.setHorizontalGroup(
             slot7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(slot7Layout.createSequentialGroup()
+            .addComponent(car_owner7, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, slot7Layout.createSequentialGroup()
                 .addContainerGap(13, Short.MAX_VALUE)
                 .addGroup(slot7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, slot7Layout.createSequentialGroup()
-                        .addGroup(slot7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(car_owner7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(car_id7, javax.swing.GroupLayout.DEFAULT_SIZE, 174, Short.MAX_VALUE))
-                        .addGap(20, 20, 20))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, slot7Layout.createSequentialGroup()
                         .addComponent(select7, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(75, 75, 75))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, slot7Layout.createSequentialGroup()
                         .addComponent(ch7, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(36, 36, 36))))
+                        .addGap(36, 36, 36))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, slot7Layout.createSequentialGroup()
+                        .addComponent(car_id7, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap())))
         );
         slot7Layout.setVerticalGroup(
             slot7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -693,7 +688,7 @@ public class ReceiptFrame extends javax.swing.JFrame {
                 .addComponent(car_owner7)
                 .addGap(18, 18, 18)
                 .addComponent(car_id7)
-                .addGap(29, 29, 29)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(select7)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -723,20 +718,23 @@ public class ReceiptFrame extends javax.swing.JFrame {
         slot8.setLayout(slot8Layout);
         slot8Layout.setHorizontalGroup(
             slot8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(slot8Layout.createSequentialGroup()
-                .addContainerGap(19, Short.MAX_VALUE)
-                .addGroup(slot8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(car_id8, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(car_owner8, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(19, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, slot8Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(select8, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(70, 70, 70))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, slot8Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(ch8, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(35, 35, 35))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, slot8Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(select8, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(73, 73, 73))
+            .addGroup(slot8Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(slot8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(slot8Layout.createSequentialGroup()
+                        .addComponent(car_id8, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, slot8Layout.createSequentialGroup()
+                        .addComponent(car_owner8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addContainerGap())))
         );
         slot8Layout.setVerticalGroup(
             slot8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -747,7 +745,7 @@ public class ReceiptFrame extends javax.swing.JFrame {
                 .addComponent(car_owner8)
                 .addGap(18, 18, 18)
                 .addComponent(car_id8)
-                .addGap(30, 30, 30)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(select8)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -778,20 +776,24 @@ public class ReceiptFrame extends javax.swing.JFrame {
         slot9Layout.setHorizontalGroup(
             slot9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(slot9Layout.createSequentialGroup()
-                .addGap(78, 78, 78)
-                .addComponent(select9, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, slot9Layout.createSequentialGroup()
-                .addContainerGap(14, Short.MAX_VALUE)
+                .addContainerGap()
                 .addGroup(slot9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(slot9Layout.createSequentialGroup()
+                        .addComponent(car_id9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addContainerGap())
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, slot9Layout.createSequentialGroup()
-                        .addGroup(slot9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(car_owner9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(car_id9, javax.swing.GroupLayout.DEFAULT_SIZE, 178, Short.MAX_VALUE))
-                        .addGap(20, 20, 20))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, slot9Layout.createSequentialGroup()
-                        .addComponent(ch9, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(40, 40, 40))))
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(slot9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, slot9Layout.createSequentialGroup()
+                                .addComponent(ch9, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(40, 40, 40))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, slot9Layout.createSequentialGroup()
+                                .addComponent(car_owner9, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap())))))
+            .addGroup(slot9Layout.createSequentialGroup()
+                .addGap(74, 74, 74)
+                .addComponent(select9, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         slot9Layout.setVerticalGroup(
             slot9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -802,7 +804,7 @@ public class ReceiptFrame extends javax.swing.JFrame {
                 .addComponent(car_owner9)
                 .addGap(18, 18, 18)
                 .addComponent(car_id9)
-                .addGap(29, 29, 29)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(select9)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -833,19 +835,18 @@ public class ReceiptFrame extends javax.swing.JFrame {
         slot10Layout.setHorizontalGroup(
             slot10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(slot10Layout.createSequentialGroup()
-                .addContainerGap(18, Short.MAX_VALUE)
+                .addContainerGap()
                 .addGroup(slot10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, slot10Layout.createSequentialGroup()
-                        .addGroup(slot10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(car_owner10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(car_id10, javax.swing.GroupLayout.DEFAULT_SIZE, 182, Short.MAX_VALUE))
-                        .addGap(16, 16, 16))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, slot10Layout.createSequentialGroup()
-                        .addComponent(select10, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(75, 75, 75))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, slot10Layout.createSequentialGroup()
+                    .addGroup(slot10Layout.createSequentialGroup()
+                        .addGap(0, 41, Short.MAX_VALUE)
                         .addComponent(ch10, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(43, 43, 43))))
+                        .addGap(43, 43, 43))
+                    .addComponent(car_owner10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(car_id10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, slot10Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(select10, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(73, 73, 73))
         );
         slot10Layout.setVerticalGroup(
             slot10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -856,7 +857,7 @@ public class ReceiptFrame extends javax.swing.JFrame {
                 .addComponent(car_owner10)
                 .addGap(18, 18, 18)
                 .addComponent(car_id10)
-                .addGap(29, 29, 29)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(select10)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -873,10 +874,10 @@ public class ReceiptFrame extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(slot8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(slot9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(slot9, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(slot10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0))
+                .addComponent(slot10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(12, 12, 12))
         );
         gridbottLayout.setVerticalGroup(
             gridbottLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -891,13 +892,14 @@ public class ReceiptFrame extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        grid.add(gridbott, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 324, -1, 340));
+        grid.add(gridbott, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 280, 1060, 300));
 
         jPanel3.add(grid, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 45, -1, -1));
 
-        getContentPane().add(jPanel3, java.awt.BorderLayout.CENTER);
+        getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 50, 1080, -1));
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
         
     private void select1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_select1ActionPerformed
@@ -950,29 +952,29 @@ public class ReceiptFrame extends javax.swing.JFrame {
         mdi.setVisible(true);
     }//GEN-LAST:event_select10ActionPerformed
 
-    private void stuffmange_bnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_stuffmange_bnActionPerformed
+    private void HomeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HomeButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_stuffmange_bnActionPerformed
+    }//GEN-LAST:event_HomeButtonActionPerformed
 
-    private void HomeButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HomeButton1ActionPerformed
+    private void CustomButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CustomButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_HomeButton1ActionPerformed
+    }//GEN-LAST:event_CustomButtonActionPerformed
 
-    private void customerqbnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_customerqbnActionPerformed
+    private void EquipmentButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EquipmentButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_customerqbnActionPerformed
+    }//GEN-LAST:event_EquipmentButtonActionPerformed
 
-    private void equipment_bnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_equipment_bnActionPerformed
+    private void WarehouseButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_WarehouseButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_equipment_bnActionPerformed
+    }//GEN-LAST:event_WarehouseButtonActionPerformed
 
-    private void warehouse_bnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_warehouse_bnActionPerformed
+    private void InvoiceButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InvoiceButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_warehouse_bnActionPerformed
+    }//GEN-LAST:event_InvoiceButtonActionPerformed
 
-    private void receipt_bnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_receipt_bnActionPerformed
+    private void AccountButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AccountButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_receipt_bnActionPerformed
+    }//GEN-LAST:event_AccountButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1006,9 +1008,14 @@ public class ReceiptFrame extends javax.swing.JFrame {
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton AccountButton;
+    private javax.swing.JButton CustomButton;
+    private javax.swing.JButton EquipmentButton;
     private javax.swing.JPanel Header;
-    private javax.swing.JButton HomeButton1;
-    private javax.swing.JPanel MenuBar1;
+    private javax.swing.JButton HomeButton;
+    private javax.swing.JButton InvoiceButton;
+    private javax.swing.JPanel MenuBar;
+    private javax.swing.JButton WarehouseButton;
     private javax.swing.JLabel car_id1;
     private javax.swing.JLabel car_id10;
     private javax.swing.JLabel car_id2;
@@ -1039,15 +1046,13 @@ public class ReceiptFrame extends javax.swing.JFrame {
     private javax.swing.JLabel ch7;
     private javax.swing.JLabel ch8;
     private javax.swing.JLabel ch9;
-    private javax.swing.JButton customerqbn;
-    private javax.swing.JButton equipment_bn;
-    private javax.swing.JLabel garageName;
     private javax.swing.JPanel grid;
     private javax.swing.JPanel gridbott;
     private javax.swing.JPanel gridtop;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JButton receipt_bn;
     private javax.swing.JButton select1;
     private javax.swing.JButton select10;
     private javax.swing.JButton select2;
@@ -1068,9 +1073,7 @@ public class ReceiptFrame extends javax.swing.JFrame {
     private javax.swing.JPanel slot7;
     private javax.swing.JPanel slot8;
     private javax.swing.JPanel slot9;
-    private javax.swing.JButton stuffmange_bn;
-    private javax.swing.JPanel usernamePn;
-    private javax.swing.JLabel usernameTxt;
-    private javax.swing.JButton warehouse_bn;
+    private javax.swing.JPanel usernamePn1;
+    private javax.swing.JLabel usernameTxt1;
     // End of variables declaration//GEN-END:variables
 }
