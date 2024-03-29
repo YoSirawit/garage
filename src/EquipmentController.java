@@ -5,8 +5,8 @@ public class EquipmentController implements ActionListener{
 
     private EquipmentMainFrame emf;
     
-    public EquipmentController(Channel[] garage_ch){
-        this.emf = new EquipmentMainFrame(garage_ch);
+    public EquipmentController(Garage gr){
+        this.emf = new EquipmentMainFrame(gr);
     }
     
     public EquipmentMainFrame getEquipmentFrame(){

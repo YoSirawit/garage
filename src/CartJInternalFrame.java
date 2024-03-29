@@ -94,7 +94,7 @@ public class CartJInternalFrame extends javax.swing.JInternalFrame {
             jTable1.getColumnModel().getColumn(3).setResizable(false);
         }
 
-        CostButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/sale.png"))); // NOI18N
+        CostButton.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\TestIcon\\sale.png"));
         CostButton.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         CostButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

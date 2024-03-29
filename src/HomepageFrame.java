@@ -1,3 +1,4 @@
+import com.formdev.flatlaf.*;
 import javax.swing.*;
 public class HomepageFrame extends javax.swing.JFrame implements ChangePageButton {
     protected JPanel[] pnArr;
@@ -9,7 +10,6 @@ public class HomepageFrame extends javax.swing.JFrame implements ChangePageButto
     public HomepageFrame(){
         initComponents();
         hps = new HomepageSystem();
-        
         
         pnArr = new JPanel[]{statusPn0, statusPn1, statusPn2, statusPn3, statusPn4, statusPn5, statusPn6, statusPn7, statusPn8, statusPn9};
         bnArr = new JButton[]{statusBn0, statusBn1, statusBn2, statusBn3, statusBn4, statusBn5, statusBn6, statusBn7, statusBn8, statusBn9};
@@ -28,17 +28,17 @@ public class HomepageFrame extends javax.swing.JFrame implements ChangePageButto
 
         Header = new javax.swing.JPanel();
         usernamePn = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
         usernameTxt = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         mainPn = new javax.swing.JPanel();
         MenuBar = new javax.swing.JPanel();
-        stuffmange_bn = new javax.swing.JButton();
         HomeButton = new javax.swing.JButton();
-        customerqbn = new javax.swing.JButton();
-        equipment_bn = new javax.swing.JButton();
-        warehouse_bn = new javax.swing.JButton();
-        receipt_bn = new javax.swing.JButton();
+        CustomButton = new javax.swing.JButton();
+        EquipmentButton = new javax.swing.JButton();
+        WarehouseButton = new javax.swing.JButton();
+        InvoiceButton = new javax.swing.JButton();
+        AccountButton = new javax.swing.JButton();
         submainPn = new javax.swing.JPanel();
         tablePn = new javax.swing.JPanel();
         slot0 = new javax.swing.JPanel();
@@ -109,60 +109,43 @@ public class HomepageFrame extends javax.swing.JFrame implements ChangePageButto
         setBackground(new java.awt.Color(0, 0, 0));
         setResizable(false);
 
-        Header.setBackground(new java.awt.Color(242, 157, 0));
+        Header.setBackground(new java.awt.Color(247, 127, 0));
         Header.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         Header.setPreferredSize(new java.awt.Dimension(1280, 50));
         Header.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        usernamePn.setBackground(new java.awt.Color(255, 255, 255));
+        usernamePn.setBackground(new java.awt.Color(247, 127, 0));
         usernamePn.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        usernameTxt.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/userWithcircle.png"))); // NOI18N
+        usernamePn.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, -1, -1));
+
+        usernameTxt.setBackground(new java.awt.Color(255, 255, 255));
         usernameTxt.setText("@USERNAME");
         usernameTxt.setToolTipText("Username Account");
-        usernameTxt.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED, new java.awt.Color(0, 0, 0), java.awt.Color.white, null, null));
         usernameTxt.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        usernamePn.add(usernameTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 160, 30));
+        usernamePn.add(usernameTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 0, 80, 30));
 
-        Header.add(usernamePn, new org.netbeans.lib.awtextra.AbsoluteConstraints(1090, 10, 160, 30));
-
-        jButton1.setBackground(new java.awt.Color(255, 204, 153));
-        jButton1.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir") + "\\src\\TestIcon\\menu_icon_jing.png"));
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-        Header.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 60, 50));
+        Header.add(usernamePn, new org.netbeans.lib.awtextra.AbsoluteConstraints(1120, 10, 130, 30));
 
         jLabel1.setBackground(new java.awt.Color(242, 157, 0));
-        jLabel1.setFont(new java.awt.Font("IrisUPC", 3, 48)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("IrisUPC", 3, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("ดำรงรวยการช่าง ");
-        Header.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 0, 230, 60));
+        Header.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 170, 40));
 
         getContentPane().add(Header, java.awt.BorderLayout.PAGE_START);
 
-        MenuBar.setBackground(new java.awt.Color(255, 204, 102));
+        MenuBar.setBackground(new java.awt.Color(248, 245, 228));
         MenuBar.setPreferredSize(new java.awt.Dimension(200, 670));
         MenuBar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        stuffmange_bn.setBackground(new java.awt.Color(255, 102, 0));
-        stuffmange_bn.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        stuffmange_bn.setForeground(new java.awt.Color(255, 255, 255));
-        stuffmange_bn.setText("จัดการพนักงาน");
-        stuffmange_bn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                stuffmange_bnActionPerformed(evt);
-            }
-        });
-        MenuBar.add(stuffmange_bn, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 530, 220, 70));
-
+        HomeButton.setBackground(new java.awt.Color(255, 255, 255));
         HomeButton.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         HomeButton.setForeground(new java.awt.Color(255, 102, 0));
-        HomeButton.setText("หน้าโฮม");
-        HomeButton.setBorder(null);
-        HomeButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        HomeButton.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\TestIcon\\HomeWhite.png"));
+        HomeButton.setText("หน้าหลัก");
+        HomeButton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         HomeButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 HomeButtonActionPerformed(evt);
@@ -170,72 +153,89 @@ public class HomepageFrame extends javax.swing.JFrame implements ChangePageButto
         });
         MenuBar.add(HomeButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 30, 220, 70));
 
-        customerqbn.setBackground(new java.awt.Color(255, 102, 0));
-        customerqbn.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        customerqbn.setForeground(new java.awt.Color(255, 255, 255));
-        customerqbn.setText("จัดการคิวรถ");
-        customerqbn.setBorder(null);
-        customerqbn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        customerqbn.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        customerqbn.addActionListener(new java.awt.event.ActionListener() {
+        CustomButton.setBackground(new java.awt.Color(255, 102, 0));
+        CustomButton.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        CustomButton.setForeground(new java.awt.Color(255, 255, 255));
+        CustomButton.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\TestIcon\\CarManageOrange.png"));
+        CustomButton.setText("จัดการคิวรถ");
+        CustomButton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        CustomButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                customerqbnActionPerformed(evt);
+                CustomButtonActionPerformed(evt);
             }
         });
-        MenuBar.add(customerqbn, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 130, 220, 70));
+        MenuBar.add(CustomButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 130, 220, 70));
 
-        equipment_bn.setBackground(new java.awt.Color(255, 102, 0));
-        equipment_bn.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        equipment_bn.setForeground(new java.awt.Color(255, 255, 255));
-        equipment_bn.setText("เบิกอุปกรณ์");
-        equipment_bn.setBorder(null);
-        equipment_bn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        equipment_bn.addActionListener(new java.awt.event.ActionListener() {
+        EquipmentButton.setBackground(new java.awt.Color(255, 102, 0));
+        EquipmentButton.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        EquipmentButton.setForeground(new java.awt.Color(255, 255, 255));
+        EquipmentButton.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\TestIcon\\ShopOrange.png"));
+        EquipmentButton.setText("เบิกอุปกรณ์");
+        EquipmentButton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        EquipmentButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                equipment_bnActionPerformed(evt);
+                EquipmentButtonActionPerformed(evt);
             }
         });
-        MenuBar.add(equipment_bn, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 230, 220, 70));
+        MenuBar.add(EquipmentButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 230, 220, 70));
 
-        warehouse_bn.setBackground(new java.awt.Color(255, 102, 0));
-        warehouse_bn.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        warehouse_bn.setForeground(new java.awt.Color(255, 255, 255));
-        warehouse_bn.setText("คลังอุปกรณ์");
-        warehouse_bn.setToolTipText("");
-        warehouse_bn.setBorder(null);
-        warehouse_bn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        warehouse_bn.addActionListener(new java.awt.event.ActionListener() {
+        WarehouseButton.setBackground(new java.awt.Color(255, 102, 0));
+        WarehouseButton.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        WarehouseButton.setForeground(new java.awt.Color(255, 255, 255));
+        WarehouseButton.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\TestIcon\\StorageOrange.png"));
+        WarehouseButton.setText("คลังอุปกรณ์");
+        WarehouseButton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        WarehouseButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                warehouse_bnActionPerformed(evt);
+                WarehouseButtonActionPerformed(evt);
             }
         });
-        MenuBar.add(warehouse_bn, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 330, 220, 70));
+        MenuBar.add(WarehouseButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 330, 220, 70));
 
-        receipt_bn.setBackground(new java.awt.Color(255, 102, 0));
-        receipt_bn.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        receipt_bn.setForeground(new java.awt.Color(255, 255, 255));
-        receipt_bn.setText("ใบเสร็จ");
-        receipt_bn.addActionListener(new java.awt.event.ActionListener() {
+        InvoiceButton.setBackground(new java.awt.Color(255, 102, 0));
+        InvoiceButton.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        InvoiceButton.setForeground(new java.awt.Color(255, 255, 255));
+        InvoiceButton.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\TestIcon\\InvoiceOrange.png"));
+        InvoiceButton.setText("ใบเสร็จ");
+        InvoiceButton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        InvoiceButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                receipt_bnActionPerformed(evt);
+                InvoiceButtonActionPerformed(evt);
             }
         });
-        MenuBar.add(receipt_bn, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 430, 220, 70));
+        MenuBar.add(InvoiceButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 430, 220, 70));
+
+        AccountButton.setBackground(new java.awt.Color(255, 102, 0));
+        AccountButton.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        AccountButton.setForeground(new java.awt.Color(255, 255, 255));
+        AccountButton.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\TestIcon\\AccountOrange.png"));
+        AccountButton.setText("จัดการพนักงาน");
+        AccountButton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        AccountButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AccountButtonActionPerformed(evt);
+            }
+        });
+        MenuBar.add(AccountButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 530, 220, 70));
 
         submainPn.setBackground(new java.awt.Color(255, 255, 255));
+        submainPn.setForeground(new java.awt.Color(255, 255, 255));
         submainPn.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 10, 30));
 
-        tablePn.setBackground(new java.awt.Color(255, 187, 92));
+        tablePn.setBackground(new java.awt.Color(255, 255, 255));
 
-        slot0.setBackground(new java.awt.Color(169, 169, 169));
+        slot0.setBackground(new java.awt.Color(78, 80, 82));
         slot0.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         slot0.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         statusPn0.setBackground(new java.awt.Color(255, 255, 255));
+        statusPn0.setForeground(new java.awt.Color(255, 255, 255));
 
         carpic0.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir") + "\\src\\TestIcon\\car.png"));
 
+        statusBn0.setBackground(new java.awt.Color(78, 80, 82));
         statusBn0.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        statusBn0.setForeground(new java.awt.Color(255, 255, 255));
         statusBn0.setText("สถานะ");
 
         javax.swing.GroupLayout statusPn0Layout = new javax.swing.GroupLayout(statusPn0);
@@ -243,14 +243,13 @@ public class HomepageFrame extends javax.swing.JFrame implements ChangePageButto
         statusPn0Layout.setHorizontalGroup(
             statusPn0Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(statusPn0Layout.createSequentialGroup()
-                .addGroup(statusPn0Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(statusPn0Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(statusBn0, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(statusPn0Layout.createSequentialGroup()
-                        .addGap(36, 36, 36)
-                        .addComponent(carpic0)))
-                .addContainerGap(9, Short.MAX_VALUE))
+                .addGap(36, 36, 36)
+                .addComponent(carpic0)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(statusPn0Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(statusBn0, javax.swing.GroupLayout.DEFAULT_SIZE, 128, Short.MAX_VALUE)
+                .addContainerGap())
         );
         statusPn0Layout.setVerticalGroup(
             statusPn0Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -276,15 +275,18 @@ public class HomepageFrame extends javax.swing.JFrame implements ChangePageButto
         num1.setText("1");
         slot0.add(num1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 0, 20, -1));
 
-        slot1.setBackground(new java.awt.Color(169, 169, 169));
+        slot1.setBackground(new java.awt.Color(78, 80, 82));
         slot1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         slot1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         statusPn1.setBackground(new java.awt.Color(255, 255, 255));
+        statusPn1.setForeground(new java.awt.Color(255, 255, 255));
 
         carpic1.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir") + "\\src\\TestIcon\\car.png"));
 
+        statusBn1.setBackground(new java.awt.Color(78, 80, 82));
         statusBn1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        statusBn1.setForeground(new java.awt.Color(255, 255, 255));
         statusBn1.setText("สถานะ");
         statusBn1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -297,14 +299,13 @@ public class HomepageFrame extends javax.swing.JFrame implements ChangePageButto
         statusPn1Layout.setHorizontalGroup(
             statusPn1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(statusPn1Layout.createSequentialGroup()
-                .addGroup(statusPn1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(statusPn1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(statusBn1, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(statusPn1Layout.createSequentialGroup()
-                        .addGap(36, 36, 36)
-                        .addComponent(carpic1)))
-                .addContainerGap(9, Short.MAX_VALUE))
+                .addGap(36, 36, 36)
+                .addComponent(carpic1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(statusPn1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(statusBn1, javax.swing.GroupLayout.DEFAULT_SIZE, 128, Short.MAX_VALUE)
+                .addContainerGap())
         );
         statusPn1Layout.setVerticalGroup(
             statusPn1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -330,15 +331,18 @@ public class HomepageFrame extends javax.swing.JFrame implements ChangePageButto
         num2.setText("2");
         slot1.add(num2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 0, 20, -1));
 
-        slot2.setBackground(new java.awt.Color(169, 169, 169));
+        slot2.setBackground(new java.awt.Color(78, 80, 82));
         slot2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         slot2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         statusPn2.setBackground(new java.awt.Color(255, 255, 255));
+        statusPn2.setForeground(new java.awt.Color(255, 255, 255));
 
         carpic2.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir") + "\\src\\TestIcon\\car.png"));
 
+        statusBn2.setBackground(new java.awt.Color(78, 80, 82));
         statusBn2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        statusBn2.setForeground(new java.awt.Color(255, 255, 255));
         statusBn2.setText("สถานะ");
         statusBn2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -351,14 +355,13 @@ public class HomepageFrame extends javax.swing.JFrame implements ChangePageButto
         statusPn2Layout.setHorizontalGroup(
             statusPn2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(statusPn2Layout.createSequentialGroup()
-                .addGroup(statusPn2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(statusPn2Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(statusBn2, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(statusPn2Layout.createSequentialGroup()
-                        .addGap(38, 38, 38)
-                        .addComponent(carpic2)))
-                .addContainerGap(9, Short.MAX_VALUE))
+                .addGap(38, 38, 38)
+                .addComponent(carpic2)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(statusPn2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(statusBn2, javax.swing.GroupLayout.DEFAULT_SIZE, 128, Short.MAX_VALUE)
+                .addContainerGap())
         );
         statusPn2Layout.setVerticalGroup(
             statusPn2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -384,15 +387,18 @@ public class HomepageFrame extends javax.swing.JFrame implements ChangePageButto
         num3.setText("3");
         slot2.add(num3, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 0, 20, -1));
 
-        slot3.setBackground(new java.awt.Color(169, 169, 169));
+        slot3.setBackground(new java.awt.Color(78, 80, 82));
         slot3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         slot3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         statusPn3.setBackground(new java.awt.Color(255, 255, 255));
+        statusPn3.setForeground(new java.awt.Color(255, 255, 255));
 
         carpic3.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir") + "\\src\\TestIcon\\car.png"));
 
+        statusBn3.setBackground(new java.awt.Color(78, 80, 82));
         statusBn3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        statusBn3.setForeground(new java.awt.Color(255, 255, 255));
         statusBn3.setText("สถานะ");
 
         javax.swing.GroupLayout statusPn3Layout = new javax.swing.GroupLayout(statusPn3);
@@ -433,16 +439,24 @@ public class HomepageFrame extends javax.swing.JFrame implements ChangePageButto
         num4.setText("4");
         slot3.add(num4, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 0, 20, -1));
 
-        slot4.setBackground(new java.awt.Color(169, 169, 169));
+        slot4.setBackground(new java.awt.Color(78, 80, 82));
         slot4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         slot4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         statusPn4.setBackground(new java.awt.Color(255, 255, 255));
+        statusPn4.setForeground(new java.awt.Color(255, 255, 255));
 
         carpic4.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir") + "\\src\\TestIcon\\car.png"));
 
+        statusBn4.setBackground(new java.awt.Color(78, 80, 82));
         statusBn4.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        statusBn4.setForeground(new java.awt.Color(255, 255, 255));
         statusBn4.setText("สถานะ");
+        statusBn4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                statusBn4ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout statusPn4Layout = new javax.swing.GroupLayout(statusPn4);
         statusPn4.setLayout(statusPn4Layout);
@@ -482,15 +496,18 @@ public class HomepageFrame extends javax.swing.JFrame implements ChangePageButto
         num5.setText("5");
         slot4.add(num5, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 0, 20, -1));
 
-        slot5.setBackground(new java.awt.Color(169, 169, 169));
+        slot5.setBackground(new java.awt.Color(78, 80, 82));
         slot5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         slot5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         statusPn5.setBackground(new java.awt.Color(255, 255, 255));
+        statusPn5.setForeground(new java.awt.Color(255, 255, 255));
 
         carpic5.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir") + "\\src\\TestIcon\\car.png"));
 
+        statusBn5.setBackground(new java.awt.Color(78, 80, 82));
         statusBn5.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        statusBn5.setForeground(new java.awt.Color(255, 255, 255));
         statusBn5.setText("สถานะ");
 
         javax.swing.GroupLayout statusPn5Layout = new javax.swing.GroupLayout(statusPn5);
@@ -531,15 +548,18 @@ public class HomepageFrame extends javax.swing.JFrame implements ChangePageButto
         num6.setText("6");
         slot5.add(num6, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 0, 20, -1));
 
-        slot6.setBackground(new java.awt.Color(169, 169, 169));
+        slot6.setBackground(new java.awt.Color(78, 80, 82));
         slot6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         slot6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         statusPn6.setBackground(new java.awt.Color(255, 255, 255));
+        statusPn6.setForeground(new java.awt.Color(255, 255, 255));
 
         carpic6.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir") + "\\src\\TestIcon\\car.png"));
 
+        statusBn6.setBackground(new java.awt.Color(78, 80, 82));
         statusBn6.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        statusBn6.setForeground(new java.awt.Color(255, 255, 255));
         statusBn6.setText("สถานะ");
 
         javax.swing.GroupLayout statusPn6Layout = new javax.swing.GroupLayout(statusPn6);
@@ -580,15 +600,18 @@ public class HomepageFrame extends javax.swing.JFrame implements ChangePageButto
         num7.setText("7");
         slot6.add(num7, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 0, 20, -1));
 
-        slot7.setBackground(new java.awt.Color(169, 169, 169));
+        slot7.setBackground(new java.awt.Color(78, 80, 82));
         slot7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         slot7.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         statusPn7.setBackground(new java.awt.Color(255, 255, 255));
+        statusPn7.setForeground(new java.awt.Color(255, 255, 255));
 
         carpic7.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir") + "\\src\\TestIcon\\car.png"));
 
+        statusBn7.setBackground(new java.awt.Color(78, 80, 82));
         statusBn7.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        statusBn7.setForeground(new java.awt.Color(255, 255, 255));
         statusBn7.setText("สถานะ");
         statusBn7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -634,15 +657,18 @@ public class HomepageFrame extends javax.swing.JFrame implements ChangePageButto
         num8.setText("8");
         slot7.add(num8, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 0, 20, -1));
 
-        slot8.setBackground(new java.awt.Color(169, 169, 169));
+        slot8.setBackground(new java.awt.Color(78, 80, 82));
         slot8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         slot8.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         statusPn8.setBackground(new java.awt.Color(255, 255, 255));
+        statusPn8.setForeground(new java.awt.Color(255, 255, 255));
 
         carpic8.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir") + "\\src\\TestIcon\\car.png"));
 
+        statusBn8.setBackground(new java.awt.Color(78, 80, 82));
         statusBn8.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        statusBn8.setForeground(new java.awt.Color(255, 255, 255));
         statusBn8.setText("สถานะ");
 
         javax.swing.GroupLayout statusPn8Layout = new javax.swing.GroupLayout(statusPn8);
@@ -683,15 +709,18 @@ public class HomepageFrame extends javax.swing.JFrame implements ChangePageButto
         num9.setText("9");
         slot8.add(num9, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 0, 20, -1));
 
-        slot9.setBackground(new java.awt.Color(169, 169, 169));
+        slot9.setBackground(new java.awt.Color(78, 80, 82));
         slot9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         slot9.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         statusPn9.setBackground(new java.awt.Color(255, 255, 255));
+        statusPn9.setForeground(new java.awt.Color(255, 255, 255));
 
         carpic9.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir") + "\\src\\TestIcon\\car.png"));
 
+        statusBn9.setBackground(new java.awt.Color(78, 80, 82));
         statusBn9.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        statusBn9.setForeground(new java.awt.Color(255, 255, 255));
         statusBn9.setText("สถานะ");
 
         javax.swing.GroupLayout statusPn9Layout = new javax.swing.GroupLayout(statusPn9);
@@ -732,11 +761,11 @@ public class HomepageFrame extends javax.swing.JFrame implements ChangePageButto
         num10.setText("10");
         slot9.add(num10, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 0, 30, -1));
 
-        headtextPn.setBackground(new java.awt.Color(255, 255, 255));
+        headtextPn.setBackground(new java.awt.Color(78, 80, 82));
 
         headTxt.setBackground(new java.awt.Color(255, 204, 102));
         headTxt.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        headTxt.setForeground(new java.awt.Color(255, 102, 0));
+        headTxt.setForeground(new java.awt.Color(255, 255, 255));
         headTxt.setText("สถานะการซ่อมรถ");
         headtextPn.add(headTxt);
 
@@ -818,39 +847,6 @@ public class HomepageFrame extends javax.swing.JFrame implements ChangePageButto
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-        if (MenuBar.isVisible()) {
-            MenuBar.setVisible(false);
-        } else {
-            MenuBar.setVisible(true);
-        }
-    }//GEN-LAST:event_jButton1ActionPerformed
-
-    private void stuffmange_bnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_stuffmange_bnActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_stuffmange_bnActionPerformed
-
-    private void receipt_bnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_receipt_bnActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_receipt_bnActionPerformed
-
-    private void warehouse_bnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_warehouse_bnActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_warehouse_bnActionPerformed
-
-    private void equipment_bnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_equipment_bnActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_equipment_bnActionPerformed
-
-    private void customerqbnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_customerqbnActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_customerqbnActionPerformed
-
-    private void HomeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HomeButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_HomeButtonActionPerformed
-
     private void statusBn7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_statusBn7ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_statusBn7ActionPerformed
@@ -863,36 +859,39 @@ public class HomepageFrame extends javax.swing.JFrame implements ChangePageButto
         // TODO add your handling code here:
     }//GEN-LAST:event_statusBn1ActionPerformed
 
+    private void statusBn4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_statusBn4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_statusBn4ActionPerformed
+
+    private void HomeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HomeButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_HomeButtonActionPerformed
+
+    private void CustomButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CustomButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CustomButtonActionPerformed
+
+    private void EquipmentButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EquipmentButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_EquipmentButtonActionPerformed
+
+    private void WarehouseButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_WarehouseButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_WarehouseButtonActionPerformed
+
+    private void InvoiceButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InvoiceButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_InvoiceButtonActionPerformed
+
+    private void AccountButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AccountButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_AccountButtonActionPerformed
+
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(HomepageFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(HomepageFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(HomepageFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(HomepageFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -909,33 +908,34 @@ public class HomepageFrame extends javax.swing.JFrame implements ChangePageButto
     
     @Override
     public JButton getManagementButton(){
-        return this.customerqbn;
+        return this.CustomButton;
     }
     
     @Override
     public JButton getEquipmentButton(){
-        return this.equipment_bn;
+        return this.EquipmentButton;
     }
     
     @Override
     public JButton getWarehouseButton(){
-        return this.warehouse_bn;
+        return this.WarehouseButton;
     }
     
     @Override
     public JButton getReceiptButton(){
-        return this.receipt_bn;
-    }
-    
-    public JButton getStuffmanageButton(){
-        return this.stuffmange_bn;
+        return this.InvoiceButton;
     }
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton AccountButton;
+    private javax.swing.JButton CustomButton;
+    private javax.swing.JButton EquipmentButton;
     private javax.swing.JPanel Header;
     private javax.swing.JButton HomeButton;
+    private javax.swing.JButton InvoiceButton;
     private javax.swing.JPanel MenuBar;
+    private javax.swing.JButton WarehouseButton;
     private javax.swing.JLabel carpic0;
     private javax.swing.JLabel carpic1;
     private javax.swing.JLabel carpic2;
@@ -946,12 +946,10 @@ public class HomepageFrame extends javax.swing.JFrame implements ChangePageButto
     private javax.swing.JLabel carpic7;
     private javax.swing.JLabel carpic8;
     private javax.swing.JLabel carpic9;
-    private javax.swing.JButton customerqbn;
-    private javax.swing.JButton equipment_bn;
     private javax.swing.JLabel headTxt;
     private javax.swing.JPanel headtextPn;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel mainPn;
     private javax.swing.JLabel num1;
     private javax.swing.JLabel num10;
@@ -963,7 +961,6 @@ public class HomepageFrame extends javax.swing.JFrame implements ChangePageButto
     private javax.swing.JLabel num7;
     private javax.swing.JLabel num8;
     private javax.swing.JLabel num9;
-    private javax.swing.JButton receipt_bn;
     private javax.swing.JPanel slot0;
     private javax.swing.JPanel slot1;
     private javax.swing.JPanel slot2;
@@ -994,7 +991,6 @@ public class HomepageFrame extends javax.swing.JFrame implements ChangePageButto
     protected javax.swing.JPanel statusPn7;
     protected javax.swing.JPanel statusPn8;
     protected javax.swing.JPanel statusPn9;
-    private javax.swing.JButton stuffmange_bn;
     private javax.swing.JPanel submainPn;
     private javax.swing.JPanel tablePn;
     private javax.swing.JLabel txtNocar0;
@@ -1009,7 +1005,6 @@ public class HomepageFrame extends javax.swing.JFrame implements ChangePageButto
     private javax.swing.JLabel txtNocar9;
     private javax.swing.JPanel usernamePn;
     private javax.swing.JLabel usernameTxt;
-    private javax.swing.JButton warehouse_bn;
     // End of variables declaration//GEN-END:variables
 
     @Override
@@ -1019,6 +1014,6 @@ public class HomepageFrame extends javax.swing.JFrame implements ChangePageButto
 
     @Override
     public JButton getStuffManageButton() {
-        return this.stuffmange_bn;
+        return this.AccountButton;
     }
 }

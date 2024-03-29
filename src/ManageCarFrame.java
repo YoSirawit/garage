@@ -31,18 +31,17 @@ public class ManageCarFrame extends javax.swing.JFrame implements ChangePageButt
     private void initComponents() {
 
         Header = new javax.swing.JPanel();
-        jTextField1 = new javax.swing.JTextField();
-        jPanel4 = new javax.swing.JPanel();
-        jTextField2 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        usernamePn1 = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
+        usernameTxt1 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
         MenuBar = new javax.swing.JPanel();
-        logPanel = new javax.swing.JPanel();
-        jToggleButton3 = new javax.swing.JToggleButton();
-        receipt_bn = new javax.swing.JButton();
         HomeButton = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        equipment_bn = new javax.swing.JButton();
-        warehouse_bn = new javax.swing.JButton();
+        CustomButton = new javax.swing.JButton();
+        EquipmentButton = new javax.swing.JButton();
+        WarehouseButton = new javax.swing.JButton();
+        InvoiceButton = new javax.swing.JButton();
+        AccountButton = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable2 = new javax.swing.JTable();
@@ -50,151 +49,116 @@ public class ManageCarFrame extends javax.swing.JFrame implements ChangePageButt
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
 
-        Header.setBackground(new java.awt.Color(242, 157, 0));
+        Header.setBackground(new java.awt.Color(247, 127, 0));
         Header.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         Header.setPreferredSize(new java.awt.Dimension(1280, 50));
         Header.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jTextField1.setEditable(false);
-        jTextField1.setBackground(new java.awt.Color(242, 157, 0));
-        jTextField1.setFont(new java.awt.Font("IrisUPC", 3, 48)); // NOI18N
-        jTextField1.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jTextField1.setText("ดำรงรวยการช่าง ");
-        jTextField1.setBorder(null);
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
-            }
-        });
-        Header.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 0, 250, 50));
+        usernamePn1.setBackground(new java.awt.Color(247, 127, 0));
+        usernamePn1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jTextField2.setEditable(false);
-        jTextField2.setForeground(new java.awt.Color(242, 157, 0));
-        jTextField2.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        jTextField2.setText("@USERNAME");
-        jTextField2.setBorder(null);
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
-            }
-        });
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/userWithcircle.png"))); // NOI18N
+        usernamePn1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, -1, -1));
 
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTextField2, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
-        );
+        usernameTxt1.setBackground(new java.awt.Color(255, 255, 255));
+        usernameTxt1.setText("@USERNAME");
+        usernameTxt1.setToolTipText("Username Account");
+        usernameTxt1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        usernamePn1.add(usernameTxt1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 0, 80, 30));
 
-        Header.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1070, 0, 220, 50));
+        Header.add(usernamePn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1120, 10, 130, 30));
 
-        jButton1.setBackground(new java.awt.Color(255, 204, 153));
-        jButton1.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir") + "\\src\\TestIcon\\menu_icon_jing.png"));
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-        Header.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 60, 50));
+        jLabel4.setBackground(new java.awt.Color(242, 157, 0));
+        jLabel4.setFont(new java.awt.Font("IrisUPC", 3, 36)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setText("ดำรงรวยการช่าง ");
+        Header.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 170, 40));
 
-        getContentPane().add(Header, java.awt.BorderLayout.PAGE_START);
+        getContentPane().add(Header, java.awt.BorderLayout.NORTH);
 
-        MenuBar.setBackground(new java.awt.Color(255, 204, 102));
+        MenuBar.setBackground(new java.awt.Color(248, 245, 228));
         MenuBar.setPreferredSize(new java.awt.Dimension(200, 670));
         MenuBar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        javax.swing.GroupLayout logPanelLayout = new javax.swing.GroupLayout(logPanel);
-        logPanel.setLayout(logPanelLayout);
-        logPanelLayout.setHorizontalGroup(
-            logPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-        logPanelLayout.setVerticalGroup(
-            logPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-
-        MenuBar.add(logPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 580, 200, 70));
-
-        jToggleButton3.setText("sth only admin see");
-        jToggleButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jToggleButton3ActionPerformed(evt);
-            }
-        });
-        MenuBar.add(jToggleButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 500, 200, 70));
-
-        receipt_bn.setBackground(new java.awt.Color(255, 102, 0));
-        receipt_bn.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 24)); // NOI18N
-        receipt_bn.setForeground(new java.awt.Color(255, 255, 255));
-        receipt_bn.setText("RECEIPT");
-        receipt_bn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                receipt_bnActionPerformed(evt);
-            }
-        });
-        MenuBar.add(receipt_bn, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 360, 220, 70));
-
         HomeButton.setBackground(new java.awt.Color(255, 102, 0));
-        HomeButton.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 24)); // NOI18N
+        HomeButton.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         HomeButton.setForeground(new java.awt.Color(255, 255, 255));
-        HomeButton.setText("HOME");
-        HomeButton.setBorder(null);
-        HomeButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        HomeButton.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\TestIcon\\HomeOrange.png"));
+        HomeButton.setText("หน้าหลัก");
+        HomeButton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         HomeButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 HomeButtonActionPerformed(evt);
             }
         });
-        MenuBar.add(HomeButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 220, 70));
+        MenuBar.add(HomeButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 30, 220, 70));
 
-        jButton3.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 24)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(255, 102, 0));
-        jButton3.setText("MANAGEMENT");
-        jButton3.setBorder(null);
-        jButton3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        CustomButton.setBackground(new java.awt.Color(255, 255, 255));
+        CustomButton.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        CustomButton.setForeground(new java.awt.Color(255, 102, 0));
+        CustomButton.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\TestIcon\\CarManageWhite.png"));
+        CustomButton.setText("จัดการคิวรถ");
+        CustomButton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        CustomButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                CustomButtonActionPerformed(evt);
             }
         });
-        MenuBar.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 90, 220, 70));
+        MenuBar.add(CustomButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 130, 220, 70));
 
-        equipment_bn.setBackground(new java.awt.Color(255, 102, 0));
-        equipment_bn.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 24)); // NOI18N
-        equipment_bn.setForeground(new java.awt.Color(255, 255, 255));
-        equipment_bn.setText("EQUIPMENT");
-        equipment_bn.setBorder(null);
-        equipment_bn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        equipment_bn.addActionListener(new java.awt.event.ActionListener() {
+        EquipmentButton.setBackground(new java.awt.Color(255, 102, 0));
+        EquipmentButton.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        EquipmentButton.setForeground(new java.awt.Color(255, 255, 255));
+        EquipmentButton.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\TestIcon\\ShopOrange.png"));
+        EquipmentButton.setText("เบิกอุปกรณ์");
+        EquipmentButton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        EquipmentButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                equipment_bnActionPerformed(evt);
+                EquipmentButtonActionPerformed(evt);
             }
         });
-        MenuBar.add(equipment_bn, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 180, 220, 70));
+        MenuBar.add(EquipmentButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 230, 220, 70));
 
-        warehouse_bn.setBackground(new java.awt.Color(255, 102, 0));
-        warehouse_bn.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 24)); // NOI18N
-        warehouse_bn.setForeground(new java.awt.Color(255, 255, 255));
-        warehouse_bn.setText("WAREHOUSE");
-        warehouse_bn.setBorder(null);
-        warehouse_bn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        warehouse_bn.addActionListener(new java.awt.event.ActionListener() {
+        WarehouseButton.setBackground(new java.awt.Color(255, 102, 0));
+        WarehouseButton.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        WarehouseButton.setForeground(new java.awt.Color(255, 255, 255));
+        WarehouseButton.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\TestIcon\\StorageOrange.png"));
+        WarehouseButton.setText("คลังอุปกรณ์");
+        WarehouseButton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        WarehouseButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                warehouse_bnActionPerformed(evt);
+                WarehouseButtonActionPerformed(evt);
             }
         });
-        MenuBar.add(warehouse_bn, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 270, 220, 70));
+        MenuBar.add(WarehouseButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 330, 220, 70));
 
-        getContentPane().add(MenuBar, java.awt.BorderLayout.LINE_START);
+        InvoiceButton.setBackground(new java.awt.Color(255, 102, 0));
+        InvoiceButton.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        InvoiceButton.setForeground(new java.awt.Color(255, 255, 255));
+        InvoiceButton.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\TestIcon\\InvoiceOrange.png"));
+        InvoiceButton.setText("ใบเสร็จ");
+        InvoiceButton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        InvoiceButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                InvoiceButtonActionPerformed(evt);
+            }
+        });
+        MenuBar.add(InvoiceButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 430, 220, 70));
+
+        AccountButton.setBackground(new java.awt.Color(255, 102, 0));
+        AccountButton.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        AccountButton.setForeground(new java.awt.Color(255, 255, 255));
+        AccountButton.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\TestIcon\\AccountOrange.png"));
+        AccountButton.setText("จัดการพนักงาน");
+        AccountButton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        AccountButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AccountButtonActionPerformed(evt);
+            }
+        });
+        MenuBar.add(AccountButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 530, 220, 70));
+
+        getContentPane().add(MenuBar, java.awt.BorderLayout.WEST);
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
         jPanel3.setLayout(new java.awt.BorderLayout());
@@ -233,52 +197,32 @@ public class ManageCarFrame extends javax.swing.JFrame implements ChangePageButt
         getContentPane().add(jPanel3, java.awt.BorderLayout.CENTER);
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
-
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-        if (MenuBar.isVisible()) {
-            MenuBar.setVisible(false);
-        } else {
-            MenuBar.setVisible(true);
-        }
-    }//GEN-LAST:event_jButton1ActionPerformed
-
-    private void jToggleButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton3ActionPerformed
-        if (logPanel.isVisible()) {
-            logPanel.setVisible(false);
-        } else {
-            logPanel.setVisible(true);
-        }
-    }//GEN-LAST:event_jToggleButton3ActionPerformed
-
-    private void receipt_bnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_receipt_bnActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_receipt_bnActionPerformed
 
     private void HomeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HomeButtonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_HomeButtonActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void CustomButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CustomButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_CustomButtonActionPerformed
 
-    private void equipment_bnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_equipment_bnActionPerformed
+    private void EquipmentButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EquipmentButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_equipment_bnActionPerformed
+    }//GEN-LAST:event_EquipmentButtonActionPerformed
 
-    private void warehouse_bnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_warehouse_bnActionPerformed
+    private void WarehouseButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_WarehouseButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_warehouse_bnActionPerformed
+    }//GEN-LAST:event_WarehouseButtonActionPerformed
+
+    private void InvoiceButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InvoiceButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_InvoiceButtonActionPerformed
+
+    private void AccountButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AccountButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_AccountButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -295,28 +239,6 @@ public class ManageCarFrame extends javax.swing.JFrame implements ChangePageButt
     
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(ManageCarFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(ManageCarFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(ManageCarFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(ManageCarFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -336,17 +258,17 @@ public class ManageCarFrame extends javax.swing.JFrame implements ChangePageButt
     
     @Override
     public JButton getEquipmentButton(){
-        return this.equipment_bn;
+        return this.EquipmentButton;
     }
     
     @Override
     public JButton getWarehouseButton(){
-        return this.warehouse_bn;
+        return this.WarehouseButton;
     }
     
     @Override
     public JButton getReceiptButton(){
-        return this.receipt_bn;
+        return this.InvoiceButton;
     }
     
     public JTable getTable(){
@@ -355,22 +277,21 @@ public class ManageCarFrame extends javax.swing.JFrame implements ChangePageButt
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton AccountButton;
+    private javax.swing.JButton CustomButton;
+    private javax.swing.JButton EquipmentButton;
     private javax.swing.JPanel Header;
     private javax.swing.JButton HomeButton;
+    private javax.swing.JButton InvoiceButton;
     private javax.swing.JPanel MenuBar;
-    private javax.swing.JButton equipment_bn;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JButton WarehouseButton;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable jTable2;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JToggleButton jToggleButton3;
-    private javax.swing.JPanel logPanel;
-    private javax.swing.JButton receipt_bn;
-    private javax.swing.JButton warehouse_bn;
+    private javax.swing.JPanel usernamePn1;
+    private javax.swing.JLabel usernameTxt1;
     // End of variables declaration//GEN-END:variables
 
     @Override
@@ -380,6 +301,6 @@ public class ManageCarFrame extends javax.swing.JFrame implements ChangePageButt
 
     @Override
     public JButton getStuffManageButton() {
-        return null;
+        return this.AccountButton;
     }
 }

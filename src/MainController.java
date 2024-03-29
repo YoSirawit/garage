@@ -1,4 +1,5 @@
 
+import com.formdev.flatlaf.FlatLightLaf;
 import java.awt.event.*;
 import javax.swing.*;
 
@@ -27,6 +28,7 @@ public class MainController implements ActionListener{
         gc.getManageCarFrame().getWarehouseButton().addActionListener(this);
         gc.getManageCarFrame().getReceiptButton().addActionListener(this);
         gc.getManageCarFrame().getEquipmentButton().addActionListener(this);
+        gc.getManageCarFrame().getStuffManageButton().addActionListener(this);
         
         spc.getAccountFrame().getHomeButton().addActionListener(this);
         spc.getAccountFrame().getManagementButton().addActionListener(this);
@@ -39,8 +41,9 @@ public class MainController implements ActionListener{
         mainframe.pack();
         mainframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         mainframe.setVisible(true);
+        mainframe.setLocationRelativeTo(null);
         lpc.getLoginFrame().getLoginButton().addActionListener(this);
-        
+
     }
 
     @Override
@@ -52,7 +55,7 @@ public class MainController implements ActionListener{
                 mainframe = new JFrame();
                 hc.getHomepageframe().getUsernameLabel().setText(lm.getAccount().getFirstName());
                 hc.getHomepageframe().getManagementButton().addActionListener(this);
-                hc.getHomepageframe().getStuffmanageButton().addActionListener(this);
+                hc.getHomepageframe().getStuffManageButton().addActionListener(this);
                 hc.getHomepageframe().getReceiptButton().addActionListener(this);
                 hc.getHomepageframe().getEquipmentButton().addActionListener(this);
                 
@@ -63,7 +66,7 @@ public class MainController implements ActionListener{
                 rc.getReceiptFrame().getManagementButton().addActionListener(this);
                 rc.getReceiptFrame().getEquipmentButton().addActionListener(this);
                 
-                ec = new EquipmentController(gc.getGarage().getAllCh());
+                ec = new EquipmentController(gc.getGarage());
                 ec.getEquipmentFrame().getHomeButton().addActionListener(this);
                 ec.getEquipmentFrame().getWarehouseButton().addActionListener(this);
                 ec.getEquipmentFrame().getStuffManageButton().addActionListener(this);
@@ -75,6 +78,7 @@ public class MainController implements ActionListener{
                 mainframe.setSize(1280, 720);
                 mainframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 mainframe.setVisible(true);
+                mainframe.setLocationRelativeTo(null);
             }
         //if user press management button
         }else if(e.getSource().equals(hc.getHomepageframe().getManagementButton()) ||
@@ -92,9 +96,10 @@ public class MainController implements ActionListener{
                 ){
             mainframe.setContentPane(hc.getHomepageframe().getContentPane());
         // if user press stuff management button    
-        }else if(e.getSource().equals(hc.getHomepageframe().getStuffmanageButton()) ||
+        }else if(e.getSource().equals(hc.getHomepageframe().getStuffManageButton()) ||
                 e.getSource().equals(rc.getReceiptFrame().getStuffManageButton()) ||
-                e.getSource().equals(ec.getEquipmentFrame().getStuffManageButton())
+                e.getSource().equals(ec.getEquipmentFrame().getStuffManageButton()) ||
+                e.getSource().equals(gc.getManageCarFrame().getStuffManageButton())
                 ){
             spc.update();
             mainframe.setContentPane(spc.getAccountFrame().getContentPane());
@@ -112,7 +117,7 @@ public class MainController implements ActionListener{
                 e.getSource().equals(rc.getReceiptFrame().getEquipmentButton())
                 ){
             mainframe.setContentPane(ec.getEquipmentFrame().getContentPane());
-            ec.getEquipmentFrame().update();
+//            ec.getEquipmentFrame().update();
         }
     }
 }
