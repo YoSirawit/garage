@@ -177,11 +177,6 @@ public class ReceiptFrame extends javax.swing.JFrame {
 
         jButton4.setBackground(new java.awt.Color(255, 204, 153));
         jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/menu_icon_jing.png"))); // NOI18N
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
-            }
-        });
         Header.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 60, 50));
 
         garageName.setBackground(new java.awt.Color(242, 157, 0));
@@ -957,15 +952,6 @@ public class ReceiptFrame extends javax.swing.JFrame {
         ReceiptMDIApplication mdi = new ReceiptMDIApplication();
         mdi.setVisible(true);
     }//GEN-LAST:event_select10ActionPerformed
-
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
-        if (MenuBar.isVisible()) {
-            MenuBar.setVisible(false);
-        } else {
-            MenuBar.setVisible(true);
-        }
-    }//GEN-LAST:event_jButton4ActionPerformed
 
     private void stuffmange_bnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_stuffmange_bnActionPerformed
         // TODO add your handling code here:
