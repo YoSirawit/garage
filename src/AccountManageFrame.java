@@ -23,9 +23,9 @@ public class AccountManageFrame extends javax.swing.JFrame {
         headPanel = new javax.swing.JPanel();
         jTextField1 = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
-        jPanel4 = new javax.swing.JPanel();
-        jTextField2 = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
+        usernamePn = new javax.swing.JPanel();
+        usernameTxt = new javax.swing.JLabel();
         WhiteBG = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         AccountTable = new javax.swing.JTable();
@@ -71,34 +71,20 @@ public class AccountManageFrame extends javax.swing.JFrame {
         });
         headPanel.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 60, 50));
 
-        jTextField2.setEditable(false);
-        jTextField2.setForeground(new java.awt.Color(242, 157, 0));
-        jTextField2.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        jTextField2.setText("@USERNAME");
-        jTextField2.setBorder(null);
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTextField2, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
-        );
-
-        headPanel.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1070, 0, 220, 50));
-
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/Account.png"))); // NOI18N
-        headPanel.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1040, 10, -1, -1));
+        headPanel.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1060, 10, -1, -1));
+
+        usernamePn.setBackground(new java.awt.Color(255, 255, 255));
+        usernamePn.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        usernameTxt.setBackground(new java.awt.Color(0, 0, 0));
+        usernameTxt.setText("@USERNAME");
+        usernameTxt.setToolTipText("Username Account");
+        usernameTxt.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED, new java.awt.Color(0, 0, 0), java.awt.Color.white, null, null));
+        usernameTxt.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        usernamePn.add(usernameTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 160, 30));
+
+        headPanel.add(usernamePn, new org.netbeans.lib.awtextra.AbsoluteConstraints(1090, 10, 160, 30));
 
         WhiteBG.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -166,9 +152,9 @@ public class AccountManageFrame extends javax.swing.JFrame {
                         .addGroup(WhiteBGLayout.createSequentialGroup()
                             .addComponent(AddAccountButton)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(SearchButton)
-                            .addGap(30, 30, 30)
-                            .addComponent(SearchField, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(SearchField, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(18, 18, 18)
+                            .addComponent(SearchButton))
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 982, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(48, 48, 48))
         );
@@ -350,10 +336,6 @@ public class AccountManageFrame extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
-
     /**
      * @param args the command line arguments
      */
@@ -431,9 +413,9 @@ public class AccountManageFrame extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
+    private javax.swing.JPanel usernamePn;
+    private javax.swing.JLabel usernameTxt;
     // End of variables declaration//GEN-END:variables
 }
