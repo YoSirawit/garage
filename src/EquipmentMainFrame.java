@@ -1,5 +1,5 @@
 
-import javax.swing.JButton;
+import javax.swing.*;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -107,7 +107,6 @@ public class EquipmentMainFrame extends javax.swing.JFrame implements ChangePage
         });
         MenuBar.add(CustomButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 130, 220, 70));
 
-        EquipmentButton.setBackground(new java.awt.Color(255, 255, 255));
         EquipmentButton.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         EquipmentButton.setForeground(new java.awt.Color(255, 102, 0));
         EquipmentButton.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\TestIcon\\ShopWhite.png"));
@@ -187,12 +186,8 @@ public class EquipmentMainFrame extends javax.swing.JFrame implements ChangePage
                     .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(0, 0, 0)
-                                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 610, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(0, 0, 0)
-                                .addComponent(MenuBar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 610, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(MenuBar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(0, 0, Short.MAX_VALUE))))
         );
 
@@ -362,5 +357,9 @@ public class EquipmentMainFrame extends javax.swing.JFrame implements ChangePage
     @Override
     public JButton getStuffManageButton() {
         return this.AccountButton;
+    }
+    
+     public JLabel getUsernameLabel(){
+        return this.usernameTxt1;
     }
 }

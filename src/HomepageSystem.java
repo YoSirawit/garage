@@ -31,6 +31,9 @@ public class HomepageSystem {
             case 2 :
                 statustxt = "รอรับรถ!";
                 break;
+            case 3 :
+                statustxt = "ออกบิลแล้ว";
+                break;
         }
         return statustxt;
     }

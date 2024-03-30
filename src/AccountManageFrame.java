@@ -354,6 +354,10 @@ public class AccountManageFrame extends javax.swing.JFrame implements ChangePage
     public JButton getReceiptButton(){
         return this.InvoiceButton;
     }
+    
+    public JLabel getUsernameLabel(){
+        return this.usernameTxt1;
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton AccountButton;

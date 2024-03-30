@@ -3,6 +3,7 @@ public class Car {
     public static final int STATUS_NOTWORKING = 0;
     public static final int STATUS_WORKING = 1;
     public static final int STATUS_FINISH = 2;
+    public static final int STATUS_READY_TO_OUT = 3;
     
     private String carOwner;
     private String carName;

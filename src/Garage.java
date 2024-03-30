@@ -23,8 +23,17 @@ public class Garage extends Online {
                Car car = new Car(result.getString(2), result.getString(3), result.getString(4), result.getString(5), result.getInt(6), result.getString(8), result.getString(9));
                int channel = result.getInt(7);
                switch (channel){
-                    case 1 : ch[0].addCar(car);
-                            break;
+                    case 1 :
+                        result = this.getStatement().executeQuery("select * from bill_1");
+                        Bill new_bill = new Bill();
+                        while(result.next()){
+                            Item item = new Item(result.getString(1), result.getInt(2), result.getInt(3));
+                            new_bill.addItem(item);
+                        }
+                        car.setBill(new_bill);
+                        new_bill.getInfo();
+                        ch[0].addCar(car);
+                        break;
                     case 2 : ch[1].addCar(car);
                             break;
                     case 3 : ch[2].addCar(car);

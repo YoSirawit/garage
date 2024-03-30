@@ -165,7 +165,7 @@ public class ManageCarFrame extends javax.swing.JFrame implements ChangePageButt
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
         jPanel3.setLayout(new java.awt.BorderLayout());
 
-        jTable2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jTable2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -306,5 +306,9 @@ public class ManageCarFrame extends javax.swing.JFrame implements ChangePageButt
     @Override
     public JButton getStuffManageButton() {
         return this.AccountButton;
+    }
+    
+     public JLabel getUsernameLabel(){
+        return this.usernameTxt1;
     }
 }

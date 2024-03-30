@@ -1,3 +1,6 @@
+
+import javax.swing.*;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -7,7 +10,7 @@
  *
  * @author sushi
  */
-public class StorageMain extends javax.swing.JFrame {
+public class StorageMain extends javax.swing.JFrame implements ChangePageButton {
 
     /**
      * Creates new form StorageMain
@@ -173,7 +176,7 @@ public class StorageMain extends javax.swing.JFrame {
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("ดำรงรวยการช่าง ");
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/userWithcircle.png"))); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\TestIcon\\userWithcircle.png"));
 
         usernameTxt1.setBackground(new java.awt.Color(255, 255, 255));
         usernameTxt1.setText("@USERNAME");
@@ -191,7 +194,7 @@ public class StorageMain extends javax.swing.JFrame {
                 .addComponent(jLabel3)
                 .addGap(10, 10, 10)
                 .addComponent(usernameTxt1, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(107, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -280,15 +283,12 @@ public class StorageMain extends javax.swing.JFrame {
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(HomeButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(CustomButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(EquipmentButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(WarehouseButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(InvoiceButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(AccountButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)))
+            .addComponent(WarehouseButton2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(InvoiceButton2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(AccountButton2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 203, Short.MAX_VALUE)
+            .addComponent(CustomButton2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(HomeButton2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(EquipmentButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -314,7 +314,7 @@ public class StorageMain extends javax.swing.JFrame {
 
         jPanel7.setBackground(new java.awt.Color(229, 151, 60));
 
-        BodyButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/BodyComponents.png"))); // NOI18N
+        BodyButton.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\TestIcon\\BodyComponents.png"));
         BodyButton.setText("jButton2");
         BodyButton.setAutoscrolls(true);
         BodyButton.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -326,7 +326,7 @@ public class StorageMain extends javax.swing.JFrame {
             }
         });
 
-        BreakeButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/Braking.png"))); // NOI18N
+        BreakeButton.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\TestIcon\\Braking.png"));
         BreakeButton.setText("--");
         BreakeButton.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         BreakeButton.addActionListener(new java.awt.event.ActionListener() {
@@ -335,7 +335,7 @@ public class StorageMain extends javax.swing.JFrame {
             }
         });
 
-        CoolingButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/Cooling.png"))); // NOI18N
+        CoolingButton.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\TestIcon\\Cooling.png"));
         CoolingButton.setText("--");
         CoolingButton.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         CoolingButton.addActionListener(new java.awt.event.ActionListener() {
@@ -344,7 +344,7 @@ public class StorageMain extends javax.swing.JFrame {
             }
         });
 
-        ElectricalButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/Electrical.png"))); // NOI18N
+        ElectricalButton.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\TestIcon\\Electrical.png"));
         ElectricalButton.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         ElectricalButton.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         ElectricalButton.addActionListener(new java.awt.event.ActionListener() {
@@ -353,7 +353,7 @@ public class StorageMain extends javax.swing.JFrame {
             }
         });
 
-        EngineButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/Engine.png"))); // NOI18N
+        EngineButton.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\TestIcon\\Engine.png"));
         EngineButton.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         EngineButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -371,7 +371,7 @@ public class StorageMain extends javax.swing.JFrame {
 
         jLabel21.setText("Engine");
 
-        ExhaustButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/Exhaust.png"))); // NOI18N
+        ExhaustButton.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\TestIcon\\Exhaust.png"));
         ExhaustButton.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         ExhaustButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -379,7 +379,7 @@ public class StorageMain extends javax.swing.JFrame {
             }
         });
 
-        FuelButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/Fuel.png"))); // NOI18N
+        FuelButton.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\TestIcon\\Fuel.png"));
         FuelButton.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         FuelButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -387,7 +387,7 @@ public class StorageMain extends javax.swing.JFrame {
             }
         });
 
-        DrivetrainButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/Drivetrain.png"))); // NOI18N
+        DrivetrainButton.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\TestIcon\\Drivetrain.png"));
         DrivetrainButton.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         DrivetrainButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -395,7 +395,7 @@ public class StorageMain extends javax.swing.JFrame {
             }
         });
 
-        SuspensionButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/Suspension.png"))); // NOI18N
+        SuspensionButton.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\TestIcon\\Suspension.png"));
         SuspensionButton.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         SuspensionButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -564,7 +564,7 @@ public class StorageMain extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(50, 50, 50)
                 .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(165, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -577,12 +577,13 @@ public class StorageMain extends javax.swing.JFrame {
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
             .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -766,4 +767,37 @@ public class StorageMain extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel7;
     private javax.swing.JLabel usernameTxt1;
     // End of variables declaration//GEN-END:variables
+
+    @Override
+    public JButton getHomeButton() {
+        return this.HomeButton2;
+    }
+
+    @Override
+    public JButton getManagementButton() {
+        return this.CustomButton2;
+    }
+
+    @Override
+    public JButton getEquipmentButton() {
+        return this.EquipmentButton2;
+    }
+
+    @Override
+    public JButton getReceiptButton() {
+        return this.InvoiceButton2;
+    }
+
+    @Override
+    public JButton getWarehouseButton() {
+        return this.WarehouseButton2;
+    }
+
+    @Override
+    public JButton getStuffManageButton() {
+        return this.AccountButton2;
+    }
+     public JLabel getUsernameLabel(){
+        return this.usernameTxt1;
+    }
 }

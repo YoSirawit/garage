@@ -1104,4 +1104,8 @@ public class ReceiptFrame extends javax.swing.JFrame implements ChangePageButton
     public JButton getStuffManageButton() {
         return this.AccountButton;
     }
+    
+     public JLabel getUsernameLabel(){
+        return this.usernameTxt1;
+    }
 }

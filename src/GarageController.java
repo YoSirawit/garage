@@ -78,6 +78,8 @@ public class GarageController extends Online implements ActionListener {
                    mcf.getTable().setValueAt("Working", i, 4);
                }else if(status == Car.STATUS_FINISH){
                    mcf.getTable().setValueAt("Finish", i, 4);
+               }else if(status == Car.STATUS_READY_TO_OUT){
+                   mcf.getTable().setValueAt("Ready to out", i, 4);
                }
                mcf.getTable().setValueAt(date_in, i, 5);
                mcf.getTable().setValueAt(date_out, i, 6);
