@@ -1,9 +1,11 @@
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
+import com.formdev.flatlaf.FlatLightLaf;
 public class EquipmentFrame2 extends javax.swing.JFrame {
     public EquipmentFrame2() {
         initComponents();
+        jTable1.setAutoCreateRowSorter(true);
     }
 
     /**
@@ -32,7 +34,6 @@ public class EquipmentFrame2 extends javax.swing.JFrame {
         CartButton = new javax.swing.JButton();
         jPanel9 = new javax.swing.JPanel();
         TableName = new javax.swing.JLabel();
-        SortButton3 = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         AddButton = new javax.swing.JButton();
@@ -235,16 +236,6 @@ public class EquipmentFrame2 extends javax.swing.JFrame {
         TableName.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         TableName.setText("Name");
 
-        SortButton3.setBackground(new java.awt.Color(255, 127, 54));
-        SortButton3.setFont(new java.awt.Font("JasmineUPC", 1, 24)); // NOI18N
-        SortButton3.setForeground(new java.awt.Color(255, 255, 255));
-        SortButton3.setText("Sort");
-        SortButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SortButton3ActionPerformed(evt);
-            }
-        });
-
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null},
@@ -336,9 +327,7 @@ public class EquipmentFrame2 extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(TableName, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(319, 319, 319)
-                .addComponent(SortButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(14, 14, 14))
+                .addGap(415, 415, 415))
             .addGroup(jPanel9Layout.createSequentialGroup()
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 1045, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
@@ -347,9 +336,7 @@ public class EquipmentFrame2 extends javax.swing.JFrame {
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(TableName, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(SortButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(TableName, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 465, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -433,10 +420,6 @@ public class EquipmentFrame2 extends javax.swing.JFrame {
         eq.setVisible(true);
     }//GEN-LAST:event_BackButton3ActionPerformed
 
-    private void SortButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SortButton3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_SortButton3ActionPerformed
-
     private void CartButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CartButtonActionPerformed
         // TODO add your handling code here:
         CartMDIFrame cart = new CartMDIFrame();
@@ -453,30 +436,10 @@ public class EquipmentFrame2 extends javax.swing.JFrame {
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
         try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(EquipmentFrame2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(EquipmentFrame2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(EquipmentFrame2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(EquipmentFrame2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
+                UIManager.setLookAndFeel(new FlatLightLaf());
+            }catch(UnsupportedLookAndFeelException ex){
+                ex.printStackTrace();}
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 EquipmentFrame2 eq2 = new EquipmentFrame2();
@@ -492,7 +455,6 @@ public class EquipmentFrame2 extends javax.swing.JFrame {
     private javax.swing.JButton BackButton3;
     private javax.swing.JButton CartButton;
     private javax.swing.JButton SortButton2;
-    private javax.swing.JButton SortButton3;
     private javax.swing.JLabel TableName;
     private javax.swing.JLabel garageName3;
     private javax.swing.JPanel headPanel;
