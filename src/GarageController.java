@@ -9,13 +9,30 @@ public class GarageController extends Online implements ActionListener {
     private ManageCarFrame mcf;
     private TableActionEvent tav;
     
-    public GarageController(){
+    public GarageController(JDesktopPane desktop_pane){
         super();
         this.gr = new Garage();
         this.tav = new TableActionEvent() {
             @Override
             public void view(int row) {
-                  System.out.println("view : "+row);
+                JInternalFrame inFrame = new JInternalFrame("View "+row, false, true, false, true);
+                int slot = (int) mcf.getTable().getValueAt(row, 0);
+                String id = (String)mcf.getTable().getValueAt(row, 1);
+                String model = (String) mcf.getTable().getValueAt(row, 3);
+                String status = (String)mcf.getTable().getValueAt(row, 4);
+                try{
+                    ResultSet result = getStatement().executeQuery("select car_owner from car_list where ch = "+slot);
+                    result.next();
+                    String customer_name = result.getString(1);
+                    inFrame.add(new CarInfoPanel(slot, customer_name, id, model, status));
+                    inFrame.pack();
+                    inFrame.setVisible(true);
+                    desktop_pane.add(inFrame);
+                    desktop_pane.repaint();
+                }catch(SQLException sqle){
+                    sqle.printStackTrace();
+                }
+                System.out.println("view : "+row);
             }
 
             @Override

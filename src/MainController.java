@@ -22,15 +22,10 @@ public class MainController implements ActionListener{
         lpc = new LoginPageController();
         spc = new StuffPageController();
         wpc = new WarehousePageController();
-        gc = new GarageController();
+
         desktop_pane = new JDesktopPane();
 
-        
-        gc.getManageCarFrame().getHomeButton().addActionListener(this);
-        gc.getManageCarFrame().getWarehouseButton().addActionListener(this);
-        gc.getManageCarFrame().getReceiptButton().addActionListener(this);
-        gc.getManageCarFrame().getEquipmentButton().addActionListener(this);
-        gc.getManageCarFrame().getStuffManageButton().addActionListener(this);
+
         
         spc.getAccountFrame().getHomeButton().addActionListener(this);
         spc.getAccountFrame().getManagementButton().addActionListener(this);
@@ -62,6 +57,14 @@ public class MainController implements ActionListener{
                 mainframe.dispose();
                 mainframe = new JFrame();
                 mainframe.setContentPane(desktop_pane);
+                
+                gc = new GarageController(desktop_pane);        
+                gc.getManageCarFrame().getHomeButton().addActionListener(this);
+                gc.getManageCarFrame().getWarehouseButton().addActionListener(this);
+                gc.getManageCarFrame().getReceiptButton().addActionListener(this);
+                gc.getManageCarFrame().getEquipmentButton().addActionListener(this);
+                gc.getManageCarFrame().getStuffManageButton().addActionListener(this);
+                
                 hc.getHomepageframe().getUsernameLabel().setText(lm.getAccount().getFirstName());
                 hc.getHomepageframe().getManagementButton().addActionListener(this);
                 hc.getHomepageframe().getStuffManageButton().addActionListener(this);
