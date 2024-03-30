@@ -1,8 +1,5 @@
 import com.formdev.flatlaf.FlatLightLaf;
-import javax.swing.table.DefaultTableModel;
-import java.awt.Font;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import javax.swing.*;
 
 public class ReceiptFrame extends javax.swing.JFrame implements ChangePageButton {
@@ -157,7 +154,6 @@ public class ReceiptFrame extends javax.swing.JFrame implements ChangePageButton
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(1280, 720));
-        setPreferredSize(new java.awt.Dimension(1280, 950));
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -244,7 +240,6 @@ public class ReceiptFrame extends javax.swing.JFrame implements ChangePageButton
         });
         MenuBar.add(WarehouseButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 330, 220, 70));
 
-        InvoiceButton.setBackground(new java.awt.Color(255, 255, 255));
         InvoiceButton.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         InvoiceButton.setForeground(new java.awt.Color(255, 102, 0));
         InvoiceButton.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\TestIcon\\InvoiceWhite.png"));
@@ -316,16 +311,16 @@ public class ReceiptFrame extends javax.swing.JFrame implements ChangePageButton
         slot1.setLayout(slot1Layout);
         slot1Layout.setHorizontalGroup(
             slot1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(slot1Layout.createSequentialGroup()
-                .addContainerGap(20, Short.MAX_VALUE)
-                .addComponent(ch1, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(36, 36, 36))
             .addComponent(car_id1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(car_owner1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(slot1Layout.createSequentialGroup()
                 .addGap(64, 64, 64)
                 .addComponent(select1, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(64, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, slot1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(ch1, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(27, 27, 27))
         );
         slot1Layout.setVerticalGroup(
             slot1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -421,19 +416,23 @@ public class ReceiptFrame extends javax.swing.JFrame implements ChangePageButton
         slot3.setLayout(slot3Layout);
         slot3Layout.setHorizontalGroup(
             slot3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, slot3Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(select3, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(71, 71, 71))
             .addGroup(slot3Layout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(slot3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, slot3Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(slot3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(car_id3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(car_owner3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(slot3Layout.createSequentialGroup()
-                        .addGap(0, 39, Short.MAX_VALUE)
-                        .addComponent(ch3, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(35, 35, 35))
-                    .addComponent(car_id3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(car_owner3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addGroup(slot3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(slot3Layout.createSequentialGroup()
+                                .addGap(38, 38, 38)
+                                .addComponent(ch3, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(slot3Layout.createSequentialGroup()
+                                .addGap(74, 74, 74)
+                                .addComponent(select3, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 36, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         slot3Layout.setVerticalGroup(
             slot3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -474,19 +473,21 @@ public class ReceiptFrame extends javax.swing.JFrame implements ChangePageButton
         slot4.setLayout(slot4Layout);
         slot4Layout.setHorizontalGroup(
             slot4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, slot4Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(select4, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(66, 66, 66))
             .addGroup(slot4Layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(33, 33, 33)
+                .addComponent(ch4, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(37, Short.MAX_VALUE))
+            .addGroup(slot4Layout.createSequentialGroup()
+                .addGap(69, 69, 69)
+                .addComponent(select4, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(slot4Layout.createSequentialGroup()
                 .addGroup(slot4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(car_id4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, slot4Layout.createSequentialGroup()
-                        .addGap(0, 31, Short.MAX_VALUE)
-                        .addComponent(ch4, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(33, 33, 33))))
-            .addComponent(car_owner4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(car_owner4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(slot4Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(car_id4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         slot4Layout.setVerticalGroup(
             slot4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -535,13 +536,11 @@ public class ReceiptFrame extends javax.swing.JFrame implements ChangePageButton
                         .addComponent(ch5, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(39, 39, 39))
                     .addComponent(car_id5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, slot5Layout.createSequentialGroup()
-                        .addComponent(car_owner5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addContainerGap())))
-            .addGroup(slot5Layout.createSequentialGroup()
-                .addGap(75, 75, 75)
+                    .addComponent(car_owner5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, slot5Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(select5, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGap(75, 75, 75))
         );
         slot5Layout.setVerticalGroup(
             slot5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -614,18 +613,20 @@ public class ReceiptFrame extends javax.swing.JFrame implements ChangePageButton
         slot6.setLayout(slot6Layout);
         slot6Layout.setHorizontalGroup(
             slot6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, slot6Layout.createSequentialGroup()
-                .addContainerGap(20, Short.MAX_VALUE)
-                .addComponent(ch6, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(37, 37, 37))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, slot6Layout.createSequentialGroup()
-                .addComponent(car_owner6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
             .addComponent(car_id6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(slot6Layout.createSequentialGroup()
-                .addGap(60, 60, 60)
-                .addComponent(select6, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(slot6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(car_owner6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(slot6Layout.createSequentialGroup()
+                        .addGroup(slot6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(slot6Layout.createSequentialGroup()
+                                .addGap(60, 60, 60)
+                                .addComponent(select6, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(slot6Layout.createSequentialGroup()
+                                .addGap(27, 27, 27)
+                                .addComponent(ch6, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 24, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         slot6Layout.setVerticalGroup(
             slot6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -720,22 +721,20 @@ public class ReceiptFrame extends javax.swing.JFrame implements ChangePageButton
         slot8Layout.setHorizontalGroup(
             slot8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, slot8Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(ch8, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(35, 35, 35))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, slot8Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(select8, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(73, 73, 73))
-            .addGroup(slot8Layout.createSequentialGroup()
-                .addContainerGap()
+                .addContainerGap(45, Short.MAX_VALUE)
                 .addGroup(slot8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(slot8Layout.createSequentialGroup()
-                        .addComponent(car_id8, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, slot8Layout.createSequentialGroup()
-                        .addComponent(car_owner8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addContainerGap())))
+                        .addComponent(ch8, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(35, 35, 35))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, slot8Layout.createSequentialGroup()
+                        .addComponent(select8, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(73, 73, 73))))
+            .addGroup(slot8Layout.createSequentialGroup()
+                .addGap(16, 16, 16)
+                .addGroup(slot8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(car_owner8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(car_id8, javax.swing.GroupLayout.DEFAULT_SIZE, 186, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         slot8Layout.setVerticalGroup(
             slot8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -784,17 +783,16 @@ public class ReceiptFrame extends javax.swing.JFrame implements ChangePageButton
                         .addContainerGap())
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, slot9Layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
-                        .addGroup(slot9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, slot9Layout.createSequentialGroup()
-                                .addComponent(ch9, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(40, 40, 40))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, slot9Layout.createSequentialGroup()
-                                .addComponent(car_owner9, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addContainerGap())))))
+                        .addComponent(ch9, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(40, 40, 40))))
             .addGroup(slot9Layout.createSequentialGroup()
                 .addGap(74, 74, 74)
                 .addComponent(select9, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, slot9Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(car_owner9, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         slot9Layout.setVerticalGroup(
             slot9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -842,12 +840,15 @@ public class ReceiptFrame extends javax.swing.JFrame implements ChangePageButton
                         .addGap(0, 41, Short.MAX_VALUE)
                         .addComponent(ch10, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(43, 43, 43))
-                    .addComponent(car_owner10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(car_id10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, slot10Layout.createSequentialGroup()
+                        .addGroup(slot10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(car_id10, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(car_owner10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addContainerGap())))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, slot10Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(select10, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(73, 73, 73))
+                .addGap(78, 78, 78))
         );
         slot10Layout.setVerticalGroup(
             slot10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -904,53 +905,244 @@ public class ReceiptFrame extends javax.swing.JFrame implements ChangePageButton
     }// </editor-fold>//GEN-END:initComponents
         
     private void select1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_select1ActionPerformed
-        ReceiptMDIApplication mdi = new ReceiptMDIApplication();
-        mdi.setVisible(true);
+        try {
+            db = new TestConnection();
+            String sql = "SELECT car_owner, car_id FROM car_list";
+            ResultSet rs = db.getConnect(sql);
+            int car_owner_index = 0;
+            while (rs.next() && car_owner_index <= 10) {
+                if (car_owner_index == 0) {
+                    String carOwner = rs.getString("car_owner");
+                    String carId = rs.getString("car_id");
+                    ReceiptMDIApplication mdi = new ReceiptMDIApplication();
+                    mdi.LinkData(carOwner,carId); // Set car_owner in ReceiptMDIApplication
+                    mdi.setVisible(true);
+                break;
+                    }
+                    car_owner_index++;
+                }
+        } catch (SQLException sqle) {
+            sqle.printStackTrace();
+        } finally {
+            db.close();
+        }
     }//GEN-LAST:event_select1ActionPerformed
 
     private void select2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_select2ActionPerformed
-        ReceiptMDIApplication mdi = new ReceiptMDIApplication();
-        mdi.setVisible(true);
+        try {
+            db = new TestConnection();
+            String sql = "SELECT car_owner, car_id FROM car_list";
+            ResultSet rs = db.getConnect(sql);
+            int car_owner_index = 0;
+            while (rs.next() && car_owner_index <= 10) {
+                if (car_owner_index == 1) {
+                    String carOwner = rs.getString("car_owner");
+                    String carId = rs.getString("car_id");
+                    ReceiptMDIApplication mdi = new ReceiptMDIApplication();
+                    mdi.LinkData(carOwner,carId); // Set car_owner in ReceiptMDIApplication
+                    mdi.setVisible(true);
+                break;
+                    }
+                    car_owner_index++;
+                }
+        } catch (SQLException sqle) {
+            sqle.printStackTrace();
+        } finally {
+            db.close();
+        }
     }//GEN-LAST:event_select2ActionPerformed
 
     private void select3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_select3ActionPerformed
-        ReceiptMDIApplication mdi = new ReceiptMDIApplication();
-        mdi.setVisible(true);
+        try {
+            db = new TestConnection();
+            String sql = "SELECT car_owner, car_id FROM car_list";
+            ResultSet rs = db.getConnect(sql);
+            int car_owner_index = 0;
+            while (rs.next() && car_owner_index <= 10) {
+                if (car_owner_index == 2) {
+                    String carOwner = rs.getString("car_owner");
+                    String carId = rs.getString("car_id");
+                    ReceiptMDIApplication mdi = new ReceiptMDIApplication();
+                    mdi.LinkData(carOwner,carId); // Set car_owner in ReceiptMDIApplication
+                    mdi.setVisible(true);
+                break;
+                    }
+                    car_owner_index++;
+                }
+        } catch (SQLException sqle) {
+            sqle.printStackTrace();
+        } finally {
+            db.close();
+        }
     }//GEN-LAST:event_select3ActionPerformed
 
     private void select4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_select4ActionPerformed
-        ReceiptMDIApplication mdi = new ReceiptMDIApplication();
-        mdi.setVisible(true);
+        try {
+            db = new TestConnection();
+            String sql = "SELECT car_owner, car_id FROM car_list";
+            ResultSet rs = db.getConnect(sql);
+            int car_owner_index = 0;
+            while (rs.next() && car_owner_index <= 10) {
+                if (car_owner_index == 3) {
+                    String carOwner = rs.getString("car_owner");
+                    String carId = rs.getString("car_id");
+                    ReceiptMDIApplication mdi = new ReceiptMDIApplication();
+                    mdi.LinkData(carOwner,carId); // Set car_owner in ReceiptMDIApplication
+                    mdi.setVisible(true);
+                break;
+                    }
+                    car_owner_index++;
+                }
+        } catch (SQLException sqle) {
+            sqle.printStackTrace();
+        } finally {
+            db.close();
+        }
     }//GEN-LAST:event_select4ActionPerformed
 
     private void select5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_select5ActionPerformed
-        ReceiptMDIApplication mdi = new ReceiptMDIApplication();
-        mdi.setVisible(true);
+
+        try {
+            db = new TestConnection();
+            String sql = "SELECT car_owner, car_id FROM car_list";
+            ResultSet rs = db.getConnect(sql);
+            int car_owner_index = 0;
+            while (rs.next() && car_owner_index <= 10) {
+                if (car_owner_index == 4) {
+                    String carOwner = rs.getString("car_owner");
+                    String carId = rs.getString("car_id");
+                    ReceiptMDIApplication mdi = new ReceiptMDIApplication();
+                    mdi.LinkData(carOwner,carId); // Set car_owner in ReceiptMDIApplication
+                    mdi.setVisible(true);
+                break;
+                    }
+                    car_owner_index++;
+                }
+        } catch (SQLException sqle) {
+            sqle.printStackTrace();
+        } finally {
+            db.close();
+        }
     }//GEN-LAST:event_select5ActionPerformed
 
     private void select6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_select6ActionPerformed
-        ReceiptMDIApplication mdi = new ReceiptMDIApplication();
-        mdi.setVisible(true);
+        try {
+            db = new TestConnection();
+            String sql = "SELECT car_owner, car_id FROM car_list";
+            ResultSet rs = db.getConnect(sql);
+            int car_owner_index = 0;
+            while (rs.next() && car_owner_index <= 10) {
+                if (car_owner_index == 5) {
+                    String carOwner = rs.getString("car_owner");
+                    String carId = rs.getString("car_id");
+                    ReceiptMDIApplication mdi = new ReceiptMDIApplication();
+                    mdi.LinkData(carOwner,carId); // Set car_owner in ReceiptMDIApplication
+                    mdi.setVisible(true);
+                break;
+                    }
+                    car_owner_index++;
+                }
+        } catch (SQLException sqle) {
+            sqle.printStackTrace();
+        } finally {
+            db.close();
+        }
     }//GEN-LAST:event_select6ActionPerformed
 
     private void select7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_select7ActionPerformed
-        ReceiptMDIApplication mdi = new ReceiptMDIApplication();
-        mdi.setVisible(true);
+        try {
+            db = new TestConnection();
+            String sql = "SELECT car_owner, car_id FROM car_list";
+            ResultSet rs = db.getConnect(sql);
+            int car_owner_index = 0;
+            while (rs.next() && car_owner_index <= 10) {
+                if (car_owner_index == 6) {
+                    String carOwner = rs.getString("car_owner");
+                    String carId = rs.getString("car_id");
+                    ReceiptMDIApplication mdi = new ReceiptMDIApplication();
+                    mdi.LinkData(carOwner,carId); // Set car_owner in ReceiptMDIApplication
+                    mdi.setVisible(true);
+                break;
+                    }
+                    car_owner_index++;
+                }
+        } catch (SQLException sqle) {
+            sqle.printStackTrace();
+        } finally {
+            db.close();
+        }
     }//GEN-LAST:event_select7ActionPerformed
 
     private void select8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_select8ActionPerformed
-        ReceiptMDIApplication mdi = new ReceiptMDIApplication();
-        mdi.setVisible(true);
+        try {
+            db = new TestConnection();
+            String sql = "SELECT car_owner, car_id FROM car_list";
+            ResultSet rs = db.getConnect(sql);
+            int car_owner_index = 0;
+            while (rs.next() && car_owner_index <= 10) {
+                if (car_owner_index == 7) {
+                    String carOwner = rs.getString("car_owner");
+                    String carId = rs.getString("car_id");
+                    ReceiptMDIApplication mdi = new ReceiptMDIApplication();
+                    mdi.LinkData(carOwner,carId); // Set car_owner in ReceiptMDIApplication
+                    mdi.setVisible(true);
+                break;
+                    }
+                    car_owner_index++;
+                }
+        } catch (SQLException sqle) {
+            sqle.printStackTrace();
+        } finally {
+            db.close();
+        }
     }//GEN-LAST:event_select8ActionPerformed
 
     private void select9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_select9ActionPerformed
-        ReceiptMDIApplication mdi = new ReceiptMDIApplication();
-        mdi.setVisible(true);
+        try {
+            db = new TestConnection();
+            String sql = "SELECT car_owner, car_id FROM car_list";
+            ResultSet rs = db.getConnect(sql);
+            int car_owner_index = 0;
+            while (rs.next() && car_owner_index <= 10) {
+                if (car_owner_index == 8) {
+                    String carOwner = rs.getString("car_owner");
+                    String carId = rs.getString("car_id");
+                    ReceiptMDIApplication mdi = new ReceiptMDIApplication();
+                    mdi.LinkData(carOwner,carId); // Set car_owner in ReceiptMDIApplication
+                    mdi.setVisible(true);
+                break;
+                    }
+                    car_owner_index++;
+                }
+        } catch (SQLException sqle) {
+            sqle.printStackTrace();
+        } finally {
+            db.close();
+        }
     }//GEN-LAST:event_select9ActionPerformed
 
     private void select10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_select10ActionPerformed
-        ReceiptMDIApplication mdi = new ReceiptMDIApplication();
-        mdi.setVisible(true);
+        try {
+            db = new TestConnection();
+            String sql = "SELECT car_owner, car_id FROM car_list";
+            ResultSet rs = db.getConnect(sql);
+            int car_owner_index = 0;
+            while (rs.next() && car_owner_index <= 10) {
+                if (car_owner_index == 9) {
+                    String carOwner = rs.getString("car_owner");
+                    String carId = rs.getString("car_id");
+                    ReceiptMDIApplication mdi = new ReceiptMDIApplication();
+                    mdi.LinkData(carOwner,carId); // Set car_owner in ReceiptMDIApplication
+                    mdi.setVisible(true);
+                break;
+                    }
+                    car_owner_index++;
+                }
+        } catch (SQLException sqle) {
+            sqle.printStackTrace();
+        } finally {
+            db.close();
+        }
     }//GEN-LAST:event_select10ActionPerformed
 
     private void HomeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HomeButtonActionPerformed

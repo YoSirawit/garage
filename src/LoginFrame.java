@@ -16,28 +16,23 @@ public class LoginFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        OrangeBG = new javax.swing.JPanel();
-        WhiteBG = new javax.swing.JPanel();
-        LoginLabel = new javax.swing.JLabel();
         GrayBG = new javax.swing.JPanel();
         UsernameField = new javax.swing.JTextField();
         PasswordLabel = new javax.swing.JLabel();
         UsernameLabel = new javax.swing.JLabel();
         LoginButton = new javax.swing.JButton();
         jPasswordField1 = new javax.swing.JPasswordField();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        OrangeBG.setBackground(new java.awt.Color(242, 157, 0));
+        GrayBG.setBackground(new java.awt.Color(255, 255, 255));
 
-        WhiteBG.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-
-        LoginLabel.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 72)); // NOI18N
-        LoginLabel.setText("Login");
-
-        GrayBG.setBackground(new java.awt.Color(218, 218, 218));
-
+        UsernameField.setBackground(new java.awt.Color(204, 204, 204));
         UsernameField.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 24)); // NOI18N
         UsernameField.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         UsernameField.setToolTipText("Enter Username");
@@ -60,6 +55,7 @@ public class LoginFrame extends javax.swing.JFrame {
             }
         });
 
+        jPasswordField1.setBackground(new java.awt.Color(204, 204, 204));
         jPasswordField1.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 24)); // NOI18N
         jPasswordField1.setToolTipText("Enter Password");
         jPasswordField1.setBorder(null);
@@ -70,81 +66,73 @@ public class LoginFrame extends javax.swing.JFrame {
             }
         });
 
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/5.png"))); // NOI18N
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/PasswordIcon.png"))); // NOI18N
+
+        jTextField1.setEditable(false);
+        jTextField1.setFont(new java.awt.Font("Tahoma", 0, 50)); // NOI18N
+        jTextField1.setText("เข้าสู่ระบบ");
+        jTextField1.setBorder(null);
+
         javax.swing.GroupLayout GrayBGLayout = new javax.swing.GroupLayout(GrayBG);
         GrayBG.setLayout(GrayBGLayout);
         GrayBGLayout.setHorizontalGroup(
             GrayBGLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(GrayBGLayout.createSequentialGroup()
-                .addGap(32, 32, 32)
-                .addGroup(GrayBGLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(UsernameLabel)
-                    .addComponent(UsernameField)
-                    .addComponent(PasswordLabel)
-                    .addComponent(jPasswordField1, javax.swing.GroupLayout.DEFAULT_SIZE, 342, Short.MAX_VALUE))
-                .addContainerGap(32, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, GrayBGLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(LoginButton, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(93, 93, 93))
+                .addContainerGap(31, Short.MAX_VALUE)
+                .addGroup(GrayBGLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(GrayBGLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(GrayBGLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(PasswordLabel)
+                        .addComponent(UsernameLabel)
+                        .addComponent(jPasswordField1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 352, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(UsernameField, javax.swing.GroupLayout.PREFERRED_SIZE, 342, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(44, 44, 44))
+            .addGroup(GrayBGLayout.createSequentialGroup()
+                .addGroup(GrayBGLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(GrayBGLayout.createSequentialGroup()
+                        .addGap(133, 133, 133)
+                        .addComponent(LoginButton, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(GrayBGLayout.createSequentialGroup()
+                        .addGap(131, 131, 131)
+                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         GrayBGLayout.setVerticalGroup(
             GrayBGLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(GrayBGLayout.createSequentialGroup()
-                .addGap(73, 73, 73)
+                .addGap(38, 38, 38)
+                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(29, 29, 29)
                 .addComponent(UsernameLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(UsernameField, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(21, 21, 21)
+                .addGap(6, 6, 6)
+                .addGroup(GrayBGLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(UsernameField, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, GrayBGLayout.createSequentialGroup()
+                        .addComponent(jLabel2)
+                        .addGap(16, 16, 16)))
+                .addGap(12, 12, 12)
                 .addComponent(PasswordLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 61, Short.MAX_VALUE)
+                .addGroup(GrayBGLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(GrayBGLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(GrayBGLayout.createSequentialGroup()
+                        .addGap(17, 17, 17)
+                        .addComponent(jLabel3)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 47, Short.MAX_VALUE)
                 .addComponent(LoginButton, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(56, 56, 56))
+                .addGap(29, 29, 29))
         );
 
-        javax.swing.GroupLayout WhiteBGLayout = new javax.swing.GroupLayout(WhiteBG);
-        WhiteBG.setLayout(WhiteBGLayout);
-        WhiteBGLayout.setHorizontalGroup(
-            WhiteBGLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(WhiteBGLayout.createSequentialGroup()
-                .addGap(123, 123, 123)
-                .addComponent(LoginLabel)
-                .addGap(132, 132, 132)
-                .addComponent(GrayBG, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(88, Short.MAX_VALUE))
-        );
-        WhiteBGLayout.setVerticalGroup(
-            WhiteBGLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(WhiteBGLayout.createSequentialGroup()
-                .addGroup(WhiteBGLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(WhiteBGLayout.createSequentialGroup()
-                        .addGap(85, 85, 85)
-                        .addComponent(GrayBG, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(WhiteBGLayout.createSequentialGroup()
-                        .addGap(156, 156, 156)
-                        .addComponent(LoginLabel)))
-                .addContainerGap(43, Short.MAX_VALUE))
-        );
+        getContentPane().add(GrayBG, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 110, 490, -1));
 
-        javax.swing.GroupLayout OrangeBGLayout = new javax.swing.GroupLayout(OrangeBG);
-        OrangeBG.setLayout(OrangeBGLayout);
-        OrangeBGLayout.setHorizontalGroup(
-            OrangeBGLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(OrangeBGLayout.createSequentialGroup()
-                .addGap(163, 163, 163)
-                .addComponent(WhiteBG, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(163, Short.MAX_VALUE))
-        );
-        OrangeBGLayout.setVerticalGroup(
-            OrangeBGLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(OrangeBGLayout.createSequentialGroup()
-                .addGap(48, 48, 48)
-                .addComponent(WhiteBG, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(48, Short.MAX_VALUE))
-        );
-
-        getContentPane().add(OrangeBG, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1280, 720));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/blur.png"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
         setLocationRelativeTo(null);
@@ -188,12 +176,13 @@ public class LoginFrame extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel GrayBG;
     private javax.swing.JButton LoginButton;
-    private javax.swing.JLabel LoginLabel;
-    private javax.swing.JPanel OrangeBG;
     private javax.swing.JLabel PasswordLabel;
     private javax.swing.JTextField UsernameField;
     private javax.swing.JLabel UsernameLabel;
-    private javax.swing.JPanel WhiteBG;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPasswordField jPasswordField1;
+    private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 }
