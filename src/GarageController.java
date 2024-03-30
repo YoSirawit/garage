@@ -12,6 +12,7 @@ public class GarageController extends Online implements ActionListener {
     public GarageController(JDesktopPane desktop_pane){
         super();
         this.gr = new Garage();
+        GarageController gc = this;
         this.tav = new TableActionEvent() {
             @Override
             public void view(int row) {
@@ -22,13 +23,17 @@ public class GarageController extends Online implements ActionListener {
                 String status = (String)mcf.getTable().getValueAt(row, 4);
                 try{
                     ResultSet result = getStatement().executeQuery("select car_owner from car_list where ch = "+slot);
-                    result.next();
-                    String customer_name = result.getString(1);
-                    inFrame.add(new CarInfoPanel(slot, customer_name, id, model, status));
-                    inFrame.pack();
-                    inFrame.setVisible(true);
-                    desktop_pane.add(inFrame);
-                    desktop_pane.repaint();
+                    if(result.next()){
+                        String customer_name = result.getString(1);
+                        inFrame.add(new CarInfoPanel(slot, customer_name, id, model, status));
+                        inFrame.pack();
+                        inFrame.setVisible(true);
+                        desktop_pane.add(inFrame);
+                        desktop_pane.repaint();
+                    }else{
+                        JOptionPane.showMessageDialog(desktop_pane, "This channel doesn't have car", "Alert", JOptionPane.PLAIN_MESSAGE);
+                    }
+                    
                 }catch(SQLException sqle){
                     sqle.printStackTrace();
                 }
@@ -37,6 +42,30 @@ public class GarageController extends Online implements ActionListener {
 
             @Override
             public void edit(int row) {
+                JInternalFrame inFrame = new JInternalFrame("Edit "+row, false, true, false, true);
+                int slot = (int) mcf.getTable().getValueAt(row, 0);
+                String id = (String)mcf.getTable().getValueAt(row, 1);
+                String brand = (String)mcf.getTable().getValueAt(row, 2);
+                String model = (String) mcf.getTable().getValueAt(row, 3);
+                String status = (String)mcf.getTable().getValueAt(row, 4);
+                String date_in = (String)mcf.getTable().getValueAt(row, 5);
+                String date_out = (String)mcf.getTable().getValueAt(row, 6);
+                try{
+                    ResultSet result = getStatement().executeQuery("select car_owner from car_list where ch = "+slot);
+                    if(result.next()){
+                        String customer_name = result.getString(1);
+                        inFrame.add(new CarConfigPanel(slot, customer_name, id, brand, model, status, date_in, date_out, gc, inFrame));
+                        inFrame.pack();
+                        inFrame.setVisible(true);
+                        desktop_pane.add(inFrame);
+                        desktop_pane.repaint();
+                    }else{
+                        JOptionPane.showMessageDialog(desktop_pane, "This channel doesn't have car", "Alert", JOptionPane.PLAIN_MESSAGE);
+                    }
+                    
+                }catch(SQLException sqle){
+                    sqle.printStackTrace();
+                }
                 System.out.println("edit : "+row);
             }
 

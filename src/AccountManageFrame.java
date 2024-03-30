@@ -6,10 +6,17 @@ public class AccountManageFrame extends javax.swing.JFrame implements ChangePage
     /**TableRowSorter myTableRowSorter = new TableRowSorter(AccountTable.getModel());
      * Creates new form AccountManageFrame
      */
-    public AccountManageFrame() {
+    public AccountManageFrame(LoginManager lm, TableActionEvent tav) {
         initComponents();
         AccountTable.setAutoCreateRowSorter(true);
         DefaultTableModel df=(DefaultTableModel) AccountTable.getModel();
+        if(lm.getAccount().getLevel() == 2){
+//            df.addColumn("config");
+            AccountTable.setModel(new AdminAccountTable().getTable().getModel());
+            df=(DefaultTableModel) AccountTable.getModel();
+            AccountTable.getColumnModel().getColumn(4).setCellRenderer(new ConfigCellRenderer());
+            AccountTable.getColumnModel().getColumn(4).setCellEditor(new CustomCellEditor(tav));
+        }
     }
 
     /**
@@ -96,8 +103,14 @@ public class AccountManageFrame extends javax.swing.JFrame implements ChangePage
                 return canEdit [columnIndex];
             }
         });
-        AccountTable.setRowHeight(30);
+        AccountTable.setRowHeight(45);
         jScrollPane1.setViewportView(AccountTable);
+        if (AccountTable.getColumnModel().getColumnCount() > 0) {
+            AccountTable.getColumnModel().getColumn(0).setHeaderValue("Username");
+            AccountTable.getColumnModel().getColumn(1).setHeaderValue("Name");
+            AccountTable.getColumnModel().getColumn(2).setHeaderValue("Surname");
+            AccountTable.getColumnModel().getColumn(3).setHeaderValue("Level");
+        }
 
         SearchField.setBackground(new java.awt.Color(211, 211, 211));
 
@@ -228,7 +241,6 @@ public class AccountManageFrame extends javax.swing.JFrame implements ChangePage
         });
         MenuBar.add(InvoiceButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 430, 220, 70));
 
-        AccountButton.setBackground(new java.awt.Color(255, 255, 255));
         AccountButton.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         AccountButton.setForeground(new java.awt.Color(255, 102, 0));
         AccountButton.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\TestIcon\\AccountWhite.png"));
@@ -316,7 +328,7 @@ public class AccountManageFrame extends javax.swing.JFrame implements ChangePage
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run(){
-                new AccountManageFrame().setVisible(true);
+                new AccountManageFrame(null, null).setVisible(true);
 //                try {
 //                    UIManager.setLookAndFeel(new FlatLightLaf());
 //                }catch(UnsupportedLookAndFeelException ex){

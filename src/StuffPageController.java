@@ -7,8 +7,24 @@ import java.sql.*;
 public class StuffPageController extends Online {
     private AccountManageFrame accFrame;
     
-    public StuffPageController(){
-        this.accFrame = new AccountManageFrame();
+    public StuffPageController(LoginManager lm){
+        TableActionEvent tav = new TableActionEvent() {
+            @Override
+            public void view(int row) {
+                System.out.println("view :" + row);
+            }
+
+            @Override
+            public void edit(int row) {
+                System.out.println("edit :" + row);
+            }
+
+            @Override
+            public void del(int row) {
+                System.out.println("del :" + row);
+            }
+        };
+        this.accFrame = new AccountManageFrame(lm, tav);
     }
     
     public AccountManageFrame getAccountFrame(){
