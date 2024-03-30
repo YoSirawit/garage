@@ -1,5 +1,5 @@
 
-import javax.swing.table.DefaultTableModel;
+import javax.swing.table.*;
 import javax.swing.*;
 
 /*
@@ -15,9 +15,12 @@ public class ManageCarFrame extends javax.swing.JFrame implements ChangePageButt
 
     /**
      * Creates new form ManageCarFrame
+     * @param tav
      */
-    public ManageCarFrame() {
+    public ManageCarFrame(TableActionEvent tav) {
         initComponents();
+        this.jTable2.getColumnModel().getColumn(7).setCellRenderer(new ConfigCellRenderer());
+        this.jTable2.getColumnModel().getColumn(7).setCellEditor(new CustomCellEditor(tav));
 //        populateTable();
     }
 
@@ -93,7 +96,6 @@ public class ManageCarFrame extends javax.swing.JFrame implements ChangePageButt
         });
         MenuBar.add(HomeButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 30, 220, 70));
 
-        CustomButton.setBackground(new java.awt.Color(255, 255, 255));
         CustomButton.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         CustomButton.setForeground(new java.awt.Color(255, 102, 0));
         CustomButton.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\TestIcon\\CarManageWhite.png"));
@@ -163,19 +165,20 @@ public class ManageCarFrame extends javax.swing.JFrame implements ChangePageButt
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
         jPanel3.setLayout(new java.awt.BorderLayout());
 
+        jTable2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
             new String [] {
-                "ch", "ID", "brand", "name", "status", "date_in", "date_out"
+                "ch", "ID", "brand", "model", "status", "date_in", "date_out", "config"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+                java.lang.Integer.class, java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Object.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false, false
+                false, false, false, false, false, false, false, true
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -186,6 +189,7 @@ public class ManageCarFrame extends javax.swing.JFrame implements ChangePageButt
                 return canEdit [columnIndex];
             }
         });
+        jTable2.setRowHeight(40);
         jScrollPane2.setViewportView(jTable2);
         if (jTable2.getColumnModel().getColumnCount() > 0) {
             jTable2.getColumnModel().getColumn(0).setPreferredWidth(3);
@@ -242,7 +246,7 @@ public class ManageCarFrame extends javax.swing.JFrame implements ChangePageButt
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                ManageCarFrame mcf = new ManageCarFrame();
+                ManageCarFrame mcf = new ManageCarFrame(null);
                 mcf.setVisible(true);
                 mcf.setSize(1280, 720);
                 mcf.setTitle("ดำรงรวยการช่าง");

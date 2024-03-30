@@ -7,11 +7,39 @@ import javax.swing.table.*;
 public class GarageController extends Online implements ActionListener {
     private Garage gr;
     private ManageCarFrame mcf;
+    private TableActionEvent tav;
     
     public GarageController(){
+        super();
         this.gr = new Garage();
-        this.mcf = new ManageCarFrame();
-            
+        this.tav = new TableActionEvent() {
+            @Override
+            public void view(int row) {
+                  System.out.println("view : "+row);
+            }
+
+            @Override
+            public void edit(int row) {
+                System.out.println("edit : "+row);
+            }
+
+            @Override
+            public void del(int row) {
+                String car_id = (String) mcf.getTable().getValueAt(row, 1);
+                try{
+                    String del = String.format("delete from car_list where car_id = '%s'", car_id);
+                    getStatement().executeUpdate(del);
+                }catch(SQLException sqle){
+                    sqle.printStackTrace();
+                }
+                gr.update();
+                update();
+                mcf.repaint();
+                
+                System.out.println("del : "+row);
+            }
+        };
+        this.mcf = new ManageCarFrame(tav);
     }
     
     public ManageCarFrame getManageCarFrame(){
