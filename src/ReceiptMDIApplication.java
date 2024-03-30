@@ -2,11 +2,24 @@ import java.sql.*;
 
 public class ReceiptMDIApplication extends javax.swing.JFrame {
     public TestConnection db;
+    private Bill bill;
     
-    public ReceiptMDIApplication() {
+    public ReceiptMDIApplication(ResultSet product) {
         initComponents();
         setDefaultCloseOperation(this.DISPOSE_ON_CLOSE);
-        
+        bill = new Bill();
+        try {
+                while (true) {
+                    if (product.next()) {
+                    Item item = new Item(product.getString(1), product.getInt(2), product.getDouble(3));
+                    bill.addItem(item);
+                    } else {
+                        break;
+                    }
+                }
+            } catch (Exception ex) {
+                System.out.println(ex);
+            }
     }
     
     public void LinkData(String carOwner,String carId) {
@@ -229,6 +242,12 @@ public class ReceiptMDIApplication extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+        try {
+            // TODO add your handling code here:
+            InvoiceCreator invoice = new InvoiceCreator(bill);
+        } catch (Exception ex) {
+            System.out.println("Something wrong.");
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -238,16 +257,16 @@ public class ReceiptMDIApplication extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new ReceiptMDIApplication().setVisible(true);
-            }
-        });
-    }
+//    public static void main(String args[]) {
+//        
+//
+//        /* Create and display the form */
+//        java.awt.EventQueue.invokeLater(new Runnable() {
+//            public void run() {
+//                new ReceiptMDIApplication().setVisible(true);
+//            }
+//        });
+//    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel car_id;
