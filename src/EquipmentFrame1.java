@@ -26,10 +26,9 @@ public class EquipmentFrame1 extends javax.swing.JFrame {
     private void initComponents() {
 
         headPanel = new javax.swing.JPanel();
-        jPanel3 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        usernameTxt = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        garageName1 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
@@ -59,48 +58,29 @@ public class EquipmentFrame1 extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        headPanel.setBackground(new java.awt.Color(242, 157, 0));
+        headPanel.setBackground(new java.awt.Color(247, 127, 0));
         headPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel3.setPreferredSize(new java.awt.Dimension(200, 50));
+        jLabel5.setBackground(new java.awt.Color(242, 157, 0));
+        jLabel5.setFont(new java.awt.Font("IrisUPC", 3, 36)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setText("ดำรงรวยการช่าง ");
+        headPanel.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 170, 40));
 
-        jLabel1.setForeground(new java.awt.Color(242, 157, 0));
-        jLabel1.setText("Username");
+        usernameTxt.setBackground(new java.awt.Color(255, 255, 255));
+        usernameTxt.setText("@USERNAME");
+        usernameTxt.setToolTipText("Username Account");
+        usernameTxt.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        headPanel.add(usernameTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(1180, 10, 80, 30));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir") + "\\src\\TestIcon\\user-regular-24.png"));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/userWithcircle.png"))); // NOI18N
+        headPanel.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 10, -1, -1));
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addContainerGap(40, Short.MAX_VALUE)
-                .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(23, 23, 23))
-        );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(16, 16, 16)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel2))
-                .addContainerGap(18, Short.MAX_VALUE))
-        );
-
-        headPanel.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1110, 0, 180, -1));
-
-        garageName1.setFont(new java.awt.Font("JasmineUPC", 3, 30)); // NOI18N
-        garageName1.setForeground(new java.awt.Color(255, 255, 255));
-        garageName1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        garageName1.setText("ดำรงรวยการช่าง ");
-        headPanel.add(garageName1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 220, 50));
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
         jPanel2.setBackground(new java.awt.Color(229, 151, 60));
 
-        jPanel4.setBackground(new java.awt.Color(255, 184, 0));
+        jPanel4.setBackground(new java.awt.Color(241, 127, 22));
 
         garageName.setFont(new java.awt.Font("JasmineUPC", 3, 36)); // NOI18N
         garageName.setForeground(new java.awt.Color(255, 255, 255));
@@ -400,7 +380,7 @@ public class EquipmentFrame1 extends javax.swing.JFrame {
                 .addComponent(headPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 18, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
@@ -503,9 +483,7 @@ public class EquipmentFrame1 extends javax.swing.JFrame {
     private javax.swing.JButton ShopButton;
     private javax.swing.JButton SuspensionButton;
     private javax.swing.JLabel garageName;
-    private javax.swing.JLabel garageName1;
     private javax.swing.JPanel headPanel;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
@@ -518,9 +496,10 @@ public class EquipmentFrame1 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
+    private javax.swing.JLabel usernameTxt;
     // End of variables declaration//GEN-END:variables
 }
