@@ -1,3 +1,4 @@
+import com.formdev.flatlaf.FlatLightLaf;
 import javax.swing.table.DefaultTableModel;
 import java.awt.Font;
 import java.sql.ResultSet;
@@ -987,8 +988,8 @@ public class ReceiptFrame extends javax.swing.JFrame implements ChangePageButton
 //            System.out.println("Hello");
     public static void main(String args[]) {
         try {
-                UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-            } catch (ClassNotFoundException | IllegalAccessException | InstantiationException | UnsupportedLookAndFeelException e) {
+                UIManager.setLookAndFeel(new FlatLightLaf());
+            } catch (UnsupportedLookAndFeelException e) {
                 e.printStackTrace();
             }
                 SwingUtilities.invokeLater(() -> { ReceiptFrame frame = new ReceiptFrame(); });
