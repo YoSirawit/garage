@@ -272,15 +272,15 @@ public class StorageMain extends javax.swing.JFrame implements ChangePageButton 
             }
         });
 
-        jLabel13.setText("Body Components");
+        jLabel13.setText("Interior and Body Components");
 
-        jLabel14.setText("Braking");
+        jLabel14.setText("Braking System");
 
-        jLabel15.setText("Cooling");
+        jLabel15.setText("Cooling System");
 
-        jLabel16.setText("Electrical");
+        jLabel16.setText("Electrical System");
 
-        jLabel21.setText("Engine");
+        jLabel21.setText("Engine Components");
 
         ExhaustButton.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\TestIcon\\Exhaust.png"));
         ExhaustButton.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -314,13 +314,13 @@ public class StorageMain extends javax.swing.JFrame implements ChangePageButton 
             }
         });
 
-        jLabel17.setText("Exhaust");
+        jLabel17.setText("Exhaust System");
 
-        jLabel18.setText("Fuel");
+        jLabel18.setText("Fuel System");
 
-        jLabel19.setText("Drivetrain");
+        jLabel19.setText("Transmission and Drivetrain");
 
-        jLabel20.setText("Suspension");
+        jLabel20.setText("Suspension and Steering");
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
@@ -329,60 +329,57 @@ public class StorageMain extends javax.swing.JFrame implements ChangePageButton 
             .addGroup(jPanel7Layout.createSequentialGroup()
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addGap(45, 45, 45)
                         .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(ExhaustButton, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(BodyButton, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(jPanel7Layout.createSequentialGroup()
+                                .addGap(45, 45, 45)
+                                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(ExhaustButton, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(BodyButton, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(jPanel7Layout.createSequentialGroup()
+                                .addGap(68, 68, 68)
+                                .addComponent(jLabel17)))
+                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel7Layout.createSequentialGroup()
+                                .addGap(44, 44, 44)
+                                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(BreakeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(FuelButton, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(jPanel7Layout.createSequentialGroup()
+                                .addGap(79, 79, 79)
+                                .addComponent(jLabel18))))
                     .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addGap(62, 62, 62)
-                        .addComponent(jLabel13))
-                    .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addGap(92, 92, 92)
-                        .addComponent(jLabel17)))
+                        .addGap(34, 34, 34)
+                        .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(65, 65, 65)
+                        .addComponent(jLabel14)))
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addGap(44, 44, 44)
-                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(BreakeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(FuelButton, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel18)
-                        .addGap(55, 55, 55))
-                    .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addGap(92, 92, 92)
-                        .addComponent(jLabel14)))
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel7Layout.createSequentialGroup()
+                        .addGap(66, 66, 66)
+                        .addComponent(jLabel15)
                         .addGap(82, 82, 82)
-                        .addComponent(jLabel19)
-                        .addGap(115, 115, 115)
-                        .addComponent(jLabel20)
-                        .addContainerGap())
+                        .addComponent(jLabel16))
                     .addGroup(jPanel7Layout.createSequentialGroup()
+                        .addGap(27, 27, 27)
+                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel19)
+                            .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(CoolingButton, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(DrivetrainButton, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(38, 38, 38)
                         .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel7Layout.createSequentialGroup()
-                                .addGap(86, 86, 86)
-                                .addComponent(jLabel15)
-                                .addGap(125, 125, 125)
-                                .addComponent(jLabel16))
-                            .addGroup(jPanel7Layout.createSequentialGroup()
-                                .addGap(38, 38, 38)
-                                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(CoolingButton, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(DrivetrainButton, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(38, 38, 38)
-                                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(SuspensionButton, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(ElectricalButton, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
-                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
-                                .addComponent(EngineButton, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(45, 45, 45))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
-                                .addComponent(jLabel21)
-                                .addGap(96, 96, 96))))))
+                                .addGap(6, 6, 6)
+                                .addComponent(jLabel20))
+                            .addComponent(SuspensionButton, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(ElectricalButton, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
+                        .addComponent(EngineButton, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(45, 45, 45))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
+                        .addComponent(jLabel21)
+                        .addGap(59, 59, 59))))
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -405,8 +402,8 @@ public class StorageMain extends javax.swing.JFrame implements ChangePageButton 
                             .addComponent(jLabel13)
                             .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                 .addComponent(jLabel15)
-                                .addComponent(jLabel16)
-                                .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                .addComponent(jLabel21)
+                                .addComponent(jLabel16)))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -586,7 +583,6 @@ public class StorageMain extends javax.swing.JFrame implements ChangePageButton 
                         .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 108, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(0, 0, 0)
                         .addComponent(MenuBar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
@@ -641,7 +637,7 @@ public class StorageMain extends javax.swing.JFrame implements ChangePageButton 
 
     private void EngineButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EngineButtonActionPerformed
         // TODO add your handling code here:
-        openStorageFrame("Engine System");
+        openStorageFrame("Engine Components");
     }//GEN-LAST:event_EngineButtonActionPerformed
 
     private void ElectricalButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ElectricalButtonActionPerformed
@@ -661,7 +657,7 @@ public class StorageMain extends javax.swing.JFrame implements ChangePageButton 
 
     private void BodyButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BodyButtonActionPerformed
         // TODO add your handling code here:
-        openStorageFrame("Body Components");
+        openStorageFrame("Interior and Body Components");
     }//GEN-LAST:event_BodyButtonActionPerformed
 
     private void TypeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TypeActionPerformed

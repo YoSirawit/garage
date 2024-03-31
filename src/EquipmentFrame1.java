@@ -39,7 +39,7 @@ public class EquipmentFrame1 extends javax.swing.JFrame {
 
         headPanel = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        jLabel23 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
@@ -76,9 +76,7 @@ public class EquipmentFrame1 extends javax.swing.JFrame {
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("ดำรงรวยการช่าง ");
         headPanel.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 170, 40));
-
-        jLabel2.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\TestIcon\\userWithcircle.png"));
-        headPanel.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 10, -1, -1));
+        headPanel.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 10, -1, -1));
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -468,9 +466,9 @@ public class EquipmentFrame1 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
