@@ -50,7 +50,7 @@ public class MainController implements ActionListener{
                 mainframe = new JFrame();
                 mainframe.setContentPane(desktop_pane);
                 
-                spc = new StuffPageController(lm);
+                spc = new StuffPageController(lm, desktop_pane);
                 spc.getAccountFrame().getHomeButton().addActionListener(this);
                 spc.getAccountFrame().getManagementButton().addActionListener(this);
                 spc.getAccountFrame().getEquipmentButton().addActionListener(this);

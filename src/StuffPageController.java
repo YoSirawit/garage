@@ -7,11 +7,30 @@ import java.sql.*;
 public class StuffPageController extends Online {
     private AccountManageFrame accFrame;
     
-    public StuffPageController(LoginManager lm){
+    public StuffPageController(LoginManager lm, JDesktopPane desktop_pane){
         TableActionEvent tav = new TableActionEvent() {
             @Override
             public void view(int row) {
-                System.out.println("view :" + row);
+                String userName = (String)accFrame.getTable().getValueAt(row, 0);
+                try{
+                    String sql = String.format("select * from userid where username = '%s'", userName);
+                    ResultSet result = getStatement().executeQuery(sql);
+                    result.next();
+                    int level = result.getInt(2);
+                    String f_name = result.getString(3);
+                    String l_name = result.getString(4);
+                    String email = result.getString(7);
+                    String phone = result.getString(8);
+                    JInternalFrame inFrame = new JInternalFrame("Stuff Info", false, true, false, true);
+                    StuffInfoPanel stuff_info = new StuffInfoPanel(userName, f_name, l_name, email, phone, level, inFrame);
+                    inFrame.add(stuff_info);
+                    inFrame.pack();
+                    inFrame.setVisible(true);
+                    desktop_pane.add(inFrame);
+                }catch(SQLException sqle){
+                    sqle.printStackTrace();
+                }
+                
             }
 
             @Override
