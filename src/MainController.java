@@ -18,7 +18,7 @@ public class MainController implements ActionListener{
     
     public MainController(){
         lm = new LoginManager();
-        hc = new HomepageController();
+
         lpc = new LoginPageController();
 
         wpc = new WarehousePageController();
@@ -64,6 +64,7 @@ public class MainController implements ActionListener{
                 gc.getManageCarFrame().getEquipmentButton().addActionListener(this);
                 gc.getManageCarFrame().getStuffManageButton().addActionListener(this);
                 
+                hc = new HomepageController(gc.getGarage());
                 hc.getHomepageframe().getUsernameLabel().setText(lm.getAccount().getFirstName());
                 hc.getHomepageframe().getManagementButton().addActionListener(this);
                 hc.getHomepageframe().getStuffManageButton().addActionListener(this);
@@ -87,7 +88,7 @@ public class MainController implements ActionListener{
                 
                 homepage = (JPanel) hc.getHomepageframe().getContentPane();
                 mainframe.add(homepage);
-                mainframe.setSize(1280, 720);
+                mainframe.setSize(1280, 760);
                 mainframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 mainframe.setVisible(true);
                 mainframe.setLocationRelativeTo(null);
@@ -103,6 +104,8 @@ public class MainController implements ActionListener{
             desktop_pane.removeAll();
             desktop_pane.revalidate();
             desktop_pane.repaint();
+            gc.getGarage().update();
+            gc.update();
             desktop_pane.add((JPanel)gc.getManageCarFrame().getContentPane());
             mainframe.setContentPane(desktop_pane);
 //            mainframe.setContentPane(gc.getManageCarFrame().getContentPane());
@@ -115,6 +118,7 @@ public class MainController implements ActionListener{
                 e.getSource().equals(wpc.getWarehousePage().getHomeButton())
                 ){
             desktop_pane.removeAll();
+            hc.update();
             desktop_pane.add(hc.getHomepageframe().getContentPane());
             mainframe.setContentPane(desktop_pane);
 //            mainframe.setContentPane(hc.getHomepageframe().getContentPane());
@@ -139,6 +143,7 @@ public class MainController implements ActionListener{
                 e.getSource().equals(wpc.getWarehousePage().getReceiptButton())
                 ){
             rc.getReceiptFrame().getUsernameLabel().setText(lm.getAccount().getFirstName());
+            rc.getReceiptFrame().update();
             desktop_pane.removeAll();
             desktop_pane.add(rc.getReceiptFrame().getContentPane());
             mainframe.setContentPane(desktop_pane);

@@ -1303,4 +1303,27 @@ public class ReceiptFrame extends javax.swing.JFrame implements ChangePageButton
      public JLabel getUsernameLabel(){
         return this.usernameTxt1;
     }
+     
+    public void update(){
+        for(int car_id_index = 0; car_id_index<10; car_id_index++){
+           switch(car_id_index) {
+                case 0 -> {car_owner1.setText("<ว่าง>"); car_id1.setText("ทะเบียนรถ   : -");}
+                case 1 -> {car_owner2.setText("<ว่าง>");car_id2.setText("ทะเบียนรถ   : -");}
+                case 2 -> {car_owner3.setText("<ว่าง>");car_id3.setText("ทะเบียนรถ   : -");}
+                case 3 -> {car_owner4.setText("<ว่าง>");car_id4.setText("ทะเบียนรถ   : -");}
+                case 4 -> {car_owner5.setText("<ว่าง>");car_id5.setText("ทะเบียนรถ   : -");}
+                case 5 -> {car_owner6.setText("<ว่าง>");car_id6.setText("ทะเบียนรถ   : -");}
+                case 6 -> {car_owner7.setText("<ว่าง>");car_id7.setText("ทะเบียนรถ   : -");}
+                case 7 -> {car_owner8.setText("<ว่าง>");car_id8.setText("ทะเบียนรถ   : -");}
+                case 8 -> {car_owner9.setText("<ว่าง>");car_id9.setText("ทะเบียนรถ   : -");}
+                case 9 -> {car_owner10.setText("<ว่าง>");car_id10.setText("ทะเบียนรถ   : -");}
+                default -> {
+                }
+            } 
+        }
+        
+
+        setCar_owner();
+        setCar_id();
+    }
 }

@@ -8,11 +8,13 @@ public class GarageController extends Online implements ActionListener {
     private Garage gr;
     private ManageCarFrame mcf;
     private TableActionEvent tav;
+    private JDesktopPane desktop_pane;
     
     public GarageController(JDesktopPane desktop_pane){
         super();
-        this.gr = new Garage();
+        this.gr = new Garage(this);
         GarageController gc = this;
+        this.desktop_pane = desktop_pane;
         this.tav = new TableActionEvent() {
             @Override
             public void view(int row) {
@@ -86,6 +88,7 @@ public class GarageController extends Online implements ActionListener {
             }
         };
         this.mcf = new ManageCarFrame(tav);
+        mcf.getAddButton().addActionListener(this);
     }
     
     public ManageCarFrame getManageCarFrame(){
@@ -102,11 +105,11 @@ public class GarageController extends Online implements ActionListener {
                 ((DefaultTableModel)mcf.getTable().getModel()).removeRow(i);
             }
         }
-        for(int i=0; i<gr.getAllCh().length; i++){
+        for(int i=0; i<10; i++){
            Channel cur_channel = gr.getCh(i);
            ((DefaultTableModel)mcf.getTable().getModel()).addRow(new Object[0]);
            mcf.getTable().setValueAt(i+1, i, 0);
-           if(gr.getCh(i).getCar() != null){
+           if(cur_channel.getCar() != null){
                Car tmp_car = cur_channel.getCar();
                String id = tmp_car.getCarID();
                String brand = tmp_car.getBrand();
@@ -137,7 +140,15 @@ public class GarageController extends Online implements ActionListener {
     
     @Override
     public void actionPerformed(ActionEvent e) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        if(e.getSource().equals(mcf.getAddButton())){
+            JInternalFrame inFrame = new JInternalFrame("AddCarFrame", false, true, false, true);
+            AddCarPanel addCar = new AddCarPanel(this, inFrame);
+            inFrame.add(addCar);
+            inFrame.pack();
+            inFrame.setVisible(true);
+            this.desktop_pane.add(inFrame);
+        }
+        
     }
     
 }

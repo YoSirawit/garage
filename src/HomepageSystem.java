@@ -2,8 +2,8 @@ public class HomepageSystem {
     private Garage slot;
     private Car car;
     
-    public HomepageSystem(){
-        slot = new Garage();
+    public HomepageSystem(Garage gr){
+        slot = gr;
         car = new Car();
     }
     

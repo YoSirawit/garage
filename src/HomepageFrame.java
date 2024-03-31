@@ -7,9 +7,9 @@ public class HomepageFrame extends javax.swing.JFrame implements ChangePageButto
     /**
      * Creates new form HomePageFrame
      */
-    public HomepageFrame(){
+    public HomepageFrame(Garage gr){
         initComponents();
-        hps = new HomepageSystem();
+        hps = new HomepageSystem(gr);
         
         pnArr = new JPanel[]{statusPn0, statusPn1, statusPn2, statusPn3, statusPn4, statusPn5, statusPn6, statusPn7, statusPn8, statusPn9};
         bnArr = new JButton[]{statusBn0, statusBn1, statusBn2, statusBn3, statusBn4, statusBn5, statusBn6, statusBn7, statusBn8, statusBn9};
@@ -895,7 +895,7 @@ public class HomepageFrame extends javax.swing.JFrame implements ChangePageButto
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                HomepageFrame home = new HomepageFrame();
+                HomepageFrame home = new HomepageFrame(null);
                 home.setSize(1280, 720);
                 home.setVisible(true);
             }
@@ -924,6 +924,10 @@ public class HomepageFrame extends javax.swing.JFrame implements ChangePageButto
     @Override
     public JButton getReceiptButton(){
         return this.InvoiceButton;
+    }
+    
+    public void update(){
+        hps.checkslot(this);
     }
     
 
