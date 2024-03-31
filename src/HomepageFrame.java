@@ -7,14 +7,31 @@ public class HomepageFrame extends javax.swing.JFrame implements ChangePageButto
     /**
      * Creates new form HomePageFrame
      */
-    public HomepageFrame(Garage gr){
+    public HomepageFrame(Garage gr, JDesktopPane dtp){
         initComponents();
-        hps = new HomepageSystem(gr);
-        
+        hps = new HomepageSystem(gr, dtp);
+
         pnArr = new JPanel[]{statusPn0, statusPn1, statusPn2, statusPn3, statusPn4, statusPn5, statusPn6, statusPn7, statusPn8, statusPn9};
         bnArr = new JButton[]{statusBn0, statusBn1, statusBn2, statusBn3, statusBn4, statusBn5, statusBn6, statusBn7, statusBn8, statusBn9};
         
+        //set tooltip for car picture
+        this.carpic0.setToolTipText(hps.ShowCarDetail(0));
+        this.carpic1.setToolTipText(hps.ShowCarDetail(1));
+        this.carpic2.setToolTipText(hps.ShowCarDetail(2));
+        this.carpic3.setToolTipText(hps.ShowCarDetail(3));
+        this.carpic4.setToolTipText(hps.ShowCarDetail(4));
+        this.carpic5.setToolTipText(hps.ShowCarDetail(5));
+        this.carpic6.setToolTipText(hps.ShowCarDetail(6));
+        this.carpic7.setToolTipText(hps.ShowCarDetail(7));
+        this.carpic8.setToolTipText(hps.ShowCarDetail(8));
+        this.carpic9.setToolTipText(hps.ShowCarDetail(9));
+        
+        //checkslot for table
         hps.checkslot(this);
+    }
+    
+    public HomepageSystem getHps(){
+        return this.hps;
     }
 
     /**
@@ -105,7 +122,7 @@ public class HomepageFrame extends javax.swing.JFrame implements ChangePageButto
         headTxt = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Dumrongruuay");
+        setTitle("Dumrongruay");
         setBackground(new java.awt.Color(0, 0, 0));
         setResizable(false);
 
@@ -140,7 +157,6 @@ public class HomepageFrame extends javax.swing.JFrame implements ChangePageButto
         MenuBar.setPreferredSize(new java.awt.Dimension(200, 670));
         MenuBar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        HomeButton.setBackground(new java.awt.Color(255, 255, 255));
         HomeButton.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         HomeButton.setForeground(new java.awt.Color(255, 102, 0));
         HomeButton.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\TestIcon\\HomeWhite.png"));
@@ -230,6 +246,8 @@ public class HomepageFrame extends javax.swing.JFrame implements ChangePageButto
 
         statusPn0.setBackground(new java.awt.Color(255, 255, 255));
         statusPn0.setForeground(new java.awt.Color(255, 255, 255));
+        statusPn0.setToolTipText("");
+        statusPn0.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         carpic0.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir") + "\\src\\TestIcon\\car.png"));
 
@@ -237,6 +255,7 @@ public class HomepageFrame extends javax.swing.JFrame implements ChangePageButto
         statusBn0.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         statusBn0.setForeground(new java.awt.Color(255, 255, 255));
         statusBn0.setText("สถานะ");
+        statusBn0.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         javax.swing.GroupLayout statusPn0Layout = new javax.swing.GroupLayout(statusPn0);
         statusPn0.setLayout(statusPn0Layout);
@@ -288,6 +307,7 @@ public class HomepageFrame extends javax.swing.JFrame implements ChangePageButto
         statusBn1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         statusBn1.setForeground(new java.awt.Color(255, 255, 255));
         statusBn1.setText("สถานะ");
+        statusBn1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         statusBn1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 statusBn1ActionPerformed(evt);
@@ -344,6 +364,7 @@ public class HomepageFrame extends javax.swing.JFrame implements ChangePageButto
         statusBn2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         statusBn2.setForeground(new java.awt.Color(255, 255, 255));
         statusBn2.setText("สถานะ");
+        statusBn2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         statusBn2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 statusBn2ActionPerformed(evt);
@@ -400,6 +421,7 @@ public class HomepageFrame extends javax.swing.JFrame implements ChangePageButto
         statusBn3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         statusBn3.setForeground(new java.awt.Color(255, 255, 255));
         statusBn3.setText("สถานะ");
+        statusBn3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         javax.swing.GroupLayout statusPn3Layout = new javax.swing.GroupLayout(statusPn3);
         statusPn3.setLayout(statusPn3Layout);
@@ -452,6 +474,7 @@ public class HomepageFrame extends javax.swing.JFrame implements ChangePageButto
         statusBn4.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         statusBn4.setForeground(new java.awt.Color(255, 255, 255));
         statusBn4.setText("สถานะ");
+        statusBn4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         statusBn4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 statusBn4ActionPerformed(evt);
@@ -509,6 +532,7 @@ public class HomepageFrame extends javax.swing.JFrame implements ChangePageButto
         statusBn5.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         statusBn5.setForeground(new java.awt.Color(255, 255, 255));
         statusBn5.setText("สถานะ");
+        statusBn5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         javax.swing.GroupLayout statusPn5Layout = new javax.swing.GroupLayout(statusPn5);
         statusPn5.setLayout(statusPn5Layout);
@@ -561,6 +585,7 @@ public class HomepageFrame extends javax.swing.JFrame implements ChangePageButto
         statusBn6.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         statusBn6.setForeground(new java.awt.Color(255, 255, 255));
         statusBn6.setText("สถานะ");
+        statusBn6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         javax.swing.GroupLayout statusPn6Layout = new javax.swing.GroupLayout(statusPn6);
         statusPn6.setLayout(statusPn6Layout);
@@ -613,6 +638,7 @@ public class HomepageFrame extends javax.swing.JFrame implements ChangePageButto
         statusBn7.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         statusBn7.setForeground(new java.awt.Color(255, 255, 255));
         statusBn7.setText("สถานะ");
+        statusBn7.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         statusBn7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 statusBn7ActionPerformed(evt);
@@ -670,6 +696,7 @@ public class HomepageFrame extends javax.swing.JFrame implements ChangePageButto
         statusBn8.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         statusBn8.setForeground(new java.awt.Color(255, 255, 255));
         statusBn8.setText("สถานะ");
+        statusBn8.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         javax.swing.GroupLayout statusPn8Layout = new javax.swing.GroupLayout(statusPn8);
         statusPn8.setLayout(statusPn8Layout);
@@ -722,6 +749,7 @@ public class HomepageFrame extends javax.swing.JFrame implements ChangePageButto
         statusBn9.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         statusBn9.setForeground(new java.awt.Color(255, 255, 255));
         statusBn9.setText("สถานะ");
+        statusBn9.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         javax.swing.GroupLayout statusPn9Layout = new javax.swing.GroupLayout(statusPn9);
         statusPn9.setLayout(statusPn9Layout);
@@ -762,6 +790,7 @@ public class HomepageFrame extends javax.swing.JFrame implements ChangePageButto
         slot9.add(num10, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 0, 30, -1));
 
         headtextPn.setBackground(new java.awt.Color(78, 80, 82));
+        headtextPn.setToolTipText("test");
 
         headTxt.setBackground(new java.awt.Color(255, 204, 102));
         headTxt.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
@@ -891,11 +920,16 @@ public class HomepageFrame extends javax.swing.JFrame implements ChangePageButto
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                HomepageFrame home = new HomepageFrame(null);
+                // look and feel setting
+                try {
+                    UIManager.setLookAndFeel(new FlatLightLaf());
+                }catch(UnsupportedLookAndFeelException ex){
+                    ex.printStackTrace();
+                }
+                HomepageFrame home = new HomepageFrame(null, null);
                 home.setSize(1280, 720);
                 home.setVisible(true);
             }
@@ -926,6 +960,7 @@ public class HomepageFrame extends javax.swing.JFrame implements ChangePageButto
         return this.InvoiceButton;
     }
     
+    //update slot
     public void update(){
         hps.checkslot(this);
     }
