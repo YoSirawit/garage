@@ -260,6 +260,8 @@ public class EquipmentMainFrame extends javax.swing.JFrame implements ChangePage
         });
     }
     public void checkslot(){
+        jPanel2.removeAll();
+        jPanel3.removeAll();
         for (int i=0;i<10;i++){
             if(i<5){
                 if (this.gr.getCh(i).getCar() != null){

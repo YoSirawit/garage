@@ -52,7 +52,7 @@ public class MainController implements ActionListener{
         if(e.getSource().equals(lpc.getLoginFrame().getLoginButton())){
             if(lm.login(lpc.getLoginFrame().getUsername(), lpc.getLoginFrame().getPassword())){
                 mainframe.dispose();
-                mainframe = new JFrame();
+                mainframe = new JFrame("Garage System");
                 mainframe.setResizable(false);
                 mainframe.setContentPane(desktop_pane);
                 //look and feel
@@ -99,7 +99,7 @@ public class MainController implements ActionListener{
                 ec.getEquipmentFrame().getReceiptButton().addActionListener(this);
                 
                 homepage = (JPanel) hc.getHomepageframe().getContentPane();
-                mainframe.add(homepage);
+                desktop_pane.add(homepage);
                 mainframe.setSize(1280, 760);
                 mainframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 mainframe.setVisible(true);
@@ -168,6 +168,7 @@ public class MainController implements ActionListener{
                 e.getSource().equals(wpc.getWarehousePage().getEquipmentButton())
                 ){
             ec.getEquipmentFrame().getUsernameLabel().setText(lm.getAccount().getFirstName());
+            ec.getEquipmentFrame().checkslot();
             desktop_pane.removeAll();
             desktop_pane.add(ec.getEquipmentFrame().getContentPane());
             mainframe.setContentPane(desktop_pane);
