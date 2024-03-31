@@ -213,7 +213,11 @@ public class ManageCarFrame extends javax.swing.JFrame implements ChangePageButt
                 jButton1ActionPerformed(evt);
             }
         });
+<<<<<<< HEAD
         jPanel3.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 600, 60, 70));
+=======
+        jPanel3.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 600, 60, 40));
+>>>>>>> 2883cf34cce365c96f1aeb5d1aa2af0c35777587
 
         getContentPane().add(jPanel3, java.awt.BorderLayout.CENTER);
 
@@ -247,7 +251,8 @@ public class ManageCarFrame extends javax.swing.JFrame implements ChangePageButt
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        
+        AddCarFrame addCar = new AddCarFrame();
+        addCar.setVisible(true);
         
         
     }//GEN-LAST:event_jButton1ActionPerformed
