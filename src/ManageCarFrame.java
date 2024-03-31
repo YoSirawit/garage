@@ -35,7 +35,7 @@ public class ManageCarFrame extends javax.swing.JFrame implements ChangePageButt
 
         Header = new javax.swing.JPanel();
         usernamePn1 = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
+        userpic = new javax.swing.JLabel();
         usernameTxt1 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         MenuBar = new javax.swing.JPanel();
@@ -61,8 +61,8 @@ public class ManageCarFrame extends javax.swing.JFrame implements ChangePageButt
         usernamePn1.setBackground(new java.awt.Color(247, 127, 0));
         usernamePn1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/userWithcircle.png"))); // NOI18N
-        usernamePn1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, -1, -1));
+        userpic.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\TestIcon\\userWithcircle.png"));
+        usernamePn1.add(userpic, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, -1, -1));
 
         usernameTxt1.setBackground(new java.awt.Color(255, 255, 255));
         usernameTxt1.setText("@USERNAME");
@@ -201,7 +201,7 @@ public class ManageCarFrame extends javax.swing.JFrame implements ChangePageButt
         jPanel3.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1080, 620));
 
         jButton1.setBackground(new java.awt.Color(255, 102, 0));
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/PlusWhitejing.png"))); // NOI18N
+        jButton1.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\TestIcon\\PlusWhitejing.png"));
         jButton1.setBorder(null);
         jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -314,13 +314,13 @@ public class ManageCarFrame extends javax.swing.JFrame implements ChangePageButt
     private javax.swing.JPanel MenuBar;
     private javax.swing.JButton WarehouseButton;
     private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable jTable2;
     private javax.swing.JPanel usernamePn1;
     private javax.swing.JLabel usernameTxt1;
+    private javax.swing.JLabel userpic;
     // End of variables declaration//GEN-END:variables
 
     @Override
