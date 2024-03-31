@@ -1,3 +1,4 @@
+import com.formdev.flatlaf.FlatLightLaf;
 import java.awt.event.*;
 import javax.swing.*;
 
@@ -37,6 +38,12 @@ public class MainController implements ActionListener{
         mainframe.setLocationRelativeTo(null);
         lpc.getLoginFrame().getLoginButton().addActionListener(this);
         mainframe.setResizable(false);
+        //look and feel
+        try {
+            UIManager.setLookAndFeel(new FlatLightLaf());
+        }catch(UnsupportedLookAndFeelException ex){
+            ex.printStackTrace();
+        }
     }
 
     @Override
@@ -48,6 +55,12 @@ public class MainController implements ActionListener{
                 mainframe = new JFrame();
                 mainframe.setResizable(false);
                 mainframe.setContentPane(desktop_pane);
+                //look and feel
+                try {
+                    UIManager.setLookAndFeel(new FlatLightLaf());
+                }catch(UnsupportedLookAndFeelException ex){
+                    ex.printStackTrace();
+                }
                 
                 spc = new StuffPageController(lm, desktop_pane);
                 spc.getAccountFrame().getHomeButton().addActionListener(this);
