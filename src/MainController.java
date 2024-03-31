@@ -1,5 +1,3 @@
-
-import com.formdev.flatlaf.FlatLightLaf;
 import java.awt.event.*;
 import javax.swing.*;
 
@@ -64,7 +62,7 @@ public class MainController implements ActionListener{
                 gc.getManageCarFrame().getEquipmentButton().addActionListener(this);
                 gc.getManageCarFrame().getStuffManageButton().addActionListener(this);
                 
-                hc = new HomepageController(gc.getGarage());
+                hc = new HomepageController(gc.getGarage(), desktop_pane);
                 hc.getHomepageframe().getUsernameLabel().setText(lm.getAccount().getFirstName());
                 hc.getHomepageframe().getManagementButton().addActionListener(this);
                 hc.getHomepageframe().getStuffManageButton().addActionListener(this);
