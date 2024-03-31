@@ -198,7 +198,7 @@ public class ManageCarFrame extends javax.swing.JFrame implements ChangePageButt
             jTable2.getColumnModel().getColumn(1).setPreferredWidth(2);
         }
 
-        jPanel3.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1080, 620));
+        jPanel3.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1080, 600));
 
         jButton1.setBackground(new java.awt.Color(255, 102, 0));
         jButton1.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\TestIcon\\PlusWhitejing.png"));
@@ -213,7 +213,7 @@ public class ManageCarFrame extends javax.swing.JFrame implements ChangePageButt
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel3.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 613, 60, 70));
+        jPanel3.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 600, 60, 40));
 
         getContentPane().add(jPanel3, java.awt.BorderLayout.CENTER);
 
@@ -247,7 +247,8 @@ public class ManageCarFrame extends javax.swing.JFrame implements ChangePageButt
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        
+        AddCarFrame addCar = new AddCarFrame();
+        addCar.setVisible(true);
         
         
     }//GEN-LAST:event_jButton1ActionPerformed
