@@ -7,12 +7,14 @@ public class ReceiptMDIApplication extends javax.swing.JFrame {
     private String[] info;
     private int billIndex;
     private ResultSet product;
+    private double totalPrice;
     
-    public ReceiptMDIApplication(ResultSet product, String[] info, int billIndex) {
+    public ReceiptMDIApplication(ResultSet product, String[] info, int billIndex, double totalPrice) {
         initComponents();
         setDefaultCloseOperation(this.DISPOSE_ON_CLOSE);
         this.info = info;
         this.billIndex = billIndex;
+        this.totalPrice = totalPrice;
         bill = new Bill();
         try {
                 while (true) {
@@ -27,6 +29,7 @@ public class ReceiptMDIApplication extends javax.swing.JFrame {
                 System.out.println(ex);
             }
         this.showItem();
+        totalTextField.setText(String.valueOf(totalPrice));
     }
     
     public void LinkData(String carOwner,String carId) {
@@ -165,6 +168,7 @@ public class ReceiptMDIApplication extends javax.swing.JFrame {
         jTextArea1.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jTextArea1.setForeground(new java.awt.Color(255, 255, 255));
         jTextArea1.setRows(5);
+        jTextArea1.setText("ไม่มีข้อมูล");
         jTextArea1.setDisabledTextColor(new java.awt.Color(0, 0, 0));
         jTextArea1.setEnabled(false);
         jScrollPane1.setViewportView(jTextArea1);
