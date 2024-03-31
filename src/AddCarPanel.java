@@ -156,7 +156,7 @@ public class AddCarPanel extends javax.swing.JPanel {
         jLabel7.setForeground(new java.awt.Color(242, 157, 0));
         jLabel7.setText("Date_out :");
 
-        selectCh.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select channel", "1", "2", "3", "4", "5", "6", "7", "8" }));
+        selectCh.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select channel", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" }));
         selectCh.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 selectChActionPerformed(evt);
