@@ -1,5 +1,6 @@
 
 import javax.swing.JInternalFrame;
+import java.sql.*;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -10,21 +11,23 @@ import javax.swing.JInternalFrame;
  *
  * @author extra
  */
-public class StuffInfoPanel extends javax.swing.JPanel {
+public class StuffEditPanel extends javax.swing.JPanel {
     private JInternalFrame inFrame;
+    private Online connect;
 
     /**
      * Creates new form StuffInfoPanel
      */
-    public StuffInfoPanel(String userName, String f_name, String l_name, String email, String phone, int level, JInternalFrame inFrame) {
+    public StuffEditPanel(String userName, String f_name, String l_name, String email, String phone, int level, JInternalFrame inFrame, Online connect) {
         initComponents();
-        this.userName.setText(userName);
+        this.userNameTextFIeld.setText(userName);
         this.firstNameTextField.setText(f_name);
         this.lastNameTextField.setText(l_name);
         this.emailTextField.setText(email);
         this.phoneTextField.setText(phone);
         this.levelTextField.setText(level+"");
         this.inFrame = inFrame;
+        this.connect = connect;
     }
 
     /**
@@ -38,7 +41,6 @@ public class StuffInfoPanel extends javax.swing.JPanel {
 
         jPanel3 = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
-        userName = new javax.swing.JLabel();
         carIDLabel = new javax.swing.JLabel();
         modelLable = new javax.swing.JLabel();
         firstNameTextField = new javax.swing.JTextField();
@@ -50,16 +52,12 @@ public class StuffInfoPanel extends javax.swing.JPanel {
         carIDLabel3 = new javax.swing.JLabel();
         carIDLabel4 = new javax.swing.JLabel();
         levelTextField = new javax.swing.JTextField();
-        close_button = new javax.swing.JButton();
+        confirm_button = new javax.swing.JButton();
+        userNameTextFIeld = new javax.swing.JTextField();
 
         jPanel3.setBackground(new java.awt.Color(255, 184, 0));
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
-
-        userName.setFont(new java.awt.Font("IrisUPC", 3, 48)); // NOI18N
-        userName.setForeground(new java.awt.Color(242, 157, 0));
-        userName.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        userName.setText("Username");
 
         carIDLabel.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         carIDLabel.setForeground(new java.awt.Color(242, 157, 0));
@@ -68,7 +66,6 @@ public class StuffInfoPanel extends javax.swing.JPanel {
         modelLable.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         modelLable.setForeground(new java.awt.Color(242, 157, 0));
 
-        firstNameTextField.setEditable(false);
         firstNameTextField.setBackground(new java.awt.Color(233, 233, 233));
         firstNameTextField.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         firstNameTextField.setForeground(new java.awt.Color(69, 69, 69));
@@ -78,7 +75,6 @@ public class StuffInfoPanel extends javax.swing.JPanel {
             }
         });
 
-        lastNameTextField.setEditable(false);
         lastNameTextField.setBackground(new java.awt.Color(233, 233, 233));
         lastNameTextField.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         lastNameTextField.setForeground(new java.awt.Color(69, 69, 69));
@@ -92,7 +88,6 @@ public class StuffInfoPanel extends javax.swing.JPanel {
         carIDLabel1.setForeground(new java.awt.Color(242, 157, 0));
         carIDLabel1.setText("LastName :");
 
-        emailTextField.setEditable(false);
         emailTextField.setBackground(new java.awt.Color(233, 233, 233));
         emailTextField.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         emailTextField.setForeground(new java.awt.Color(69, 69, 69));
@@ -106,7 +101,6 @@ public class StuffInfoPanel extends javax.swing.JPanel {
         carIDLabel2.setForeground(new java.awt.Color(242, 157, 0));
         carIDLabel2.setText("Email :");
 
-        phoneTextField.setEditable(false);
         phoneTextField.setBackground(new java.awt.Color(233, 233, 233));
         phoneTextField.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         phoneTextField.setForeground(new java.awt.Color(69, 69, 69));
@@ -124,7 +118,6 @@ public class StuffInfoPanel extends javax.swing.JPanel {
         carIDLabel4.setForeground(new java.awt.Color(242, 157, 0));
         carIDLabel4.setText("Level :");
 
-        levelTextField.setEditable(false);
         levelTextField.setBackground(new java.awt.Color(233, 233, 233));
         levelTextField.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         levelTextField.setForeground(new java.awt.Color(69, 69, 69));
@@ -134,13 +127,23 @@ public class StuffInfoPanel extends javax.swing.JPanel {
             }
         });
 
-        close_button.setBackground(new java.awt.Color(127, 197, 148));
-        close_button.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        close_button.setForeground(new java.awt.Color(255, 255, 255));
-        close_button.setText("Close");
-        close_button.addActionListener(new java.awt.event.ActionListener() {
+        confirm_button.setBackground(new java.awt.Color(127, 197, 148));
+        confirm_button.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        confirm_button.setForeground(new java.awt.Color(255, 255, 255));
+        confirm_button.setText("Confirm");
+        confirm_button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                close_buttonActionPerformed(evt);
+                confirm_buttonActionPerformed(evt);
+            }
+        });
+
+        userNameTextFIeld.setEditable(false);
+        userNameTextFIeld.setFont(new java.awt.Font("IrisUPC", 1, 48)); // NOI18N
+        userNameTextFIeld.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        userNameTextFIeld.setText("userName");
+        userNameTextFIeld.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                userNameTextFIeldActionPerformed(evt);
             }
         });
 
@@ -171,16 +174,14 @@ public class StuffInfoPanel extends javax.swing.JPanel {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(carIDLabel)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(firstNameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 311, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(30, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(userName, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(96, 96, 96))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(firstNameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 311, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(userNameTextFIeld, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(32, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(close_button, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+                    .addComponent(confirm_button, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
                     .addComponent(modelLable, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -188,7 +189,7 @@ public class StuffInfoPanel extends javax.swing.JPanel {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(userName, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(userNameTextFIeld, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(carIDLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -215,7 +216,7 @@ public class StuffInfoPanel extends javax.swing.JPanel {
                         .addComponent(modelLable))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(close_button)))
+                        .addComponent(confirm_button)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -268,9 +269,32 @@ public class StuffInfoPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_levelTextFieldActionPerformed
 
-    private void close_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_close_buttonActionPerformed
-       inFrame.dispose();
-    }//GEN-LAST:event_close_buttonActionPerformed
+    private void confirm_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_confirm_buttonActionPerformed
+        String username = this.userNameTextFIeld.getText();
+        String f_name = this.firstNameTextField.getText();
+        String l_name = this.lastNameTextField.getText();
+        String email = this.emailTextField.getText();
+        String phone = this.phoneTextField.getText();
+        int level = Integer.parseInt(this.levelTextField.getText());
+        String sql = String.format("update userid set "
+                + "FirstName = '%s', "
+                + "LastName = '%s', "
+                + "email = '%s', "
+                + "user_level = %d,"
+                + "phone = '%s' "
+                + "where username = '%s'", f_name, l_name, email, level, phone, username);
+        try{
+            connect.getStatement().executeUpdate(sql);
+        }catch(SQLException sqle){
+            sqle.printStackTrace();
+        }
+        ((StuffPageController)connect).update();
+        inFrame.dispose();
+    }//GEN-LAST:event_confirm_buttonActionPerformed
+
+    private void userNameTextFIeldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userNameTextFIeldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_userNameTextFIeldActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -279,7 +303,7 @@ public class StuffInfoPanel extends javax.swing.JPanel {
     private javax.swing.JLabel carIDLabel2;
     private javax.swing.JLabel carIDLabel3;
     private javax.swing.JLabel carIDLabel4;
-    private javax.swing.JButton close_button;
+    private javax.swing.JButton confirm_button;
     private javax.swing.JTextField emailTextField;
     private javax.swing.JTextField firstNameTextField;
     private javax.swing.JPanel jPanel1;
@@ -288,6 +312,6 @@ public class StuffInfoPanel extends javax.swing.JPanel {
     private javax.swing.JTextField levelTextField;
     private javax.swing.JLabel modelLable;
     private javax.swing.JTextField phoneTextField;
-    private javax.swing.JLabel userName;
+    private javax.swing.JTextField userNameTextFIeld;
     // End of variables declaration//GEN-END:variables
 }

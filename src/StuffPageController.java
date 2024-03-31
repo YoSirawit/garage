@@ -8,6 +8,7 @@ public class StuffPageController extends Online {
     private AccountManageFrame accFrame;
     
     public StuffPageController(LoginManager lm, JDesktopPane desktop_pane){
+        StuffPageController spc = this;
         TableActionEvent tav = new TableActionEvent() {
             @Override
             public void view(int row) {
@@ -35,12 +36,36 @@ public class StuffPageController extends Online {
 
             @Override
             public void edit(int row) {
-                System.out.println("edit :" + row);
+                String userName = (String)accFrame.getTable().getValueAt(row, 0);
+                try{
+                    String sql = String.format("select * from userid where username = '%s'", userName);
+                    ResultSet result = getStatement().executeQuery(sql);
+                    result.next();
+                    int level = result.getInt(2);
+                    String f_name = result.getString(3);
+                    String l_name = result.getString(4);
+                    String email = result.getString(7);
+                    String phone = result.getString(8);
+                    JInternalFrame inFrame = new JInternalFrame("Stuff Info", false, true, false, true);
+                    StuffEditPanel stuff_edit = new StuffEditPanel(userName, f_name, l_name, email, phone, level, inFrame, spc);
+                    inFrame.add(stuff_edit);
+                    inFrame.pack();
+                    inFrame.setVisible(true);
+                    desktop_pane.add(inFrame);
+                }catch(SQLException sqle){
+                    sqle.printStackTrace();
+                }
             }
 
             @Override
             public void del(int row) {
-                System.out.println("del :" + row);
+                String username = (String)accFrame.getTable().getValueAt(row, 0);
+                try{
+                    getStatement().executeUpdate(String.format("delete from userid where username = '%s'", username));
+                }catch(SQLException sqle){
+                    sqle.printStackTrace();
+                }
+                update();
             }
         };
         this.accFrame = new AccountManageFrame(lm, tav);
