@@ -351,7 +351,7 @@ public class EquipmentFrame1 extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                        .addContainerGap()
+                        .addGap(0, 0, 0)
                         .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addComponent(headPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 1280, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 0, Short.MAX_VALUE))
@@ -434,9 +434,9 @@ public class EquipmentFrame1 extends javax.swing.JFrame {
      */
     public static void main(String args[]) {
         try {
-                UIManager.setLookAndFeel(new FlatLightLaf());
-            }catch(UnsupportedLookAndFeelException ex){
-                ex.printStackTrace();}
+            UIManager.setLookAndFeel(new FlatLightLaf());
+        }catch(UnsupportedLookAndFeelException ex){
+            ex.printStackTrace();}
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 EquipmentFrame1 eq = new EquipmentFrame1();
