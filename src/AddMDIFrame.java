@@ -197,6 +197,123 @@ public class AddMDIFrame extends javax.swing.JFrame {
             bill.addItem(item);
             String decrease = String.format("UPDATE inventory SET quantity= quantity - %d WHERE ID= %d", Integer.parseInt(QuantityField.getText()), Integer.parseInt(idField.getText()));
             db.getUpdate(decrease);
+            String getCarCh = String.format("select ch from car_list where car_id = '%s'", this.car.getCarID());
+            rs = db.getConnect(getCarCh);
+            rs.next();
+            int ch = rs.getInt(1);
+            String checkItem = "";
+            switch(ch){
+                case 1 -> {
+                    checkItem = String.format("select * from bill_1 where Name = '%s'", item.getName());
+                    rs = db.getConnect(checkItem);
+                    if(rs.next()){
+                        String addItem = String.format("update bill_1 set Quantity = Quantity + %d where Name = '%s'", item.getVolume(), item.getName());
+                        db.getUpdate(addItem);
+                    }else{
+                        String addNewItem = String.format("insert into bill_1(Name, Quantity, Price_Per_Piece) values('%s', %d, %f)", item.getName(), item.getVolume(), item.getPrice());
+                        db.getUpdate(addNewItem);
+                    }
+                }
+                case 2 -> {
+                    checkItem = String.format("select * from bill_2 where Name = '%s'", item.getName());
+                    rs = db.getConnect(checkItem);
+                    if(rs.next()){
+                        String addItem = String.format("update bill_2 set Quantity = Quantity + %d where Name = '%s'", item.getVolume(), item.getName());
+                        db.getUpdate(addItem);
+                    }else{
+                        String addNewItem = String.format("insert into bill_2(Name, Quantity, Price_Per_Piece) values('%s', %d, %f)", item.getName(), item.getVolume(), item.getPrice());
+                        db.getUpdate(addNewItem);
+                    }
+                }
+                case 3 -> {
+                    checkItem = String.format("select * from bill_3 where Name = '%s'", item.getName());
+                    rs = db.getConnect(checkItem);
+                    if(rs.next()){
+                        String addItem = String.format("update bill_3 set Quantity = Quantity + %d where Name = '%s'", item.getVolume(), item.getName());
+                        db.getUpdate(addItem);
+                    }else{
+                        String addNewItem = String.format("insert into bill_3(Name, Quantity, Price_Per_Piece) values('%s', %d, %f)", item.getName(), item.getVolume(), item.getPrice());
+                        db.getUpdate(addNewItem);
+                    }
+                }
+                case 4 -> {
+                    checkItem = String.format("select * from bill_4 where Name = '%s'", item.getName());
+                    rs = db.getConnect(checkItem);
+                    if(rs.next()){
+                        String addItem = String.format("update bill_4 set Quantity = Quantity + %d where Name = '%s'", item.getVolume(), item.getName());
+                        db.getUpdate(addItem);
+                    }else{
+                        String addNewItem = String.format("insert into bill_4(Name, Quantity, Price_Per_Piece) values('%s', %d, %f)", item.getName(), item.getVolume(), item.getPrice());
+                        db.getUpdate(addNewItem);
+                    }
+                }
+                case 5 -> {
+                    checkItem = String.format("select * from bill_5 where Name = '%s'", item.getName());
+                    rs = db.getConnect(checkItem);
+                    if(rs.next()){
+                        String addItem = String.format("update bill_5 set Quantity = Quantity + %d where Name = '%s'", item.getVolume(), item.getName());
+                        db.getUpdate(addItem);
+                    }else{
+                        String addNewItem = String.format("insert into bill_5(Name, Quantity, Price_Per_Piece) values('%s', %d, %f)", item.getName(), item.getVolume(), item.getPrice());
+                        db.getUpdate(addNewItem);
+                    }
+                }
+                case 6 -> {
+                    checkItem = String.format("select * from bill_6 where Name = '%s'", item.getName());
+                    rs = db.getConnect(checkItem);
+                    if(rs.next()){
+                        String addItem = String.format("update bill_6 set Quantity = Quantity + %d where Name = '%s'", item.getVolume(), item.getName());
+                        db.getUpdate(addItem);
+                    }else{
+                        String addNewItem = String.format("insert into bill_6(Name, Quantity, Price_Per_Piece) values('%s', %d, %f)", item.getName(), item.getVolume(), item.getPrice());
+                        db.getUpdate(addNewItem);
+                    }
+                }
+                case 7 -> {
+                    checkItem = String.format("select * from bill_7 where Name = '%s'", item.getName());
+                    rs = db.getConnect(checkItem);
+                    if(rs.next()){
+                        String addItem = String.format("update bill_7 set Quantity = Quantity + %d where Name = '%s'", item.getVolume(), item.getName());
+                        db.getUpdate(addItem);
+                    }else{
+                        String addNewItem = String.format("insert into bill_7(Name, Quantity, Price_Per_Piece) values('%s', %d, %f)", item.getName(), item.getVolume(), item.getPrice());
+                        db.getUpdate(addNewItem);
+                    }
+                }
+                case 8 -> {
+                    checkItem = String.format("select * from bill_8 where Name = '%s'", item.getName());
+                    rs = db.getConnect(checkItem);
+                    if(rs.next()){
+                        String addItem = String.format("update bill_8 set Quantity = Quantity + %d where Name = '%s'", item.getVolume(), item.getName());
+                        db.getUpdate(addItem);
+                    }else{
+                        String addNewItem = String.format("insert into bill_8(Name, Quantity, Price_Per_Piece) values('%s', %d, %f)", item.getName(), item.getVolume(), item.getPrice());
+                        db.getUpdate(addNewItem);
+                    }
+                }
+                case 9 -> {
+                    checkItem = String.format("select * from bill_9 where Name = '%s'", item.getName());
+                    rs = db.getConnect(checkItem);
+                    if(rs.next()){
+                        String addItem = String.format("update bill_9 set Quantity = Quantity + %d where Name = '%s'", item.getVolume(), item.getName());
+                        db.getUpdate(addItem);
+                    }else{
+                        String addNewItem = String.format("insert into bill_9(Name, Quantity, Price_Per_Piece) values('%s', %d, %f)", item.getName(), item.getVolume(), item.getPrice());
+                        db.getUpdate(addNewItem);
+                    }
+                }
+                case 10 -> {
+                    checkItem = String.format("select * from bill_10 where Name = '%s'", item.getName());
+                    rs = db.getConnect(checkItem);
+                    if(rs.next()){
+                        String addItem = String.format("update bill_10 set Quantity = Quantity + %d where Name = '%s'", item.getVolume(), item.getName());
+                        db.getUpdate(addItem);
+                    }else{
+                        String addNewItem = String.format("insert into bill_10(Name, Quantity, Price_Per_Piece) values('%s', %d, %f)", item.getName(), item.getVolume(), item.getPrice());
+                        db.getUpdate(addNewItem);
+                    }
+                }
+            }
             this.dispose();
         } catch (SQLException ex) {
             Logger.getLogger(AddMDIFrame.class.getName()).log(Level.SEVERE, null, ex);
