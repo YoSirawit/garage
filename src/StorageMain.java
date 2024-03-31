@@ -1,5 +1,6 @@
 
 import javax.swing.*;
+import java.sql.*;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -17,6 +18,18 @@ public class StorageMain extends javax.swing.JFrame implements ChangePageButton 
      */
     public StorageMain() {
         initComponents();
+    }
+    private void openStorageFrame(String type) {
+        TestConnection db = new TestConnection();
+        try {
+            ResultSet item = db.getConnect(String.format("SELECT * FROM inventory WHERE item_type='%s'",type));
+            StorageFrame storageFrame = new StorageFrame(type);
+            storageFrame.pack();
+            storageFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+            storageFrame.setVisible(true);
+        } catch (Exception ex) {
+            System.out.println(ex);
+        }
     }
 
     /**
@@ -608,38 +621,47 @@ public class StorageMain extends javax.swing.JFrame implements ChangePageButton 
 
     private void SuspensionButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SuspensionButtonActionPerformed
         // TODO add your handling code here:
+        openStorageFrame("Suspension and Steering");
     }//GEN-LAST:event_SuspensionButtonActionPerformed
 
     private void DrivetrainButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DrivetrainButtonActionPerformed
         // TODO add your handling code here:
+        openStorageFrame("Transmission and Drivetrain");
     }//GEN-LAST:event_DrivetrainButtonActionPerformed
 
     private void FuelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FuelButtonActionPerformed
         // TODO add your handling code here:
+        openStorageFrame("Fuel System");
     }//GEN-LAST:event_FuelButtonActionPerformed
 
     private void ExhaustButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExhaustButtonActionPerformed
         // TODO add your handling code here:
+        openStorageFrame("Exhaust System");
     }//GEN-LAST:event_ExhaustButtonActionPerformed
 
     private void EngineButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EngineButtonActionPerformed
         // TODO add your handling code here:
+        openStorageFrame("Engine System");
     }//GEN-LAST:event_EngineButtonActionPerformed
 
     private void ElectricalButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ElectricalButtonActionPerformed
         // TODO add your handling code here:
+        openStorageFrame("Electrical System");
     }//GEN-LAST:event_ElectricalButtonActionPerformed
 
     private void CoolingButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CoolingButtonActionPerformed
         // TODO add your handling code here:
+        openStorageFrame("Cooling System");
     }//GEN-LAST:event_CoolingButtonActionPerformed
 
     private void BreakeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BreakeButtonActionPerformed
         // TODO add your handling code here:
+        openStorageFrame("Brake System");
     }//GEN-LAST:event_BreakeButtonActionPerformed
 
     private void BodyButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BodyButtonActionPerformed
         // TODO add your handling code here:
+        openStorageFrame("Body Components");
     }//GEN-LAST:event_BodyButtonActionPerformed
 
     private void TypeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TypeActionPerformed

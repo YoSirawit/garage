@@ -16,9 +16,11 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.sql.*;
+import java.time.*;
+import java.time.format.DateTimeFormatter;
 
 public class InvoiceCreator {
-    public InvoiceCreator(Bill bill) throws FileNotFoundException, IOException {
+    public InvoiceCreator(Bill bill, String[] info) throws FileNotFoundException, IOException {
         String path = "invoice.pdf";
         PdfWriter pdfWriter = new PdfWriter(path);
         PdfDocument pdfDocument = new PdfDocument(pdfWriter);
@@ -34,6 +36,7 @@ public class InvoiceCreator {
         float oneTwo[] = {threeCol+125f, threeCol*2};
         float fullWidth[] = {threeCol*3};
         Paragraph oneSp = new Paragraph("\n");
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd");
         
         Table table = new Table(twoColumnWidth);
         table.addCell(new Cell().add("Invoice").setFontSize(20f).setBorder(Border.NO_BORDER).setBold());
@@ -44,7 +47,7 @@ public class InvoiceCreator {
         nestedTable.addCell(getHeaderTextCellValue("---------"));  
         nestedTable.addCell(getHeaderTextCell("Invoice Date"));     
         //Invoice Date data
-        nestedTable.addCell(getHeaderTextCellValue("---------"));  
+        nestedTable.addCell(getHeaderTextCellValue(dtf.format(LocalDateTime.now())));  
         
         table.addCell(new Cell().add(nestedTable).setBorder(Border.NO_BORDER));
         
@@ -69,22 +72,27 @@ public class InvoiceCreator {
         twoColTable2.addCell(getCell10fLeft("Name", true));
         twoColTable2.addCell(getCell10fLeft("Dumrongruy", false));
         //Customer data
-        twoColTable2.addCell(getCell10fLeft("Customer's name", false));
+        twoColTable2.addCell(getCell10fLeft(info[0], false));
         document.add(twoColTable2);
         
         Table twoColTable3 = new Table(twoColumnWidth);
         twoColTable3.addCell(getCell10fLeft("Name", true));
         twoColTable3.addCell(getCell10fLeft("Address", true));
         //Worker data
-        twoColTable3.addCell(getCell10fLeft("Worker's name", false));
+        twoColTable3.addCell(getCell10fLeft("Dumrong", false));
         //Customer data
         twoColTable3.addCell(getCell10fLeft("Customer's address", false));
         document.add(twoColTable3);
         
+        Table twoColTable4 = new Table(twoColumnWidth);
+        twoColTable4.addCell(getCell10fLeft("Address", true));
+        twoColTable4.addCell(getCell10fLeft("Car's owner name", true));
+        //Organize's data
+        twoColTable4.addCell(getCell10fLeft("Organize's address", false));
+        twoColTable4.addCell(getCell10fLeft(info[1], false));
+        document.add(twoColTable4);
+        
         Table oneColTable1 = new Table(oneColumnWidth);
-        oneColTable1.addCell(getCell10fLeft("Address", true));
-        //Organize data
-        oneColTable1.addCell(getCell10fLeft("Organize's address", false));
         oneColTable1.addCell(getCell10fLeft("Email", true));
         oneColTable1.addCell(getCell10fLeft("dumrongruykanchang@gmail.com", false));
         document.add(oneColTable1);

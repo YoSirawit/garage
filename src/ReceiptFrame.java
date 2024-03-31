@@ -917,7 +917,10 @@ public class ReceiptFrame extends javax.swing.JFrame implements ChangePageButton
                 if (car_owner_index == 0) {
                     String carOwner = rs.getString("car_owner");
                     String carId = rs.getString("car_id");
-                    ReceiptMDIApplication mdi = new ReceiptMDIApplication(getProductFromDB("SELECT * FROM bill_1"));
+                    String[] info = new String[2];
+                    info[0] = carOwner;
+                    info[1] = carId;
+                    ReceiptMDIApplication mdi = new ReceiptMDIApplication(getProductFromDB("SELECT * FROM bill_1"), info, 1);
                     mdi.LinkData(carOwner,carId); // Set car_owner in ReceiptMDIApplication
                     mdi.setVisible(true);
                 break;
@@ -941,7 +944,10 @@ public class ReceiptFrame extends javax.swing.JFrame implements ChangePageButton
                 if (car_owner_index == 1) {
                     String carOwner = rs.getString("car_owner");
                     String carId = rs.getString("car_id");
-                    ReceiptMDIApplication mdi = new ReceiptMDIApplication(getProductFromDB("SELECT * FROM bill_2"));
+                    String[] info = new String[2];
+                    info[0] = carOwner;
+                    info[1] = carId;
+                    ReceiptMDIApplication mdi = new ReceiptMDIApplication(getProductFromDB("SELECT * FROM bill_2"), info, 2);
                     mdi.LinkData(carOwner,carId); // Set car_owner in ReceiptMDIApplication
                     mdi.setVisible(true);
                 break;
@@ -965,7 +971,10 @@ public class ReceiptFrame extends javax.swing.JFrame implements ChangePageButton
                 if (car_owner_index == 2) {
                     String carOwner = rs.getString("car_owner");
                     String carId = rs.getString("car_id");
-                    ReceiptMDIApplication mdi = new ReceiptMDIApplication(getProductFromDB("SELECT * FROM bill_3"));
+                    String[] info = new String[2];
+                    info[0] = carOwner;
+                    info[1] = carId;
+                    ReceiptMDIApplication mdi = new ReceiptMDIApplication(getProductFromDB("SELECT * FROM bill_3"), info, 3);
                     mdi.LinkData(carOwner,carId); // Set car_owner in ReceiptMDIApplication
                     mdi.setVisible(true);
                 break;
@@ -989,7 +998,10 @@ public class ReceiptFrame extends javax.swing.JFrame implements ChangePageButton
                 if (car_owner_index == 3) {
                     String carOwner = rs.getString("car_owner");
                     String carId = rs.getString("car_id");
-                    ReceiptMDIApplication mdi = new ReceiptMDIApplication(getProductFromDB("SELECT * FROM bill_4"));
+                    String[] info = new String[2];
+                    info[0] = carOwner;
+                    info[1] = carId;
+                    ReceiptMDIApplication mdi = new ReceiptMDIApplication(getProductFromDB("SELECT * FROM bill_4"), info, 4);
                     mdi.LinkData(carOwner,carId); // Set car_owner in ReceiptMDIApplication
                     mdi.setVisible(true);
                 break;
@@ -1014,7 +1026,10 @@ public class ReceiptFrame extends javax.swing.JFrame implements ChangePageButton
                 if (car_owner_index == 4) {
                     String carOwner = rs.getString("car_owner");
                     String carId = rs.getString("car_id");
-                    ReceiptMDIApplication mdi = new ReceiptMDIApplication(getProductFromDB("SELECT * FROM bill_5"));
+                    String[] info = new String[2];
+                    info[0] = carOwner;
+                    info[1] = carId;
+                    ReceiptMDIApplication mdi = new ReceiptMDIApplication(getProductFromDB("SELECT * FROM bill_5"), info, 5);
                     mdi.LinkData(carOwner,carId); // Set car_owner in ReceiptMDIApplication
                     mdi.setVisible(true);
                 break;
@@ -1038,7 +1053,10 @@ public class ReceiptFrame extends javax.swing.JFrame implements ChangePageButton
                 if (car_owner_index == 5) {
                     String carOwner = rs.getString("car_owner");
                     String carId = rs.getString("car_id");
-                    ReceiptMDIApplication mdi = new ReceiptMDIApplication(getProductFromDB("SELECT * FROM bill_6"));
+                    String[] info = new String[2];
+                    info[0] = carOwner;
+                    info[1] = carId;
+                    ReceiptMDIApplication mdi = new ReceiptMDIApplication(getProductFromDB("SELECT * FROM bill_6"), info, 6);
                     mdi.LinkData(carOwner,carId); // Set car_owner in ReceiptMDIApplication
                     mdi.setVisible(true);
                 break;
@@ -1062,7 +1080,10 @@ public class ReceiptFrame extends javax.swing.JFrame implements ChangePageButton
                 if (car_owner_index == 6) {
                     String carOwner = rs.getString("car_owner");
                     String carId = rs.getString("car_id");
-                    ReceiptMDIApplication mdi = new ReceiptMDIApplication(getProductFromDB("SELECT * FROM bill_7"));
+                    String[] info = new String[2];
+                    info[0] = carOwner;
+                    info[1] = carId;
+                    ReceiptMDIApplication mdi = new ReceiptMDIApplication(getProductFromDB("SELECT * FROM bill_7"), info, 7);
                     mdi.LinkData(carOwner,carId); // Set car_owner in ReceiptMDIApplication
                     mdi.setVisible(true);
                 break;
@@ -1086,7 +1107,10 @@ public class ReceiptFrame extends javax.swing.JFrame implements ChangePageButton
                 if (car_owner_index == 7) {
                     String carOwner = rs.getString("car_owner");
                     String carId = rs.getString("car_id");
-                    ReceiptMDIApplication mdi = new ReceiptMDIApplication(getProductFromDB("SELECT * FROM bill_8"));
+                    String[] info = new String[2];
+                    info[0] = carOwner;
+                    info[1] = carId;
+                    ReceiptMDIApplication mdi = new ReceiptMDIApplication(getProductFromDB("SELECT * FROM bill_8"), info, 8);
                     mdi.LinkData(carOwner,carId); // Set car_owner in ReceiptMDIApplication
                     mdi.setVisible(true);
                 break;
@@ -1110,7 +1134,10 @@ public class ReceiptFrame extends javax.swing.JFrame implements ChangePageButton
                 if (car_owner_index == 8) {
                     String carOwner = rs.getString("car_owner");
                     String carId = rs.getString("car_id");
-                    ReceiptMDIApplication mdi = new ReceiptMDIApplication(getProductFromDB("SELECT * FROM bill_9"));
+                    String[] info = new String[2];
+                    info[0] = carOwner;
+                    info[1] = carId;
+                    ReceiptMDIApplication mdi = new ReceiptMDIApplication(getProductFromDB("SELECT * FROM bill_9"), info, 9);
                     mdi.LinkData(carOwner,carId); // Set car_owner in ReceiptMDIApplication
                     mdi.setVisible(true);
                 break;
@@ -1134,7 +1161,10 @@ public class ReceiptFrame extends javax.swing.JFrame implements ChangePageButton
                 if (car_owner_index == 9) {
                     String carOwner = rs.getString("car_owner");
                     String carId = rs.getString("car_id");
-                    ReceiptMDIApplication mdi = new ReceiptMDIApplication(getProductFromDB("SELECT * FROM bill_10"));
+                    String[] info = new String[2];
+                    info[0] = carOwner;
+                    info[1] = carId;
+                    ReceiptMDIApplication mdi = new ReceiptMDIApplication(getProductFromDB("SELECT * FROM bill_10"), info, 10);
                     mdi.LinkData(carOwner,carId); // Set car_owner in ReceiptMDIApplication
                     mdi.setVisible(true);
                 break;

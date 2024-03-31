@@ -1,12 +1,18 @@
 import java.sql.*;
+import java.util.*;
 
 public class ReceiptMDIApplication extends javax.swing.JFrame {
-    public TestConnection db;
+    private TestConnection db;
     private Bill bill;
+    private String[] info;
+    private int billIndex;
+    private ResultSet product;
     
-    public ReceiptMDIApplication(ResultSet product) {
+    public ReceiptMDIApplication(ResultSet product, String[] info, int billIndex) {
         initComponents();
         setDefaultCloseOperation(this.DISPOSE_ON_CLOSE);
+        this.info = info;
+        this.billIndex = billIndex;
         bill = new Bill();
         try {
                 while (true) {
@@ -20,6 +26,7 @@ public class ReceiptMDIApplication extends javax.swing.JFrame {
             } catch (Exception ex) {
                 System.out.println(ex);
             }
+        this.showItem();
     }
     
     public void LinkData(String carOwner,String carId) {
@@ -33,6 +40,12 @@ public class ReceiptMDIApplication extends javax.swing.JFrame {
         }
     }
     
+    private void showItem() {
+        List<Item> itemList = bill.getInfo();
+        for (Item item:itemList) {
+            this.jTextArea1.append(String.format("%s (%.2f) x%d\t\ttotal %.2f baht\n", item.getName(), item.getPrice(), item.getVolume(), item.getTotal()));
+        }
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -51,13 +64,13 @@ public class ReceiptMDIApplication extends javax.swing.JFrame {
         car_id = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         totaltext1 = new javax.swing.JLabel();
-        jTextField4 = new javax.swing.JTextField();
+        totalTextField = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
         totaltext = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
+        wageTextField = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
+        priceTextField = new javax.swing.JTextField();
         jButton2 = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -93,12 +106,12 @@ public class ReceiptMDIApplication extends javax.swing.JFrame {
         totaltext1.setText("รวมทั้งหมดคิดเป็น");
         jPanel3.add(totaltext1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 210, 30));
 
-        jTextField4.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
-        jTextField4.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField4.setText("ราคา");
-        jTextField4.setDisabledTextColor(new java.awt.Color(0, 0, 0));
-        jTextField4.setEnabled(false);
-        jPanel3.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 0, 260, 30));
+        totalTextField.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
+        totalTextField.setForeground(new java.awt.Color(255, 255, 255));
+        totalTextField.setText("ราคา");
+        totalTextField.setDisabledTextColor(new java.awt.Color(0, 0, 0));
+        totalTextField.setEnabled(false);
+        jPanel3.add(totalTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 0, 260, 30));
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
@@ -112,14 +125,14 @@ public class ReceiptMDIApplication extends javax.swing.JFrame {
         totaltext.setText("ค่าแรง");
         jPanel5.add(totaltext, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 60, 30));
 
-        jTextField2.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
-        jTextField2.setText("รายการ");
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        wageTextField.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
+        wageTextField.setText("รายการ");
+        wageTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                wageTextFieldActionPerformed(evt);
             }
         });
-        jPanel5.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 0, 310, 30));
+        jPanel5.add(wageTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 0, 310, 30));
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
@@ -127,9 +140,9 @@ public class ReceiptMDIApplication extends javax.swing.JFrame {
         jLabel5.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         jPanel5.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 0, 30, 30));
 
-        jTextField3.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
-        jTextField3.setText("ราคา");
-        jPanel5.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 0, 260, 30));
+        priceTextField.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
+        priceTextField.setText("ราคา");
+        jPanel5.add(priceTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 0, 260, 30));
 
         jButton2.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         jButton2.setText("+");
@@ -152,7 +165,6 @@ public class ReceiptMDIApplication extends javax.swing.JFrame {
         jTextArea1.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jTextArea1.setForeground(new java.awt.Color(255, 255, 255));
         jTextArea1.setRows(5);
-        jTextArea1.setText("อะไหล่");
         jTextArea1.setDisabledTextColor(new java.awt.Color(0, 0, 0));
         jTextArea1.setEnabled(false);
         jScrollPane1.setViewportView(jTextArea1);
@@ -236,15 +248,15 @@ public class ReceiptMDIApplication extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void wageTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wageTextFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_wageTextFieldActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        try {
+                try {
             // TODO add your handling code here:
-            InvoiceCreator invoice = new InvoiceCreator(bill);
+            InvoiceCreator invoice = new InvoiceCreator(bill, info);
         } catch (Exception ex) {
             System.out.println("Something wrong.");
         }
@@ -252,6 +264,63 @@ public class ReceiptMDIApplication extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
+        db = new TestConnection();
+        switch (billIndex) {
+            case 1 -> {
+                db.getUpdate(String.format("INSERT INTO bill_1 (Name,Quantity,Price_Per_Piece) VALUES ('%s',1,%f)", this.wageTextField.getText(),Double.parseDouble(this.priceTextField.getText())));
+                product = db.getConnect("SELECT * FROM bill_1");
+            }
+            case 2 -> {
+                db.getUpdate(String.format("INSERT INTO bill_2 (Name,Quantity,Price_Per_Piece) VALUES ('%s',1,%f)", this.wageTextField.getText(),Double.parseDouble(this.priceTextField.getText())));                
+                product = db.getConnect("SELECT * FROM bill_2");
+            }
+            case 3 -> {
+                db.getUpdate(String.format("INSERT INTO bill_3 (Name,Quantity,Price_Per_Piece) VALUES ('%s',1,%f)", this.wageTextField.getText(),Double.parseDouble(this.priceTextField.getText())));                
+                product = db.getConnect("SELECT * FROM bill_3");
+            }
+            case 4 -> {
+                db.getUpdate(String.format("INSERT INTO bill_4 (Name,Quantity,Price_Per_Piece) VALUES ('%s',1,%f)", this.wageTextField.getText(),Double.parseDouble(this.priceTextField.getText())));                
+                product = db.getConnect("SELECT * FROM bill_4");
+            }
+            case 5 -> {
+                db.getUpdate(String.format("INSERT INTO bill_5 (Name,Quantity,Price_Per_Piece) VALUES ('%s',1,%f)", this.wageTextField.getText(),Double.parseDouble(this.priceTextField.getText())));                
+                product = db.getConnect("SELECT * FROM bill_5");
+            }
+            case 6 -> {
+                db.getUpdate(String.format("INSERT INTO bill_6 (Name,Quantity,Price_Per_Piece) VALUES ('%s',1,%f)", this.wageTextField.getText(),Double.parseDouble(this.priceTextField.getText())));                
+                product = db.getConnect("SELECT * FROM bill_6");
+            }
+            case 7 -> {
+                db.getUpdate(String.format("INSERT INTO bill_7 (Name,Quantity,Price_Per_Piece) VALUES ('%s',1,%f)", this.wageTextField.getText(),Double.parseDouble(this.priceTextField.getText())));                
+                product = db.getConnect("SELECT * FROM bill_7");
+            }
+            case 8 -> {
+                db.getUpdate(String.format("INSERT INTO bill_8 (Name,Quantity,Price_Per_Piece) VALUES ('%s',1,%f)", this.wageTextField.getText(),Double.parseDouble(this.priceTextField.getText())));                
+                product = db.getConnect("SELECT * FROM bill_8");
+            }
+            case 9 -> {
+                db.getUpdate(String.format("INSERT INTO bill_9 (Name,Quantity,Price_Per_Piece) VALUES ('%s',1,%f)", this.wageTextField.getText(),Double.parseDouble(this.priceTextField.getText())));                
+                product = db.getConnect("SELECT * FROM bill_9");
+            }
+            case 10 -> {
+                db.getUpdate(String.format("INSERT INTO bill_10 (Name,Quantity,Price_Per_Piece) VALUES ('%s',1,%f)", this.wageTextField.getText(),Double.parseDouble(this.priceTextField.getText())));                
+                product = db.getConnect("SELECT * FROM bill_10");
+            }
+        }
+        this.jTextArea1.append(String.format("%s (%.2f) x1\t\ttotal %.2f baht\n", this.wageTextField.getText(), Double.parseDouble(this.priceTextField.getText()),Double.parseDouble(this.priceTextField.getText())));
+        bill = new Bill();
+        try {
+                while (true) {
+                    if (product.next()) {
+                    Item item = new Item(product.getString(1), product.getInt(2), product.getDouble(3));
+                    bill.addItem(item);
+                    } else {
+                        break;
+                    }
+                }
+            } catch (Exception ex) {
+                System.out.println(ex);
+            }
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
@@ -283,11 +352,11 @@ public class ReceiptMDIApplication extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel5;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
+    private javax.swing.JTextField priceTextField;
+    private javax.swing.JTextField totalTextField;
     private javax.swing.JLabel totaltext;
     private javax.swing.JLabel totaltext1;
+    private javax.swing.JTextField wageTextField;
     // End of variables declaration//GEN-END:variables
 
 }
