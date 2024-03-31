@@ -36,7 +36,7 @@ public class MainController implements ActionListener{
         mainframe.setVisible(true);
         mainframe.setLocationRelativeTo(null);
         lpc.getLoginFrame().getLoginButton().addActionListener(this);
-
+        mainframe.setResizable(false);
     }
 
     @Override
@@ -46,6 +46,7 @@ public class MainController implements ActionListener{
             if(lm.login(lpc.getLoginFrame().getUsername(), lpc.getLoginFrame().getPassword())){
                 mainframe.dispose();
                 mainframe = new JFrame();
+                mainframe.setResizable(false);
                 mainframe.setContentPane(desktop_pane);
                 
                 spc = new StuffPageController(lm, desktop_pane);
