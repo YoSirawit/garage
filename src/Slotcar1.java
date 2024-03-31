@@ -138,6 +138,8 @@ public class Slotcar1 extends javax.swing.JPanel {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         EquipmentFrame1 eq1 = new EquipmentFrame1(car);
+        eq1.setResizable(false);
+        eq1.setLocationRelativeTo(null);
         eq1.setVisible(true);
         
     }//GEN-LAST:event_jButton1ActionPerformed
