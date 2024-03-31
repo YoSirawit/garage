@@ -39,13 +39,6 @@ public class StorageMain extends javax.swing.JFrame implements ChangePageButton 
         jLabel4 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         usernameTxt1 = new javax.swing.JLabel();
-        jPanel4 = new javax.swing.JPanel();
-        HomeButton2 = new javax.swing.JButton();
-        CustomButton2 = new javax.swing.JButton();
-        EquipmentButton2 = new javax.swing.JButton();
-        WarehouseButton2 = new javax.swing.JButton();
-        InvoiceButton2 = new javax.swing.JButton();
-        AccountButton2 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
         jPanel7 = new javax.swing.JPanel();
@@ -68,6 +61,13 @@ public class StorageMain extends javax.swing.JFrame implements ChangePageButton 
         jLabel19 = new javax.swing.JLabel();
         jLabel20 = new javax.swing.JLabel();
         Type = new javax.swing.JTextField();
+        MenuBar = new javax.swing.JPanel();
+        HomeButton2 = new javax.swing.JButton();
+        CustomButton2 = new javax.swing.JButton();
+        EquipmentButton2 = new javax.swing.JButton();
+        WarehouseButton2 = new javax.swing.JButton();
+        InvoiceButton2 = new javax.swing.JButton();
+        AccountButton2 = new javax.swing.JButton();
 
         jPanel2.setBackground(new java.awt.Color(255, 204, 102));
 
@@ -204,108 +204,6 @@ public class StorageMain extends javax.swing.JFrame implements ChangePageButton 
                     .addComponent(jLabel3)
                     .addComponent(usernameTxt1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
-        );
-
-        jPanel4.setBackground(new java.awt.Color(248, 245, 228));
-
-        HomeButton2.setBackground(new java.awt.Color(255, 102, 0));
-        HomeButton2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        HomeButton2.setForeground(new java.awt.Color(255, 255, 255));
-        HomeButton2.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\TestIcon\\HomeOrange.png"));
-        HomeButton2.setText("หน้าหลัก");
-        HomeButton2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        HomeButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                HomeButton2ActionPerformed(evt);
-            }
-        });
-
-        CustomButton2.setBackground(new java.awt.Color(255, 102, 0));
-        CustomButton2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        CustomButton2.setForeground(new java.awt.Color(255, 255, 255));
-        CustomButton2.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\TestIcon\\CarManageOrange.png"));
-        CustomButton2.setText("จัดการคิวรถ");
-        CustomButton2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        CustomButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CustomButton2ActionPerformed(evt);
-            }
-        });
-
-        EquipmentButton2.setBackground(new java.awt.Color(255, 102, 0));
-        EquipmentButton2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        EquipmentButton2.setForeground(new java.awt.Color(255, 255, 255));
-        EquipmentButton2.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\TestIcon\\ShopOrange.png"));
-        EquipmentButton2.setText("เบิกอุปกรณ์");
-        EquipmentButton2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        EquipmentButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                EquipmentButton2ActionPerformed(evt);
-            }
-        });
-
-        WarehouseButton2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        WarehouseButton2.setForeground(new java.awt.Color(255, 102, 0));
-        WarehouseButton2.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\TestIcon\\StorageOrange.png"));
-        WarehouseButton2.setText("คลังอุปกรณ์");
-        WarehouseButton2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        WarehouseButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                WarehouseButton2ActionPerformed(evt);
-            }
-        });
-
-        InvoiceButton2.setBackground(new java.awt.Color(255, 102, 0));
-        InvoiceButton2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        InvoiceButton2.setForeground(new java.awt.Color(255, 255, 255));
-        InvoiceButton2.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\TestIcon\\InvoiceOrange.png"));
-        InvoiceButton2.setText("ใบเสร็จ");
-        InvoiceButton2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        InvoiceButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                InvoiceButton2ActionPerformed(evt);
-            }
-        });
-
-        AccountButton2.setBackground(new java.awt.Color(255, 102, 0));
-        AccountButton2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        AccountButton2.setForeground(new java.awt.Color(255, 255, 255));
-        AccountButton2.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\TestIcon\\AccountWhite.png"));
-        AccountButton2.setText("จัดการพนักงาน");
-        AccountButton2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        AccountButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                AccountButton2ActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(WarehouseButton2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(InvoiceButton2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(AccountButton2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 203, Short.MAX_VALUE)
-            .addComponent(CustomButton2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(HomeButton2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(EquipmentButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(31, 31, 31)
-                .addComponent(HomeButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
-                .addComponent(CustomButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
-                .addComponent(EquipmentButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
-                .addComponent(WarehouseButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
-                .addComponent(InvoiceButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
-                .addComponent(AccountButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(130, Short.MAX_VALUE))
         );
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
@@ -574,6 +472,87 @@ public class StorageMain extends javax.swing.JFrame implements ChangePageButton 
                 .addContainerGap(99, Short.MAX_VALUE))
         );
 
+        MenuBar.setBackground(new java.awt.Color(248, 245, 228));
+        MenuBar.setPreferredSize(new java.awt.Dimension(200, 670));
+        MenuBar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        HomeButton2.setBackground(new java.awt.Color(255, 102, 0));
+        HomeButton2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        HomeButton2.setForeground(new java.awt.Color(255, 255, 255));
+        HomeButton2.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\TestIcon\\HomeOrange.png"));
+        HomeButton2.setText("หน้าหลัก");
+        HomeButton2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        HomeButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                HomeButton2ActionPerformed(evt);
+            }
+        });
+        MenuBar.add(HomeButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 30, 220, 70));
+
+        CustomButton2.setBackground(new java.awt.Color(255, 102, 0));
+        CustomButton2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        CustomButton2.setForeground(new java.awt.Color(255, 255, 255));
+        CustomButton2.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\TestIcon\\CarManageOrange.png"));
+        CustomButton2.setText("จัดการคิวรถ");
+        CustomButton2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        CustomButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CustomButton2ActionPerformed(evt);
+            }
+        });
+        MenuBar.add(CustomButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 130, 220, 70));
+
+        EquipmentButton2.setBackground(new java.awt.Color(255, 102, 0));
+        EquipmentButton2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        EquipmentButton2.setForeground(new java.awt.Color(255, 255, 255));
+        EquipmentButton2.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\TestIcon\\ShopOrange.png"));
+        EquipmentButton2.setText("เบิกอุปกรณ์");
+        EquipmentButton2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        EquipmentButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EquipmentButton2ActionPerformed(evt);
+            }
+        });
+        MenuBar.add(EquipmentButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 230, 220, 70));
+
+        WarehouseButton2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        WarehouseButton2.setForeground(new java.awt.Color(255, 102, 0));
+        WarehouseButton2.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\TestIcon\\StorageWhite.png"));
+        WarehouseButton2.setText("คลังอุปกรณ์");
+        WarehouseButton2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        WarehouseButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                WarehouseButton2ActionPerformed(evt);
+            }
+        });
+        MenuBar.add(WarehouseButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 330, 220, 70));
+
+        InvoiceButton2.setBackground(new java.awt.Color(255, 102, 0));
+        InvoiceButton2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        InvoiceButton2.setForeground(new java.awt.Color(255, 255, 255));
+        InvoiceButton2.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\TestIcon\\InvoiceOrange.png"));
+        InvoiceButton2.setText("ใบเสร็จ");
+        InvoiceButton2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        InvoiceButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                InvoiceButton2ActionPerformed(evt);
+            }
+        });
+        MenuBar.add(InvoiceButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 430, 220, 70));
+
+        AccountButton2.setBackground(new java.awt.Color(255, 102, 0));
+        AccountButton2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        AccountButton2.setForeground(new java.awt.Color(255, 255, 255));
+        AccountButton2.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\TestIcon\\AccountOrange.png"));
+        AccountButton2.setText("จัดการพนักงาน");
+        AccountButton2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        AccountButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AccountButton2ActionPerformed(evt);
+            }
+        });
+        MenuBar.add(AccountButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 530, 220, 70));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -581,8 +560,8 @@ public class StorageMain extends javax.swing.JFrame implements ChangePageButton 
             .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(MenuBar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         layout.setVerticalGroup(
@@ -590,9 +569,13 @@ public class StorageMain extends javax.swing.JFrame implements ChangePageButton 
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 32, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 108, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(0, 0, 0)
+                        .addComponent(MenuBar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
 
         pack();
@@ -744,6 +727,7 @@ public class StorageMain extends javax.swing.JFrame implements ChangePageButton 
     private javax.swing.JButton HomeButton2;
     private javax.swing.JButton InvoiceButton;
     private javax.swing.JButton InvoiceButton2;
+    private javax.swing.JPanel MenuBar;
     private javax.swing.JButton SuspensionButton;
     private javax.swing.JTextField Type;
     private javax.swing.JButton WarehouseButton;
@@ -762,7 +746,6 @@ public class StorageMain extends javax.swing.JFrame implements ChangePageButton 
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JLabel usernameTxt1;
