@@ -1,4 +1,5 @@
 import com.formdev.flatlaf.FlatLightLaf;
+import java.awt.Font;
 import java.sql.*;
 import javax.swing.*;
 
@@ -477,19 +478,20 @@ public class ReceiptFrame extends javax.swing.JFrame implements ChangePageButton
         slot4Layout.setHorizontalGroup(
             slot4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(slot4Layout.createSequentialGroup()
-                .addGap(33, 33, 33)
-                .addComponent(ch4, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(37, Short.MAX_VALUE))
-            .addGroup(slot4Layout.createSequentialGroup()
-                .addGap(69, 69, 69)
-                .addComponent(select4, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(slot4Layout.createSequentialGroup()
                 .addGroup(slot4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(car_owner4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(slot4Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(car_id4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(car_id4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(slot4Layout.createSequentialGroup()
+                        .addGroup(slot4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(slot4Layout.createSequentialGroup()
+                                .addGap(33, 33, 33)
+                                .addComponent(ch4, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(slot4Layout.createSequentialGroup()
+                                .addGap(69, 69, 69)
+                                .addComponent(select4, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 31, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         slot4Layout.setVerticalGroup(
@@ -910,50 +912,70 @@ public class ReceiptFrame extends javax.swing.JFrame implements ChangePageButton
     private void select1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_select1ActionPerformed
         try {
             db = new TestConnection();
-            String sql = "SELECT car_owner, car_id FROM car_list";
-            ResultSet rs = db.getConnect(sql);
-            int car_owner_index = 0;
-            while (rs.next() && car_owner_index <= 10) {
-                if (car_owner_index == 0) {
-                    String carOwner = rs.getString("car_owner");
-                    String carId = rs.getString("car_id");
+            String car_listSQL = "SELECT car_owner, car_id FROM car_list";
+            String  bill_SQL = "SELECT SUM(Price_Per_Piece * Quantity) AS total_price FROM bill_1";
+
+            ResultSet carListResult = db.getConnect(car_listSQL);
+            ResultSet billTotalResult = db.getConnect(bill_SQL);
+
+            if (carListResult.next()) {
+                String carOwner = carListResult.getString("car_owner");
+                String carId = carListResult.getString("car_id");
+                if (billTotalResult.next()) {
+                    double total = billTotalResult.getDouble("total_price");
                     String[] info = new String[2];
                     info[0] = carOwner;
                     info[1] = carId;
-                    ReceiptMDIApplication mdi = new ReceiptMDIApplication(getProductFromDB("SELECT * FROM bill_1"), info, 1);
-                    mdi.LinkData(carOwner,carId); // Set car_owner in ReceiptMDIApplication
+
+                    ReceiptMDIApplication mdi = new ReceiptMDIApplication(getProductFromDB("SELECT * FROM bill_1"), info, 1, total);
+                    mdi.LinkData(carOwner, carId);
                     mdi.setVisible(true);
-                break;
-                    }
-                    car_owner_index++;
                 }
+            }else {
+                // if no data
+                Font font = new Font("Tahoma", Font.PLAIN, 18);
+                UIManager.put("OptionPane.messageFont", font);
+                JOptionPane.showMessageDialog(this, "ยังไม่มีข้อมูล", "Warning", JOptionPane.WARNING_MESSAGE);
+            }
         } catch (SQLException sqle) {
             sqle.printStackTrace();
         } finally {
             db.close();
         }
+
     }//GEN-LAST:event_select1ActionPerformed
 
     private void select2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_select2ActionPerformed
         try {
             db = new TestConnection();
-            String sql = "SELECT car_owner, car_id FROM car_list";
-            ResultSet rs = db.getConnect(sql);
-            int car_owner_index = 0;
-            while (rs.next() && car_owner_index <= 10) {
-                if (car_owner_index == 1) {
-                    String carOwner = rs.getString("car_owner");
-                    String carId = rs.getString("car_id");
+            String car_listSQL = "SELECT car_owner, car_id FROM car_list";
+            String  bill_SQL = "SELECT SUM(Price_Per_Piece * Quantity) AS total_price FROM bill_2";
+
+            ResultSet carListResult = db.getConnect(car_listSQL);
+            ResultSet billTotalResult = db.getConnect(bill_SQL);
+            carListResult.next();//วนลูปไม่ได้อ่า nextไปเลยละกัน
+            if (carListResult.next()) {
+                
+                String carOwner = carListResult.getString("car_owner");
+                String carId = carListResult.getString("car_id");
+
+                if (billTotalResult.next()) {
+                    double total = billTotalResult.getDouble("total_price");
+
                     String[] info = new String[2];
                     info[0] = carOwner;
                     info[1] = carId;
-                    ReceiptMDIApplication mdi = new ReceiptMDIApplication(getProductFromDB("SELECT * FROM bill_2"), info, 2);
-                    mdi.LinkData(carOwner,carId); // Set car_owner in ReceiptMDIApplication
+
+                    ReceiptMDIApplication mdi = new ReceiptMDIApplication(getProductFromDB("SELECT * FROM bill_2"), info, 2, total);
+                    mdi.LinkData(carOwner, carId);
                     mdi.setVisible(true);
-                break;
-                    }
-                    car_owner_index++;
+                }else {
+                // if no data
+                Font font = new Font("Tahoma", Font.PLAIN, 18);
+                UIManager.put("OptionPane.messageFont", font);
+                JOptionPane.showMessageDialog(this, "ยังไม่มีข้อมูล", "Warning", JOptionPane.WARNING_MESSAGE);
                 }
+            } 
         } catch (SQLException sqle) {
             sqle.printStackTrace();
         } finally {
@@ -964,23 +986,35 @@ public class ReceiptFrame extends javax.swing.JFrame implements ChangePageButton
     private void select3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_select3ActionPerformed
         try {
             db = new TestConnection();
-            String sql = "SELECT car_owner, car_id FROM car_list";
-            ResultSet rs = db.getConnect(sql);
-            int car_owner_index = 0;
-            while (rs.next() && car_owner_index <= 10) {
-                if (car_owner_index == 2) {
-                    String carOwner = rs.getString("car_owner");
-                    String carId = rs.getString("car_id");
+            String car_listSQL = "SELECT car_owner, car_id FROM car_list";
+            String  bill_SQL = "SELECT SUM(Price_Per_Piece * Quantity) AS total_price FROM bill_3";
+
+            ResultSet carListResult = db.getConnect(car_listSQL);
+            ResultSet billTotalResult = db.getConnect(bill_SQL);
+            carListResult.next();//วนลูปไม่ได้อ่า nextไปเลยละกัน
+            carListResult.next();
+            if (carListResult.next() ) {
+                
+                String carOwner = carListResult.getString("car_owner");
+                String carId = carListResult.getString("car_id");
+
+                if (billTotalResult.next()) {
+                    double total = billTotalResult.getDouble("total_price");
+
                     String[] info = new String[2];
                     info[0] = carOwner;
                     info[1] = carId;
-                    ReceiptMDIApplication mdi = new ReceiptMDIApplication(getProductFromDB("SELECT * FROM bill_3"), info, 3);
-                    mdi.LinkData(carOwner,carId); // Set car_owner in ReceiptMDIApplication
+
+                    ReceiptMDIApplication mdi = new ReceiptMDIApplication(getProductFromDB("SELECT * FROM bill_3"), info, 3, total);
+                    mdi.LinkData(carOwner, carId);
                     mdi.setVisible(true);
-                break;
-                    }
-                    car_owner_index++;
                 }
+                
+            }else{
+                Font font = new Font("Tahoma", Font.PLAIN, 16);
+                UIManager.put("OptionPane.messageFont", font);
+                JOptionPane.showMessageDialog(this, "ยังไม่มีข้อมูล", "Warning", JOptionPane.WARNING_MESSAGE);
+            }
         } catch (SQLException sqle) {
             sqle.printStackTrace();
         } finally {
@@ -991,23 +1025,37 @@ public class ReceiptFrame extends javax.swing.JFrame implements ChangePageButton
     private void select4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_select4ActionPerformed
         try {
             db = new TestConnection();
-            String sql = "SELECT car_owner, car_id FROM car_list";
-            ResultSet rs = db.getConnect(sql);
-            int car_owner_index = 0;
-            while (rs.next() && car_owner_index <= 10) {
-                if (car_owner_index == 3) {
-                    String carOwner = rs.getString("car_owner");
-                    String carId = rs.getString("car_id");
+            String car_listSQL = "SELECT car_owner, car_id FROM car_list";
+            String  bill_SQL = "SELECT SUM(Price_Per_Piece * Quantity) AS total_price FROM bill_4";
+
+            ResultSet carListResult = db.getConnect(car_listSQL);
+            ResultSet billTotalResult = db.getConnect(bill_SQL);
+            carListResult.next();//วนลูปไม่ได้อ่า nextไปเลยละกัน
+            carListResult.next();
+            carListResult.next();
+            if (carListResult.next() ) {
+                
+                String carOwner = carListResult.getString("car_owner");
+                String carId = carListResult.getString("car_id");
+
+                if (billTotalResult.next()) {
+                    double total = billTotalResult.getDouble("total_price");
+
                     String[] info = new String[2];
                     info[0] = carOwner;
                     info[1] = carId;
-                    ReceiptMDIApplication mdi = new ReceiptMDIApplication(getProductFromDB("SELECT * FROM bill_4"), info, 4);
-                    mdi.LinkData(carOwner,carId); // Set car_owner in ReceiptMDIApplication
+
+                    ReceiptMDIApplication mdi = new ReceiptMDIApplication(getProductFromDB("SELECT * FROM bill_4"), info, 4, total);
+                    mdi.LinkData(carOwner, carId);
                     mdi.setVisible(true);
-                break;
-                    }
-                    car_owner_index++;
                 }
+                
+            }else {
+                // if no data
+                Font font = new Font("Tahoma", Font.PLAIN, 18);
+                UIManager.put("OptionPane.messageFont", font);
+                JOptionPane.showMessageDialog(this, "ยังไม่มีข้อมูล", "Warning", JOptionPane.WARNING_MESSAGE);
+            }
         } catch (SQLException sqle) {
             sqle.printStackTrace();
         } finally {
@@ -1019,23 +1067,39 @@ public class ReceiptFrame extends javax.swing.JFrame implements ChangePageButton
 
         try {
             db = new TestConnection();
-            String sql = "SELECT car_owner, car_id FROM car_list";
-            ResultSet rs = db.getConnect(sql);
-            int car_owner_index = 0;
-            while (rs.next() && car_owner_index <= 10) {
-                if (car_owner_index == 4) {
-                    String carOwner = rs.getString("car_owner");
-                    String carId = rs.getString("car_id");
+            String car_listSQL = "SELECT car_owner, car_id FROM car_list";
+            String  bill_SQL = "SELECT SUM(Price_Per_Piece * Quantity) AS total_price FROM bill_5";
+
+            ResultSet carListResult = db.getConnect(car_listSQL);
+            ResultSet billTotalResult = db.getConnect(bill_SQL);
+            carListResult.next();//วนลูปไม่ได้อ่า nextไปเลยละกัน
+            carListResult.next();
+            carListResult.next();
+            carListResult.next();
+            if (carListResult.next() ) {
+ 
+
+                String carOwner = carListResult.getString("car_owner");
+                String carId = carListResult.getString("car_id");
+
+                if (billTotalResult.next()) {
+                    double total = billTotalResult.getDouble("total_price");
+
                     String[] info = new String[2];
                     info[0] = carOwner;
                     info[1] = carId;
-                    ReceiptMDIApplication mdi = new ReceiptMDIApplication(getProductFromDB("SELECT * FROM bill_5"), info, 5);
-                    mdi.LinkData(carOwner,carId); // Set car_owner in ReceiptMDIApplication
+
+                    ReceiptMDIApplication mdi = new ReceiptMDIApplication(getProductFromDB("SELECT * FROM bill_5"), info, 5, total);
+                    mdi.LinkData(carOwner, carId);
                     mdi.setVisible(true);
-                break;
-                    }
-                    car_owner_index++;
                 }
+                
+            }else {
+                // if no data
+                Font font = new Font("Tahoma", Font.PLAIN, 18);
+                UIManager.put("OptionPane.messageFont", font);
+                JOptionPane.showMessageDialog(this, "ยังไม่มีข้อมูล", "Warning", JOptionPane.WARNING_MESSAGE);
+            }
         } catch (SQLException sqle) {
             sqle.printStackTrace();
         } finally {
@@ -1046,23 +1110,39 @@ public class ReceiptFrame extends javax.swing.JFrame implements ChangePageButton
     private void select6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_select6ActionPerformed
         try {
             db = new TestConnection();
-            String sql = "SELECT car_owner, car_id FROM car_list";
-            ResultSet rs = db.getConnect(sql);
-            int car_owner_index = 0;
-            while (rs.next() && car_owner_index <= 10) {
-                if (car_owner_index == 5) {
-                    String carOwner = rs.getString("car_owner");
-                    String carId = rs.getString("car_id");
+            String car_listSQL = "SELECT car_owner, car_id FROM car_list";
+            String  bill_SQL = "SELECT SUM(Price_Per_Piece * Quantity) AS total_price FROM bill_6";
+
+            ResultSet carListResult = db.getConnect(car_listSQL);
+            ResultSet billTotalResult = db.getConnect(bill_SQL);
+                carListResult.next();//วนลูปไม่ได้อ่า nextไปเลยละกัน
+                carListResult.next();
+                carListResult.next();
+                carListResult.next();
+                carListResult.next();
+            if (carListResult.next() ) {
+
+                String carOwner = carListResult.getString("car_owner");
+                String carId = carListResult.getString("car_id");
+
+                if (billTotalResult.next()) {
+                    double total = billTotalResult.getDouble("total_price");
+
                     String[] info = new String[2];
                     info[0] = carOwner;
                     info[1] = carId;
-                    ReceiptMDIApplication mdi = new ReceiptMDIApplication(getProductFromDB("SELECT * FROM bill_6"), info, 6);
-                    mdi.LinkData(carOwner,carId); // Set car_owner in ReceiptMDIApplication
+
+                    ReceiptMDIApplication mdi = new ReceiptMDIApplication(getProductFromDB("SELECT * FROM bill_6"), info, 6, total);
+                    mdi.LinkData(carOwner, carId);
                     mdi.setVisible(true);
-                break;
-                    }
-                    car_owner_index++;
                 }
+                
+            }else {
+                // if no data
+                Font font = new Font("Tahoma", Font.PLAIN, 18);
+                UIManager.put("OptionPane.messageFont", font);
+                JOptionPane.showMessageDialog(this, "ยังไม่มีข้อมูล", "Warning", JOptionPane.WARNING_MESSAGE);
+            }
         } catch (SQLException sqle) {
             sqle.printStackTrace();
         } finally {
@@ -1073,23 +1153,41 @@ public class ReceiptFrame extends javax.swing.JFrame implements ChangePageButton
     private void select7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_select7ActionPerformed
         try {
             db = new TestConnection();
-            String sql = "SELECT car_owner, car_id FROM car_list";
-            ResultSet rs = db.getConnect(sql);
-            int car_owner_index = 0;
-            while (rs.next() && car_owner_index <= 10) {
-                if (car_owner_index == 6) {
-                    String carOwner = rs.getString("car_owner");
-                    String carId = rs.getString("car_id");
+            String car_listSQL = "SELECT car_owner, car_id FROM car_list";
+            String  bill_SQL = "SELECT SUM(Price_Per_Piece * Quantity) AS total_price FROM bill_7";
+
+            ResultSet carListResult = db.getConnect(car_listSQL);
+            ResultSet billTotalResult = db.getConnect(bill_SQL);
+            carListResult.next();//วนลูปไม่ได้อ่า nextไปเลยละกัน
+                carListResult.next();
+                carListResult.next();
+                carListResult.next();
+                carListResult.next();
+                carListResult.next();
+            if (carListResult.next() ) {
+                
+
+                String carOwner = carListResult.getString("car_owner");
+                String carId = carListResult.getString("car_id");
+
+                if (billTotalResult.next()) {
+                    double total = billTotalResult.getDouble("total_price");
+
                     String[] info = new String[2];
                     info[0] = carOwner;
                     info[1] = carId;
-                    ReceiptMDIApplication mdi = new ReceiptMDIApplication(getProductFromDB("SELECT * FROM bill_7"), info, 7);
-                    mdi.LinkData(carOwner,carId); // Set car_owner in ReceiptMDIApplication
+
+                    ReceiptMDIApplication mdi = new ReceiptMDIApplication(getProductFromDB("SELECT * FROM bill_7"), info, 7, total);
+                    mdi.LinkData(carOwner, carId);
                     mdi.setVisible(true);
-                break;
-                    }
-                    car_owner_index++;
                 }
+                
+            }else {
+                // if no data
+                Font font = new Font("Tahoma", Font.PLAIN, 18);
+                UIManager.put("OptionPane.messageFont", font);
+                JOptionPane.showMessageDialog(this, "ยังไม่มีข้อมูล", "Warning", JOptionPane.WARNING_MESSAGE);
+            }
         } catch (SQLException sqle) {
             sqle.printStackTrace();
         } finally {
@@ -1100,23 +1198,42 @@ public class ReceiptFrame extends javax.swing.JFrame implements ChangePageButton
     private void select8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_select8ActionPerformed
         try {
             db = new TestConnection();
-            String sql = "SELECT car_owner, car_id FROM car_list";
-            ResultSet rs = db.getConnect(sql);
-            int car_owner_index = 0;
-            while (rs.next() && car_owner_index <= 10) {
-                if (car_owner_index == 7) {
-                    String carOwner = rs.getString("car_owner");
-                    String carId = rs.getString("car_id");
+            String car_listSQL = "SELECT car_owner, car_id FROM car_list";
+            String  bill_SQL = "SELECT SUM(Price_Per_Piece * Quantity) AS total_price FROM bill_8";
+
+            ResultSet carListResult = db.getConnect(car_listSQL);
+            ResultSet billTotalResult = db.getConnect(bill_SQL);
+                carListResult.next();//วนลูปไม่ได้อ่า nextไปเลยละกัน
+                carListResult.next();
+                carListResult.next();
+                carListResult.next();
+                carListResult.next();
+                carListResult.next();
+                carListResult.next();
+            if (carListResult.next() ) {
+                
+
+                String carOwner = carListResult.getString("car_owner");
+                String carId = carListResult.getString("car_id");
+
+                if (billTotalResult.next()) {
+                    double total = billTotalResult.getDouble("total_price");
+
                     String[] info = new String[2];
                     info[0] = carOwner;
                     info[1] = carId;
-                    ReceiptMDIApplication mdi = new ReceiptMDIApplication(getProductFromDB("SELECT * FROM bill_8"), info, 8);
-                    mdi.LinkData(carOwner,carId); // Set car_owner in ReceiptMDIApplication
+
+                    ReceiptMDIApplication mdi = new ReceiptMDIApplication(getProductFromDB("SELECT * FROM bill_8"), info, 8, total);
+                    mdi.LinkData(carOwner, carId);
                     mdi.setVisible(true);
-                break;
-                    }
-                    car_owner_index++;
                 }
+                
+            }else {
+                // if no data
+                Font font = new Font("Tahoma", Font.PLAIN, 18);
+                UIManager.put("OptionPane.messageFont", font);
+                JOptionPane.showMessageDialog(this, "ยังไม่มีข้อมูล", "Warning", JOptionPane.WARNING_MESSAGE);
+            }
         } catch (SQLException sqle) {
             sqle.printStackTrace();
         } finally {
@@ -1127,23 +1244,42 @@ public class ReceiptFrame extends javax.swing.JFrame implements ChangePageButton
     private void select9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_select9ActionPerformed
         try {
             db = new TestConnection();
-            String sql = "SELECT car_owner, car_id FROM car_list";
-            ResultSet rs = db.getConnect(sql);
-            int car_owner_index = 0;
-            while (rs.next() && car_owner_index <= 10) {
-                if (car_owner_index == 8) {
-                    String carOwner = rs.getString("car_owner");
-                    String carId = rs.getString("car_id");
+            String car_listSQL = "SELECT car_owner, car_id FROM car_list";
+            String  bill_SQL = "SELECT SUM(Price_Per_Piece * Quantity) AS total_price FROM bill_9";
+
+            ResultSet carListResult = db.getConnect(car_listSQL);
+            ResultSet billTotalResult = db.getConnect(bill_SQL);
+                carListResult.next();//วนลูปไม่ได้อ่า nextไปเลยละกัน
+                carListResult.next();
+                carListResult.next();
+                carListResult.next();
+                carListResult.next();
+                carListResult.next();
+                carListResult.next();
+                carListResult.next();
+            if (carListResult.next() ) {
+
+                String carOwner = carListResult.getString("car_owner");
+                String carId = carListResult.getString("car_id");
+
+                if (billTotalResult.next()) {
+                    double total = billTotalResult.getDouble("total_price");
+
                     String[] info = new String[2];
                     info[0] = carOwner;
                     info[1] = carId;
-                    ReceiptMDIApplication mdi = new ReceiptMDIApplication(getProductFromDB("SELECT * FROM bill_9"), info, 9);
-                    mdi.LinkData(carOwner,carId); // Set car_owner in ReceiptMDIApplication
+
+                    ReceiptMDIApplication mdi = new ReceiptMDIApplication(getProductFromDB("SELECT * FROM bill_9"), info, 9, total);
+                    mdi.LinkData(carOwner, carId);
                     mdi.setVisible(true);
-                break;
-                    }
-                    car_owner_index++;
                 }
+                
+            }else {
+                // if no data
+                Font font = new Font("Tahoma", Font.PLAIN, 18);
+                UIManager.put("OptionPane.messageFont", font);
+                JOptionPane.showMessageDialog(this, "ยังไม่มีข้อมูล", "Warning", JOptionPane.WARNING_MESSAGE);
+            }
         } catch (SQLException sqle) {
             sqle.printStackTrace();
         } finally {
@@ -1154,23 +1290,44 @@ public class ReceiptFrame extends javax.swing.JFrame implements ChangePageButton
     private void select10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_select10ActionPerformed
         try {
             db = new TestConnection();
-            String sql = "SELECT car_owner, car_id FROM car_list";
-            ResultSet rs = db.getConnect(sql);
-            int car_owner_index = 0;
-            while (rs.next() && car_owner_index <= 10) {
-                if (car_owner_index == 9) {
-                    String carOwner = rs.getString("car_owner");
-                    String carId = rs.getString("car_id");
+            String car_listSQL = "SELECT car_owner, car_id FROM car_list";
+            String  bill_SQL = "SELECT SUM(Price_Per_Piece * Quantity) AS total_price FROM bill_10";
+
+            ResultSet carListResult = db.getConnect(car_listSQL);
+            ResultSet billTotalResult = db.getConnect(bill_SQL);
+                carListResult.next();//วนลูปไม่ได้อ่า nextไปเลยละกัน
+                carListResult.next();
+                carListResult.next();
+                carListResult.next();
+                carListResult.next();
+                carListResult.next();
+                carListResult.next();
+                carListResult.next();
+                carListResult.next();
+            if (carListResult.next() ) {
+                
+
+                String carOwner = carListResult.getString("car_owner");
+                String carId = carListResult.getString("car_id");
+
+                if (billTotalResult.next()) {
+                    double total = billTotalResult.getDouble("total_price");
+
                     String[] info = new String[2];
                     info[0] = carOwner;
                     info[1] = carId;
-                    ReceiptMDIApplication mdi = new ReceiptMDIApplication(getProductFromDB("SELECT * FROM bill_10"), info, 10);
-                    mdi.LinkData(carOwner,carId); // Set car_owner in ReceiptMDIApplication
+
+                    ReceiptMDIApplication mdi = new ReceiptMDIApplication(getProductFromDB("SELECT * FROM bill_10"), info, 10, total);
+                    mdi.LinkData(carOwner, carId);
                     mdi.setVisible(true);
-                break;
-                    }
-                    car_owner_index++;
                 }
+                
+            }else {
+                // if no data
+                Font font = new Font("Tahoma", Font.PLAIN, 18);
+                UIManager.put("OptionPane.messageFont", font);
+                JOptionPane.showMessageDialog(this, "ยังไม่มีข้อมูล", "Warning", JOptionPane.WARNING_MESSAGE);
+            }
         } catch (SQLException sqle) {
             sqle.printStackTrace();
         } finally {
