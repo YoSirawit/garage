@@ -48,6 +48,7 @@ public class ManageCarFrame extends javax.swing.JFrame implements ChangePageButt
         jPanel3 = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable2 = new javax.swing.JTable();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -88,6 +89,7 @@ public class ManageCarFrame extends javax.swing.JFrame implements ChangePageButt
         HomeButton.setForeground(new java.awt.Color(255, 255, 255));
         HomeButton.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\TestIcon\\HomeOrange.png"));
         HomeButton.setText("หน้าหลัก");
+        HomeButton.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         HomeButton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         HomeButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -163,7 +165,7 @@ public class ManageCarFrame extends javax.swing.JFrame implements ChangePageButt
         getContentPane().add(MenuBar, java.awt.BorderLayout.WEST);
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel3.setLayout(new java.awt.BorderLayout());
+        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jTable2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
@@ -196,7 +198,22 @@ public class ManageCarFrame extends javax.swing.JFrame implements ChangePageButt
             jTable2.getColumnModel().getColumn(1).setPreferredWidth(2);
         }
 
-        jPanel3.add(jScrollPane2, java.awt.BorderLayout.CENTER);
+        jPanel3.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1080, 620));
+
+        jButton1.setBackground(new java.awt.Color(255, 102, 0));
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/PlusWhitejing.png"))); // NOI18N
+        jButton1.setBorder(null);
+        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButton1.setMaximumSize(new java.awt.Dimension(40, 40));
+        jButton1.setMinimumSize(new java.awt.Dimension(40, 40));
+        jButton1.setPreferredSize(new java.awt.Dimension(40, 40));
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel3.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 613, 60, 70));
 
         getContentPane().add(jPanel3, java.awt.BorderLayout.CENTER);
 
@@ -228,13 +245,20 @@ public class ManageCarFrame extends javax.swing.JFrame implements ChangePageButt
         // TODO add your handling code here:
     }//GEN-LAST:event_AccountButtonActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        
+        
+        
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
     
     public void populateTable(){
         String columns[] = {"ID", "ch", "reg_number", "brand", "name", "status", "date_in", "date_out"};
-        String data[][] = {{"test"}
+        String data[][] = {{""}
             
         };
         DefaultTableModel model = new DefaultTableModel(data, columns);
@@ -289,6 +313,7 @@ public class ManageCarFrame extends javax.swing.JFrame implements ChangePageButt
     private javax.swing.JButton InvoiceButton;
     private javax.swing.JPanel MenuBar;
     private javax.swing.JButton WarehouseButton;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel3;
