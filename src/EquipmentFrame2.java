@@ -234,7 +234,7 @@ public class EquipmentFrame2 extends javax.swing.JFrame {
         jLabel1.setText("ดำรงรวยการช่าง ");
         headPanel.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 170, 40));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\TestIcon\\userWithcircle.png"));
+        jLabel2.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\TestIcon\\orange.png"));
         headPanel.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 10, -1, -1));
 
         jPanel8.setBackground(new java.awt.Color(255, 255, 255));
