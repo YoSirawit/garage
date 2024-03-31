@@ -66,9 +66,9 @@ public class LoginFrame extends javax.swing.JFrame {
             }
         });
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/5.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\TestIcon\\5.png"));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/PasswordIcon.png"))); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\TestIcon\\PasswordIcon.png"));
 
         jTextField1.setEditable(false);
         jTextField1.setFont(new java.awt.Font("Tahoma", 0, 50)); // NOI18N
@@ -80,7 +80,7 @@ public class LoginFrame extends javax.swing.JFrame {
         GrayBGLayout.setHorizontalGroup(
             GrayBGLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, GrayBGLayout.createSequentialGroup()
-                .addContainerGap(31, Short.MAX_VALUE)
+                .addContainerGap(39, Short.MAX_VALUE)
                 .addGroup(GrayBGLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel2)
                     .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -131,7 +131,7 @@ public class LoginFrame extends javax.swing.JFrame {
 
         getContentPane().add(GrayBG, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 110, 490, -1));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/blur.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\TestIcon\\blur.png"));
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();

@@ -59,7 +59,7 @@ public class AccountManageFrame extends javax.swing.JFrame implements ChangePage
         usernamePn1.setBackground(new java.awt.Color(247, 127, 0));
         usernamePn1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/userWithcircle.png"))); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\TestIcon\\userWithcircle.png"));
         usernamePn1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, -1, -1));
 
         usernameTxt1.setBackground(new java.awt.Color(255, 255, 255));

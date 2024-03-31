@@ -1,22 +1,14 @@
 
 import javax.swing.*;
-
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
-
-/**
- *
- * @author petgo
- */
 public class EquipmentMainFrame extends javax.swing.JFrame implements ChangePageButton {
 
     private Garage gr;
-    
+    private Car car;
+//    private EquipmentSystem eqs;
     public EquipmentMainFrame(Garage gr) {
         initComponents();
         this.gr = gr;
+        checkslot();
     }
     
     public EquipmentMainFrame(){
@@ -60,7 +52,7 @@ public class EquipmentMainFrame extends javax.swing.JFrame implements ChangePage
         usernamePn1.setBackground(new java.awt.Color(247, 127, 0));
         usernamePn1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/userWithcircle.png"))); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\TestIcon\\userWithcircle.png"));
         usernamePn1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, -1, -1));
 
         usernameTxt1.setBackground(new java.awt.Color(255, 255, 255));
@@ -172,10 +164,10 @@ public class EquipmentMainFrame extends javax.swing.JFrame implements ChangePage
                     .addComponent(Header, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(MenuBar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 515, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 521, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 530, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -183,12 +175,14 @@ public class EquipmentMainFrame extends javax.swing.JFrame implements ChangePage
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(Header, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 610, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(MenuBar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 0, Short.MAX_VALUE))))
+                        .addComponent(MenuBar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jPanel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 651, Short.MAX_VALUE)
+                            .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -266,33 +260,35 @@ public class EquipmentMainFrame extends javax.swing.JFrame implements ChangePage
             }
         });
     }
-    public void setSlot(){
+    public void checkslot(){
         for (int i=0;i<10;i++){
-            if(i <5){
-                if (gr.getCh(i) == null){
+            if(i<5){
+                if (this.gr.getCh(i).getCar() != null){
+                    car = this.gr.getCh(i).getCar();
+                    Slotcar1 sc1 = new Slotcar1(car);
+                    jPanel2.add(sc1);
+                    sc1.setnum(i+1);
+                    sc1.setVisible(true);
+                }else{
                     Slotcar2 sc2 = new Slotcar2();
                     jPanel2.add(sc2);
                     sc2.setnum(i+1);
                     sc2.setVisible(true);
-                }else{
-                    Slotcar sc1 = new Slotcar();
-                    jPanel2.add(sc1);
-                    sc1.setnum(i+1);
-                    sc1.setVisible(true);
                 }
             }else{
-                if (gr.getCh(i) == null){
+                if(this.gr.getCh(i).getCar() != null){
+                    car = this.gr.getCh(i).getCar();
+                    Slotcar1 sc1 = new Slotcar1(car);
+                    jPanel3.add(sc1);
+                    sc1.setnum(i+1);
+                    sc1.setVisible(true);
+                }else{
                     Slotcar2 sc2 = new Slotcar2();
                     jPanel3.add(sc2);
                     sc2.setnum(i+1);
                     sc2.setVisible(true);
-                }else{
-                    Slotcar sc1 = new Slotcar();
-                    jPanel3.add(sc1);
-                    sc1.setnum(i+1);
-                    sc1.setVisible(true);
-                    }
                 }
+            }
         }
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -307,8 +303,8 @@ public class EquipmentMainFrame extends javax.swing.JFrame implements ChangePage
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
+    protected javax.swing.JPanel jPanel2;
+    protected javax.swing.JPanel jPanel3;
     private javax.swing.JPanel usernamePn1;
     private javax.swing.JLabel usernameTxt1;
     // End of variables declaration//GEN-END:variables
