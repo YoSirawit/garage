@@ -17,6 +17,9 @@ public class AccountManageFrame extends javax.swing.JFrame implements ChangePage
             AccountTable.getColumnModel().getColumn(4).setCellRenderer(new ConfigCellRenderer());
             AccountTable.getColumnModel().getColumn(4).setCellEditor(new CustomCellEditor(tav));
         }
+        //set Grid table visible
+        this.AccountTable.setShowHorizontalLines(true);
+        this.AccountTable.setShowVerticalLines(true);
     }
 
     /**
@@ -78,7 +81,6 @@ public class AccountManageFrame extends javax.swing.JFrame implements ChangePage
 
         WhiteBG.setBackground(new java.awt.Color(255, 255, 255));
 
-        AccountTable.setBackground(new java.awt.Color(211, 211, 211));
         AccountTable.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         AccountTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -103,6 +105,7 @@ public class AccountManageFrame extends javax.swing.JFrame implements ChangePage
                 return canEdit [columnIndex];
             }
         });
+        AccountTable.setGridColor(new java.awt.Color(153, 153, 153));
         AccountTable.setRowHeight(45);
         jScrollPane1.setViewportView(AccountTable);
         if (AccountTable.getColumnModel().getColumnCount() > 0) {

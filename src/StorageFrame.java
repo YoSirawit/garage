@@ -19,6 +19,9 @@ public class StorageFrame extends javax.swing.JFrame {
     public StorageFrame(String type) {
         this.type = type;
         initComponents();
+        //set Grid table visible
+        this.ItemTable.setShowHorizontalLines(true);
+        this.ItemTable.setShowVerticalLines(true);
         setTable();
     }
     public void setTable() {
@@ -281,6 +284,7 @@ public class StorageFrame extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
+        ItemTable.setGridColor(new java.awt.Color(153, 153, 153));
         ItemTable.setSelectionBackground(new java.awt.Color(233, 233, 233));
         jScrollPane2.setViewportView(ItemTable);
         if (ItemTable.getColumnModel().getColumnCount() > 0) {

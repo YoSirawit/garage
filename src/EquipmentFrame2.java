@@ -16,6 +16,9 @@ public class EquipmentFrame2 extends javax.swing.JFrame {
         this.type = type;
         this.car = car;
         setTable();
+        //set Grid table visible
+        this.jTable1.setShowHorizontalLines(true);
+        this.jTable1.setShowVerticalLines(true);
     }
     public void setTable() {
         TestConnection db = new TestConnection();
@@ -330,6 +333,7 @@ public class EquipmentFrame2 extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
+        jTable1.setGridColor(new java.awt.Color(153, 153, 153));
         jScrollPane2.setViewportView(jTable1);
         if (jTable1.getColumnModel().getColumnCount() > 0) {
             jTable1.getColumnModel().getColumn(0).setResizable(false);

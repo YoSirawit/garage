@@ -19,6 +19,9 @@ public class ManageCarFrame extends javax.swing.JFrame implements ChangePageButt
      */
     public ManageCarFrame(TableActionEvent tav) {
         initComponents();
+        //set Grid table visible
+        this.jTable2.setShowHorizontalLines(true);
+        this.jTable2.setShowVerticalLines(true);
         this.jTable2.getColumnModel().getColumn(7).setCellRenderer(new ConfigCellRenderer());
         this.jTable2.getColumnModel().getColumn(7).setCellEditor(new CustomCellEditor(tav));
 //        populateTable();
@@ -167,6 +170,7 @@ public class ManageCarFrame extends javax.swing.JFrame implements ChangePageButt
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jTable2.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
         jTable2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -191,6 +195,7 @@ public class ManageCarFrame extends javax.swing.JFrame implements ChangePageButt
                 return canEdit [columnIndex];
             }
         });
+        jTable2.setGridColor(new java.awt.Color(153, 153, 153));
         jTable2.setRowHeight(40);
         jScrollPane2.setViewportView(jTable2);
         if (jTable2.getColumnModel().getColumnCount() > 0) {

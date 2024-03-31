@@ -17,6 +17,9 @@ public class CartMDIFrame extends javax.swing.JFrame {
         initComponents();
         setDefaultCloseOperation(this.DISPOSE_ON_CLOSE);
         showTable();
+        //set Grid table visible
+        this.jTable1.setShowHorizontalLines(true);
+        this.jTable1.setShowVerticalLines(true);
     }
 
     public void showTable(){
@@ -92,6 +95,7 @@ public class CartMDIFrame extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
+        jTable1.setGridColor(new java.awt.Color(153, 153, 153));
         jScrollPane1.setViewportView(jTable1);
 
         jLabel2.setFont(new java.awt.Font("Leelawadee UI", 1, 14)); // NOI18N
