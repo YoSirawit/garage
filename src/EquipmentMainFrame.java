@@ -4,7 +4,6 @@ public class EquipmentMainFrame extends javax.swing.JFrame implements ChangePage
 
     private Garage gr;
     private Car car;
-//    private EquipmentSystem eqs;
     public EquipmentMainFrame(Garage gr) {
         initComponents();
         this.gr = gr;

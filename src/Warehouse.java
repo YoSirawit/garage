@@ -62,4 +62,8 @@ public class Warehouse extends Online{
             e.printStackTrace();
         }
     }
+    public static void main(String[] args) {
+        Warehouse wr = new Warehouse();
+        wr.removeItems(10, 2);
+    }
 }

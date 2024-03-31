@@ -1,14 +1,31 @@
 import com.formdev.flatlaf.*;
-import javax.swing.UIManager;
-import javax.swing.UnsupportedLookAndFeelException;
+import java.sql.*;
+import javax.swing.*;
 
 public class EquipmentFrame1 extends javax.swing.JFrame {
-
+    private Bill bill;
+    private Car car;
     /**
      * Creates new form EquipmentFrame1
      */
-    public EquipmentFrame1() {
+    public EquipmentFrame1(){
+        this(null);
+    }
+    public EquipmentFrame1(Car car) {
         initComponents();
+        this.car = car;
+    }
+    private void openEquipment2(String type) {
+        TestConnection db = new TestConnection();
+        try {
+            ResultSet item = db.getConnect(String.format("SELECT * FROM inventory WHERE item_type='%s'",type));
+            EquipmentFrame2 eq2 = new EquipmentFrame2(type, car);
+            eq2.setSize(1280,720);
+            eq2.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+            eq2.setVisible(true);
+        } catch (Exception ex) {
+            System.out.println(ex);
+        }
     }
 
     /**
@@ -22,7 +39,6 @@ public class EquipmentFrame1 extends javax.swing.JFrame {
 
         headPanel = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
-        usernameTxt = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
@@ -49,7 +65,6 @@ public class EquipmentFrame1 extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         BackButton = new javax.swing.JButton();
-        ShopButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -61,12 +76,6 @@ public class EquipmentFrame1 extends javax.swing.JFrame {
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("ดำรงรวยการช่าง ");
         headPanel.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 170, 40));
-
-        usernameTxt.setBackground(new java.awt.Color(255, 255, 255));
-        usernameTxt.setText("@USERNAME");
-        usernameTxt.setToolTipText("Username Account");
-        usernameTxt.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        headPanel.add(usernameTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(1180, 10, 80, 30));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\TestIcon\\userWithcircle.png"));
         headPanel.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 10, -1, -1));
@@ -314,15 +323,6 @@ public class EquipmentFrame1 extends javax.swing.JFrame {
             }
         });
 
-        ShopButton.setBackground(new java.awt.Color(242, 242, 242));
-        ShopButton.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir") + "\\src\\TestIcon\\sale.png"));
-        ShopButton.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        ShopButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ShopButtonActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -332,8 +332,6 @@ public class EquipmentFrame1 extends javax.swing.JFrame {
                 .addComponent(BackButton)
                 .addGap(31, 31, 31)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(ShopButton, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -346,10 +344,6 @@ public class EquipmentFrame1 extends javax.swing.JFrame {
                 .addGap(37, 37, 37)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 535, Short.MAX_VALUE)
                 .addGap(80, 80, 80))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(ShopButton, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(62, 62, 62))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -378,38 +372,56 @@ public class EquipmentFrame1 extends javax.swing.JFrame {
 
     private void BodyButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BodyButtonActionPerformed
         // TODO add your handling code here:
+        openEquipment2("Interior and Body Components");
+        this.dispose();
     }//GEN-LAST:event_BodyButtonActionPerformed
 
     private void BreakeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BreakeButtonActionPerformed
         // TODO add your handling code here:
+        openEquipment2("Brake System");
+        this.dispose();
     }//GEN-LAST:event_BreakeButtonActionPerformed
 
     private void CoolingButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CoolingButtonActionPerformed
         // TODO add your handling code here:
+        openEquipment2("Cooling System");
+        this.dispose();
     }//GEN-LAST:event_CoolingButtonActionPerformed
 
     private void ElectricalButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ElectricalButtonActionPerformed
         // TODO add your handling code here:
+        openEquipment2("Electrical System");
+        this.dispose();
     }//GEN-LAST:event_ElectricalButtonActionPerformed
 
     private void EngineButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EngineButtonActionPerformed
         // TODO add your handling code here:
+        openEquipment2("Engine Components");
+        this.dispose();
     }//GEN-LAST:event_EngineButtonActionPerformed
 
     private void ExhaustButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExhaustButtonActionPerformed
         // TODO add your handling code here:
+        openEquipment2("Exhaust System");
+        this.dispose();
     }//GEN-LAST:event_ExhaustButtonActionPerformed
 
     private void FuelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FuelButtonActionPerformed
         // TODO add your handling code here:
+        openEquipment2("Fuel System");
+        this.dispose();
     }//GEN-LAST:event_FuelButtonActionPerformed
 
     private void DrivetrainButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DrivetrainButtonActionPerformed
         // TODO add your handling code here:
+        openEquipment2("Transmission and Drivetrain");
+        this.dispose();
     }//GEN-LAST:event_DrivetrainButtonActionPerformed
 
     private void SuspensionButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SuspensionButtonActionPerformed
         // TODO add your handling code here:
+        openEquipment2("Suspension and Steering");
+        this.dispose();
     }//GEN-LAST:event_SuspensionButtonActionPerformed
 
     private void BackButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackButtonActionPerformed
@@ -418,10 +430,6 @@ public class EquipmentFrame1 extends javax.swing.JFrame {
         EquipmentMainFrame eqm = new EquipmentMainFrame();
         eqm.setVisible(true);
     }//GEN-LAST:event_BackButtonActionPerformed
-
-    private void ShopButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ShopButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ShopButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -450,7 +458,6 @@ public class EquipmentFrame1 extends javax.swing.JFrame {
     private javax.swing.JButton EngineButton;
     private javax.swing.JButton ExhaustButton;
     private javax.swing.JButton FuelButton;
-    private javax.swing.JButton ShopButton;
     private javax.swing.JButton SuspensionButton;
     private javax.swing.JLabel garageName;
     private javax.swing.JPanel headPanel;
@@ -470,6 +477,5 @@ public class EquipmentFrame1 extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel4;
-    private javax.swing.JLabel usernameTxt;
     // End of variables declaration//GEN-END:variables
 }

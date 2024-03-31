@@ -1,22 +1,37 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/MDIApplication.java to edit this template
- */
-
-/**
- *
- * @author petgo
- */
+import java.awt.*;
+import javax.swing.*;
+import javax.swing.table.*;
+import java.util.*;
 public class CartMDIFrame extends javax.swing.JFrame {
-
+    private Car car;
+    private Bill bill;
     /**
      * Creates new form CartMDIFrame
      */
     public CartMDIFrame() {
+        this(null);
+    }
+    public CartMDIFrame(Car car){
+        this.car = car;
+        this.bill = car.getBill();
         initComponents();
         setDefaultCloseOperation(this.DISPOSE_ON_CLOSE);
+        showTable();
     }
 
+    public void showTable(){
+        DefaultTableModel ob = (DefaultTableModel)jTable1.getModel();
+        ArrayList<Item> item1 = bill.getInfo();
+        int j = 0;
+        double total = 0;
+        for (Item item:item1){
+            jTable1.setValueAt(item.getName(), j, 0);
+            jTable1.setValueAt(item.getVolume(), j, 1);
+            jTable1.setValueAt(item.getPrice(), j, 2);
+            jTable1.setValueAt(item.getTotal(), j++, 3);
+            total += item.getTotal();}
+        Totallabel.setText(String.valueOf(total));
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -30,7 +45,6 @@ public class CartMDIFrame extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
-        CostButton = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         Totallabel = new javax.swing.JLabel();
 
@@ -70,30 +84,15 @@ public class CartMDIFrame extends javax.swing.JFrame {
                 "Items", "Quantity", "Price", "Total"
             }
         ) {
-            Class[] types = new Class [] {
-                java.lang.String.class, java.lang.Integer.class, java.lang.Double.class, java.lang.Double.class
-            };
             boolean[] canEdit = new boolean [] {
-                false, true, true, false
+                false, false, false, false
             };
-
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
-            }
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
                 return canEdit [columnIndex];
             }
         });
         jScrollPane1.setViewportView(jTable1);
-
-        CostButton.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\TestIcon\\sale.png"));
-        CostButton.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        CostButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CostButtonActionPerformed(evt);
-            }
-        });
 
         jLabel2.setFont(new java.awt.Font("Leelawadee UI", 1, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
@@ -115,13 +114,11 @@ public class CartMDIFrame extends javax.swing.JFrame {
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(249, 249, 249))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
                                 .addComponent(jLabel2)
                                 .addGap(18, 18, 18)
-                                .addComponent(Totallabel, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(CostButton, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(Totallabel, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 590, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(16, 16, 16))))
         );
@@ -132,15 +129,11 @@ public class CartMDIFrame extends javax.swing.JFrame {
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 314, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(CostButton, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(3, 3, 3)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel2)
-                            .addComponent(Totallabel))))
-                .addContainerGap())
+                .addGap(9, 9, 9)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(Totallabel))
+                .addGap(14, 14, 14))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -156,10 +149,6 @@ public class CartMDIFrame extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void CostButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CostButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_CostButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -197,7 +186,6 @@ public class CartMDIFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton CostButton;
     private javax.swing.JLabel Totallabel;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

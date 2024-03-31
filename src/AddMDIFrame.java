@@ -1,20 +1,20 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/MDIApplication.java to edit this template
- */
-
-/**
- *
- * @author petgo
- */
+import java.sql.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 public class AddMDIFrame extends javax.swing.JFrame {
-    private Bill cart;
+    private Bill bill;
+    private Car car;
+    
     /**
      * Creates new form AddMDIFrame
      */
     public AddMDIFrame() {
+        this(null);
+    }
+    public AddMDIFrame(Car car){
+        this.car = car;
         initComponents();
-        this.cart = new Bill();
+        this.bill = car.getBill();
         setDefaultCloseOperation(this.DISPOSE_ON_CLOSE);
     }
 
@@ -33,25 +33,22 @@ public class AddMDIFrame extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         idField = new javax.swing.JTextField();
-        PriceField = new javax.swing.JTextField();
         QuantityField = new javax.swing.JTextField();
         AddButton = new javax.swing.JButton();
-        TotalField = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(255, 184, 0));
         jPanel1.setToolTipText("");
 
-        jLabel6.setFont(new java.awt.Font("JasmineUPC", 1, 36)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("JasmineUPC", 1, 48)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 184, 0));
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel6.setText("---->");
 
-        jLabel1.setFont(new java.awt.Font("Leelawadee UI", 1, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Leelawadee UI", 1, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 184, 0));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Name");
@@ -59,28 +56,23 @@ public class AddMDIFrame extends javax.swing.JFrame {
         jLabel1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jLabel1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-        jLabel5.setFont(new java.awt.Font("JasmineUPC", 1, 36)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("JasmineUPC", 1, 48)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 184, 0));
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel5.setText("<----");
 
-        jLabel3.setFont(new java.awt.Font("JasmineUPC", 1, 28)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("JasmineUPC", 1, 30)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 184, 0));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel3.setText("ID :");
 
-        jLabel4.setFont(new java.awt.Font("JasmineUPC", 1, 28)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 184, 0));
-        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel4.setText("Price :");
-
-        jLabel7.setFont(new java.awt.Font("JasmineUPC", 1, 28)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("JasmineUPC", 1, 30)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 184, 0));
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel7.setText("Quantity :");
 
         idField.setBackground(new java.awt.Color(233, 233, 233));
-        idField.setFont(new java.awt.Font("JasmineUPC", 0, 24)); // NOI18N
+        idField.setFont(new java.awt.Font("JasmineUPC", 0, 30)); // NOI18N
         idField.setForeground(new java.awt.Color(255, 184, 0));
         idField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         idField.addActionListener(new java.awt.event.ActionListener() {
@@ -89,19 +81,8 @@ public class AddMDIFrame extends javax.swing.JFrame {
             }
         });
 
-        PriceField.setEditable(false);
-        PriceField.setBackground(new java.awt.Color(233, 233, 233));
-        PriceField.setFont(new java.awt.Font("JasmineUPC", 0, 24)); // NOI18N
-        PriceField.setForeground(new java.awt.Color(255, 184, 0));
-        PriceField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        PriceField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                PriceFieldActionPerformed(evt);
-            }
-        });
-
         QuantityField.setBackground(new java.awt.Color(233, 233, 233));
-        QuantityField.setFont(new java.awt.Font("JasmineUPC", 0, 24)); // NOI18N
+        QuantityField.setFont(new java.awt.Font("JasmineUPC", 0, 30)); // NOI18N
         QuantityField.setForeground(new java.awt.Color(255, 184, 0));
         QuantityField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         QuantityField.addActionListener(new java.awt.event.ActionListener() {
@@ -111,6 +92,7 @@ public class AddMDIFrame extends javax.swing.JFrame {
         });
 
         AddButton.setBackground(new java.awt.Color(255, 0, 0));
+        AddButton.setFont(new java.awt.Font("Leelawadee UI", 0, 16)); // NOI18N
         AddButton.setForeground(new java.awt.Color(255, 255, 255));
         AddButton.setText("Add to Cart");
         AddButton.addActionListener(new java.awt.event.ActionListener() {
@@ -119,29 +101,12 @@ public class AddMDIFrame extends javax.swing.JFrame {
             }
         });
 
-        TotalField.setEditable(false);
-        TotalField.setBackground(new java.awt.Color(233, 233, 233));
-        TotalField.setForeground(new java.awt.Color(255, 184, 0));
-        TotalField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        TotalField.setText("Total Price");
-
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(46, 46, 46)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel7, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(41, 41, 41)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(QuantityField, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(PriceField, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(idField, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(90, 90, 90)
                         .addComponent(jLabel6)
@@ -150,11 +115,19 @@ public class AddMDIFrame extends javax.swing.JFrame {
                         .addGap(30, 30, 30)
                         .addComponent(jLabel5))
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(16, 16, 16)
-                        .addComponent(TotalField, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(83, 83, 83)
-                        .addComponent(AddButton, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(36, 36, 36)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(51, 51, 51)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(QuantityField, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(idField, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(82, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(AddButton, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(184, 184, 184))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -164,27 +137,17 @@ public class AddMDIFrame extends javax.swing.JFrame {
                     .addComponent(jLabel6)
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel5))
-                .addGap(52, 52, 52)
+                .addGap(79, 79, 79)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(idField, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(24, 24, 24)
+                .addGap(40, 40, 40)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(PriceField, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(QuantityField, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(TotalField, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(15, 15, 15))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(29, 29, 29)
-                        .addComponent(AddButton, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(47, Short.MAX_VALUE))))
+                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(QuantityField, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(40, 40, 40)
+                .addComponent(AddButton, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(52, Short.MAX_VALUE))
         );
 
         jLabel6.getAccessibleContext().setAccessibleParent(jPanel2);
@@ -198,7 +161,7 @@ public class AddMDIFrame extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(22, 22, 22)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(18, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -218,17 +181,26 @@ public class AddMDIFrame extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 4, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void AddButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddButtonActionPerformed
-        // TODO add your handling code here:
-        //        Item item = new Item(idField.getText(), Integer.parseInt(QuantityField.getText()), Double.parseDouble(PriceField.getText()) * Double.parseDouble(QuantityField.getText()));
-        //        this.cart.addItem(item);
-        this.dispose();
+        try {
+            // TODO add your handling code here:d
+            TestConnection db = new TestConnection();
+            ResultSet rs = db.getConnect(String.format("select item_name, price from inventory where ID=%d",Integer.parseInt(idField.getText())));
+            rs.next();
+            Item item = new Item(rs.getString(1), Integer.parseInt(QuantityField.getText()), Double.parseDouble(rs.getString(2)));
+            bill.addItem(item);
+            String decrease = String.format("UPDATE inventory SET quantity= quantity - %d WHERE ID= %d", Integer.parseInt(QuantityField.getText()), Integer.parseInt(idField.getText()));
+            db.getUpdate(decrease);
+            this.dispose();
+        } catch (SQLException ex) {
+            Logger.getLogger(AddMDIFrame.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_AddButtonActionPerformed
 
     private void idFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_idFieldActionPerformed
@@ -238,10 +210,6 @@ public class AddMDIFrame extends javax.swing.JFrame {
     private void QuantityFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QuantityFieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_QuantityFieldActionPerformed
-
-    private void PriceFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PriceFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_PriceFieldActionPerformed
 
     /**
      * @param args the command line arguments
@@ -280,13 +248,10 @@ public class AddMDIFrame extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton AddButton;
-    private javax.swing.JTextField PriceField;
     private javax.swing.JTextField QuantityField;
-    private javax.swing.JTextField TotalField;
     private javax.swing.JTextField idField;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;

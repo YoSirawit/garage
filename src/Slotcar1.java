@@ -1,14 +1,6 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
- */
 
-/**
- *
- * @author petgo
- */
 public class Slotcar1 extends javax.swing.JPanel {
-
+    private Car car;
     public Slotcar1() {
         this(null);
     }
@@ -16,9 +8,9 @@ public class Slotcar1 extends javax.swing.JPanel {
         initComponents();
         if (car != null){
             this.settext(car.getCarID(), car.getCarOwner(), car.getCarName(), car.getBrand());
+            this.car = car;
         }
     }
-    
     public void settext(String carid, String carowner, String carname, String carbrand){
         carId.setText(carid);
         carOwner.setText(carowner);
@@ -90,6 +82,11 @@ public class Slotcar1 extends javax.swing.JPanel {
         jButton1.setFont(new java.awt.Font("JasmineUPC", 1, 24)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Shop");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -137,6 +134,13 @@ public class Slotcar1 extends javax.swing.JPanel {
                 .addGap(32, 32, 32))
         );
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        EquipmentFrame1 eq1 = new EquipmentFrame1(car);
+        eq1.setVisible(true);
+        
+    }//GEN-LAST:event_jButton1ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

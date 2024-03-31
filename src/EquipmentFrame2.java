@@ -1,13 +1,47 @@
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
+import javax.swing.table.*;
 import com.formdev.flatlaf.FlatLightLaf;
+import java.sql.*;
 public class EquipmentFrame2 extends javax.swing.JFrame {
-    public EquipmentFrame2() {
-        initComponents();
-        jTable1.setAutoCreateRowSorter(true);
-    }
+    private String type;
+    private Car car;
 
+    public EquipmentFrame2() {
+        this("", null);
+    }
+    public EquipmentFrame2(String type, Car car){
+        initComponents();
+        this.type = type;
+        this.car = car;
+        setTable();
+    }
+    public void setTable() {
+        TestConnection db = new TestConnection();
+        ResultSet item = db.getConnect(String.format("SELECT * FROM inventory WHERE item_type='%s'",type));
+        int row = 0;
+        while (true) {
+            try {
+                if (item.next()) {
+                    for (int i=1;  i<=6; i++) {
+                        this.jTable1.setValueAt(item.getString(i), row, i-1);
+                    }
+                    row += 1;
+                } else {
+                    break;
+                }
+            } catch (SQLException ex) {
+                System.out.println("Error at" + row);
+            }
+        }
+    }
+    public JTable getTable(){
+        return this.jTable1;
+    }
+    public String getStringType() {
+        return this.type;
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -26,7 +60,6 @@ public class EquipmentFrame2 extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable = new javax.swing.JTable();
         headPanel = new javax.swing.JPanel();
-        usernameTxt = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jPanel8 = new javax.swing.JPanel();
@@ -36,6 +69,8 @@ public class EquipmentFrame2 extends javax.swing.JFrame {
         TableName = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
+        jTextField1 = new javax.swing.JTextField();
+        findButton = new javax.swing.JButton();
         AddButton = new javax.swing.JButton();
 
         BackButton2.setBackground(new java.awt.Color(255, 127, 54));
@@ -193,12 +228,6 @@ public class EquipmentFrame2 extends javax.swing.JFrame {
         headPanel.setBackground(new java.awt.Color(247, 127, 0));
         headPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        usernameTxt.setBackground(new java.awt.Color(255, 255, 255));
-        usernameTxt.setText("@USERNAME");
-        usernameTxt.setToolTipText("Username Account");
-        usernameTxt.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        headPanel.add(usernameTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(1180, 10, 80, 30));
-
         jLabel1.setBackground(new java.awt.Color(242, 157, 0));
         jLabel1.setFont(new java.awt.Font("IrisUPC", 3, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
@@ -231,7 +260,7 @@ public class EquipmentFrame2 extends javax.swing.JFrame {
 
         jPanel9.setBackground(new java.awt.Color(241, 127, 22));
 
-        TableName.setFont(new java.awt.Font("JasmineUPC", 3, 30)); // NOI18N
+        TableName.setFont(new java.awt.Font("JasmineUPC", 3, 36)); // NOI18N
         TableName.setForeground(new java.awt.Color(255, 255, 255));
         TableName.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         TableName.setText("Name");
@@ -293,16 +322,9 @@ public class EquipmentFrame2 extends javax.swing.JFrame {
                 "ID", "Type", "Brand", "Name", "Price", "Quantitiy"
             }
         ) {
-            Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Double.class, java.lang.Integer.class
-            };
             boolean[] canEdit = new boolean [] {
                 false, false, false, false, false, false
             };
-
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
-            }
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
                 return canEdit [columnIndex];
@@ -320,6 +342,21 @@ public class EquipmentFrame2 extends javax.swing.JFrame {
             jTable1.getColumnModel().getColumn(5).setResizable(false);
         }
 
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
+            }
+        });
+
+        findButton.setFont(new java.awt.Font("JasmineUPC", 0, 19)); // NOI18N
+        findButton.setForeground(new java.awt.Color(241, 127, 22));
+        findButton.setText("ค้นหา");
+        findButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                findButtonActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
         jPanel9.setLayout(jPanel9Layout);
         jPanel9Layout.setHorizontalGroup(
@@ -327,7 +364,11 @@ public class EquipmentFrame2 extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(TableName, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(415, 415, 415))
+                .addGap(204, 204, 204)
+                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(10, 10, 10)
+                .addComponent(findButton)
+                .addGap(8, 8, 8))
             .addGroup(jPanel9Layout.createSequentialGroup()
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 1045, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
@@ -336,7 +377,10 @@ public class EquipmentFrame2 extends javax.swing.JFrame {
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(TableName, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(TableName, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(findButton, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 465, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -377,11 +421,11 @@ public class EquipmentFrame2 extends javax.swing.JFrame {
                 .addComponent(BackButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 7, Short.MAX_VALUE)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel9, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel9, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(CartButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(AddButton, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(109, 109, 109))
+                .addGap(126, 126, 126))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -416,21 +460,33 @@ public class EquipmentFrame2 extends javax.swing.JFrame {
     private void BackButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackButton3ActionPerformed
         // TODO add your handling code here:
         this.dispose();
-        EquipmentFrame1 eq = new EquipmentFrame1();
+        EquipmentFrame1 eq = new EquipmentFrame1(car);
         eq.setVisible(true);
     }//GEN-LAST:event_BackButton3ActionPerformed
 
     private void CartButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CartButtonActionPerformed
         // TODO add your handling code here:
-        CartMDIFrame cart = new CartMDIFrame();
+        CartMDIFrame cart = new CartMDIFrame(car);
         cart.setVisible(true);
     }//GEN-LAST:event_CartButtonActionPerformed
 
     private void AddButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddButtonActionPerformed
         // TODO add your handling code here:
-        AddMDIFrame addframe = new AddMDIFrame();
+        AddMDIFrame addframe = new AddMDIFrame(car);
         addframe.setVisible(true);
     }//GEN-LAST:event_AddButtonActionPerformed
+
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1ActionPerformed
+
+    private void findButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_findButtonActionPerformed
+        // TODO add your handling code here:
+        DefaultTableModel ob = (DefaultTableModel)jTable1.getModel();
+        TableRowSorter<DefaultTableModel> obj= new TableRowSorter<>(ob);
+        jTable1.setRowSorter(obj);
+        obj.setRowFilter(RowFilter.regexFilter(this.jTextField1.getText()));
+    }//GEN-LAST:event_findButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -456,6 +512,7 @@ public class EquipmentFrame2 extends javax.swing.JFrame {
     private javax.swing.JButton CartButton;
     private javax.swing.JButton SortButton2;
     private javax.swing.JLabel TableName;
+    private javax.swing.JButton findButton;
     private javax.swing.JLabel garageName3;
     private javax.swing.JPanel headPanel;
     private javax.swing.JButton jButton3;
@@ -469,6 +526,6 @@ public class EquipmentFrame2 extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable jTable;
     private javax.swing.JTable jTable1;
-    private javax.swing.JLabel usernameTxt;
+    private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 }
