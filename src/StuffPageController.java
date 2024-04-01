@@ -12,6 +12,7 @@ public class StuffPageController extends Online {
         TableActionEvent tav = new TableActionEvent() {
             @Override
             public void view(int row) {
+                // open staffInfo InternalFrame
                 String userName = (String)accFrame.getTable().getValueAt(row, 0);
                 try{
                     String sql = String.format("select * from userid where username = '%s'", userName);
@@ -36,6 +37,7 @@ public class StuffPageController extends Online {
 
             @Override
             public void edit(int row) {
+                //open editStaffInfo InternalFrame
                 String userName = (String)accFrame.getTable().getValueAt(row, 0);
                 try{
                     String sql = String.format("select * from userid where username = '%s'", userName);
@@ -59,6 +61,7 @@ public class StuffPageController extends Online {
 
             @Override
             public void del(int row) {
+                //delete staff info
                 String username = (String)accFrame.getTable().getValueAt(row, 0);
                 try{
                     getStatement().executeUpdate(String.format("delete from userid where username = '%s'", username));
@@ -76,6 +79,7 @@ public class StuffPageController extends Online {
     }
     
     public void update(){
+        //update staffInfoTable
         try{
             if(accFrame.getTable().getRowCount() != 0){
                 for(int i=accFrame.getTable().getRowCount()-1; i>=0; i--){

@@ -22,6 +22,7 @@ public class ManageCarFrame extends javax.swing.JFrame implements ChangePageButt
         //set Grid table visible
         this.jTable2.setShowHorizontalLines(true);
         this.jTable2.setShowVerticalLines(true);
+        //add action button to table
         this.jTable2.getColumnModel().getColumn(7).setCellRenderer(new ConfigCellRenderer());
         this.jTable2.getColumnModel().getColumn(7).setCellEditor(new CustomCellEditor(tav));
 //        populateTable();

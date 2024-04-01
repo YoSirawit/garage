@@ -8,6 +8,7 @@ public class LoginManager extends Online {
     }
     
     public boolean login(String username, String password){
+        //login function
         try {
             ResultSet result = this.getStatement().executeQuery("select * from userid where username = \""+username+"\" and user_pass = md5(\""+password+"\")");
             if(result.next()){

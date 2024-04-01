@@ -18,6 +18,7 @@ public class GarageController extends Online implements ActionListener {
         this.tav = new TableActionEvent() {
             @Override
             public void view(int row) {
+                // open carInfo when press view button
                 JInternalFrame inFrame = new JInternalFrame("View "+row, false, true, false, true);
                 int slot = (int) mcf.getTable().getValueAt(row, 0);
                 String id = (String)mcf.getTable().getValueAt(row, 1);
@@ -44,6 +45,7 @@ public class GarageController extends Online implements ActionListener {
 
             @Override
             public void edit(int row) {
+                // open editCarInfo when press edit button
                 JInternalFrame inFrame = new JInternalFrame("Edit "+row, false, true, false, true);
                 int slot = (int) mcf.getTable().getValueAt(row, 0);
                 String id = (String)mcf.getTable().getValueAt(row, 1);
@@ -73,6 +75,7 @@ public class GarageController extends Online implements ActionListener {
 
             @Override
             public void del(int row) {
+                // delete car in garage
                 String car_id = (String) mcf.getTable().getValueAt(row, 1);
                 try{
                     String del = String.format("delete from car_list where car_id = '%s'", car_id);
@@ -100,6 +103,7 @@ public class GarageController extends Online implements ActionListener {
     }
     
     public void update(){
+        //update carInfoTable
         if(mcf.getTable().getRowCount() != 0){
             for(int i=mcf.getTable().getRowCount()-1; i>=0; i--){
                 ((DefaultTableModel)mcf.getTable().getModel()).removeRow(i);
@@ -141,6 +145,7 @@ public class GarageController extends Online implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if(e.getSource().equals(mcf.getAddButton())){
+            //open addCarInternalFrame
             JInternalFrame inFrame = new JInternalFrame("AddCarFrame", false, true, false, true);
             AddCarPanel addCar = new AddCarPanel(this, inFrame);
             inFrame.add(addCar);

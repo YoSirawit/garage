@@ -47,7 +47,7 @@ public class MainController implements ActionListener{
     }
 
     @Override
-    public void actionPerformed(ActionEvent e) {
+    public void actionPerformed(ActionEvent e) { //Change page function.
         //if user press login button
         if(e.getSource().equals(lpc.getLoginFrame().getLoginButton())){
             if(lm.login(lpc.getLoginFrame().getUsername(), lpc.getLoginFrame().getPassword())){
