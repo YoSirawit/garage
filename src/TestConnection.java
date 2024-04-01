@@ -3,23 +3,24 @@ public class TestConnection extends Online{
     private Connection conn;
     private ResultSet rs;
     public TestConnection(){
+        //super(Online class)
         super();
     }
     @Override
     public void db_connect() {
+    // to connect with database and to get data
+    // Thai ver เชื่อมต่อกับฐานข้อมูล กับ ดึงข้อมูล
         try {
             conn = DriverManager.getConnection(DB_connector.getUrl(), DB_connector.getUsername(), DB_connector.getPassword());
         } catch (SQLException e) {
             e.printStackTrace();
         }
     }
-    // to link with database and to get value of data
-    // Thai ver เชื่อมต่อกับฐานข้อมูล กับ ดึงข้อมูล
+    
     public ResultSet getConnect(String sql){
-        
+    //executes sql query
+    //Thai ver ดึงข้อมูลจาก query database
         try{
-//            conn = DriverManager.getConnection(DB_connector.getUrl(), DB_connector.getUsername(), DB_connector.getPassword());
-            //use statement to run sql by using conn
             statement = conn.createStatement();
             rs = statement.executeQuery(sql);
         }catch(SQLException e){
@@ -28,8 +29,9 @@ public class TestConnection extends Online{
         return rs;
     }
     
-    // insert update delete
+    
     public void getUpdate(String sql){
+    //modifies the database such as insert, update 
         try{
             statement = conn.createStatement();
             statement.executeUpdate(sql);
@@ -38,9 +40,10 @@ public class TestConnection extends Online{
         }
     }
     
-    //close thor 
-    // Thai ver : ปิดการเชื่อมต่อกับฐานข้อมูล
+    
     public void close(){
+    //close thor database
+    // Thai ver : ปิดการเชื่อมต่อกับฐานข้อมูล
         try{
             statement.close();
             conn.close();
