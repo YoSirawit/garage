@@ -64,7 +64,7 @@ public class ManageCarFrame extends javax.swing.JFrame implements ChangePageButt
         usernamePn1.setBackground(new java.awt.Color(247, 127, 0));
         usernamePn1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        userpic.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\TestIcon\\userWithcircle.png"));
+        userpic.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/userWithcircle.png"))); // NOI18N
         usernamePn1.add(userpic, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, -1, -1));
 
         usernameTxt1.setBackground(new java.awt.Color(255, 255, 255));
@@ -90,7 +90,7 @@ public class ManageCarFrame extends javax.swing.JFrame implements ChangePageButt
         HomeButton.setBackground(new java.awt.Color(255, 102, 0));
         HomeButton.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         HomeButton.setForeground(new java.awt.Color(255, 255, 255));
-        HomeButton.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\TestIcon\\HomeOrange.png"));
+        HomeButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/HomeOrange.png"))); // NOI18N
         HomeButton.setText("หน้าหลัก");
         HomeButton.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         HomeButton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -103,7 +103,7 @@ public class ManageCarFrame extends javax.swing.JFrame implements ChangePageButt
 
         CustomButton.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         CustomButton.setForeground(new java.awt.Color(255, 102, 0));
-        CustomButton.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\TestIcon\\CarManageWhite.png"));
+        CustomButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/CarManageWhite.png"))); // NOI18N
         CustomButton.setText("จัดการคิวรถ");
         CustomButton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         CustomButton.addActionListener(new java.awt.event.ActionListener() {
@@ -116,7 +116,7 @@ public class ManageCarFrame extends javax.swing.JFrame implements ChangePageButt
         EquipmentButton.setBackground(new java.awt.Color(255, 102, 0));
         EquipmentButton.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         EquipmentButton.setForeground(new java.awt.Color(255, 255, 255));
-        EquipmentButton.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\TestIcon\\ShopOrange.png"));
+        EquipmentButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/ShopOrange.png"))); // NOI18N
         EquipmentButton.setText("เบิกอุปกรณ์");
         EquipmentButton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         EquipmentButton.addActionListener(new java.awt.event.ActionListener() {
@@ -129,7 +129,7 @@ public class ManageCarFrame extends javax.swing.JFrame implements ChangePageButt
         WarehouseButton.setBackground(new java.awt.Color(255, 102, 0));
         WarehouseButton.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         WarehouseButton.setForeground(new java.awt.Color(255, 255, 255));
-        WarehouseButton.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\TestIcon\\StorageOrange.png"));
+        WarehouseButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/StorageOrange.png"))); // NOI18N
         WarehouseButton.setText("คลังอุปกรณ์");
         WarehouseButton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         WarehouseButton.addActionListener(new java.awt.event.ActionListener() {
@@ -142,7 +142,7 @@ public class ManageCarFrame extends javax.swing.JFrame implements ChangePageButt
         InvoiceButton.setBackground(new java.awt.Color(255, 102, 0));
         InvoiceButton.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         InvoiceButton.setForeground(new java.awt.Color(255, 255, 255));
-        InvoiceButton.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\TestIcon\\InvoiceOrange.png"));
+        InvoiceButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/InvoiceOrange.png"))); // NOI18N
         InvoiceButton.setText("ใบเสร็จ");
         InvoiceButton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         InvoiceButton.addActionListener(new java.awt.event.ActionListener() {
@@ -155,7 +155,7 @@ public class ManageCarFrame extends javax.swing.JFrame implements ChangePageButt
         AccountButton.setBackground(new java.awt.Color(255, 102, 0));
         AccountButton.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         AccountButton.setForeground(new java.awt.Color(255, 255, 255));
-        AccountButton.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\TestIcon\\AccountOrange.png"));
+        AccountButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/AccountOrange.png"))); // NOI18N
         AccountButton.setText("จัดการพนักงาน");
         AccountButton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         AccountButton.addActionListener(new java.awt.event.ActionListener() {
@@ -206,7 +206,7 @@ public class ManageCarFrame extends javax.swing.JFrame implements ChangePageButt
         jPanel3.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1080, 600));
 
         jButton1.setBackground(new java.awt.Color(255, 102, 0));
-        jButton1.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\TestIcon\\PlusWhitejing.png"));
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/PlusWhitejing.png"))); // NOI18N
         jButton1.setBorder(null);
         jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);

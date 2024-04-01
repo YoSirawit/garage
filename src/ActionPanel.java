@@ -54,22 +54,21 @@ public class ActionPanel extends javax.swing.JPanel {
         edit_bn = new ActionButton_Custom();
         view_bn = new ActionButton_Custom();
 
-        del_bn.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\TestIcon\\trash-bin.png"));
+        del_bn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/trash-bin.png"))); // NOI18N
         del_bn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 del_bnActionPerformed(evt);
             }
         });
 
-        edit_bn.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\TestIcon\\PencilIcon.png"));
-        edit_bn.setLabel("");
+        edit_bn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/PencilIcon.png"))); // NOI18N
         edit_bn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 edit_bnActionPerformed(evt);
             }
         });
 
-        view_bn.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\TestIcon\\EyeIcon.png"));
+        view_bn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/EyeIcon.png"))); // NOI18N
         view_bn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 view_bnActionPerformed(evt);

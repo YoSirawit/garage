@@ -124,7 +124,7 @@ public class LoginFrame extends javax.swing.JFrame {
 
         getContentPane().add(GrayBG, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 100, 490, 550));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\TestIcon\\blur.png"));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/blur.png"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();

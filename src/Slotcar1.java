@@ -62,7 +62,7 @@ public class Slotcar1 extends javax.swing.JPanel {
                 .addGap(25, 25, 25))
         );
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\TestIcon\\caricon1.png"));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/caricon1.png"))); // NOI18N
 
         carId.setFont(new java.awt.Font("JasmineUPC", 1, 28)); // NOI18N
         carId.setForeground(new java.awt.Color(255, 255, 255));

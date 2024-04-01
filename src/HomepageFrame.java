@@ -159,7 +159,7 @@ public class HomepageFrame extends javax.swing.JFrame implements ChangePageButto
 
         HomeButton.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         HomeButton.setForeground(new java.awt.Color(255, 102, 0));
-        HomeButton.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\TestIcon\\HomeWhite.png"));
+        HomeButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/HomeWhite.png"))); // NOI18N
         HomeButton.setText("หน้าหลัก");
         HomeButton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         HomeButton.addActionListener(new java.awt.event.ActionListener() {
@@ -172,7 +172,7 @@ public class HomepageFrame extends javax.swing.JFrame implements ChangePageButto
         CustomButton.setBackground(new java.awt.Color(255, 102, 0));
         CustomButton.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         CustomButton.setForeground(new java.awt.Color(255, 255, 255));
-        CustomButton.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\TestIcon\\CarManageOrange.png"));
+        CustomButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/CarManageOrange.png"))); // NOI18N
         CustomButton.setText("จัดการคิวรถ");
         CustomButton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         CustomButton.addActionListener(new java.awt.event.ActionListener() {
@@ -185,7 +185,7 @@ public class HomepageFrame extends javax.swing.JFrame implements ChangePageButto
         EquipmentButton.setBackground(new java.awt.Color(255, 102, 0));
         EquipmentButton.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         EquipmentButton.setForeground(new java.awt.Color(255, 255, 255));
-        EquipmentButton.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\TestIcon\\ShopOrange.png"));
+        EquipmentButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/ShopOrange.png"))); // NOI18N
         EquipmentButton.setText("เบิกอุปกรณ์");
         EquipmentButton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         EquipmentButton.addActionListener(new java.awt.event.ActionListener() {
@@ -198,7 +198,7 @@ public class HomepageFrame extends javax.swing.JFrame implements ChangePageButto
         WarehouseButton.setBackground(new java.awt.Color(255, 102, 0));
         WarehouseButton.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         WarehouseButton.setForeground(new java.awt.Color(255, 255, 255));
-        WarehouseButton.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\TestIcon\\StorageOrange.png"));
+        WarehouseButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/StorageOrange.png"))); // NOI18N
         WarehouseButton.setText("คลังอุปกรณ์");
         WarehouseButton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         WarehouseButton.addActionListener(new java.awt.event.ActionListener() {
@@ -211,7 +211,7 @@ public class HomepageFrame extends javax.swing.JFrame implements ChangePageButto
         InvoiceButton.setBackground(new java.awt.Color(255, 102, 0));
         InvoiceButton.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         InvoiceButton.setForeground(new java.awt.Color(255, 255, 255));
-        InvoiceButton.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\TestIcon\\InvoiceOrange.png"));
+        InvoiceButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/InvoiceOrange.png"))); // NOI18N
         InvoiceButton.setText("ใบเสร็จ");
         InvoiceButton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         InvoiceButton.addActionListener(new java.awt.event.ActionListener() {
@@ -224,7 +224,7 @@ public class HomepageFrame extends javax.swing.JFrame implements ChangePageButto
         AccountButton.setBackground(new java.awt.Color(255, 102, 0));
         AccountButton.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         AccountButton.setForeground(new java.awt.Color(255, 255, 255));
-        AccountButton.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\TestIcon\\AccountOrange.png"));
+        AccountButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/AccountOrange.png"))); // NOI18N
         AccountButton.setText("จัดการพนักงาน");
         AccountButton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         AccountButton.addActionListener(new java.awt.event.ActionListener() {
@@ -249,7 +249,7 @@ public class HomepageFrame extends javax.swing.JFrame implements ChangePageButto
         statusPn0.setToolTipText("");
         statusPn0.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
-        carpic0.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir") + "\\src\\TestIcon\\car.png"));
+        carpic0.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/car.png"))); // NOI18N
 
         statusBn0.setBackground(new java.awt.Color(78, 80, 82));
         statusBn0.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
@@ -277,7 +277,7 @@ public class HomepageFrame extends javax.swing.JFrame implements ChangePageButto
                 .addComponent(carpic0)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(statusBn0, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(137, Short.MAX_VALUE))
+                .addContainerGap(17, Short.MAX_VALUE))
         );
 
         slot0.add(statusPn0, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 140, 200));
@@ -301,7 +301,7 @@ public class HomepageFrame extends javax.swing.JFrame implements ChangePageButto
         statusPn1.setBackground(new java.awt.Color(255, 255, 255));
         statusPn1.setForeground(new java.awt.Color(255, 255, 255));
 
-        carpic1.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir") + "\\src\\TestIcon\\car.png"));
+        carpic1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/car.png"))); // NOI18N
 
         statusBn1.setBackground(new java.awt.Color(78, 80, 82));
         statusBn1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
@@ -334,7 +334,7 @@ public class HomepageFrame extends javax.swing.JFrame implements ChangePageButto
                 .addComponent(carpic1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(statusBn1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(137, Short.MAX_VALUE))
+                .addContainerGap(17, Short.MAX_VALUE))
         );
 
         slot1.add(statusPn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 140, 200));
@@ -358,7 +358,7 @@ public class HomepageFrame extends javax.swing.JFrame implements ChangePageButto
         statusPn2.setBackground(new java.awt.Color(255, 255, 255));
         statusPn2.setForeground(new java.awt.Color(255, 255, 255));
 
-        carpic2.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir") + "\\src\\TestIcon\\car.png"));
+        carpic2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/car.png"))); // NOI18N
 
         statusBn2.setBackground(new java.awt.Color(78, 80, 82));
         statusBn2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
@@ -391,7 +391,7 @@ public class HomepageFrame extends javax.swing.JFrame implements ChangePageButto
                 .addComponent(carpic2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(statusBn2, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(137, Short.MAX_VALUE))
+                .addContainerGap(17, Short.MAX_VALUE))
         );
 
         slot2.add(statusPn2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 140, 200));
@@ -415,7 +415,7 @@ public class HomepageFrame extends javax.swing.JFrame implements ChangePageButto
         statusPn3.setBackground(new java.awt.Color(255, 255, 255));
         statusPn3.setForeground(new java.awt.Color(255, 255, 255));
 
-        carpic3.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir") + "\\src\\TestIcon\\car.png"));
+        carpic3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/car.png"))); // NOI18N
 
         statusBn3.setBackground(new java.awt.Color(78, 80, 82));
         statusBn3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
@@ -444,7 +444,7 @@ public class HomepageFrame extends javax.swing.JFrame implements ChangePageButto
                 .addComponent(carpic3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(statusBn3, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(137, Short.MAX_VALUE))
+                .addContainerGap(17, Short.MAX_VALUE))
         );
 
         slot3.add(statusPn3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 140, 200));
@@ -468,7 +468,7 @@ public class HomepageFrame extends javax.swing.JFrame implements ChangePageButto
         statusPn4.setBackground(new java.awt.Color(255, 255, 255));
         statusPn4.setForeground(new java.awt.Color(255, 255, 255));
 
-        carpic4.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir") + "\\src\\TestIcon\\car.png"));
+        carpic4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/car.png"))); // NOI18N
 
         statusBn4.setBackground(new java.awt.Color(78, 80, 82));
         statusBn4.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
@@ -502,7 +502,7 @@ public class HomepageFrame extends javax.swing.JFrame implements ChangePageButto
                 .addComponent(carpic4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(statusBn4, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(137, Short.MAX_VALUE))
+                .addContainerGap(17, Short.MAX_VALUE))
         );
 
         slot4.add(statusPn4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 140, 200));
@@ -526,7 +526,7 @@ public class HomepageFrame extends javax.swing.JFrame implements ChangePageButto
         statusPn5.setBackground(new java.awt.Color(255, 255, 255));
         statusPn5.setForeground(new java.awt.Color(255, 255, 255));
 
-        carpic5.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir") + "\\src\\TestIcon\\car.png"));
+        carpic5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/car.png"))); // NOI18N
 
         statusBn5.setBackground(new java.awt.Color(78, 80, 82));
         statusBn5.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
@@ -555,7 +555,7 @@ public class HomepageFrame extends javax.swing.JFrame implements ChangePageButto
                 .addComponent(carpic5)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(statusBn5, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(137, Short.MAX_VALUE))
+                .addContainerGap(17, Short.MAX_VALUE))
         );
 
         slot5.add(statusPn5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 140, 200));
@@ -579,7 +579,7 @@ public class HomepageFrame extends javax.swing.JFrame implements ChangePageButto
         statusPn6.setBackground(new java.awt.Color(255, 255, 255));
         statusPn6.setForeground(new java.awt.Color(255, 255, 255));
 
-        carpic6.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir") + "\\src\\TestIcon\\car.png"));
+        carpic6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/car.png"))); // NOI18N
 
         statusBn6.setBackground(new java.awt.Color(78, 80, 82));
         statusBn6.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
@@ -608,7 +608,7 @@ public class HomepageFrame extends javax.swing.JFrame implements ChangePageButto
                 .addComponent(carpic6)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(statusBn6, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(137, Short.MAX_VALUE))
+                .addContainerGap(17, Short.MAX_VALUE))
         );
 
         slot6.add(statusPn6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 140, 200));
@@ -632,7 +632,7 @@ public class HomepageFrame extends javax.swing.JFrame implements ChangePageButto
         statusPn7.setBackground(new java.awt.Color(255, 255, 255));
         statusPn7.setForeground(new java.awt.Color(255, 255, 255));
 
-        carpic7.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir") + "\\src\\TestIcon\\car.png"));
+        carpic7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/car.png"))); // NOI18N
 
         statusBn7.setBackground(new java.awt.Color(78, 80, 82));
         statusBn7.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
@@ -666,7 +666,7 @@ public class HomepageFrame extends javax.swing.JFrame implements ChangePageButto
                 .addComponent(carpic7)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(statusBn7, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(137, Short.MAX_VALUE))
+                .addContainerGap(17, Short.MAX_VALUE))
         );
 
         slot7.add(statusPn7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 140, 200));
@@ -690,7 +690,7 @@ public class HomepageFrame extends javax.swing.JFrame implements ChangePageButto
         statusPn8.setBackground(new java.awt.Color(255, 255, 255));
         statusPn8.setForeground(new java.awt.Color(255, 255, 255));
 
-        carpic8.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir") + "\\src\\TestIcon\\car.png"));
+        carpic8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/car.png"))); // NOI18N
 
         statusBn8.setBackground(new java.awt.Color(78, 80, 82));
         statusBn8.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
@@ -719,7 +719,7 @@ public class HomepageFrame extends javax.swing.JFrame implements ChangePageButto
                 .addComponent(carpic8)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(statusBn8, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(137, Short.MAX_VALUE))
+                .addContainerGap(17, Short.MAX_VALUE))
         );
 
         slot8.add(statusPn8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 140, 200));
@@ -743,7 +743,7 @@ public class HomepageFrame extends javax.swing.JFrame implements ChangePageButto
         statusPn9.setBackground(new java.awt.Color(255, 255, 255));
         statusPn9.setForeground(new java.awt.Color(255, 255, 255));
 
-        carpic9.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir") + "\\src\\TestIcon\\car.png"));
+        carpic9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/car.png"))); // NOI18N
 
         statusBn9.setBackground(new java.awt.Color(78, 80, 82));
         statusBn9.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
@@ -772,7 +772,7 @@ public class HomepageFrame extends javax.swing.JFrame implements ChangePageButto
                 .addComponent(carpic9)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(statusBn9, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(137, Short.MAX_VALUE))
+                .addContainerGap(17, Short.MAX_VALUE))
         );
 
         slot9.add(statusPn9, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 140, 200));

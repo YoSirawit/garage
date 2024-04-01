@@ -253,7 +253,7 @@ public class EquipmentFrame2 extends javax.swing.JFrame {
         });
 
         CartButton.setBackground(new java.awt.Color(242, 242, 242));
-        CartButton.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir") + "\\src\\TestIcon\\cart.png"));
+        CartButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/cart.png"))); // NOI18N
         CartButton.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         CartButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

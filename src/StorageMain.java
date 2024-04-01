@@ -225,7 +225,7 @@ public class StorageMain extends javax.swing.JFrame implements ChangePageButton 
 
         jPanel7.setBackground(new java.awt.Color(229, 151, 60));
 
-        BodyButton.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\TestIcon\\BodyComponents.png"));
+        BodyButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/BodyComponents.png"))); // NOI18N
         BodyButton.setText("jButton2");
         BodyButton.setAutoscrolls(true);
         BodyButton.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -237,7 +237,7 @@ public class StorageMain extends javax.swing.JFrame implements ChangePageButton 
             }
         });
 
-        BreakeButton.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\TestIcon\\Braking.png"));
+        BreakeButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/Braking.png"))); // NOI18N
         BreakeButton.setText("--");
         BreakeButton.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         BreakeButton.addActionListener(new java.awt.event.ActionListener() {
@@ -246,7 +246,7 @@ public class StorageMain extends javax.swing.JFrame implements ChangePageButton 
             }
         });
 
-        CoolingButton.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\TestIcon\\Cooling.png"));
+        CoolingButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/Cooling.png"))); // NOI18N
         CoolingButton.setText("--");
         CoolingButton.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         CoolingButton.addActionListener(new java.awt.event.ActionListener() {
@@ -255,7 +255,7 @@ public class StorageMain extends javax.swing.JFrame implements ChangePageButton 
             }
         });
 
-        ElectricalButton.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\TestIcon\\Electrical.png"));
+        ElectricalButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/Electrical.png"))); // NOI18N
         ElectricalButton.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         ElectricalButton.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         ElectricalButton.addActionListener(new java.awt.event.ActionListener() {
@@ -264,7 +264,7 @@ public class StorageMain extends javax.swing.JFrame implements ChangePageButton 
             }
         });
 
-        EngineButton.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\TestIcon\\Engine.png"));
+        EngineButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/Engine.png"))); // NOI18N
         EngineButton.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         EngineButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -282,7 +282,7 @@ public class StorageMain extends javax.swing.JFrame implements ChangePageButton 
 
         jLabel21.setText("Engine Components");
 
-        ExhaustButton.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\TestIcon\\Exhaust.png"));
+        ExhaustButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/Exhaust.png"))); // NOI18N
         ExhaustButton.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         ExhaustButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -290,7 +290,7 @@ public class StorageMain extends javax.swing.JFrame implements ChangePageButton 
             }
         });
 
-        FuelButton.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\TestIcon\\Fuel.png"));
+        FuelButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/Fuel.png"))); // NOI18N
         FuelButton.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         FuelButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -298,7 +298,7 @@ public class StorageMain extends javax.swing.JFrame implements ChangePageButton 
             }
         });
 
-        DrivetrainButton.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\TestIcon\\Drivetrain.png"));
+        DrivetrainButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/Drivetrain.png"))); // NOI18N
         DrivetrainButton.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         DrivetrainButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -306,7 +306,7 @@ public class StorageMain extends javax.swing.JFrame implements ChangePageButton 
             }
         });
 
-        SuspensionButton.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\TestIcon\\Suspension.png"));
+        SuspensionButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/Suspension.png"))); // NOI18N
         SuspensionButton.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         SuspensionButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -400,8 +400,8 @@ public class StorageMain extends javax.swing.JFrame implements ChangePageButton 
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel13)
+                            .addComponent(jLabel15)
                             .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jLabel15)
                                 .addComponent(jLabel21)
                                 .addComponent(jLabel16)))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
@@ -489,7 +489,7 @@ public class StorageMain extends javax.swing.JFrame implements ChangePageButton 
         HomeButton2.setBackground(new java.awt.Color(255, 102, 0));
         HomeButton2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         HomeButton2.setForeground(new java.awt.Color(255, 255, 255));
-        HomeButton2.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\TestIcon\\HomeOrange.png"));
+        HomeButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/HomeOrange.png"))); // NOI18N
         HomeButton2.setText("หน้าหลัก");
         HomeButton2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         HomeButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -502,7 +502,7 @@ public class StorageMain extends javax.swing.JFrame implements ChangePageButton 
         CustomButton2.setBackground(new java.awt.Color(255, 102, 0));
         CustomButton2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         CustomButton2.setForeground(new java.awt.Color(255, 255, 255));
-        CustomButton2.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\TestIcon\\CarManageOrange.png"));
+        CustomButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/CarManageOrange.png"))); // NOI18N
         CustomButton2.setText("จัดการคิวรถ");
         CustomButton2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         CustomButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -515,7 +515,7 @@ public class StorageMain extends javax.swing.JFrame implements ChangePageButton 
         EquipmentButton2.setBackground(new java.awt.Color(255, 102, 0));
         EquipmentButton2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         EquipmentButton2.setForeground(new java.awt.Color(255, 255, 255));
-        EquipmentButton2.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\TestIcon\\ShopOrange.png"));
+        EquipmentButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/ShopOrange.png"))); // NOI18N
         EquipmentButton2.setText("เบิกอุปกรณ์");
         EquipmentButton2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         EquipmentButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -527,7 +527,7 @@ public class StorageMain extends javax.swing.JFrame implements ChangePageButton 
 
         WarehouseButton2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         WarehouseButton2.setForeground(new java.awt.Color(255, 102, 0));
-        WarehouseButton2.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\TestIcon\\StorageWhite.png"));
+        WarehouseButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/StorageWhite.png"))); // NOI18N
         WarehouseButton2.setText("คลังอุปกรณ์");
         WarehouseButton2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         WarehouseButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -540,7 +540,7 @@ public class StorageMain extends javax.swing.JFrame implements ChangePageButton 
         InvoiceButton2.setBackground(new java.awt.Color(255, 102, 0));
         InvoiceButton2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         InvoiceButton2.setForeground(new java.awt.Color(255, 255, 255));
-        InvoiceButton2.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\TestIcon\\InvoiceOrange.png"));
+        InvoiceButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/InvoiceOrange.png"))); // NOI18N
         InvoiceButton2.setText("ใบเสร็จ");
         InvoiceButton2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         InvoiceButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -553,7 +553,7 @@ public class StorageMain extends javax.swing.JFrame implements ChangePageButton 
         AccountButton2.setBackground(new java.awt.Color(255, 102, 0));
         AccountButton2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         AccountButton2.setForeground(new java.awt.Color(255, 255, 255));
-        AccountButton2.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\TestIcon\\AccountOrange.png"));
+        AccountButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/AccountOrange.png"))); // NOI18N
         AccountButton2.setText("จัดการพนักงาน");
         AccountButton2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         AccountButton2.addActionListener(new java.awt.event.ActionListener() {

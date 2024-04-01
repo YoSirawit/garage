@@ -32,7 +32,7 @@ public class MainController implements ActionListener{
 
         mainframe = new JFrame();
         mainframe.setContentPane(lpc.getLoginFrame().getContentPane());
-        mainframe.pack();
+        mainframe.setSize(1280, 720);
         mainframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         mainframe.setVisible(true);
         mainframe.setLocationRelativeTo(null);
@@ -187,5 +187,9 @@ public class MainController implements ActionListener{
             mainframe.setContentPane(desktop_pane);
 //            mainframe.setContentPane(wpc.getWarehousePage().getContentPane());
         }
+    }
+    
+    public static void main(String[] args) {
+        new MainController();
     }
 }

@@ -123,7 +123,7 @@ public class EquipmentFrame1 extends javax.swing.JFrame {
 
         jLabel21.setText("Engine Components");
 
-        BodyButton.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\TestIcon\\BodyComponents.png"));
+        BodyButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/BodyComponents.png"))); // NOI18N
         BodyButton.setText("jButton2");
         BodyButton.setAutoscrolls(true);
         BodyButton.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -135,7 +135,7 @@ public class EquipmentFrame1 extends javax.swing.JFrame {
             }
         });
 
-        BreakeButton.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir") + "\\src\\TestIcon\\Braking.png"));
+        BreakeButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/Braking.png"))); // NOI18N
         BreakeButton.setText("--");
         BreakeButton.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         BreakeButton.addActionListener(new java.awt.event.ActionListener() {
@@ -144,7 +144,7 @@ public class EquipmentFrame1 extends javax.swing.JFrame {
             }
         });
 
-        CoolingButton.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir") + "\\src\\TestIcon\\Cooling.png"));
+        CoolingButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/Cooling.png"))); // NOI18N
         CoolingButton.setText("--");
         CoolingButton.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         CoolingButton.addActionListener(new java.awt.event.ActionListener() {
@@ -153,7 +153,7 @@ public class EquipmentFrame1 extends javax.swing.JFrame {
             }
         });
 
-        ElectricalButton.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir") + "\\src\\TestIcon\\Electrical.png"));
+        ElectricalButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/Electrical.png"))); // NOI18N
         ElectricalButton.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         ElectricalButton.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         ElectricalButton.addActionListener(new java.awt.event.ActionListener() {
@@ -162,7 +162,7 @@ public class EquipmentFrame1 extends javax.swing.JFrame {
             }
         });
 
-        EngineButton.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir") + "\\src\\TestIcon\\Engine.png"));
+        EngineButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/Engine.png"))); // NOI18N
         EngineButton.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         EngineButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -170,7 +170,7 @@ public class EquipmentFrame1 extends javax.swing.JFrame {
             }
         });
 
-        ExhaustButton.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir") + "\\src\\TestIcon\\Exhaust.png"));
+        ExhaustButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/Exhaust.png"))); // NOI18N
         ExhaustButton.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         ExhaustButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -178,7 +178,7 @@ public class EquipmentFrame1 extends javax.swing.JFrame {
             }
         });
 
-        FuelButton.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir") + "\\src\\TestIcon\\Fuel.png"));
+        FuelButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/Fuel.png"))); // NOI18N
         FuelButton.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         FuelButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -186,7 +186,7 @@ public class EquipmentFrame1 extends javax.swing.JFrame {
             }
         });
 
-        DrivetrainButton.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir") + "\\src\\TestIcon\\Drivetrain.png"));
+        DrivetrainButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/Drivetrain.png"))); // NOI18N
         DrivetrainButton.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         DrivetrainButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -194,7 +194,7 @@ public class EquipmentFrame1 extends javax.swing.JFrame {
             }
         });
 
-        SuspensionButton.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir") + "\\src\\TestIcon\\Suspension.png"));
+        SuspensionButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/Suspension.png"))); // NOI18N
         SuspensionButton.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         SuspensionButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -202,7 +202,7 @@ public class EquipmentFrame1 extends javax.swing.JFrame {
             }
         });
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir") + "\\src\\TestIcon\\Mechanic.png"));
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/Mechanic.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -350,9 +350,7 @@ public class EquipmentFrame1 extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                        .addGap(0, 0, 0)
-                        .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(headPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 1280, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 0, Short.MAX_VALUE))
         );

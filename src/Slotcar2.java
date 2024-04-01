@@ -61,7 +61,7 @@ public class Slotcar2 extends javax.swing.JPanel {
         carId.setForeground(new java.awt.Color(255, 255, 255));
         carId.setText("None");
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\TestIcon\\caricon1.png"));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TestIcon/caricon1.png"))); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);

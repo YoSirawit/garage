@@ -1,7 +1,19 @@
 
+import com.formdev.flatlaf.FlatLightLaf;
+import javax.swing.SwingUtilities;
+import javax.swing.UIManager;
+import javax.swing.UnsupportedLookAndFeelException;
+
+
 public class Main {
     public static void main(String[] args) {
-        new MainController();
+        try {
+            UIManager.setLookAndFeel(new FlatLightLaf());
+        }catch(UnsupportedLookAndFeelException ex){
+            ex.printStackTrace();
+        }
+        SwingUtilities.invokeLater(()->{MainController mc = new MainController(); });
+        
     }
     
 //    public static void main(String[] args) {
