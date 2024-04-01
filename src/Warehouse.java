@@ -13,12 +13,9 @@ public class Warehouse extends Online{
     public Warehouse(){
         db = new TestConnection();
 }
-    public void showItems(){
-        
-    }
     public void addNewItems(String type, String Brand, String name, double price, int volume){
+        //Insert Newitem to Database
         try{
-//            String add = "INSERT INTO inventory(item_type="+type+", brand="+Brand+", item_name="+name+", price="+price+", quantity="+volume+")";
             String add = String.format("INSERT INTO inventory (item_type, brand, item_name, price, quantity) VALUES ('%s', '%s', '%s', %f, %d)", type, Brand, name, price, volume);
             db.getUpdate(add);
             JOptionPane.showMessageDialog(null, "Updated Succesfully");
@@ -27,6 +24,7 @@ public class Warehouse extends Online{
         }
     }
     public void removeItems(String name, int volume) {
+        //Decrease items volume by Name
         try{    
             String decrease = String.format("update inventory set quantity= quantity - %d WHERE item_name= '%s'", volume, name);
             db.getUpdate(decrease);
@@ -36,6 +34,7 @@ public class Warehouse extends Online{
         }
     }
     public void removeItems(int id, int volume){
+        //Decrease items volume by ID
         try{
             String decrease = String.format("UPDATE inventory SET quantity= quantity - %d WHERE ID= %d", volume, id);
             db.getUpdate(decrease);
@@ -45,6 +44,7 @@ public class Warehouse extends Online{
         }
     }
     public void deleteItem(int id, String name){
+        //Delete row item by ID
         try{
             String col = String.format("DELETE FROM inventory WHERE ID=%d OR item_name= '%s'", id, name);
             db.getUpdate(col);
@@ -54,6 +54,7 @@ public class Warehouse extends Online{
         }
     }
     public void addItems(int id, String name, int volume){
+        //Increase item volume by ID or Name
         try{
             String add = String.format("update inventory set quantity = quantity + %d where ID = %d OR item_name = '%s'", volume, id, name);
             db.getUpdate(add);
@@ -61,9 +62,5 @@ public class Warehouse extends Online{
         }catch(Exception e){
             e.printStackTrace();
         }
-    }
-    public static void main(String[] args) {
-        Warehouse wr = new Warehouse();
-        wr.removeItems(10, 2);
     }
 }

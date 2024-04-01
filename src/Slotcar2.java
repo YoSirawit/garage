@@ -1,21 +1,11 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
- */
 
-/**
- *
- * @author petgo
- */
 public class Slotcar2 extends javax.swing.JPanel {
 
-    /**
-     * Creates new form Slotcar2
-     */
     public Slotcar2() {
         initComponents();
     }
     public void setnum(int num){
+        //set No.CarSlot
         jLabel1.setText(num+"");
     }
 

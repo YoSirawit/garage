@@ -4,10 +4,7 @@ import java.util.logging.Logger;
 public class AddMDIFrame extends javax.swing.JFrame {
     private Bill bill;
     private Car car;
-    
-    /**
-     * Creates new form AddMDIFrame
-     */
+
     public AddMDIFrame() {
         this(null);
     }
@@ -188,8 +185,8 @@ public class AddMDIFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void AddButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddButtonActionPerformed
+        //Add item to cart by ID and decrease volume in database
         try {
-            // TODO add your handling code here:d
             TestConnection db = new TestConnection();
             ResultSet rs = db.getConnect(String.format("select item_name, price from inventory where ID=%d",Integer.parseInt(idField.getText())));
             rs.next();
@@ -203,6 +200,7 @@ public class AddMDIFrame extends javax.swing.JFrame {
             int ch = rs.getInt(1);
             String checkItem = "";
             switch(ch){
+                //Add item in billTable on Database or increase volume by car_id to ch
                 case 1 -> {
                     checkItem = String.format("select * from bill_1 where Name = '%s'", item.getName());
                     rs = db.getConnect(checkItem);

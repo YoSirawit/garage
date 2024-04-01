@@ -5,9 +5,7 @@ import javax.swing.*;
 public class EquipmentFrame1 extends javax.swing.JFrame {
     private Bill bill;
     private Car car;
-    /**
-     * Creates new form EquipmentFrame1
-     */
+
     public EquipmentFrame1(){
         this(null);
     }
@@ -16,6 +14,7 @@ public class EquipmentFrame1 extends javax.swing.JFrame {
         this.car = car;
     }
     private void openEquipment2(String type) {
+        //Open EquipmentFrame2
         TestConnection db = new TestConnection();
         try {
             ResultSet item = db.getConnect(String.format("SELECT * FROM inventory WHERE item_type='%s'",type));

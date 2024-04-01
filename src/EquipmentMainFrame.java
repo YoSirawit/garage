@@ -1,9 +1,9 @@
 
 import javax.swing.*;
 public class EquipmentMainFrame extends javax.swing.JFrame implements ChangePageButton {
-
     private Garage gr;
     private Car car;
+
     public EquipmentMainFrame(Garage gr) {
         initComponents();
         this.gr = gr;
@@ -260,6 +260,7 @@ public class EquipmentMainFrame extends javax.swing.JFrame implements ChangePage
         });
     }
     public void checkslot(){
+        //CheckSlot Garage before add Slotcar Panel
         jPanel2.removeAll();
         jPanel3.removeAll();
         for (int i=0;i<10;i++){

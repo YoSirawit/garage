@@ -21,6 +21,7 @@ public class EquipmentFrame2 extends javax.swing.JFrame {
         this.jTable1.setShowVerticalLines(true);
     }
     public void setTable() {
+        //set Table by type
         TestConnection db = new TestConnection();
         ResultSet item = db.getConnect(String.format("SELECT * FROM inventory WHERE item_type='%s'",type));
         int row = 0;

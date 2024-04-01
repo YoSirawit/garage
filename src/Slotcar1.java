@@ -12,12 +12,14 @@ public class Slotcar1 extends javax.swing.JPanel {
         }
     }
     public void settext(String carid, String carowner, String carname, String carbrand){
+        //Settext to Slotcar
         carId.setText(carid);
         carOwner.setText(carowner);
         carName.setText(carname);
         brand.setText(carbrand);
     }
     public void setnum(int num){
+        //Set No.CarSlot
         jLabel1.setText(num+"");
     }
     /**
@@ -136,12 +138,10 @@ public class Slotcar1 extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
         EquipmentFrame1 eq1 = new EquipmentFrame1(car);
         eq1.setResizable(false);
         eq1.setLocationRelativeTo(null);
         eq1.setVisible(true);
-        
     }//GEN-LAST:event_jButton1ActionPerformed
 
 

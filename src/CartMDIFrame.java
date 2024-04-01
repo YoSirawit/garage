@@ -5,9 +5,7 @@ import java.util.*;
 public class CartMDIFrame extends javax.swing.JFrame {
     private Car car;
     private Bill bill;
-    /**
-     * Creates new form CartMDIFrame
-     */
+
     public CartMDIFrame() {
         this(null);
     }
@@ -23,6 +21,7 @@ public class CartMDIFrame extends javax.swing.JFrame {
     }
 
     public void showTable(){
+        //Show Item in ArrayList on Cart JTable
         DefaultTableModel ob = (DefaultTableModel)jTable1.getModel();
         ArrayList<Item> item1 = bill.getInfo();
         int j = 0;
