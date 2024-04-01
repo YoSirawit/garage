@@ -1,0 +1,1913 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="garage">
+  <ClassDiagramComponents>
+    <Class name="Account" package="" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="username" type="String" visibility="private"/>
+        <Field name="firstName" type="String" visibility="private"/>
+        <Field name="lastName" type="String" visibility="private"/>
+        <Field name="level" type="int" visibility="private"/>
+        <Field name="id" type="int" visibility="private"/>
+        <Field name="statement" type="Statement" visibility="public"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="username"/>
+          <Argument type="String" name="firstName"/>
+          <Argument type="String" name="lastName"/>
+          <Argument type="int" name="level"/>
+          <Argument type="int" name="id"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getUsername" returnType="String" visibility="public"/>
+        <Method name="getFirstName" returnType="String" visibility="public"/>
+        <Method name="getLastName" returnType="String" visibility="public"/>
+        <Method name="getLevel" returnType="int" visibility="public"/>
+        <Method name="getId" returnType="int" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="AccountManageFrame" package="" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Fields>
+        <Field name="AccountButton" type="javax.swing.JButton" visibility="private"/>
+        <Field name="AccountTable" type="javax.swing.JTable" visibility="private"/>
+        <Field name="AddAccountButton" type="javax.swing.JButton" visibility="private"/>
+        <Field name="CustomButton" type="javax.swing.JButton" visibility="private"/>
+        <Field name="EquipmentButton" type="javax.swing.JButton" visibility="private"/>
+        <Field name="Header" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="HomeButton" type="javax.swing.JButton" visibility="private"/>
+        <Field name="InvoiceButton" type="javax.swing.JButton" visibility="private"/>
+        <Field name="MenuBar" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="SearchButton" type="javax.swing.JButton" visibility="private"/>
+        <Field name="SearchField" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="WarehouseButton" type="javax.swing.JButton" visibility="private"/>
+        <Field name="WhiteBG" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jScrollPane1" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="usernamePn1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="usernameTxt1" type="javax.swing.JLabel" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="LoginManager" name="lm"/>
+          <Argument type="TableActionEvent" name="tav"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="SearchButtonActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="AddAccountButtonActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="HomeButtonActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="CustomButtonActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="EquipmentButtonActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="WarehouseButtonActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="InvoiceButtonActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="AccountButtonActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+        <Method name="getTable" returnType="JTable" visibility="public"/>
+        <Method name="getHomeButton" returnType="JButton" visibility="public"/>
+        <Method name="getManagementButton" returnType="JButton" visibility="public"/>
+        <Method name="getEquipmentButton" returnType="JButton" visibility="public"/>
+        <Method name="getWarehouseButton" returnType="JButton" visibility="public"/>
+        <Method name="getReceiptButton" returnType="JButton" visibility="public"/>
+        <Method name="getUsernameLabel" returnType="JLabel" visibility="public"/>
+        <Method name="getStuffManageButton" returnType="JButton" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="ActionButton_Custom" package="" visibility="public" xPosition="620.0" yPosition="20.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="ActionPanel" package="" visibility="public" xPosition="920.0" yPosition="20.0">
+      <Fields>
+        <Field name="del_bn" type="ActionButton_Custom" visibility="private"/>
+        <Field name="edit_bn" type="ActionButton_Custom" visibility="private"/>
+        <Field name="view_bn" type="ActionButton_Custom" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="addEvent" returnType="void" visibility="public">
+          <Argument type="TableActionEvent" name="ev"/>
+          <Argument type="int" name="row"/>
+        </Method>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="del_bnActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="edit_bnActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="view_bnActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="AddCarFrame" package="" visibility="public" xPosition="1220.0" yPosition="20.0">
+      <Fields>
+        <Field name="jButton1" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel5" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel6" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel7" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel8" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel2" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jTextField1" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jTextField2" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jTextField3" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jTextField4" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jTextField5" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jTextField6" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jTextField7" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jTextField8" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="jTextField1ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="AddCarPanel" package="" visibility="public" xPosition="1520.0" yPosition="20.0">
+      <Fields>
+        <Field name="gc" type="GarageController" visibility="private"/>
+        <Field name="inFrame" type="JInternalFrame" visibility="private"/>
+        <Field name="brand_textfield" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="carID_textfield" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="confirm_button" type="javax.swing.JButton" visibility="private"/>
+        <Field name="customerName_textfield" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="dateIn_textfield" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="dateOut_textfield" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel5" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel6" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel7" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel2" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel3" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="model_textfield" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="selectCh" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="GarageController" name="gc"/>
+          <Argument type="JInternalFrame" name="inFrame"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="confirm_buttonActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="customerName_textfieldActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="carID_textfieldActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="brand_textfieldActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="model_textfieldActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="dateIn_textfieldActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="dateOut_textfieldActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="selectChActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="AddItemForStorage" package="" visibility="public" xPosition="1820.0" yPosition="20.0">
+      <Fields>
+        <Field name="storage" type="StorageFrame" visibility="private"/>
+        <Field name="type" type="String" visibility="private"/>
+        <Field name="brandTextField" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="cancelButton" type="javax.swing.JButton" visibility="private"/>
+        <Field name="confirmButton" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel5" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel6" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel2" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel3" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="nameTextField" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="priceTextField" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="quantityTextField" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="typeTextField" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="StorageFrame" name="storage"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="confirmButtonActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="nameTextFieldActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="typeTextFieldActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="brandTextFieldActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="priceTextFieldActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="quantityTextFieldActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="cancelButtonActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="AdminAccountTable" package="" visibility="public" xPosition="2120.0" yPosition="20.0">
+      <Fields>
+        <Field name="AccountTable" type="javax.swing.JTable" visibility="private"/>
+        <Field name="jScrollPane1" type="javax.swing.JScrollPane" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="getTable" returnType="JTable" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Bill" package="" visibility="public" xPosition="20.0" yPosition="420.0">
+      <Fields>
+        <Field name="item_list" type="ArrayList&lt;Item&gt;" visibility="private"/>
+        <Field name="total" type="double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="addItem" returnType="void" visibility="public">
+          <Argument type="Item" name="item"/>
+        </Method>
+        <Method name="getInfo" returnType="ArrayList" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Car" package="" visibility="public" xPosition="320.0" yPosition="420.0">
+      <Fields>
+        <Field name="STATUS_NOTWORKING" type="int" visibility="public" isStatic="true" isFinal="true"/>
+        <Field name="STATUS_WORKING" type="int" visibility="public" isStatic="true" isFinal="true"/>
+        <Field name="STATUS_FINISH" type="int" visibility="public" isStatic="true" isFinal="true"/>
+        <Field name="STATUS_READY_TO_OUT" type="int" visibility="public" isStatic="true" isFinal="true"/>
+        <Field name="carOwner" type="String" visibility="private"/>
+        <Field name="carName" type="String" visibility="private"/>
+        <Field name="brand" type="String" visibility="private"/>
+        <Field name="carID" type="String" visibility="private"/>
+        <Field name="status" type="int" visibility="private"/>
+        <Field name="bill" type="Bill" visibility="private"/>
+        <Field name="date_in" type="String" visibility="private"/>
+        <Field name="date_out" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="carOwner"/>
+          <Argument type="String" name="brand"/>
+          <Argument type="String" name="carName"/>
+          <Argument type="String" name="carID"/>
+          <Argument type="int" name="status"/>
+          <Argument type="String" name="date_in"/>
+          <Argument type="String" name="date_out"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="String" name="carOwner"/>
+          <Argument type="String" name="brand"/>
+          <Argument type="String" name="carName"/>
+          <Argument type="String" name="carID"/>
+          <Argument type="int" name="status"/>
+          <Argument type="String" name="date_in"/>
+          <Argument type="String" name="date_out"/>
+          <Argument type="Bill" name="bill"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="setCarOwner" returnType="void" visibility="public">
+          <Argument type="String" name="owner"/>
+        </Method>
+        <Method name="setBrand" returnType="void" visibility="public">
+          <Argument type="String" name="brand"/>
+        </Method>
+        <Method name="setCarName" returnType="void" visibility="public">
+          <Argument type="String" name="name"/>
+        </Method>
+        <Method name="setCarID" returnType="void" visibility="public">
+          <Argument type="String" name="ID"/>
+        </Method>
+        <Method name="setStatus" returnType="void" visibility="public">
+          <Argument type="int" name="status"/>
+        </Method>
+        <Method name="setBill" returnType="void" visibility="public">
+          <Argument type="Bill" name="bill"/>
+        </Method>
+        <Method name="getCarOwner" returnType="String" visibility="public"/>
+        <Method name="getCarName" returnType="String" visibility="public"/>
+        <Method name="getBrand" returnType="String" visibility="public"/>
+        <Method name="getCarID" returnType="String" visibility="public"/>
+        <Method name="getStatus" returnType="int" visibility="public"/>
+        <Method name="getBill" returnType="Bill" visibility="public"/>
+        <Method name="getDateIn" returnType="String" visibility="public"/>
+        <Method name="getDateOut" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="CarConfigPanel" package="" visibility="public" xPosition="620.0" yPosition="420.0">
+      <Fields>
+        <Field name="gc" type="GarageController" visibility="private"/>
+        <Field name="inFrame" type="JInternalFrame" visibility="private"/>
+        <Field name="brandTextField" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="carIDLabel" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="carIDTextField" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="confirmButton" type="javax.swing.JButton" visibility="private"/>
+        <Field name="customerNameTextField" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="dateInTextField" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="dateOutTextField" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel3" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jTextField5" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="modelLable" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="modelLable1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="modelLable2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="modelTextField" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="slotTextField" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="statusLabel" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="statusLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="statusSelector" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="slot"/>
+          <Argument type="String" name="customer_name"/>
+          <Argument type="String" name="car_id"/>
+          <Argument type="String" name="brand"/>
+          <Argument type="String" name="model"/>
+          <Argument type="String" name="status"/>
+          <Argument type="String" name="date_in"/>
+          <Argument type="String" name="date_out"/>
+          <Argument type="GarageController" name="gc"/>
+          <Argument type="JInternalFrame" name="inFrame"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="carIDTextFieldActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="brandTextFieldActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jTextField5ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="modelTextFieldActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="slotTextFieldActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="dateInTextFieldActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="dateOutTextFieldActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="customerNameTextFieldActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="confirmButtonActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="getConfirmButton" returnType="JButton" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="CarInfoPanel" package="" visibility="public" xPosition="920.0" yPosition="420.0">
+      <Fields>
+        <Field name="carIDLabel" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="carIDTextField" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="customerName" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel2" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel3" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jTextField5" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="modelLable" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="modelTextField" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="slotTextField" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="statusLabel" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="statusTextField" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="slot"/>
+          <Argument type="String" name="customer_name"/>
+          <Argument type="String" name="car_id"/>
+          <Argument type="String" name="model"/>
+          <Argument type="String" name="status"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="carIDTextFieldActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="statusTextFieldActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jTextField5ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="modelTextFieldActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="slotTextFieldActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="CartMDIFrame" package="" visibility="public" xPosition="1220.0" yPosition="420.0">
+      <Fields>
+        <Field name="car" type="Car" visibility="private"/>
+        <Field name="bill" type="Bill" visibility="private"/>
+        <Field name="Totallabel" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jScrollPane1" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jTable1" type="javax.swing.JTable" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="Car" name="car"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="showTable" returnType="void" visibility="public"/>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Interface name="ChangePageButton" package="" visibility="public" xPosition="1520.0" yPosition="420.0">
+      <Methods>
+        <Method name="getHomeButton" returnType="JButton" visibility="public"/>
+        <Method name="getManagementButton" returnType="JButton" visibility="public"/>
+        <Method name="getEquipmentButton" returnType="JButton" visibility="public"/>
+        <Method name="getReceiptButton" returnType="JButton" visibility="public"/>
+        <Method name="getWarehouseButton" returnType="JButton" visibility="public"/>
+        <Method name="getStuffManageButton" returnType="JButton" visibility="public"/>
+      </Methods>
+    </Interface>
+    <Class name="Channel" package="" visibility="public" xPosition="1820.0" yPosition="420.0">
+      <Fields>
+        <Field name="car" type="Car" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="Car" name="car"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="addCar" returnType="void" visibility="public">
+          <Argument type="Car" name="car"/>
+        </Method>
+        <Method name="removeCar" returnType="void" visibility="public"/>
+        <Method name="getCar" returnType="Car" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="ConfigCellRenderer" package="" visibility="public" xPosition="2120.0" yPosition="420.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="getTableCellRendererComponent" returnType="Component" visibility="public">
+          <Argument type="JTable" name="table"/>
+          <Argument type="Object" name="value"/>
+          <Argument type="boolean" name="isSelected"/>
+          <Argument type="boolean" name="hasFocus"/>
+          <Argument type="int" name="row"/>
+          <Argument type="int" name="column"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="CreateAccFrame" package="" visibility="public" xPosition="20.0" yPosition="820.0">
+      <Fields>
+        <Field name="db" type="TestConnection" visibility="public"/>
+        <Field name="BackButton" type="javax.swing.JButton" visibility="private"/>
+        <Field name="CreateAccButton" type="javax.swing.JButton" visibility="private"/>
+        <Field name="CreateLabel" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="CreateTHLabel" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="EmailField" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="EmailLabel" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="NameField" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="NameLabel" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="OrangeBG" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="PasswordField" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="PasswordLabel" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="PhoneLabel" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="PhoneNumber" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="SurnameField" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="SurnameLabel" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="UsernameField" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="UsernameLabel" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="WhiteBG" type="javax.swing.JPanel" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="close" returnType="void" visibility="public"/>
+        <Method name="getMD5" returnType="String" visibility="public" isStatic="true">
+          <Argument type="String" name="pass"/>
+        </Method>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="BackButtonActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="CreateAccButtonActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="CustomCellEditor" package="" visibility="public" xPosition="320.0" yPosition="820.0">
+      <Fields>
+        <Field name="tav" type="TableActionEvent" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="TableActionEvent" name="ev"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getTableCellEditorComponent" returnType="Component" visibility="public">
+          <Argument type="JTable" name="table"/>
+          <Argument type="Object" name="value"/>
+          <Argument type="boolean" name="isSelected"/>
+          <Argument type="int" name="row"/>
+          <Argument type="int" name="column"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="DB_connector" package="" visibility="public" xPosition="620.0" yPosition="820.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="getUrl" returnType="String" visibility="public" isStatic="true"/>
+        <Method name="getUsername" returnType="String" visibility="public" isStatic="true"/>
+        <Method name="getPassword" returnType="String" visibility="public" isStatic="true"/>
+      </Methods>
+    </Class>
+    <Class name="DeleteItemForStorage" package="" visibility="public" xPosition="920.0" yPosition="820.0">
+      <Fields>
+        <Field name="storage" type="StorageFrame" visibility="private"/>
+        <Field name="cancelButton" type="javax.swing.JButton" visibility="private"/>
+        <Field name="confirmButton" type="javax.swing.JButton" visibility="private"/>
+        <Field name="idTextField" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel2" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel3" type="javax.swing.JPanel" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="StorageFrame" name="storage"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="resetTableForStorage" returnType="void" visibility="private"/>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="confirmButtonActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="cancelButtonActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="idTextFieldActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="DoNothing" package="" visibility="public" xPosition="1220.0" yPosition="820.0">
+      <Fields>
+        <Field name="fn" type="ForNothing" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="GetPoint101" name="gp"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="EquipmentController" package="" visibility="public" xPosition="1520.0" yPosition="820.0">
+      <Fields>
+        <Field name="emf" type="EquipmentMainFrame" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Garage" name="gr"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getEquipmentFrame" returnType="EquipmentMainFrame" visibility="public"/>
+        <Method name="actionPerformed" returnType="void" visibility="public">
+          <Argument type="ActionEvent" name="e"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="EquipmentFrame1" package="" visibility="public" xPosition="1820.0" yPosition="820.0">
+      <Fields>
+        <Field name="bill" type="Bill" visibility="private"/>
+        <Field name="car" type="Car" visibility="private"/>
+        <Field name="BackButton" type="javax.swing.JButton" visibility="private"/>
+        <Field name="BodyButton" type="javax.swing.JButton" visibility="private"/>
+        <Field name="BreakeButton" type="javax.swing.JButton" visibility="private"/>
+        <Field name="CoolingButton" type="javax.swing.JButton" visibility="private"/>
+        <Field name="DrivetrainButton" type="javax.swing.JButton" visibility="private"/>
+        <Field name="ElectricalButton" type="javax.swing.JButton" visibility="private"/>
+        <Field name="EngineButton" type="javax.swing.JButton" visibility="private"/>
+        <Field name="ExhaustButton" type="javax.swing.JButton" visibility="private"/>
+        <Field name="FuelButton" type="javax.swing.JButton" visibility="private"/>
+        <Field name="SuspensionButton" type="javax.swing.JButton" visibility="private"/>
+        <Field name="garageName" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="headPanel" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jLabel13" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel14" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel15" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel16" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel17" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel18" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel19" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel20" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel21" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel23" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel5" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel2" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel4" type="javax.swing.JPanel" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="Car" name="car"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="openEquipment2" returnType="void" visibility="private">
+          <Argument type="String" name="type"/>
+        </Method>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="BodyButtonActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="BreakeButtonActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="CoolingButtonActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="ElectricalButtonActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="EngineButtonActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="ExhaustButtonActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="FuelButtonActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="DrivetrainButtonActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="SuspensionButtonActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="BackButtonActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="EquipmentFrame2" package="" visibility="public" xPosition="2120.0" yPosition="820.0">
+      <Fields>
+        <Field name="type" type="String" visibility="private"/>
+        <Field name="car" type="Car" visibility="private"/>
+        <Field name="AddButton" type="javax.swing.JButton" visibility="private"/>
+        <Field name="BackButton2" type="javax.swing.JButton" visibility="private"/>
+        <Field name="BackButton3" type="javax.swing.JButton" visibility="private"/>
+        <Field name="CartButton" type="javax.swing.JButton" visibility="private"/>
+        <Field name="SortButton2" type="javax.swing.JButton" visibility="private"/>
+        <Field name="TableName" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="findButton" type="javax.swing.JButton" visibility="private"/>
+        <Field name="garageName3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="headPanel" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jButton3" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel6" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel7" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel8" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel9" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jScrollPane1" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jScrollPane2" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jTable" type="javax.swing.JTable" visibility="private"/>
+        <Field name="jTable1" type="javax.swing.JTable" visibility="private"/>
+        <Field name="jTextField1" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="type"/>
+          <Argument type="Car" name="car"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="setTable" returnType="void" visibility="public"/>
+        <Method name="getTable" returnType="JTable" visibility="public"/>
+        <Method name="getStringType" returnType="String" visibility="public"/>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="BackButton2ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="SortButton2ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="BackButton3ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="CartButtonActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="AddButtonActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jTextField1ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="findButtonActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="EquipmentMainFrame" package="" visibility="public" xPosition="20.0" yPosition="1220.0">
+      <Fields>
+        <Field name="gr" type="Garage" visibility="private"/>
+        <Field name="car" type="Car" visibility="private"/>
+        <Field name="AccountButton" type="javax.swing.JButton" visibility="private"/>
+        <Field name="CustomButton" type="javax.swing.JButton" visibility="private"/>
+        <Field name="EquipmentButton" type="javax.swing.JButton" visibility="private"/>
+        <Field name="Header" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="HomeButton1" type="javax.swing.JButton" visibility="private"/>
+        <Field name="InvoiceButton" type="javax.swing.JButton" visibility="private"/>
+        <Field name="MenuBar" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="WarehouseButton" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel2" type="javax.swing.JPanel" visibility="protected"/>
+        <Field name="jPanel3" type="javax.swing.JPanel" visibility="protected"/>
+        <Field name="usernamePn1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="usernameTxt1" type="javax.swing.JLabel" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Garage" name="gr"/>
+        </Constructor>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="HomeButton1ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="CustomButtonActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="EquipmentButtonActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="WarehouseButtonActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="InvoiceButtonActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="AccountButtonActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+        <Method name="checkslot" returnType="void" visibility="public"/>
+        <Method name="getHomeButton" returnType="JButton" visibility="public"/>
+        <Method name="getManagementButton" returnType="JButton" visibility="public"/>
+        <Method name="getEquipmentButton" returnType="JButton" visibility="public"/>
+        <Method name="getReceiptButton" returnType="JButton" visibility="public"/>
+        <Method name="getWarehouseButton" returnType="JButton" visibility="public"/>
+        <Method name="getStuffManageButton" returnType="JButton" visibility="public"/>
+        <Method name="getUsernameLabel" returnType="JLabel" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="ForNothing" package="" visibility="public" xPosition="320.0" yPosition="1220.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="somthing" returnType="void" visibility="public">
+          <Argument type="int" name="get"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Garage" package="" visibility="public" xPosition="620.0" yPosition="1220.0">
+      <Fields>
+        <Field name="gc" type="GarageController" visibility="private"/>
+        <Field name="name" type="String" visibility="private"/>
+        <Field name="ch" type="Channel[]" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="GarageController" name="gc"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="update" returnType="void" visibility="public"/>
+        <Method name="addCar" returnType="void" visibility="public">
+          <Argument type="Car" name="car"/>
+          <Argument type="int" name="channel"/>
+        </Method>
+        <Method name="getName" returnType="String" visibility="public"/>
+        <Method name="getCh" returnType="Channel" visibility="public">
+          <Argument type="int" name="index"/>
+        </Method>
+        <Method name="getAllCh" returnType="Channel[]" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="GarageController" package="" visibility="public" xPosition="920.0" yPosition="1220.0">
+      <Fields>
+        <Field name="gr" type="Garage" visibility="private"/>
+        <Field name="mcf" type="ManageCarFrame" visibility="private"/>
+        <Field name="tav" type="TableActionEvent" visibility="private"/>
+        <Field name="desktop_pane" type="JDesktopPane" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="JDesktopPane" name="desktop_pane"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getManageCarFrame" returnType="ManageCarFrame" visibility="public"/>
+        <Method name="getGarage" returnType="Garage" visibility="public"/>
+        <Method name="update" returnType="void" visibility="public"/>
+        <Method name="actionPerformed" returnType="void" visibility="public">
+          <Argument type="ActionEvent" name="e"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Interface name="GetPoint101" package="" visibility="public" xPosition="1220.0" yPosition="1220.0">
+      <Methods>
+        <Method name="somthing" returnType="void" visibility="package">
+          <Argument type="int" name="get"/>
+        </Method>
+      </Methods>
+    </Interface>
+    <Class name="HomepageController" package="" visibility="public" xPosition="1520.0" yPosition="1220.0">
+      <Fields>
+        <Field name="hpf" type="HomepageFrame" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Garage" name="gr"/>
+          <Argument type="JDesktopPane" name="dtp"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getHomepageframe" returnType="HomepageFrame" visibility="public"/>
+        <Method name="update" returnType="void" visibility="public"/>
+        <Method name="actionPerformed" returnType="void" visibility="public">
+          <Argument type="ActionEvent" name="e"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="HomepageFrame" package="" visibility="public" xPosition="1820.0" yPosition="1220.0">
+      <Fields>
+        <Field name="pnArr" type="JPanel[]" visibility="protected"/>
+        <Field name="bnArr" type="JButton[]" visibility="protected"/>
+        <Field name="hps" type="HomepageSystem" visibility="private"/>
+        <Field name="AccountButton" type="javax.swing.JButton" visibility="private"/>
+        <Field name="CustomButton" type="javax.swing.JButton" visibility="private"/>
+        <Field name="EquipmentButton" type="javax.swing.JButton" visibility="private"/>
+        <Field name="Header" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="HomeButton" type="javax.swing.JButton" visibility="private"/>
+        <Field name="InvoiceButton" type="javax.swing.JButton" visibility="private"/>
+        <Field name="MenuBar" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="WarehouseButton" type="javax.swing.JButton" visibility="private"/>
+        <Field name="carpic0" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="carpic1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="carpic2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="carpic3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="carpic4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="carpic5" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="carpic6" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="carpic7" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="carpic8" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="carpic9" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="headTxt" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="headtextPn" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="mainPn" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="num1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="num10" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="num2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="num3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="num4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="num5" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="num6" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="num7" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="num8" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="num9" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="slot0" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="slot1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="slot2" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="slot3" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="slot4" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="slot5" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="slot6" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="slot7" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="slot8" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="slot9" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="statusBn0" type="javax.swing.JButton" visibility="protected"/>
+        <Field name="statusBn1" type="javax.swing.JButton" visibility="protected"/>
+        <Field name="statusBn2" type="javax.swing.JButton" visibility="protected"/>
+        <Field name="statusBn3" type="javax.swing.JButton" visibility="protected"/>
+        <Field name="statusBn4" type="javax.swing.JButton" visibility="protected"/>
+        <Field name="statusBn5" type="javax.swing.JButton" visibility="protected"/>
+        <Field name="statusBn6" type="javax.swing.JButton" visibility="protected"/>
+        <Field name="statusBn7" type="javax.swing.JButton" visibility="protected"/>
+        <Field name="statusBn8" type="javax.swing.JButton" visibility="protected"/>
+        <Field name="statusBn9" type="javax.swing.JButton" visibility="protected"/>
+        <Field name="statusPn0" type="javax.swing.JPanel" visibility="protected"/>
+        <Field name="statusPn1" type="javax.swing.JPanel" visibility="protected"/>
+        <Field name="statusPn2" type="javax.swing.JPanel" visibility="protected"/>
+        <Field name="statusPn3" type="javax.swing.JPanel" visibility="protected"/>
+        <Field name="statusPn4" type="javax.swing.JPanel" visibility="protected"/>
+        <Field name="statusPn5" type="javax.swing.JPanel" visibility="protected"/>
+        <Field name="statusPn6" type="javax.swing.JPanel" visibility="protected"/>
+        <Field name="statusPn7" type="javax.swing.JPanel" visibility="protected"/>
+        <Field name="statusPn8" type="javax.swing.JPanel" visibility="protected"/>
+        <Field name="statusPn9" type="javax.swing.JPanel" visibility="protected"/>
+        <Field name="submainPn" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="tablePn" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="txtNocar0" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="txtNocar1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="txtNocar2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="txtNocar3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="txtNocar4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="txtNocar5" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="txtNocar6" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="txtNocar7" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="txtNocar8" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="txtNocar9" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="usernamePn" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="usernameTxt" type="javax.swing.JLabel" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Garage" name="gr"/>
+          <Argument type="JDesktopPane" name="dtp"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getHps" returnType="HomepageSystem" visibility="public"/>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="statusBn7ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="statusBn2ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="statusBn1ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="statusBn4ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="HomeButtonActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="CustomButtonActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="EquipmentButtonActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="WarehouseButtonActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="InvoiceButtonActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="AccountButtonActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+        <Method name="getUsernameLabel" returnType="JLabel" visibility="public"/>
+        <Method name="getManagementButton" returnType="JButton" visibility="public"/>
+        <Method name="getEquipmentButton" returnType="JButton" visibility="public"/>
+        <Method name="getWarehouseButton" returnType="JButton" visibility="public"/>
+        <Method name="getReceiptButton" returnType="JButton" visibility="public"/>
+        <Method name="update" returnType="void" visibility="public"/>
+        <Method name="getHomeButton" returnType="JButton" visibility="public"/>
+        <Method name="getStuffManageButton" returnType="JButton" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="HomepageSystem" package="" visibility="public" xPosition="2120.0" yPosition="1220.0">
+      <Fields>
+        <Field name="slot" type="Garage" visibility="private"/>
+        <Field name="car" type="Car" visibility="private"/>
+        <Field name="carDetailFrame" type="JInternalFrame" visibility="private"/>
+        <Field name="dtp" type="JDesktopPane" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Garage" name="gr"/>
+          <Argument type="JDesktopPane" name="dtp"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="ShowCarDetail" returnType="String" visibility="public">
+          <Argument type="int" name="index"/>
+        </Method>
+        <Method name="ShowMoreCarDetail" returnType="void" visibility="public">
+          <Argument type="int" name="index"/>
+        </Method>
+        <Method name="checkslot" returnType="void" visibility="public">
+          <Argument type="HomepageFrame" name="hpf"/>
+        </Method>
+        <Method name="status" returnType="String" visibility="public">
+          <Argument type="int" name="status"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="InvoiceCreator" package="" visibility="public" xPosition="20.0" yPosition="1620.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Bill" name="bill"/>
+          <Argument type="String[]" name="info"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getHeaderTextCell" returnType="Cell" visibility="package" isStatic="true">
+          <Argument type="String" name="textValue"/>
+        </Method>
+        <Method name="getHeaderTextCellValue" returnType="Cell" visibility="package" isStatic="true">
+          <Argument type="String" name="textValue"/>
+        </Method>
+        <Method name="getBillingAndShippingCell" returnType="Cell" visibility="package" isStatic="true">
+          <Argument type="String" name="textValue"/>
+        </Method>
+        <Method name="getCell10fLeft" returnType="Cell" visibility="package" isStatic="true">
+          <Argument type="String" name="textValue"/>
+          <Argument type="Boolean" name="isBold"/>
+        </Method>
+        <Method name="openPDF" returnType="void" visibility="package" isStatic="true">
+          <Argument type="String" name="filePath"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Item" package="" visibility="public" xPosition="320.0" yPosition="1620.0">
+      <Fields>
+        <Field name="name" type="String" visibility="private"/>
+        <Field name="volume" type="int" visibility="private"/>
+        <Field name="price_per_piece" type="double" visibility="private"/>
+        <Field name="total" type="double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="name"/>
+          <Argument type="int" name="volume"/>
+          <Argument type="double" name="price_per_piece"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="setName" returnType="void" visibility="public">
+          <Argument type="String" name="name"/>
+        </Method>
+        <Method name="setVolume" returnType="void" visibility="public">
+          <Argument type="int" name="volume"/>
+        </Method>
+        <Method name="setPrice" returnType="void" visibility="public">
+          <Argument type="double" name="price"/>
+        </Method>
+        <Method name="getName" returnType="String" visibility="public"/>
+        <Method name="getVolume" returnType="int" visibility="public"/>
+        <Method name="getPrice" returnType="double" visibility="public"/>
+        <Method name="getTotal" returnType="double" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="LoginFrame" package="" visibility="public" xPosition="620.0" yPosition="1620.0">
+      <Fields>
+        <Field name="GrayBG" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="LoginButton" type="javax.swing.JButton" visibility="private"/>
+        <Field name="PasswordLabel" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="UsernameField" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="UsernameLabel" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPasswordField1" type="javax.swing.JPasswordField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="close" returnType="void" visibility="public"/>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="LoginButtonActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jPasswordField1ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+        <Method name="getUsername" returnType="String" visibility="public"/>
+        <Method name="getPassword" returnType="String" visibility="public"/>
+        <Method name="getLoginButton" returnType="JButton" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="LoginManager" package="" visibility="public" xPosition="920.0" yPosition="1620.0">
+      <Fields>
+        <Field name="acct" type="Account" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="login" returnType="boolean" visibility="public">
+          <Argument type="String" name="username"/>
+          <Argument type="String" name="password"/>
+        </Method>
+        <Method name="getAccount" returnType="Account" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="LoginPageController" package="" visibility="public" xPosition="1220.0" yPosition="1620.0">
+      <Fields>
+        <Field name="lf" type="LoginFrame" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="close" returnType="void" visibility="public"/>
+        <Method name="getLoginFrame" returnType="LoginFrame" visibility="public"/>
+        <Method name="actionPerformed" returnType="void" visibility="public">
+          <Argument type="ActionEvent" name="e"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Main" package="" visibility="public" xPosition="1520.0" yPosition="1620.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="MainController" package="" visibility="public" xPosition="1820.0" yPosition="1620.0">
+      <Fields>
+        <Field name="mainframe" type="JFrame" visibility="private"/>
+        <Field name="desktop_pane" type="JDesktopPane" visibility="private"/>
+        <Field name="hc" type="HomepageController" visibility="private"/>
+        <Field name="lpc" type="LoginPageController" visibility="private"/>
+        <Field name="spc" type="StuffPageController" visibility="private"/>
+        <Field name="wpc" type="WarehousePageController" visibility="private"/>
+        <Field name="gc" type="GarageController" visibility="private"/>
+        <Field name="ec" type="EquipmentController" visibility="private"/>
+        <Field name="rc" type="ReceiptController" visibility="private"/>
+        <Field name="lm" type="LoginManager" visibility="private"/>
+        <Field name="homepage" type="JPanel" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="actionPerformed" returnType="void" visibility="public">
+          <Argument type="ActionEvent" name="e"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ManageCarFrame" package="" visibility="public" xPosition="2120.0" yPosition="1620.0">
+      <Fields>
+        <Field name="AccountButton" type="javax.swing.JButton" visibility="private"/>
+        <Field name="CustomButton" type="javax.swing.JButton" visibility="private"/>
+        <Field name="EquipmentButton" type="javax.swing.JButton" visibility="private"/>
+        <Field name="Header" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="HomeButton" type="javax.swing.JButton" visibility="private"/>
+        <Field name="InvoiceButton" type="javax.swing.JButton" visibility="private"/>
+        <Field name="MenuBar" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="WarehouseButton" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton1" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel3" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jScrollPane2" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jTable2" type="javax.swing.JTable" visibility="private"/>
+        <Field name="usernamePn1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="usernameTxt1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="userpic" type="javax.swing.JLabel" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="TableActionEvent" name="tav"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="HomeButtonActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="CustomButtonActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="EquipmentButtonActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="WarehouseButtonActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="InvoiceButtonActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="AccountButtonActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButton1ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="populateTable" returnType="void" visibility="public"/>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+        <Method name="getHomeButton" returnType="JButton" visibility="public"/>
+        <Method name="getEquipmentButton" returnType="JButton" visibility="public"/>
+        <Method name="getWarehouseButton" returnType="JButton" visibility="public"/>
+        <Method name="getReceiptButton" returnType="JButton" visibility="public"/>
+        <Method name="getTable" returnType="JTable" visibility="public"/>
+        <Method name="getAddButton" returnType="JButton" visibility="public"/>
+        <Method name="getManagementButton" returnType="JButton" visibility="public"/>
+        <Method name="getStuffManageButton" returnType="JButton" visibility="public"/>
+        <Method name="getUsernameLabel" returnType="JLabel" visibility="public"/>
+      </Methods>
+    </Class>
+    <Interface name="NeedDB" package="" visibility="public" xPosition="20.0" yPosition="2020.0">
+      <Methods>
+        <Method name="db_connect" returnType="void" visibility="package"/>
+      </Methods>
+    </Interface>
+    <Class name="Online" package="" visibility="public" isAbstract="true" xPosition="320.0" yPosition="2020.0">
+      <Fields>
+        <Field name="statement" type="Statement" visibility="public"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="db_connect" returnType="void" visibility="public"/>
+        <Method name="getStatement" returnType="Statement" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="ReceiptController" package="" visibility="public" xPosition="620.0" yPosition="2020.0">
+      <Fields>
+        <Field name="rf" type="ReceiptFrame" visibility="private"/>
+        <Field name="ch" type="Channel[]" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Channel[]" name="ch"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getReceiptFrame" returnType="ReceiptFrame" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Slotcar1" package="" visibility="public" xPosition="920.0" yPosition="2020.0">
+      <Fields>
+        <Field name="car" type="Car" visibility="private"/>
+        <Field name="brand" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="carId" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="carName" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="carOwner" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jButton1" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="Car" name="car"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="settext" returnType="void" visibility="public">
+          <Argument type="String" name="carid"/>
+          <Argument type="String" name="carowner"/>
+          <Argument type="String" name="carname"/>
+          <Argument type="String" name="carbrand"/>
+        </Method>
+        <Method name="setnum" returnType="void" visibility="public">
+          <Argument type="int" name="num"/>
+        </Method>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="jButton1ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Slotcar2" package="" visibility="public" xPosition="1220.0" yPosition="2020.0">
+      <Fields>
+        <Field name="carId" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="setnum" returnType="void" visibility="public">
+          <Argument type="int" name="num"/>
+        </Method>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+      </Methods>
+    </Class>
+    <Class name="StorageFrame" package="" visibility="public" xPosition="1520.0" yPosition="2020.0">
+      <Fields>
+        <Field name="type" type="String" visibility="private"/>
+        <Field name="BackButton3" type="javax.swing.JButton" visibility="private"/>
+        <Field name="ItemTable" type="javax.swing.JTable" visibility="private"/>
+        <Field name="Type" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="findButton" type="javax.swing.JButton" visibility="private"/>
+        <Field name="findTextField" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jButton1" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton2" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton3" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel3" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel4" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel5" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel6" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel7" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jScrollPane2" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jTextField3" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="type"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="setTable" returnType="void" visibility="public"/>
+        <Method name="getItemTable" returnType="JTable" visibility="public"/>
+        <Method name="getStringType" returnType="String" visibility="public"/>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="jTextField3ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="TypeActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="findButtonActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButton1ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButton2ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButton3ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="BackButton3ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="StorageMain" package="" visibility="public" xPosition="1820.0" yPosition="2020.0">
+      <Fields>
+        <Field name="AccountButton" type="javax.swing.JButton" visibility="private"/>
+        <Field name="AccountButton2" type="javax.swing.JButton" visibility="private"/>
+        <Field name="BodyButton" type="javax.swing.JButton" visibility="private"/>
+        <Field name="BreakeButton" type="javax.swing.JButton" visibility="private"/>
+        <Field name="CoolingButton" type="javax.swing.JButton" visibility="private"/>
+        <Field name="CustomButton" type="javax.swing.JButton" visibility="private"/>
+        <Field name="CustomButton2" type="javax.swing.JButton" visibility="private"/>
+        <Field name="DrivetrainButton" type="javax.swing.JButton" visibility="private"/>
+        <Field name="ElectricalButton" type="javax.swing.JButton" visibility="private"/>
+        <Field name="EngineButton" type="javax.swing.JButton" visibility="private"/>
+        <Field name="EquipmentButton" type="javax.swing.JButton" visibility="private"/>
+        <Field name="EquipmentButton2" type="javax.swing.JButton" visibility="private"/>
+        <Field name="ExhaustButton" type="javax.swing.JButton" visibility="private"/>
+        <Field name="FuelButton" type="javax.swing.JButton" visibility="private"/>
+        <Field name="HomeButton" type="javax.swing.JButton" visibility="private"/>
+        <Field name="HomeButton2" type="javax.swing.JButton" visibility="private"/>
+        <Field name="InvoiceButton" type="javax.swing.JButton" visibility="private"/>
+        <Field name="InvoiceButton2" type="javax.swing.JButton" visibility="private"/>
+        <Field name="MenuBar" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="SuspensionButton" type="javax.swing.JButton" visibility="private"/>
+        <Field name="Type" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="WarehouseButton" type="javax.swing.JButton" visibility="private"/>
+        <Field name="WarehouseButton2" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel13" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel14" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel15" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel16" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel17" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel18" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel19" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel20" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel21" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel2" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel3" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel5" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel7" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="usernameTxt1" type="javax.swing.JLabel" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="openStorageFrame" returnType="void" visibility="private">
+          <Argument type="String" name="type"/>
+        </Method>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="HomeButtonActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="CustomButtonActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="EquipmentButtonActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="WarehouseButtonActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="InvoiceButtonActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="AccountButtonActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="SuspensionButtonActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="DrivetrainButtonActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="FuelButtonActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="ExhaustButtonActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="EngineButtonActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="ElectricalButtonActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="CoolingButtonActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="BreakeButtonActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="BodyButtonActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="TypeActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="HomeButton2ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="CustomButton2ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="EquipmentButton2ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="WarehouseButton2ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="InvoiceButton2ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="AccountButton2ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+        <Method name="getHomeButton" returnType="JButton" visibility="public"/>
+        <Method name="getManagementButton" returnType="JButton" visibility="public"/>
+        <Method name="getEquipmentButton" returnType="JButton" visibility="public"/>
+        <Method name="getReceiptButton" returnType="JButton" visibility="public"/>
+        <Method name="getWarehouseButton" returnType="JButton" visibility="public"/>
+        <Method name="getStuffManageButton" returnType="JButton" visibility="public"/>
+        <Method name="getUsernameLabel" returnType="JLabel" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="StuffEditPanel" package="" visibility="public" xPosition="2120.0" yPosition="2020.0">
+      <Fields>
+        <Field name="inFrame" type="JInternalFrame" visibility="private"/>
+        <Field name="connect" type="Online" visibility="private"/>
+        <Field name="carIDLabel" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="carIDLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="carIDLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="carIDLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="carIDLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="confirm_button" type="javax.swing.JButton" visibility="private"/>
+        <Field name="emailTextField" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="firstNameTextField" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel3" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="lastNameTextField" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="levelTextField" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="modelLable" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="phoneTextField" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="userNameTextFIeld" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="userName"/>
+          <Argument type="String" name="f_name"/>
+          <Argument type="String" name="l_name"/>
+          <Argument type="String" name="email"/>
+          <Argument type="String" name="phone"/>
+          <Argument type="int" name="level"/>
+          <Argument type="JInternalFrame" name="inFrame"/>
+          <Argument type="Online" name="connect"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="firstNameTextFieldActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="lastNameTextFieldActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="emailTextFieldActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="phoneTextFieldActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="levelTextFieldActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="confirm_buttonActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="userNameTextFIeldActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="StuffInfoPanel" package="" visibility="public" xPosition="20.0" yPosition="2420.0">
+      <Fields>
+        <Field name="inFrame" type="JInternalFrame" visibility="private"/>
+        <Field name="carIDLabel" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="carIDLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="carIDLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="carIDLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="carIDLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="close_button" type="javax.swing.JButton" visibility="private"/>
+        <Field name="emailTextField" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="firstNameTextField" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel3" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="lastNameTextField" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="levelTextField" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="modelLable" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="phoneTextField" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="userName" type="javax.swing.JLabel" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="userName"/>
+          <Argument type="String" name="f_name"/>
+          <Argument type="String" name="l_name"/>
+          <Argument type="String" name="email"/>
+          <Argument type="String" name="phone"/>
+          <Argument type="int" name="level"/>
+          <Argument type="JInternalFrame" name="inFrame"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="firstNameTextFieldActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="lastNameTextFieldActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="emailTextFieldActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="phoneTextFieldActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="levelTextFieldActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="close_buttonActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="StuffPageController" package="" visibility="public" xPosition="320.0" yPosition="2420.0">
+      <Fields>
+        <Field name="accFrame" type="AccountManageFrame" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="LoginManager" name="lm"/>
+          <Argument type="JDesktopPane" name="desktop_pane"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getAccountFrame" returnType="AccountManageFrame" visibility="public"/>
+        <Method name="update" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Interface name="TableActionEvent" package="" visibility="public" xPosition="620.0" yPosition="2420.0">
+      <Methods>
+        <Method name="view" returnType="void" visibility="public">
+          <Argument type="int" name="row"/>
+        </Method>
+        <Method name="edit" returnType="void" visibility="public">
+          <Argument type="int" name="row"/>
+        </Method>
+        <Method name="del" returnType="void" visibility="public">
+          <Argument type="int" name="row"/>
+        </Method>
+      </Methods>
+    </Interface>
+    <Class name="TestConnection" package="" visibility="public" xPosition="920.0" yPosition="2420.0">
+      <Fields>
+        <Field name="conn" type="Connection" visibility="private"/>
+        <Field name="rs" type="ResultSet" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="db_connect" returnType="void" visibility="public"/>
+        <Method name="getConnect" returnType="ResultSet" visibility="public">
+          <Argument type="String" name="sql"/>
+        </Method>
+        <Method name="getUpdate" returnType="void" visibility="public">
+          <Argument type="String" name="sql"/>
+        </Method>
+        <Method name="close" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Warehouse" package="" visibility="public" xPosition="1220.0" yPosition="2420.0">
+      <Fields>
+        <Field name="id" type="int" visibility="private"/>
+        <Field name="name" type="String" visibility="private"/>
+        <Field name="type" type="String" visibility="private"/>
+        <Field name="Brand" type="String" visibility="private"/>
+        <Field name="price" type="double" visibility="private"/>
+        <Field name="volume" type="int" visibility="private"/>
+        <Field name="db" type="TestConnection" visibility="public"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="addNewItems" returnType="void" visibility="public">
+          <Argument type="String" name="type"/>
+          <Argument type="String" name="Brand"/>
+          <Argument type="String" name="name"/>
+          <Argument type="double" name="price"/>
+          <Argument type="int" name="volume"/>
+        </Method>
+        <Method name="removeItems" returnType="void" visibility="public">
+          <Argument type="String" name="name"/>
+          <Argument type="int" name="volume"/>
+        </Method>
+        <Method name="removeItems" returnType="void" visibility="public">
+          <Argument type="int" name="id"/>
+          <Argument type="int" name="volume"/>
+        </Method>
+        <Method name="deleteItem" returnType="void" visibility="public">
+          <Argument type="int" name="id"/>
+          <Argument type="String" name="name"/>
+        </Method>
+        <Method name="addItems" returnType="void" visibility="public">
+          <Argument type="int" name="id"/>
+          <Argument type="String" name="name"/>
+          <Argument type="int" name="volume"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="WarehousePageController" package="" visibility="public" xPosition="1520.0" yPosition="2420.0">
+      <Fields>
+        <Field name="wh" type="Warehouse" visibility="private"/>
+        <Field name="warehouse_frame" type="StorageMain" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getWarehousePage" returnType="StorageMain" visibility="public"/>
+        <Method name="actionPerformed" returnType="void" visibility="public">
+          <Argument type="ActionEvent" name="e"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="gr" source="GarageController" target="Garage" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="HomepageSystem" target="HomepageFrame" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="TestConnection" target="Online"/>
+    <UseRelation source="Channel" target="Car" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="emf" source="EquipmentController" target="EquipmentMainFrame" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Car" target="Bill" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="GarageController" target="Online"/>
+    <UseRelation source="WarehousePageController" target="StorageMain" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="connect" source="StuffEditPanel" target="Online" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="car" source="EquipmentFrame2" target="Car" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="AccountManageFrame" target="ChangePageButton"/>
+    <UseRelation source="Garage" target="Channel" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="lm" source="MainController" target="LoginManager" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="gc" source="CarConfigPanel" target="GarageController" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="edit_bn" source="ActionPanel" target="ActionButton_Custom" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="StuffPageController" target="Online"/>
+    <UseRelation source="HomepageController" target="HomepageFrame" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="wpc" source="MainController" target="WarehousePageController" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="StorageMain" target="ChangePageButton"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="ForNothing" target="GetPoint101"/>
+    <UseRelation source="LoginPageController" target="LoginFrame" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="rc" source="MainController" target="ReceiptController" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="view_bn" source="ActionPanel" target="ActionButton_Custom" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="accFrame" source="StuffPageController" target="AccountManageFrame" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="gc" source="MainController" target="GarageController" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="storage" source="DeleteItemForStorage" target="StorageFrame" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="warehouse_frame" source="WarehousePageController" target="StorageMain" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="ec" source="MainController" target="EquipmentController" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="gc" source="AddCarPanel" target="GarageController" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="car" source="Channel" target="Car" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="EquipmentController" target="Main" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="hps" source="HomepageFrame" target="HomepageSystem" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="fn" source="DoNothing" target="ForNothing" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="car" source="HomepageSystem" target="Car" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="LoginManager" target="Account" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="HomepageFrame" target="HomepageSystem" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="gc" source="Garage" target="GarageController" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="GarageController" target="ManageCarFrame" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="hc" source="MainController" target="HomepageController" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="lf" source="LoginPageController" target="LoginFrame" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="wh" source="WarehousePageController" target="Warehouse" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="Warehouse" target="Online"/>
+    <HasRelation name="gr" source="EquipmentMainFrame" target="Garage" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Bill" target="Item" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="lpc" source="MainController" target="LoginPageController" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="tav" source="CustomCellEditor" target="TableActionEvent" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="EquipmentMainFrame" target="ChangePageButton"/>
+    <UseRelation source="GarageController" target="Garage" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="ManageCarFrame" target="ChangePageButton"/>
+    <HasRelation name="car" source="EquipmentFrame1" target="Car" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="bill" source="CartMDIFrame" target="Bill" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Garage" target="Car" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="bill" source="EquipmentFrame1" target="Bill" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="car" source="CartMDIFrame" target="Car" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="LoginManager" target="Online"/>
+    <HasRelation name="tav" source="GarageController" target="TableActionEvent" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="Online" target="NeedDB"/>
+    <IsRelation name="is" source="Garage" target="Online"/>
+    <HasRelation name="item_list" source="Bill" target="Item" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Item&gt;"/>
+    <HasRelation name="del_bn" source="ActionPanel" target="ActionButton_Custom" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="slot" source="HomepageSystem" target="Garage" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="acct" source="LoginManager" target="Account" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="storage" source="AddItemForStorage" target="StorageFrame" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="HomepageFrame" target="ChangePageButton"/>
+    <HasRelation name="car" source="EquipmentMainFrame" target="Car" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="ActionPanel" target="TableActionEvent" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="car" source="Slotcar1" target="Car" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="db" source="Warehouse" target="TestConnection" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="hpf" source="HomepageController" target="HomepageFrame" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="StuffPageController" target="AccountManageFrame" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="bill" source="Car" target="Bill" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="spc" source="MainController" target="StuffPageController" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="mcf" source="GarageController" target="ManageCarFrame" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="db" source="CreateAccFrame" target="TestConnection" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
