@@ -24,6 +24,8 @@ public class StorageFrame extends javax.swing.JFrame {
         this.ItemTable.setShowVerticalLines(true);
         setTable();
     }
+    
+    //show all item in database on ItemTable
     public void setTable() {
         TestConnection db = new TestConnection();
         ResultSet item = db.getConnect(String.format("SELECT * FROM inventory WHERE item_type='%s'",type));
@@ -467,6 +469,7 @@ public class StorageFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_TypeActionPerformed
 
+    //show only filtered item
     private void findButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_findButtonActionPerformed
         // TODO add your handling code here:
         DefaultTableModel ob=(DefaultTableModel) ItemTable.getModel();
@@ -475,6 +478,7 @@ public class StorageFrame extends javax.swing.JFrame {
         obj.setRowFilter(RowFilter.regexFilter(this.findTextField.getText()));
     }//GEN-LAST:event_findButtonActionPerformed
 
+    //call AddItemForStorage to add item and update on database
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         AddItemForStorage addItem = new AddItemForStorage(this);
@@ -483,6 +487,7 @@ public class StorageFrame extends javax.swing.JFrame {
         addItem.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    //call DeleteItemForStorage to delete item and update on database
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         DeleteItemForStorage deleteItem = new DeleteItemForStorage(this);
@@ -495,6 +500,7 @@ public class StorageFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
 
+    //close StorageFrame
     private void BackButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackButton3ActionPerformed
         // TODO add your handling code here:
         this.dispose();

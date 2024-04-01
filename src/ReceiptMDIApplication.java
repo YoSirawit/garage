@@ -43,6 +43,7 @@ public class ReceiptMDIApplication extends javax.swing.JFrame {
         }
     }
     
+    //For show each item on JTextArea1
     private void showItem() {
         List<Item> itemList = bill.getInfo();
         for (Item item:itemList) {
@@ -254,17 +255,18 @@ public class ReceiptMDIApplication extends javax.swing.JFrame {
     private void wageTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wageTextFieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_wageTextFieldActionPerformed
-
+       
+    //Open invoice pdf file
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
                 try {
-            // TODO add your handling code here:
             InvoiceCreator invoice = new InvoiceCreator(bill, info);
         } catch (Exception ex) {
             System.out.println("Something wrong.");
         }
     }//GEN-LAST:event_jButton1ActionPerformed
-
+    
+    //Add wage and price on JTextArea1 database + update bill
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         db = new TestConnection();

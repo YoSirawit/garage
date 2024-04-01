@@ -80,6 +80,7 @@ public class ReceiptFrame extends javax.swing.JFrame implements ChangePageButton
             }
         
     }
+    //For get ResultSet from database
     static ResultSet getProductFromDB(String sql) {
         TestConnection db2 = new TestConnection();
         return db2.getConnect(sql);

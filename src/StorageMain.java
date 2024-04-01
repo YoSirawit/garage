@@ -19,6 +19,8 @@ public class StorageMain extends javax.swing.JFrame implements ChangePageButton 
     public StorageMain() {
         initComponents();
     }
+    
+    //call StorageFrame depend on who call this function
     private void openStorageFrame(String type) {
         TestConnection db = new TestConnection();
         try {
@@ -614,7 +616,7 @@ public class StorageMain extends javax.swing.JFrame implements ChangePageButton 
     private void AccountButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AccountButtonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_AccountButtonActionPerformed
-
+    
     private void SuspensionButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SuspensionButtonActionPerformed
         // TODO add your handling code here:
         openStorageFrame("Suspension and Steering");

@@ -1,4 +1,4 @@
-/*
+    /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
@@ -17,6 +17,8 @@ public class DeleteItemForStorage extends javax.swing.JFrame {
         this.storage = storage;
         initComponents();
     }
+    
+    //open new StorageFrame and close old StorageFrame
     private void resetTableForStorage() {
         StorageFrame storage = new StorageFrame(this.storage.getStringType());
         storage.pack();
@@ -174,6 +176,7 @@ public class DeleteItemForStorage extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    //delete item and update on database then call method resetTableForStorage from this class
     private void confirmButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_confirmButtonActionPerformed
         // TODO add your handling code here:
         TestConnection db = new TestConnection();
@@ -182,6 +185,7 @@ public class DeleteItemForStorage extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_confirmButtonActionPerformed
 
+    //close DeleteItemForStorage
     private void cancelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelButtonActionPerformed
         // TODO add your handling code here:
         this.dispose();

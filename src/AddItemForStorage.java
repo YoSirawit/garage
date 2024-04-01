@@ -266,6 +266,7 @@ public class AddItemForStorage extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
+    //add item and update on database then open new StorageFrame and close old StorageFrame
     private void confirmButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_confirmButtonActionPerformed
         // TODO add your handling code here:
         TestConnection db = new TestConnection();
@@ -315,6 +316,7 @@ public class AddItemForStorage extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_quantityTextFieldActionPerformed
 
+    //close AddItemForStorage
     private void cancelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelButtonActionPerformed
         // TODO add your handling code here:
         this.dispose();

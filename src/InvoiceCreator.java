@@ -154,18 +154,25 @@ public class InvoiceCreator {
         document.close();
         openPDF(path);
 }
+        //default text style show on pdf (bold, right)
         static Cell getHeaderTextCell(String textValue) {
 
             return new Cell().add(textValue).setBold().setBorder(Border.NO_BORDER).setTextAlignment(TextAlignment.RIGHT);
         }
+        
+        //default text style show on pdf (bold, left)
         static Cell getHeaderTextCellValue(String textValue) {
 
             return new Cell().add(textValue).setBorder(Border.NO_BORDER).setTextAlignment(TextAlignment.LEFT);
         }
+        
+        //default text style show on pdf (font size 12, bold, left)
         static Cell getBillingAndShippingCell(String textValue) {
 
             return new Cell().add(textValue).setFontSize(12f).setBold().setBorder(Border.NO_BORDER).setTextAlignment(TextAlignment.LEFT);
         }
+        
+        //default text style show on pad (font size 10, left) and check bold or not
         static Cell getCell10fLeft(String textValue, Boolean isBold) {
             Cell myCell = new Cell().add(textValue).setFontSize(10f).setBorder(Border.NO_BORDER).setTextAlignment(TextAlignment.LEFT);
             return isBold ?myCell.setBold():myCell;
@@ -175,6 +182,8 @@ public class InvoiceCreator {
     //            return myCell;
     //        }
         }
+        
+        //Open pdf file
         static void openPDF(String filePath) throws IOException {
             File file = new File(filePath);
             Runtime.getRuntime().exec("rundll32 url.dll,FileProtocolHandler "+file);
