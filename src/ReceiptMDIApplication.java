@@ -32,6 +32,7 @@ public class ReceiptMDIApplication extends javax.swing.JFrame {
         totalTextField.setText(String.valueOf(totalPrice));
     }
     
+    // get carowner and carid from ReceiptFrame and show it
     public void LinkData(String carOwner,String carId) {
         try {
             String carowner = "ชื่อ : " + carOwner;

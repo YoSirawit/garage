@@ -14,6 +14,7 @@ public class ReceiptFrame extends javax.swing.JFrame implements ChangePageButton
     }
     
     private void setCar_owner(){
+    //fetch car_owner from database and display it
         try{
             db = new TestConnection();
             String sql = "SELECT car_owner FROM car_list";
@@ -47,6 +48,7 @@ public class ReceiptFrame extends javax.swing.JFrame implements ChangePageButton
             }
     }
     private void setCar_id(){
+    //fetch car_id database and display it
         try{
             db = new TestConnection();
             String sql = "SELECT car_id FROM car_list";
@@ -911,6 +913,7 @@ public class ReceiptFrame extends javax.swing.JFrame implements ChangePageButton
     }// </editor-fold>//GEN-END:initComponents
         
     private void select1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_select1ActionPerformed
+    //get data car_owner and car_id from database, calculates the total price from bill_1 table, and shows a receipt  
         try {
             db = new TestConnection();
             String car_listSQL = "SELECT car_owner, car_id FROM car_list";
@@ -947,6 +950,7 @@ public class ReceiptFrame extends javax.swing.JFrame implements ChangePageButton
     }//GEN-LAST:event_select1ActionPerformed
 
     private void select2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_select2ActionPerformed
+    //get data car_owner and car_id from database, calculates the total price from bill_2 table, and shows a receipt 
         try {
             db = new TestConnection();
             String car_listSQL = "SELECT car_owner, car_id FROM car_list";
@@ -985,6 +989,7 @@ public class ReceiptFrame extends javax.swing.JFrame implements ChangePageButton
     }//GEN-LAST:event_select2ActionPerformed
 
     private void select3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_select3ActionPerformed
+    //get data car_owner and car_id from database, calculates the total price from bill_3 table, and shows a receipt 
         try {
             db = new TestConnection();
             String car_listSQL = "SELECT car_owner, car_id FROM car_list";
@@ -1024,6 +1029,7 @@ public class ReceiptFrame extends javax.swing.JFrame implements ChangePageButton
     }//GEN-LAST:event_select3ActionPerformed
 
     private void select4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_select4ActionPerformed
+        //get data car_owner and car_id from database, calculates the total price from bill_4 table, and shows a receipt 
         try {
             db = new TestConnection();
             String car_listSQL = "SELECT car_owner, car_id FROM car_list";
@@ -1065,7 +1071,7 @@ public class ReceiptFrame extends javax.swing.JFrame implements ChangePageButton
     }//GEN-LAST:event_select4ActionPerformed
 
     private void select5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_select5ActionPerformed
-
+        //get data car_owner and car_id from database, calculates the total price from bill_5 table, and shows a receipt 
         try {
             db = new TestConnection();
             String car_listSQL = "SELECT car_owner, car_id FROM car_list";
@@ -1109,6 +1115,7 @@ public class ReceiptFrame extends javax.swing.JFrame implements ChangePageButton
     }//GEN-LAST:event_select5ActionPerformed
 
     private void select6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_select6ActionPerformed
+        //get data car_owner and car_id from database, calculates the total price from bill_6 table, and shows a receipt 
         try {
             db = new TestConnection();
             String car_listSQL = "SELECT car_owner, car_id FROM car_list";
@@ -1152,6 +1159,7 @@ public class ReceiptFrame extends javax.swing.JFrame implements ChangePageButton
     }//GEN-LAST:event_select6ActionPerformed
 
     private void select7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_select7ActionPerformed
+        //get data car_owner and car_id from database, calculates the total price from bill_7 table, and shows a receipt 
         try {
             db = new TestConnection();
             String car_listSQL = "SELECT car_owner, car_id FROM car_list";
@@ -1197,6 +1205,7 @@ public class ReceiptFrame extends javax.swing.JFrame implements ChangePageButton
     }//GEN-LAST:event_select7ActionPerformed
 
     private void select8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_select8ActionPerformed
+        //get data car_owner and car_id from database, calculates the total price from bill_8 table, and shows a receipt 
         try {
             db = new TestConnection();
             String car_listSQL = "SELECT car_owner, car_id FROM car_list";
@@ -1243,6 +1252,7 @@ public class ReceiptFrame extends javax.swing.JFrame implements ChangePageButton
     }//GEN-LAST:event_select8ActionPerformed
 
     private void select9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_select9ActionPerformed
+        //get data car_owner and car_id from database, calculates the total price from bill_9 table, and shows a receipt 
         try {
             db = new TestConnection();
             String car_listSQL = "SELECT car_owner, car_id FROM car_list";
@@ -1289,6 +1299,7 @@ public class ReceiptFrame extends javax.swing.JFrame implements ChangePageButton
     }//GEN-LAST:event_select9ActionPerformed
 
     private void select10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_select10ActionPerformed
+        //get data car_owner and car_id from database, calculates the total price from bill_10 table, and shows a receipt 
         try {
             db = new TestConnection();
             String car_listSQL = "SELECT car_owner, car_id FROM car_list";
